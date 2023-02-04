@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Modmail Overview](README.md)
+* [Introduction](README.md)
 * [Installation](installation/README.md)
   * [Local Hosting / VPS](installation/local-hosting-vps/README.md)
     * [Windows](installation/local-hosting-vps/windows.md)
