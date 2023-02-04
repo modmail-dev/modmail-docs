@@ -2,7 +2,7 @@
 description: https://github.com/kyb3r/modmail
 ---
 
-# Modmail Overview
+# Introduction
 
 Modmail is a self-hosted Discord bot for your server. It works similar to [Reddit](https://reddit.zendesk.com/hc/en-us/articles/210896606-What-is-Modmail-)'s Modmail—both in functionality and purpose. It serves as a shared inbox for server staff to communicate with their users in a seamless way.
 
