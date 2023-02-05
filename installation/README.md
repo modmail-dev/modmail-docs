@@ -236,7 +236,7 @@ My MongoDB connection string: mongodb+srv://modmail:elAO7wF1r07pNG6u@cluster0.ex
 ```
 {% endcode %}
 
-You are now done with the MongoDB steps. At this point, your bot should still be **offline**. Continue to follow the [next steps](./#next-steps) to start up your Modmail bot.
+You finished the MongoDB steps! At this point, your bot should still be **offline**. You can now proceed to the [next steps](./#next-steps) and start up your Modmail bot.
 
 ## Next steps
 
