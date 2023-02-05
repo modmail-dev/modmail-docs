@@ -6,19 +6,24 @@ description: Modmail hosting and installation guide.
 
 Modmail is a self-hosted bot. This unfortunately means that there's **no** public bot invite. Furthermore, due to the inner workings of the bot and its highly customisable interfaces, you will need to host your own dedicated Modmail bot.&#x20;
 
-This section provides setup instructions for Modmail on many hosting methods, both **free and paid**.
+This section provides setup instructions for Modmail on many hosting methods, both **free\* and paid**.&#x20;
+
+\*Some free options require a credit card for verification.&#x20;
 
 Here are the basic requirements for hosting your Modmail bot. You will find instructions on obtaining and using them in later sections.
 
 *   A Discord account.
 
     You will need to create a Discord bot under your account.
-*   A MongoDB instance.
+*   A MongoDB database instance.
 
     Modmail will store its internal data to this database.
 *   A hosting server.
 
     To keep Modmail running 24/7 in your server.
+*   A Desktop Notepad, Notes, TextEdit, etc.
+
+    Anywhere you can copy and paste to temporary store some texts while we set up the bot.
 
 {% hint style="warning" %}
 **Note:** There are two components for Modmail: the bot component and the Logviewer component. You will need **both** to take full advantage of Modmail.
@@ -54,7 +59,7 @@ Once you created a new application, head over to the **Bot** tab and create a ne
 
 </div>
 
-After adding a bot, reset the token, then copy and store the newly generated token in a safe place (e.g. Notepad) for later.
+After adding a bot, reset the token, then copy and store the newly generated token in your Notepad for later.
 
 <div>
 
@@ -115,10 +120,123 @@ Discord should prompt you to choose a server to invite your bot, followed by a l
 </div>
 
 {% hint style="info" %}
-You **must leave on** all permissions excepted _Administrator_ (optional)! However, we recommend allowing _Administrator_ for ease of setup and avoid complications with Discord permissions.
+You **must leave on** all permissions excepted for _Administrator_ (optional). However, we recommend allowing _Administrator_ for ease of setup and to avoid complications with Discord permissions.
 {% endhint %}
 
-Your bot should now be **offline** in your server. Congratulations, that's as excepted! You have successfully created a Discord bot. The [next steps](./#next-steps) will guide you on starting up your Modmail bot.
+Your bot should now be **offline** in your server. Congratulations, that's as expected! You have successfully created a Discord bot. The next step is to [create a MongoDB database](./#create-a-mongodb-database).
+
+## Create a MongoDB database
+
+Modmail uses MongoDB to store its internal configurations and log histories. You must create a MongoDB database in order to use Modmail.&#x20;
+
+We will be using [MongoDB Atlas](https://www.mongodb.com/atlas), which provides us with a free 512MB storage share—more than enough for Modmail.
+
+### Requirements
+
+* No credit card required.
+* An email account.
+
+Head over to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register) and register for a free account:
+
+{% embed url="https://www.mongodb.com/cloud/atlas/register" %}
+MongoDB Atlas registration page.
+{% endembed %}
+
+<div>
+
+<figure><img src="../.gitbook/assets/Image12.png" alt="Screenshot of the sign up page for MongoDB Atlas. Fill all info and click create your Atlas account."><figcaption><p>Fill in with your info, then click <strong>Create your Atlas account</strong>. Optionally, you can sign up with Google.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Image13.png" alt="Screenshot of an email verification screen."><figcaption><p>You will need to confirm your email. Open your confirmation email in the same browser.</p></figcaption></figure>
+
+</div>
+
+Once you confirmed your email, you will be greeted by the MongoDB welcome introduction, asking you to "tell us a few things about yourself and your project". You can answer these questions honestly or however you like.
+
+In the next step for "deploy a cloud database", choose the **Shared** option. Any recommended region (free regions) are fine. Make sure the **Cluster Tier** is set to **M0 Sandbox** and the price shows as **FREE**.
+
+<figure><img src="../.gitbook/assets/Image14.png" alt="Screenshot of choosing the shared option and click create."><figcaption><p>Choose the free <strong>Shared</strong> option and click <strong>Create</strong>.</p></figcaption></figure>
+
+<div>
+
+<figure><img src="../.gitbook/assets/Image15.png" alt="Screenshot of making sure the shared option is selected."><figcaption><p>Make sure <strong>Shared</strong> is selected, then choose any of the <em>"recommended region"</em>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Image16.png" alt="Screenshot of making sure cluster tier is set to M0 sandbox and click create cluster."><figcaption><p>Make sure Cluster Tier is set to <strong>M0 Sandbox</strong>. The Cluster Name doesn't matter. Click <strong>Create Cluster</strong>.</p></figcaption></figure>
+
+</div>
+
+On the following **Security Quickstart** page, do the following:&#x20;
+
+1.  Authentication method: _Username and Password_
+
+    Username: `modmail`
+
+    Password: Click **Autogenerate Secure Password** - don't type your own password!
+2.  Copy and **save the password** in your Notepad, you will need this for later.
+
+    From now on, we will be referring to these credentials as the _database username_ and _database password_.
+3. Click **Create User**.
+4. Scroll down, we will be connecting from: _My Local Environment_
+5.  Set IP address as **`0.0.0.0/0`** and anything for the description.
+
+    **You must** set the IP address exactly to this, unless you know what you're doing. **Do not** set it to anything else or click add my current IP address. This allows Modmail to connect to your database.
+6. Click **Add Entry**.
+
+You can now click **Finish and Close** on the bottom. Your page should look similar to this:
+
+<div>
+
+<figure><img src="../.gitbook/assets/Image17.png" alt="Screenshot of adding a database user, then click create user."><figcaption><p>Click <strong>Autogenerate Secure Password</strong>, <strong>copy and save</strong> the database password, then click <strong>Create User</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Image18.png" alt="Screenshot of setting the whitelist IP, then click add entry."><figcaption><p>Set IP Address to <strong>0.0.0.0/0</strong>, then click <strong>Add Entry</strong>.</p></figcaption></figure>
+
+</div>
+
+Next, we will need to generate a _MongoDB connection string_. Simply click **Connect** on the main dashboard, choose **Connect your application**, then copy the **connection string** (the default driver is fine) and paste it into your Notepad.
+
+<div>
+
+<figure><img src="../.gitbook/assets/Image19.png" alt=""><figcaption><p>Click <strong>Connect</strong> on the main dashboard.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Image20.png" alt=""><figcaption><p>Choose <strong>Connect your application</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Image21.png" alt=""><figcaption><p>Copy the <strong>connection string</strong>.</p></figcaption></figure>
+
+</div>
+
+If you followed all the steps so far, your Notepad should contain three lines: the bot token, the database password, and the MongoDB connection string. For example:
+
+{% code title="My Notepad" %}
+```
+My bot token: MTA3Djv3IAxNjk1NDgdKD231.G1AoUjD.5z629aKP34JKHn4v1EsdNUwdDO3MvBR9ifVES4
+My database password: elAO7wF1r07pNG6u
+My MongoDB connection string: mongodb+srv://modmail:<password>@cluster0.example.mongodb.net/?retryWrites=true&w=majority
+```
+{% endcode %}
+
+Finally, you will need to combine the database password with the MongoDB connection string by **replacing** the `<password>` (including the `<>`) with the database password.&#x20;
+
+You also need to **remove** everything after `.mongodb.net` at the end of the MongoDB connection string.
+
+This is what your Notepad should look like now:
+
+{% code title="My Notepad (revised)" %}
+```
+My bot token: MTA3Djv3IAxNjk1NDgdKD231.G1AoUjD.5z629aKP34JKHn4v1EsdNUwdDO3MvBR9ifVES4
+My MongoDB connection string: mongodb+srv://modmail:elAO7wF1r07pNG6u@cluster0.example.mongodb.net
+```
+{% endcode %}
+
+You are now done with the MongoDB steps. At this point, your bot should still be **offline**. Continue to follow the [next steps](./#next-steps) to start up your Modmail bot.
 
 ## Next steps
 
