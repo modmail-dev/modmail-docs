@@ -26,7 +26,7 @@ Here are the basic requirements for hosting your Modmail bot. You will find inst
 
 ## Create a Discord bot
 
-Regardless how you choose to host your Modmail bot, you first will need to create a Discord bot.&#x20;
+The first step in setting up Modmail is to create a Discord bot.&#x20;
 
 Head over to the [**Discord Developer Portal**](https://discordapp.com/developers/applications/) and create a new application.
 
