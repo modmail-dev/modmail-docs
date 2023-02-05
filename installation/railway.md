@@ -12,6 +12,7 @@ Railway is a deployment platform where you can provision infrastructure, develop
 
 * A credit card (for verification only).
 * An email account.
+* A [GitHub](https://github.com/signup) account.
 * You have completed the initial steps: [invited your bot](./#create-a-discord-bot) and [created a MongoDB database](./#create-a-mongodb-database).
 
 ## Costs
@@ -20,11 +21,198 @@ Railway provides a **free** "Starter" plan. This plan allows you to try out thei
 
 To keep your bot running 24/7, you'll need to sign up for their "Developer" plan. This plan is also **free**, but you will need to verify using your credit card, as it's to prevent abuse on their systems.
 
-\* May be required for some users.
+\* Credit card may be required for some users.
+
+## Fork our GitHub repositories
+
+You will need to fork our repositories to deploy onto Railway.
+
+Make sure you're logged in to GitHub. You will need to fork **two** repositories.&#x20;
+
+First we fork the Modmail repository. Head over to [https://github.com/kyb3r/modmail/fork](https://github.com/kyb3r/modmail/fork), leave all the settings as default, and click **Create fork**.
+
+<figure><img src="../.gitbook/assets/RW1.png" alt="Screenshot of creating a Modmail fork."><figcaption><p>Create a GitHub fork for the Modmail Repository.</p></figcaption></figure>
+
+Next do the same for the Logviewer repository by heading over to [https://github.com/kyb3r/logviewer/fork](https://github.com/kyb3r/logviewer/fork), leave all the settings as default, and click **Create fork**.
+
+<figure><img src="../.gitbook/assets/RW2.png" alt="Screenshot of creating a Logviewer fork."><figcaption><p>Create a GitHub fork for the Logviewer Repository.</p></figcaption></figure>
+
+Next, to keep your Modmail and Logviewer up to date, you will need to install the [Pull app](https://github.com/apps/pull). Simply head over to [https://github.com/apps/pull](https://github.com/apps/pull), click **Install**, choose **Only select repositories**, then select **both** the Modmail and Logviewer repositories that you forked in the previous step.&#x20;
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW3.png" alt="Screenshot of installing the pull app."><figcaption><p>Click <strong>Install</strong> to install the <a href="https://github.com/apps/pull">Pull app</a>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW4.png" alt="Screenshot of selecting both repositories."><figcaption><p>Select <strong>both</strong> the Modmail and Logviewer forks, then click <strong>Install</strong>.</p></figcaption></figure>
+
+</div>
+
+Your GitHub should now be all set. Next step, [create a Railway account](railway.md#create-a-railway-account) to deploy your bot.
+
+## Create a Railway account
+
+Head over to [Railway's website](https://railway.app/new) and create an account. It will ask you to create a new project, choose **Deploy from GitHub repo**. Then, you will be asked to connect your GitHub account.
+
+{% embed url="https://railway.app/new" %}
+Sign up for a new Railway account.
+{% endembed %}
+
+<figure><img src="../.gitbook/assets/RW5.png" alt="Screenshot of selecting the deploy from GitHub repo option."><figcaption><p>Choose <strong>Deploy from GitHub repo</strong> when creating a new project.</p></figcaption></figure>
+
+<details>
+
+<summary>Why does it says "Your Account is Unverified"?</summary>
+
+If your GitHub account is new or not reputable, you may be asked to verify your identify.
+
+This unfortunately means that you will have to provide a credit card for verification. Click **Verify Account**, read and accept Railway's **Terms of Service**, then enter your credit card details. You may be temporary charged $1 USD to confirm the legitimacy of the card.
+
+![Screenshot of clicking verify account.](../.gitbook/assets/RW6.png)![Screenshot of clicking terms of service.](../.gitbook/assets/RW7.png)![Screenshot of clicking I agree with terms of service.](../.gitbook/assets/RW7B.png)![Screenshot of entering your credit card details.](../.gitbook/assets/RW8.png)
+
+
+
+</details>
+
+Next, you will be asked to **Configure a GitHub App**. You will be directed to the GitHub authentication page. Choose **Only select repositories**, then select **both** the Modmail and Logviewer repositories, as you have done before. Finally, click **Install & Authorize**.
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW9.png" alt="Screenshot of choosing configure GitHub app."><figcaption><p>Click <strong>Configure a GitHub App</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW10.png" alt="Screenshot of selecting both repositories."><figcaption><p>Select <strong>both</strong> the Modmail and Logviewer forks, then click <strong>Install &#x26; Authorize</strong>.</p></figcaption></figure>
+
+</div>
+
+The next step is to deploy Modmail onto Railway. This is split into two parts. You will need to complete **both parts** to fully Modmail.
+
+## Part 1: Deploying the Logviewer
+
+From the [**New Project**](https://railway.app/new) page, create the project by selecting your **Logviewer** repository, then select **Add variables**.
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW11B.png" alt="Screenshot of selecting the Logviewer repository."><figcaption><p>Choose your <strong>Logviewer</strong> repository fork.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW12B.png" alt="Screenshot of choosing Add Variables."><figcaption><p>Click on <strong>Add variables</strong>. Alternatively, the following page can also be found within the project -> variables menu.</p></figcaption></figure>
+
+</div>
+
+Click **New Variable**, set left to be **`CONNECTION_URI`**, then on the right, paste your revised MongoDB connection string from your Notepad (if this is new to you, [go back and read the initial steps](./)).&#x20;
+
+Don't add any other variables, nor use the suggested variables section. You should see a new variable named **`CONNECTION_URI`** added under variables once you're done.
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW13 (1).png" alt="Screenshot of clicking new variable."><figcaption><p>Click on <strong>New Variable</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW14 (1).png" alt="Screenshot of filling left and right boxes then click add."><figcaption><p>Left side: <strong><code>CONNECTION_URI</code></strong>. Right side: your <strong>MongoDB connection string</strong>. Then click <strong>+ Add</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW15.png" alt="Screenshot of the completed variables page."><figcaption><p>Once you've added the variable, you should see a single variable named <strong><code>CONNECTION_URI</code></strong>.</p></figcaption></figure>
+
+</div>
+
+Next, go to the **Deployments** tab, look at the latest deployment, is it successful? You may need to wait up to 10 minutes. If you click the URL, you should be taken to your Logviewer homepage (see screenshot below). **Save this URL** into your Notepad as we will need it for the next step, we will be referring to this as your Logviewer URL.
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW16 (1).png" alt="Screenshot of the deployments tab, and clicking the URL."><figcaption><p>Navigate to the <strong>Deployments</strong> tab, save and open this URL.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/LVHOME.png" alt="Screenshot of the Logviewer homepage."><figcaption><p>This URL should show the Logviewer homepage. </p></figcaption></figure>
+
+</div>
+
+## Part 2: Deploying the Modmail bot
+
+From the [**New Project**](https://railway.app/new) page, create the project by selecting your **Modmail** repository, then select **Add variables**.
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW11.png" alt="Screenshot of selecting the Modmail repository."><figcaption><p>Choose your <strong>Modmail</strong> repository fork.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW12.png" alt="Screenshot of choosing Add Variables."><figcaption><p>Click on <strong>Add variables</strong>. Alternatively, the following page can also be found within the project -> variables menu.</p></figcaption></figure>
+
+</div>
+
+Click **New Variable.** We will be adding 5 variables in total, so repeat this step until you've added all 5 variables.
+
+| Variable Name (left) | Variable Value (right)                                                        | Example                                                                                                               |
+| -------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **`CONNECTION_URI`** | The MongoDB Connection string from your Notepad.                              | <pre data-overflow="wrap"><code>mongodb+srv://modmail:elAO7wF1r07pNG6u@cluster0.example.mongodb.net
+</code></pre>     |
+| **`TOKEN`**          | The Discord bot token from your Notepad.                                      | <pre data-overflow="wrap"><code>MTA3Djv3IAxNjk1NDgdKD231.G1AoUjD.5z629aKP34JKHn4v1EsdNUwdDO3MvBR9ifVES4
+</code></pre> |
+| **`LOG_URL`**        | The Logviewer URL from your Notepad. Remember to add `https://` in front!     | <pre data-overflow="wrap"><code><strong>https://web-production-1234.up.railway.app
+</strong></code></pre>             |
+| **`OWNERS`**         | Your Discord ID. If you have multiple owners, separate your IDs with a comma. | <pre><code>718827787302791100
+</code></pre>                                                                           |
+| **`GUILD_ID`**       | The ID of the Discord server for your Modmail bot.                            | <pre><code>109483701365508619
+</code></pre>                                                                           |
+
+<details>
+
+<summary>Do you have a separate staff server?</summary>
+
+If you manage a large server where you have a separate server for communication among your moderation team, Modmail supports directing threads into the staff server instead of your main (public) server.&#x20;
+
+Simply add an additional variable named **`MODMAIL_GUILD_ID`** and set the value to your staff server's ID.&#x20;
+
+Note: the **`GUILD_ID`** should always be your main server's ID (not staff server's).
+
+If you haven't yet invited your Modmail bot to your staff server, see the [invite section](./#do-you-have-a-separate-staff-server).
+
+</details>
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW17.png" alt="Screenshot of clicking new variable."><figcaption><p>Click on <strong>New Variable</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW18.png" alt="Screenshot of the completed variables page."><figcaption><p>Once you've added the variable as per the table above, you should see 5 variables here.</p></figcaption></figure>
+
+</div>
+
+## Final step
+
+Within 10 minutes of saving the Modmail bot variables, your Modmail bot should come online in your server. The default prefix for Modmail is **`?`**. You need to run **`?setup`** within your server to complete the setup. If you configured Modmail to use a separate staff server, you must run this command **in your staff server**. This will create a category for your Modmail threads and a Logs channel for an archive of all past threads.
+
+<details>
+
+<summary>Help! My bot hasn't started after 10 minutes.</summary>
+
+This probably means you've failed to follow one or more steps. \[more info TODO]
+
+</details>
 
 ## Updating
 
+Railway is configured to automatically update your Modmail bot and Logviewer whenever updates are available.
 
+<details>
+
+<summary>How do I disable auto-updates?</summary>
+
+You can disable auto-updates by heading to the settings page for both your Modmail and Logviewer projects. Under **Automatic Deployments**, click **Disable trigger**. ![Screenshot of disabling auto updates for Logviewer.](../.gitbook/assets/RW19b.png)![Screenshot of disabling auto updates for Modmail.](../.gitbook/assets/RW19a.png)
+
+</details>
+
+## Next steps
+
+Now that you've successfully set up Modmail, visit the [Getting Started](../getting-started.md) page to find information on using Modmail.
 
 
 

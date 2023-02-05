@@ -123,6 +123,16 @@ Discord should prompt you to choose a server to invite your bot, followed by a l
 You **must leave on** all permissions excepted for _Administrator_ (optional). However, we recommend allowing _Administrator_ for ease of setup and to avoid complications with Discord permissions.
 {% endhint %}
 
+<details>
+
+<summary>Do you have a separate staff server?</summary>
+
+If you manage a large server where you have a separate server for communication among your moderation team, Modmail supports directing threads into the staff server instead of your main (public) server.
+
+You will need to invite your Modmail bot to **both** your main (public) server and your staff server using the same invite link above.
+
+</details>
+
 Your bot should now be **offline** in your server. Congratulations, that's as expected! You have successfully created a Discord bot. The next step is to [create a MongoDB database](./#create-a-mongodb-database).
 
 ## Create a MongoDB database
@@ -155,6 +165,18 @@ MongoDB Atlas registration page.
 Once you confirmed your email, you will be greeted by the MongoDB welcome introduction, asking you to "tell us a few things about yourself and your project". You can answer these questions honestly or however you like.
 
 In the next step for "deploy a cloud database", choose the **Shared** option. Any recommended region (free regions) are fine. Make sure the **Cluster Tier** is set to **M0 Sandbox** and the price shows as **FREE**.
+
+<details>
+
+<summary>Don't see this page?</summary>
+
+It's possible that you verified your email in a different browser session, or you manually signed in to MongoDB Atlas.
+
+In this case, you can still follow the same steps below, but first click **Build a Database**:&#x20;
+
+![Screenshot of homepage and click build a database.](../.gitbook/assets/Image22.png)
+
+</details>
 
 <figure><img src="../.gitbook/assets/Image14.png" alt="Screenshot of choosing the shared option and click create."><figcaption><p>Choose the free <strong>Shared</strong> option and click <strong>Create</strong>.</p></figcaption></figure>
 
@@ -236,7 +258,7 @@ My MongoDB connection string: mongodb+srv://modmail:elAO7wF1r07pNG6u@cluster0.ex
 ```
 {% endcode %}
 
-You are now done with the MongoDB steps. At this point, your bot should still be **offline**. Continue to follow the [next steps](./#next-steps) to start up your Modmail bot.
+You finished the MongoDB steps! At this point, your bot should still be **offline**. You can now proceed to the [next steps](./#next-steps) and start up your Modmail bot.
 
 ## Next steps
 
