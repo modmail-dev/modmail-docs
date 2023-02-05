@@ -104,10 +104,6 @@ https://discord.com/oauth2/authorize?scope=bot&permissions=416075476184&client_i
 
 Discord should prompt you to choose a server to invite your bot, followed by a list of permissions. Scroll to the bottom and click **Authorize**.&#x20;
 
-{% hint style="info" %}
-You **must leave on** all permissions excepted _Administrator_ (optional)! However, we recommend allowing _Administrator_ for ease of setup and avoid complications with Discord permissions.
-{% endhint %}
-
 <div>
 
 <figure><img src="../.gitbook/assets/Image10.png" alt="Screenshot of the Discord bot invite prompt, click continue."><figcaption><p>Choose your server to invite, then click <strong>Continue</strong>.</p></figcaption></figure>
@@ -118,6 +114,10 @@ You **must leave on** all permissions excepted _Administrator_ (optional)! Howev
 
 </div>
 
+{% hint style="info" %}
+You **must leave on** all permissions excepted _Administrator_ (optional)! However, we recommend allowing _Administrator_ for ease of setup and avoid complications with Discord permissions.
+{% endhint %}
+
 Your bot should now be **offline** in your server. Congratulations, that's as excepted! You have successfully created a Discord bot. The [next steps](./#next-steps) will guide you on starting up your Modmail bot.
 
 ## Next steps
@@ -126,7 +126,7 @@ Click on one of the links below to view further instructions for your preferred 
 
 ### [Railway](railway.md) (free)
 
-
+A platform as a service (PaaS) that offers a generous free plan, which allows you to host Modmail for free without any downtime. A credit card is required for verification purposes.[ **Go to guide ►**](railway.md)****
 
 ### [Local Hosting](local-hosting-vps/) (free)
 
@@ -134,15 +134,29 @@ Do you have an old PC, a Raspberry Pi, or a Linux box that you're able to keep o
 
 You can host Modmail on it for free (electricity fees may apply).[ **Go to guide ►**](local-hosting-vps/)****
 
+### [Modmail Patreon](https://www.patreon.com/kyber) (paid)
+
+We offer paid hosting solution for your Modmail bot. Hosting Modmail with us costs $4-5 USD per month.&#x20;
+
+We will also fully manage your bot hosting for you, so you don't need to worry about upgrading or setting up your own host server. [ **Go to Patreon page ►**](https://www.patreon.com/kyber)****
+
 ### [Heroku](heroku.md) (paid)
 
+Another popular PaaS that's used to be free. However, their recent pricing adjustments, it now costs $5-7 USD per month.&#x20;
 
+If you are currently a higher-education student, you may be eligible for the first year free with their [student offer](https://www.heroku.com/github-students).[ **Go to guide ►**](heroku.md)****
 
 ### [Cloud Server / VPS](local-hosting-vps/) (paid)
 
+Apart from [Patreon hosting](./#modmail-patreon-paid), hosting on a cloud server / VPS is the most reliable hosting method. Rent a virtual server from any reputable hosting provider for roughly $4-10 USD per month (price varies), and you'll be able to install Modmail onto the server.
 
+This method is a lot more "involved" than other solutions. If you're not comfortable with configuring remote Linux environments, we recommend you to choose a different option. [ **Go to guide ►**](local-hosting-vps/)****
 
-### [Patreon](https://www.patreon.com/kyber) (paid)
+### [Replit](replit.md) (free/paid)
+
+> The Modmail team does not recommend this hosting method.
+
+An online code execution environment. You can host Modmail there for free using certain exploits. The legitimate method costs $7 USD per month. However, regardless if you pay or host for free, hosting on Replit are often unstable. [ **Go to guide ►**](replit.md)****
 
 
 

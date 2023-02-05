@@ -13,6 +13,7 @@ Railway is a deployment platform where you can provision infrastructure, develop
 * A credit card (for verification only).
 * Stable internet connection.
 * An email account.
+* You have completed the [first step](./#create-a-discord-bot) and invited your bot.
 
 ## Costs
 
