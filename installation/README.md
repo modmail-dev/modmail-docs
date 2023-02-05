@@ -54,7 +54,7 @@ Once you created a new application, head over to the **Bot** tab and create a ne
 
 </div>
 
-After adding a bot, reset the token, then copy and store the newly generated token somewhere for later.
+After adding a bot, reset the token, then copy and store the newly generated token in a safe place (e.g. Notepad) for later.
 
 <div>
 
