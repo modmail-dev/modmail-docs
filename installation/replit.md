@@ -16,7 +16,6 @@ Replit often is unstable for hosting Modmail bots. Your bot may shutdown without
 
 ## Requirements <a href="#requirements" id="requirements"></a>
 
-* Stable internet connection.
 * An email account.
 * You have completed the initial steps: [invited your bot](./#create-a-discord-bot) and [created a MongoDB database](./#create-a-mongodb-database).
 

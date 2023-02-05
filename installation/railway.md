@@ -11,7 +11,6 @@ Railway is a deployment platform where you can provision infrastructure, develop
 ## Requirements
 
 * A credit card (for verification only).
-* Stable internet connection.
 * An email account.
 * You have completed the initial steps: [invited your bot](./#create-a-discord-bot) and [created a MongoDB database](./#create-a-mongodb-database).
 
