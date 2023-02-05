@@ -1,3 +1,7 @@
 # Ubuntu
 
 TODO
+
+## Prerequisites
+
+## Updating

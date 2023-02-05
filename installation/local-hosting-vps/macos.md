@@ -1,3 +1,7 @@
 # MacOS
 
 TODO
+
+## Prerequisites
+
+## Updating

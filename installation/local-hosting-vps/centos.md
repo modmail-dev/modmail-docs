@@ -1,3 +1,7 @@
 # CentOS
 
 TODO
+
+## Prerequisites
+
+## Updating

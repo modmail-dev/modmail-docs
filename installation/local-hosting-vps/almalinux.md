@@ -1,3 +1,7 @@
 # AlmaLinux
 
 TODO
+
+## Prerequisites
+
+## Updating

@@ -1,3 +1,7 @@
 # Debian
 
 TODO
+
+## Prerequisites
+
+## Updating

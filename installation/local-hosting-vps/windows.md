@@ -1,3 +1,7 @@
 # Windows
 
 TODO
+
+## Prerequisites
+
+## Updating
