@@ -65,4 +65,5 @@ Support Modmail with your contributions! Whether it be improvements to the docum
 * Read about [installing Modmail](installation/).
 * Become familiar with [Modmail commands and functionalities](getting-started.md).
 
+
 {% hint style="info" %} In this guide when we refer to bot commands, we will assume the prefix to be `?` and will display them like in this example. `?help`. Optional arguments will be in [brackets], for example `?close [time] [reason] [silently].` Required arguments will be put in <andled brackets>, for example `?permissions add <command/level> <name> <user/role>` {% endhint %}
