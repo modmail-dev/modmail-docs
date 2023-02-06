@@ -266,7 +266,7 @@ If you're subscribed under the [usage-based subscription](railway.md#usage-based
 
 ## Updating
 
-Railway is configured to automatically update your Modmail bot and Logviewer whenever updates are available.
+Railway is configured to automatically update your Modmail bot and Logviewer whenever new updates become available.
 
 <details>
 

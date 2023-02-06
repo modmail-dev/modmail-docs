@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](installation/README.md)
-  * [Local Hosting / VPS](installation/local-hosting-vps/README.md)
+  * [Local hosting / VPS](installation/local-hosting-vps/README.md)
     * [Windows](installation/local-hosting-vps/windows.md)
     * [MacOS](installation/local-hosting-vps/macos.md)
     * [Docker](installation/local-hosting-vps/docker.md)
@@ -15,6 +15,7 @@
   * [Railway](installation/railway.md)
   * [Heroku](installation/heroku.md)
   * [Replit](installation/replit.md)
+  * [Community Guides](installation/community-guides.md)
 * [Getting Started](getting-started.md)
 * [OLD DOCS](old-docs/README.md)
   * [Installation](installation-1.md)
