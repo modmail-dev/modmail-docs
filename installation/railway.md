@@ -21,13 +21,13 @@ Railway provides a **free** "Starter" plan. This plan allows you to try out thei
 
 To keep your bot running 24/7, you'll need to sign up for their "Developer" plan. This plan is also **free**, but you will need to verify using your credit card, as it's to prevent abuse on their systems.
 
-\* Credit card may be required for some users.
+\*Credit card may be required for some users.
 
 ## Fork our GitHub repositories
 
 You will need to fork our repositories to deploy onto Railway.
 
-Make sure you're logged in to GitHub. You will need to fork **two** repositories.&#x20;
+Make sure you're logged in to [GitHub](https://github.com/). You will need to fork **two** repositories.&#x20;
 
 First we fork the Modmail repository. Head over to [https://github.com/kyb3r/modmail/fork](https://github.com/kyb3r/modmail/fork), leave all the settings as default, and click **Create fork**.
 
@@ -186,7 +186,7 @@ If you haven't yet invited your Modmail bot to your staff server, see the [invit
 
 </div>
 
-## Final step
+## Complete the setup
 
 Within 10 minutes of saving the Modmail bot variables, your Modmail bot should come online in your server. The default prefix for Modmail is **`?`**. You need to run **`?setup`** within your server to complete the setup. If you configured Modmail to use a separate staff server, you must run this command **in your staff server**. This will create a category for your Modmail threads and a Logs channel for an archive of all past threads.
 
@@ -198,6 +198,72 @@ This probably means you've failed to follow one or more steps. \[more info TODO]
 
 </details>
 
+## How to keep your bot running 24/7
+
+You have 10 days to test Modmail without upgrading to the "Developer" plan. As mentioned in the [costs](railway.md#costs) section, Railway's Developer plan provides enough free monthly credits to run Modmail for **free** 24/7 everyday. However, you will need to provide your credit card details to upgrade your plan. More details can be found [here](https://docs.railway.app/reference/plans).
+
+#### Usage-based subscription
+
+Head over to the **** [**Billing Details**](https://railway.app/account/billing) page, click the **Unlock** button to unlock Developer plan. Then input your credit card details and hit **Subscribe to Developer Plan**.
+
+{% hint style="warning" %}
+Subscribing to the Developer plan under _usage based subscription_ **may incur you unexpected charges**. This because Railway does not provide any safe-guards or monthly spending limits. Average Modmail and Logviewer usage should be well below the free threshold. However, if you run resource-intensive code via plugins or due to other means, you credit card may be billed.
+
+If you want to guarantee that your credit card won't get charged for whatever reason, check out the [credit-based subscription model](railway.md#credit-based-subscription-alternative-subscription-model) instead. Alternatively, you can use a virtual credit card, such as [privacy.com](https://privacy.com/virtual-card), to verify for the Developer plan.
+{% endhint %}
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW20.png" alt="Screenshot of clicking the unlock button."><figcaption><p>Click the <strong>Unlock</strong> button next to <strong>Unlock Developer Plan</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW21.png" alt="Screenshot of filling in credit card details and clicking subscribe."><figcaption><p>Fill in your credit card details then click <strong>Subscribe to Developer Plan</strong>.</p></figcaption></figure>
+
+</div>
+
+<details>
+
+<summary>Why was I charged $1.00 USD?</summary>
+
+This should be a temporary charge to verify that your credit card works as expected. Railway explains this with:
+
+A temporary hold of $1.00 USD will be placed on the card and then refunded immediately.
+
+</details>
+
+#### Credit-based subscription (alternative subscription model)
+
+If you rather pay a one-time $5.00 USD non-refundable credit purchase instead of permanently linking your credit card, you can choose to use the credit-based subscription model. As long as you have a non-zero credit balance (which should be forever since the monthly operating cost for Modmail is $0.00), you will be continuously subscribed to the Developer plan.
+
+<div>
+
+<figure><img src="../.gitbook/assets/RW20.png" alt="Screenshot of clicking the unlock button."><figcaption><p>Click the <strong>Unlock</strong> button next to <strong>Unlock Developer Plan</strong>.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW23.png" alt="Screenshot of clicking credit-based subscription."><figcaption><p>Click <strong>Credit-based subscription</strong> at the bottom.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/RW24.png" alt="Screenshot of entering credit card info, $5 amount, and click purchase credits."><figcaption><p>Fill in your credit card details, enter <strong>$5.00</strong> as the amount (it's the minimum), then click <strong>Purchase Credits</strong>.</p></figcaption></figure>
+
+</div>
+
+There you go! Your bot should now be able to run 24/7 without interruptions. Head over to the [**Usage**](https://railway.app/account/usage) page to make sure you won't be charged. Add up the estimated price for both your projects and verify that they're well below $5.00 USD.
+
+<figure><img src="../.gitbook/assets/RW22.png" alt="Screenshot of the usage page."><figcaption><p><strong>Estimated Bill</strong> should be $0.00 and the sum of the <strong>Estimated</strong> should be well below $5.00.</p></figcaption></figure>
+
+<details>
+
+<summary>How do I cancel my Developer plan subscription?</summary>
+
+If you're subscribed under the [usage-based subscription](railway.md#usage-based-subscription) model, you can cancel your subscription by heading to the **** [**Billing Details**](https://railway.app/account/billing) page, click **Manage Subscription**, then click **Cancel plan**.
+
+![Screenshot of clicking manage subscription.](../.gitbook/assets/RW25.png)![Screenshot of clicking cancel plan.](../.gitbook/assets/RW26.png)
+
+</details>
+
 ## Updating
 
 Railway is configured to automatically update your Modmail bot and Logviewer whenever updates are available.
@@ -206,7 +272,7 @@ Railway is configured to automatically update your Modmail bot and Logviewer whe
 
 <summary>How do I disable auto-updates?</summary>
 
-You can disable auto-updates by heading to the settings page for both your Modmail and Logviewer projects. Under **Automatic Deployments**, click **Disable trigger**. ![Screenshot of disabling auto updates for Logviewer.](../.gitbook/assets/RW19b.png)![Screenshot of disabling auto updates for Modmail.](../.gitbook/assets/RW19a.png)
+You can disable auto-updates by heading to the settings page for **both** your Modmail and Logviewer projects. Under **Automatic Deployments**, click **Disable trigger**. ![Screenshot of disabling auto updates for Logviewer.](../.gitbook/assets/RW19b.png)![Screenshot of disabling auto updates for Modmail.](../.gitbook/assets/RW19a.png)
 
 </details>
 
