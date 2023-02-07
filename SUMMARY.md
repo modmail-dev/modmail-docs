@@ -13,6 +13,7 @@
     * [CentOS](installation/local-hosting-vps/centos.md)
     * [Raspberry Pi](installation/local-hosting-vps/raspberry-pi.md)
   * [Railway](installation/railway.md)
+  * [Koyeb](installation/koyeb.md)
   * [Heroku](installation/heroku.md)
   * [Replit](installation/replit.md)
   * [Community Guides](installation/community-guides.md)
