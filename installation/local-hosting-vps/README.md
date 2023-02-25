@@ -13,7 +13,7 @@ description: Hosting on the cloud or on your own computer.
 
 ## Choose your Operating System
 
-* [Windows](./ubuntu.md)
+* [Windows](./windows.md)
 * [MacOS](./macos.md)
 * [Docker](./docker.md)
 * [Ubuntu](./ubuntu.md)
