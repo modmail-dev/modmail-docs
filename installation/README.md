@@ -280,6 +280,12 @@ We offer paid hosting solution for your Modmail bot. Hosting Modmail with us cos
 
 We will also fully manage your bot hosting for you, so you don't need to worry about upgrading or setting up your own host server. [ **Go to Patreon page ►**](https://www.patreon.com/kyber)****
 
+### [Koyeb](koyeb.md) (free)
+
+A PaaS with a free tier that allows you to host Modmail without any downtime.
+
+Koyeb has health checks that makes TCP connections to the bot, so you need a plugin that runs a web server.[ **Go to guide ►**](koyeb.md)****
+
 ### [Heroku](heroku.md) (paid)
 
 Another popular PaaS that's used to be free. However, their recent pricing adjustments, it now costs $5-7 USD per month.&#x20;
