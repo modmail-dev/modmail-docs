@@ -27,7 +27,7 @@ You will need to fork our repositories to deploy onto Heroku.
 
 Make sure you're logged in to [GitHub](https://github.com/). You will need to fork **two** repositories.&#x20;
 
-First we fork the Modmail repository. Head over to [https://github.com/kyb3r/modmail/fork](https://github.com/kyb3r/modmail/fork), leave all the settings as default, and click **Create fork**.
+First we fork the Modmail repository. Head over to [https://github.com/kyb3rr/modmail/fork](https://github.com/kyb3rr/modmail/fork), leave all the settings as default, and click **Create fork**.
 
 <figure><img src="../.gitbook/assets/RW1.png" alt="Screenshot of creating a Modmail fork."><figcaption><p>Create a GitHub fork for the Modmail Repository.</p></figcaption></figure>
 
