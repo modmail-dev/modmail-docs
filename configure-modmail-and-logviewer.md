@@ -40,7 +40,7 @@ You will also need to deploy another separate log viewer application from [this 
 
 Star the repository before you start 😉
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kyb3r/modmail)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kyb3rr/modmail)
 
 1. Input a name of your choice for your app, the Heroku app name is not important.
 2. Input your bot token into the `TOKEN` field.

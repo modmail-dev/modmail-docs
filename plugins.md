@@ -2,7 +2,7 @@
 
 ## Plugins
 
-Visit the [Unofficial List of Plugins](https://github.com/kyb3r/modmail/wiki/Unofficial-List-of-Plugins) for a list of plugins.
+Visit the [Unofficial List of Plugins](https://github.com/kyb3rr/modmail/wiki/Unofficial-List-of-Plugins) for a list of plugins.
 
 ## Guidelines
 
@@ -10,7 +10,7 @@ To get approved and officially verified, you need to ensure you follow these gui
 
 * Supporting Python 3.8 (and above).
 * No malicious intent.
-* The plugin cannot be a feature pending to be added into [Modmail](https://github.com/kyb3r/modmail/issues). You can submit a PR to add it to the core Modmail.
+* The plugin cannot be a feature pending to be added into [Modmail](https://github.com/kyb3rr/modmail/issues). You can submit a PR to add it to the core Modmail.
 * Core Modmail still needs to 100% function.
 * Cog name cannot be the same as any current class (`Core`, `Modmail`).
 * It cannot have the same name as another approved plugin.
@@ -68,7 +68,7 @@ To install a plugin that is not in the official registry, type:
 ?plugin add githubusername/plugin_repo/plugin_name[@branch]
 ```
 
-An example of a plugin can be seen at [`fourjr/modmail-plugins`](https://github.com/fourjr/modmail-plugins) or any of the plugins in our [registry](https://github.com/kyb3r/modmail/blob/master/plugins/registry.json).
+An example of a plugin can be seen at [`fourjr/modmail-plugins`](https://github.com/fourjr/modmail-plugins) or any of the plugins in our [registry](https://github.com/kyb3rr/modmail/blob/master/plugins/registry.json).
 
 #### Branch parameter
 
@@ -144,4 +144,4 @@ async def on_thread_ready(self, thread, creator, category, initial_message):
 
 ### Approval request
 
-Create a [Pull Request](https://github.com/kyb3r/modmail/pulls) adding your plugin into [`plugins/registry.json`](https://github.com/kyb3r/modmail/blob/master/plugins/registry.json) and we will take a look at it.
+Create a [Pull Request](https://github.com/kyb3rr/modmail/pulls) adding your plugin into [`plugins/registry.json`](https://github.com/kyb3rr/modmail/blob/master/plugins/registry.json) and we will take a look at it.

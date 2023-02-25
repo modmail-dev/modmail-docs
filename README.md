@@ -1,5 +1,5 @@
 ---
-description: https://github.com/kyb3r/modmail
+description: https://github.com/kyb3rr/modmail
 ---
 
 # Introduction
@@ -58,7 +58,7 @@ If you like to show your appreciation, consider supporting us on [**Patreon**](h
 
 ### Contributing
 
-Support Modmail with your contributions! Whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/kyb3r/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
+Support Modmail with your contributions! Whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/kyb3rr/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
 
 ## Next steps
 
