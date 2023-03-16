@@ -64,11 +64,11 @@ If those steps are done correctly you can use the `?update` command to update yo
 
 ### **Click the button below to deploy the logviewer to heroku!**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kyb3r/logviewer)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/logviewer)
 
 **This is not the bot!**
 
-You will need to deploy a separate log viewer application from [this repository](https://github.com/kyb3r/logviewer). This Heroku application is separate from the bot; it's a simple website that will be used to display your thread logs.
+You will need to deploy a separate log viewer application from [this repository](https://github.com/modmail-dev/logviewer). This Heroku application is separate from the bot; it's a simple website that will be used to display your thread logs.
 
 Choose a name for your app and paste your Mongo URI (from your notepad). After you click the `Deploy App` button, it will start creating the website.
 
@@ -82,7 +82,7 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 **This is the second application you will be deploying**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kyb3rr/modmail)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/modmail)
 
 **6.1.** Choose any name for your app. Note: this name doesn't matter at all.
 
@@ -114,7 +114,7 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 Congratulations! Your bot is ready! Head over to Discord and try it out! If you have any issues or questions, join the [Discord server](https://discord.gg/etJNHCQ).
 
-Make sure to setup permissions using this [handy guide](https://github.com/kyb3rr/modmail/wiki/Permissions)!
+Make sure to setup permissions using this [handy guide](https://github.com/modmail-dev/modmail/wiki/Permissions)!
 
 [Taki's Blog](https://taaku18.github.io/modmail/customization/) contains many cool customizations for the bot, so you might want to check it out!
 
