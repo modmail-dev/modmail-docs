@@ -144,4 +144,4 @@ async def on_thread_ready(self, thread, creator, category, initial_message):
 
 ### Approval request
 
-Create a [Pull Request](https://github.com/modmail-dev/modmail/pulls) adding your plugin into [`plugins/registry.json`](https://github.com/kyb3rr/modmail/blob/master/plugins/registry.json) and we will take a look at it.
+Create a [Pull Request](https://github.com/modmail-dev/modmail/pulls) adding your plugin into [`plugins/registry.json`](https://github.com/modmail-dev/modmail/blob/master/plugins/registry.json) and we will take a look at it.
