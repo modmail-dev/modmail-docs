@@ -32,7 +32,7 @@ If your URI is followed by `test?retryWrites=true` or anything else, don't inclu
 
 ## Deploying the Log Viewer
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kyb3r/logviewer)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/logviewer)
 
 You will also need to deploy another separate log viewer application from [this repo](https://github.com/kyb3r/logviewer). Click on the deploy button over there and fill in the configurations upon request. This is a **separate** Heroku application from the bot and is a simple website that will be used to display your thread logs.
 
@@ -40,7 +40,7 @@ You will also need to deploy another separate log viewer application from [this 
 
 Star the repository before you start 😉
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kyb3rr/modmail)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/modmail-dev/modmail)
 
 1. Input a name of your choice for your app, the Heroku app name is not important.
 2. Input your bot token into the `TOKEN` field.
