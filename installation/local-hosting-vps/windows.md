@@ -62,8 +62,6 @@ Download Python and set up Python from official Python download page: https://ww
 
 > The version of Python required may change overtime. Use the version that is recommended in this guide, and then reach out to us in the Support Server if that gives you problems. We will attempt to keep these guides as up to date as possible, however, this is the one place where a potiental version mismatch could occur.
 
-When completing the installation, be sure to choose “Add to PATH” (or similar).
-
 ## Running Modmail
 
 Open Command Prompt, or "cmd". You can do this in one of two ways.
