@@ -8,4 +8,4 @@ description: Unofficial installation guides created by the community.
 Community guides are not verified by the Modmail team, so use them at your own risks.
 {% endhint %}
 
-ToDO
+TODO

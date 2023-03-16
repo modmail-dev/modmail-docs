@@ -56,4 +56,4 @@ Before you press "copy", scroll down and select the following permissions:
 
 ## ![Discord Invite](https://i.imgur.com/iAQ2u0w.png)
 
-[**To continue the setup, head over to the second page of this guide.**](https://github.com/kyb3r/modmail/wiki/Installation-\(cont.\))
+[**To continue the setup, head over to the second page of this guide.**](https://github.com/modmail-dev/modmail/wiki/Installation-\(cont.\))

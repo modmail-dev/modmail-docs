@@ -1,5 +1,5 @@
 ---
-description: https://github.com/kyb3r/modmail
+description: https://github.com/modmail-dev/modmail
 ---
 
 # Introduction
@@ -58,9 +58,12 @@ If you like to show your appreciation, consider supporting us on [**Patreon**](h
 
 ### Contributing
 
-Support Modmail with your contributions! Whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/kyb3r/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
+Support Modmail with your contributions! Whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/modmail-dev/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
 
 ## Next steps
 
 * Read about [installing Modmail](installation/).
 * Become familiar with [Modmail commands and functionalities](getting-started.md).
+
+
+{% hint style="info" %} In this guide when we refer to bot commands, we will assume the prefix to be `?` and will display them like in this example. `?help`. Optional arguments will be in [brackets], for example `?close [time] [reason] [silently].` Required arguments will be put in <andled brackets>, for example `?permissions add <command/level> <name> <user/role>` {% endhint %}

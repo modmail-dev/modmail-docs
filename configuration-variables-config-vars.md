@@ -35,4 +35,4 @@ These are currently all the valid configuration variables you can change with th
 | twitch\_url                                         | The twitch URL when activity\_type is set to 1 (streaming).                                                                                                                                                                                                                                                                                                      |
 | user\_typing                                        | Shows when user starts typing to bot. (default is off)                                                                                                                                                                                                                                                                                                           |
 
-Accepted color names can be found here: https://github.com/kyb3r/modmail/wiki/Color-Names.
+Accepted color names can be found here: {% page-ref page="color-names.md" %}.
