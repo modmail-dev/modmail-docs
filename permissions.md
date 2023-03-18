@@ -38,4 +38,4 @@ Examples:
 
 ***
 
-If you need help setting up permissions, feel free to join our [Discord server](https://discord.gg/etJNHCQ) and DM Modmail. One of our support members will help you.
+If you need help setting up permissions, feel free to join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. One of our support members will help you.

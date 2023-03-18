@@ -1,6 +1,6 @@
 # Installation
 
-**If you need help beyond this tutorial please join our support server and the support team will be happy to help you** [https://discord.gg/etJNHCQ](https://discord.gg/etJNHCQ)
+**If you need help beyond this tutorial please join our support server and the support team will be happy to help you** [https://discord.gg/cnUpwrnpYb](https://discord.gg/cnUpwrnpYb)
 
 > **Self Hosting Tutorial**: https://taaku18.github.io/modmail/local-hosting/
 

@@ -52,7 +52,7 @@ Visit our [installation page](installation/) for detailed instructions on settin
 
 ## Supporting the project
 
-You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/etJNHCQ).&#x20;
+You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/cnUpwrnpYb).&#x20;
 
 If you like to show your appreciation, consider supporting us on [**Patreon**](https://www.patreon.com/kyber)!
 
