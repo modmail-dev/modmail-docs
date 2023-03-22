@@ -104,7 +104,7 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 **6.10.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
 
-**6.11.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/etJNHCQ) and DM Modmail. The support members will help you figure out the issue and show you how to fix it.
+**6.11.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. The support members will help you figure out the issue and show you how to fix it.
 
 **6.12.** Once the bot is online in your server, make sure to give it `Manage Channels`, `Manage Messages` and `View Audit Logs` permissions. If your bot is not online, recheck the previous steps above.
 
@@ -112,7 +112,7 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 ***
 
-Congratulations! Your bot is ready! Head over to Discord and try it out! If you have any issues or questions, join the [Discord server](https://discord.gg/etJNHCQ).
+Congratulations! Your bot is ready! Head over to Discord and try it out! If you have any issues or questions, join the [Discord server](https://discord.gg/cnUpwrnpYb).
 
 Make sure to setup permissions using this [handy guide](https://github.com/modmail-dev/modmail/wiki/Permissions)!
 

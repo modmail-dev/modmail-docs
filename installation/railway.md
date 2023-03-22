@@ -280,7 +280,7 @@ You can disable auto-updates by heading to the settings page for **both** your M
 
 Now that you've successfully set up Modmail, visit the [Getting Started](../getting-started.md) page to find information on using Modmail.
 
-You can also join our [**Discord Server**](https://discord.gg/etJNHCQ) to interact with our community or get support for Modmail.
+You can also join our [**Discord Server**](https://discord.gg/cnUpwrnpYb) to interact with our community or get support for Modmail.
 
 
 

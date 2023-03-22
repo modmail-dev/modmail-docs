@@ -28,7 +28,7 @@ Modmail is an open-source project, which means you can easily add or request new
 
 #### How do I become a support member?
 
-To join our support team, join our [Discord server](https://discord.gg/etJNHCQ). One of the more experienced members will hold an interview to check if you fit the requirements.
+To join our support team, join our [Discord server](https://discord.gg/cnUpwrnpYb). One of the more experienced members will hold an interview to check if you fit the requirements.
 
 #### Can I add commands to the bot?
 
@@ -36,7 +36,7 @@ You can add commands to the bot using plugins. All currently approved plugins ca
 
 #### My bot is offline, what do I do?
 
-Join our [Discord server](https://discord.gg/etJNHCQ) and DM Modmail. One of our support members will assist you and help you fix the issue.
+Join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. One of our support members will assist you and help you fix the issue.
 
 #### How can I donate the developers?
 
@@ -50,4 +50,4 @@ There is not much information we get about your instance of modmail, The only th
 
 #### Answer not found?
 
-Feel free to join our [Discord server](https://discord.gg/etJNHCQ). People will gladly help you with any questions that you have!
+Feel free to join our [Discord server](https://discord.gg/cnUpwrnpYb). People will gladly help you with any questions that you have!
