@@ -54,6 +54,6 @@ Star the repository before you start 😉
 10. If you want, you can go over and check the application logs to see if everything is running smoothly.
 11. Once the bot is online in your server, do `[your prefix]setup` (defaults `?`) and you are good to go!
 
-Your bot is ready! Head over to Discord and try it out! If you have any issues, join the [Discord server](https://discord.gg/etJNHCQ).
+Your bot is ready! Head over to Discord and try it out! If you have any issues, join the [Discord server](https://discord.gg/cnUpwrnpYb).
 
 **Make sure to give the bot Manage Channels, Manage Messages and View Audit Logs permissions!**

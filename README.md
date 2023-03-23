@@ -14,7 +14,7 @@ When a member sends a direct message to Modmail, the bot will create a channel (
 
 <figure><img src="https://i.imgur.com/fru5Q07.png" alt=""><figcaption><p>An example of a Modmail thread.</p></figcaption></figure>
 
-Our Logviewer will save the threads so your staff can view previous threads through their corresponding log link. ~~Here is an~~ [~~**example**~~](https://logs.modmail.dev/example).
+Our Logviewer will save the threads so your staff can view previous threads through their corresponding log link. ~~Here is an~~ [~~**example**~~](https://publicmodmail.logs.vodka/logs/example).
 
 ## Features
 
@@ -52,7 +52,7 @@ Visit our [installation page](installation/) for detailed instructions on settin
 
 ## Supporting the project
 
-You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/etJNHCQ).&#x20;
+You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/cnUpwrnpYb).&#x20;
 
 If you like to show your appreciation, consider supporting us on [**Patreon**](https://www.patreon.com/kyber)!
 
