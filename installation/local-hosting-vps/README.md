@@ -22,3 +22,12 @@ description: Hosting on the cloud or on your own computer.
 * [AlmaLinux](./almalinux.md)
 * [CentOS](./centos.md)
 * [Raspberry Pi](./raspberry-pi.md)
+
+## Logviewer
+
+You can also self-host logviewer by following the guide below.
+
+If you wish to self host the patreon logviewer, first follow the regular logviewer hosting setup, then follow the guide below.
+
+* [Logviewer](./logviewer.md)
+* [Patreon logviewer](./patreon-logviewer.md)
