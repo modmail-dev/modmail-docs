@@ -12,6 +12,8 @@
     * [AlmaLinux](installation/local-hosting-vps/almalinux.md)
     * [CentOS](installation/local-hosting-vps/centos.md)
     * [Raspberry Pi](installation/local-hosting-vps/raspberry-pi.md)
+    * [Logviewer](installation/logviewer.md)
+    * [Patreon logviewer](installation/patreon-logviewer.md)
   * [Railway](installation/railway.md)
   * [Heroku](installation/heroku.md)
   * [Replit](installation/replit.md)
