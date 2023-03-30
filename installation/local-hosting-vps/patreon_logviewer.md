@@ -20,12 +20,30 @@ Finally, click save.
 
 * You must have git installed on your system. If you do not, run `sudo apt install git` to install it.
 
+Due to the logviewer premium repo being private, you will first need to set up a personal access token to clone the repo. To do this, follow the steps below.
+
+* Open github in your browser
+* When logged in, click your name in the top right and go to 'settings'
+* On the left, click 'Developer settings'
+* On the left, click 'Personal access tokens' and then 'Tokens (classic)'
+* Click 'Generate new token'
+* Give the token a name and select the 'repo' scope
+* Copy the token and save it somewhere safe
+
+<figure><img src="https://i.imgur.com/rpDGDaJ.png" alt=""></figure>
+<figure><img src="https://i.imgur.com/6lHiDM6.png" alt=""></figure>
+<figure><img src="https://i.imgur.com/BIVl3E5.png" alt=""></figure>
+<figure><img src="https://i.imgur.com/DVZysE6.png" alt=""></figure>
+<figure><img src="https://i.imgur.com/xZd2m4R.png" alt=""></figure>
+
 You can download the logviewer files by running the following command:
 
 ```bash
 git clone https://github.com/modmail-dev/logviewer-premium logviewer
 ```
-<figure><img src="https://i.imgur.com/8um24fa.png" alt=""></figure>
+
+You will be prompted for your username and password. Enter your github username and the personal access token you just created.
+<figure><img src="https://i.imgur.com/qe0wWIg.png" alt=""></figure>
 Once done, you can use `cd logviewer` to enter the directory.
 
 ## Installing the dependencies
