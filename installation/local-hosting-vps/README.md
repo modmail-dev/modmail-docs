@@ -28,4 +28,4 @@ description: Hosting on the cloud or on your own computer.
 You can also self-host logviewer by following the guides below.
 
 * [Logviewer](./logviewer.md)
-* [Patreon logviewer](./patreon-logviewer.md)
+* [Patreon logviewer](./patreon_logviewer.md)
