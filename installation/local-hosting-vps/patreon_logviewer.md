@@ -4,7 +4,7 @@ description: Hosting the patreon logviewer on the cloud or on your own computer.
 
 # Patreon logviewer
 
-Before starting, please ensure that you have first followed the regular logviewer hosting setup [here](./logviewer)
+This logviewer hosting tutorial is written assuming you have already set up your bot and are running Ubuntu 20.04-22.04.
 
 ## Setting up OAuth2
 
