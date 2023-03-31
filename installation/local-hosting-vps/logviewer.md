@@ -22,7 +22,13 @@ Once done, you can use `cd logviewer` to enter the directory.
 
 ## Installing the dependencies
 
+First, install pipenv by running the following command:
+
 * Pipenv must be installed. Since this is also used for the bot, you can skip this step if you have already installed it.
+
+```bash
+python -m pip install pipenv
+```
 
 Installing the dependencies is done by running the following command:
 
@@ -36,13 +42,12 @@ pipenv install
 To configure the .env file, you can use the following command:
 
 ```bash
-cp .env.example .env
 nano .env
 ```
 This will copy the example .env file and open it in nano. You can then edit the file with your info.
 You will need to enter the same mongo URI as your bot uses. The rest of the configs can be left to the default values, unless you have a specific reason to change them.
 
-Then save the file and exit nano by pressing `ctrl + x`, then `y` and `enter`.
+Then save the file and exit nano by pressing `ctrl + x`, then `y`, change the name from `.env.example` to `.env` and then `enter`.
 
 ## Running the logviewer
 
