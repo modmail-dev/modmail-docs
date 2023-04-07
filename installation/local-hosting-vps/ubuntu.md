@@ -102,7 +102,7 @@ If no error shows up, it means your bot is now running correctly.
 
 To have the bot auto-restart on crash or system reboot, we will be using systemd by making a service file for our bot.
 
-In order to create the service file, you will first need to know two things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
+In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
 
 First, your Linux `username` can be fetched with the following command:
 
@@ -142,13 +142,13 @@ Description=Modmail bot
 After=network.target
 
 [Service]
-User=username
-Group=username
+User=username # replace this
+Group=username # replace this
 Restart=always
 RestartSec=10
 Type=simple
-WorkingDirectory=modmail_path
-ExecStart=pipenv_path run python bot.py
+WorkingDirectory=modmail_path # replace this
+ExecStart=pipenv_path run python bot.py # replace pipenv_path only
 
 [Install]
 WantedBy=multi-user.target
