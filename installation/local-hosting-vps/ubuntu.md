@@ -7,8 +7,8 @@ description: Deploy Modmail on an Ubuntu server.
 ## Prerequisites
 
 * Root access (**`sudo`**).
-* Minimum 1GB of RAM, 2GB recommended.
-* 2GB available disk space.
+* Minimum 1GB of RAM
+* At least 2GB available disk space.
 * Supported releases: Ubuntu 18.04 LTS, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS.
 
 ## Dependencies
@@ -16,27 +16,30 @@ description: Deploy Modmail on an Ubuntu server.
 We will be using the following dependencies:
 
 * Python 3.10
-* NGINX web server
 * Tools: `git`, `wget`, `software-properties-common`
 * Additional Modmail requirements: `libcairo2-dev`, `libffi-dev`, `g++`
 
 To install these dependencies, we will be using the **`apt`**.
 
 {% hint style="info" %}
-All code blocks should be executed in bash unless specified otherwise.
+All code blocks should be executed in bash and line by line unless specified otherwise.
 {% endhint %}
 
-{% code title="bash" %}
+We recommend adding the `deadsnakes` ppa to install Python 3.10:
+
 ```bash
-sudo apt update && sudo apt upgrade -y  # Update and upgrade all packages
-sudo apt install -y software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa  # Official Python PPA
 sudo apt update
-sudo apt install -y python3.10 python3.10-dev python3.10-venv \
-                    libcairo2-dev libffi-dev g++ \
-                    git wget nginx
+sudo apt -y install software-properties-common
+sudo add-apt-repository -y ppa:deadsnakes/ppa
 ```
-{% endcode %}
+
+Now install the pre-requirements with apt:
+
+```bash
+sudo apt -y install python3.10 python3.10-dev python3.10-venv python3-pip \
+                    libcairo2-dev libffi-dev g++ \
+                    git wget nano
+```
 
 <details>
 
@@ -44,7 +47,6 @@ sudo apt install -y python3.10 python3.10-dev python3.10-venv \
 
 You can manually compile Python instead of adding using the Deadsnakes PPA. Compiling Python may take a while (est. 5-10 minutes).
 
-{% code title="bash" %}
 ```bash
 sudo apt update && sudo apt upgrade -y  # Update and upgrade all packages
 sudo apt install -y software-properties-common \
@@ -59,12 +61,136 @@ cd Python-3.10.9
 ./configure --enable-optimizations 
 make altinstall
 ```
-{% endcode %}
 
 </details>
 
+## Installing Bot
 
+Clone and cd into the official Modmail repository with:
 
+```bash
+git clone https://github.com/modmail-dev/modmail
+cd modmail
+```
 
+Inside the Modmail folder, Install pipenv and the bot dependencies with:
+
+```bash
+pip install pipenv
+pipenv install
+```
+
+Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor.
+
+```bash
+nano .env
+```
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+After that, press `Ctrl+O` and `Enter` to save your changes. Exit the `nano` editor with `Ctrl+X`.
+
+You can now go ahead and try running your bot with:
+
+```bash
+pipenv run bot
+```
+
+If no error shows up, it means your bot is now running correctly.
+
+## Setting up auto-restart
+
+To have the bot auto-restart on crash or system reboot, we will be using systemd by making a service file for our bot.
+
+In order to create the service file, you will first need to know two things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
+
+First, your Linux `username` can be fetched with the following command:
+
+```bash
+whoami
+```
+
+If you have cloned the Modmail repo as a `root` user, your Modmail repo path should be:
+
+```bash
+/root/modmail
+```
+
+Otherwise, your path should be:
+
+```bash
+/home/$USER/modmail/
+```
+
+You can get your Pipenv `path` with:
+
+```
+whereis pipenv
+```
+
+Now, using `nano`, create a service file for systemd with:
+
+```bash
+sudo nano /etc/systemd/system/modmail.service
+```
+
+and paste in the contents below, replacing `username`, `modmail_path` and `pipenv_path` with yours respectively. `Ctrl+O` and `Enter` to save. `Ctrl+X` to exit the nano editor.
+
+```bash
+[Unit]
+Description=Modmail bot
+After=network.target
+
+[Service]
+User=username
+Group=username
+Restart=always
+RestartSec=10
+Type=simple
+WorkingDirectory=modmail_path
+ExecStart=pipenv_path run python bot.py
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Now, start your Modmail bot with:
+
+```bash
+sudo systemctl start modmail
+```
+
+If everything goes correctly, you should see your bot online. You can also view the logs of your systemd process with:
+
+```bash
+sudo journalctl -eu modmail
+```
+
+With that said, go ahead and enable your Modmail service to auto-restart after crash and reboot with:
+
+```bash
+sudo systemctl enable modmail
+```
+
+If in the future you need to stop and disable your Modmail service, you can do so with:
+
+```bash
+sudo systemctl stop modmail
+sudo systemctl disable modmail
+```
 
 ## Updating
+
+Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
+
+If for some reason your update command isn't working correctly, you can update your bot by going into your modmail folder and pulling the latest changes from GitHub like so:
+
+```bash
+cd modmail && git pull
+```
+
+Be sure to restart your bot to apply the changes. If you followed the above instructions on setting up auto-restart, you can do so with:
+
+```bash
+sudo systemctl restart modmail
+```
