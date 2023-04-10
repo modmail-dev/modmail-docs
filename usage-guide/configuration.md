@@ -1,9 +1,6 @@
 ---
 description: Configuring and customizing modmail.
 ---
----
-description: Configuring and customizing modmail.
----
 
 Modmail offers an assort of customizations to make your Modmail bot unique to your server. Most customizations can be set with `?config`, but some has its own special command, such as `?activity`.
 You may find all of the personalizable tweaks available for Modmail below:
@@ -12,6 +9,7 @@ You may find all of the personalizable tweaks available for Modmail below:
 
 {% hint style="warning" %} Things covered in brackets are optional: `[]`
 Things covered in angled brackets are required: `<>`  {% endhint %}
+
 
 Moderation Configurations
 ======
