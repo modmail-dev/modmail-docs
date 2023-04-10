@@ -11,7 +11,7 @@ This logviewer hosting tutorial is written assuming you have already set up your
 To set up OAuth2, you need to set a few settings in your Discord Developer Portal. First, head to the [Discord Developer Portal](https://discord.com/developers/applications) and select your modmail bot application. Then go to "OAuth2" and "General"
 <figure><img src="https://i.imgur.com/ZqteRCn.png" alt=""></figure>
 
-First, copy the Client ID and Client Secret. You will need these later when filling in the .env.
+First, copy the Client ID and Client Secret. You will need these later when filling in the `.env`.
 Then, set a redirect URL to `https://yourlogviewer.com/callback`, with the url being changed to the url of your logviewer.
 Finally, click save.
 <figure><img src="https://i.imgur.com/xTBUnSA.png" alt=""></figure>
@@ -65,12 +65,12 @@ pipenv install
 
 ## Configuring the .env
 
-To configure the .env file, you can use the following command:
+To configure the `.env` file, you can use the following command:
 
 ```bash
-nano .env
+nano .env.example
 ```
-This will copy the example .env file and open it in nano. You can then edit the file with your info. Besides the normal logviewer config, you will also need to add your bot's token and the client ID and secret you copied earlier.
+This will open the example .env file in nano. You can then edit the file with your info. Besides the normal logviewer config, you will also need to add your bot's token and the client ID and secret you copied earlier.
 
 You will need to enter the same mongo URI as your bot uses. The rest of the configs can be left to the default values, unless you have a specific reason to change them.
 
@@ -87,7 +87,7 @@ sudo pipenv run logviewer
 ## Whitelisting users
 
 To allow people to view the logviewer, you will have to whitelist them. To do this, you can use the following command in discord where your modmail bot is:
-`oauth whitelist roleID` or `oauth whitelist userID`.
+`?oauth whitelist roleID` or `?oauth whitelist userID`.
 
 ## (Optional) Keep logviewer running in the background with pm2
 
