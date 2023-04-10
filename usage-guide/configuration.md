@@ -13,6 +13,8 @@ Things covered in angled brackets are required: `<>`  {% endhint %}
 **Quick Navigation:**
 
 ###### Moderation: 
+- [Prefix]()
+- [Mention](./usage-guide/configuration#mention-mention)
 
 Moderation Configurations
 ======
@@ -758,7 +760,655 @@ Transfer users reactions to mods and vice versa
 Thread Responses 
 ======
 
-TODO / In Progress 
+Close On Leave Reason ( close_on_leave_reason )
+------
+
+Reason for closing the thread once member leaves 
+
+***Default:*** The recipient has left the server.
+
+***Example:***
+- `?config set close_on_leave_reason Member left`
+
+***Notes:***
+- This has no effect unless `close_on_leave` is set.
+- See also: `close_on_leave`.
+
+Confirm Thread Creation Title ( confirm_thread_creation_title )
+------
+
+Title for the embed message sent to users to confirm a thread creation 
+
+***Default:*** Confirm thread creation
+
+***Example:***
+- `?config set confirm_thread_creation_title Are you sure you want to create a new thread?`
+
+
+***Notes:***
+- See also: `confirm_thread_creation`, `confirm_thread_response`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
+
+Confirm Thread Response ( confirm_thread_response )
+------
+
+Description for the embed message sent to users to confirm a thread creation 
+
+***Default:*** React to confirm thread creation which will directly contact the moderators
+
+***Example:***
+- `?config set confirm_thread_response React to confirm`
+
+
+***Notes:***
+- See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
+
+
+Cooldown Thread Response ( cooldown_thread_response )
+------
+
+The description of the message embed when the user has a cooldown before creating a new thread. 
+ 
+***Default:*** Your cooldown ends {delta}. Try contacting me then.
+
+{% hint style="info" %} `{delta}` will be replaced with whatever time you gave it. {% endhint %}
+
+***Example:***
+- `?config set cooldown_thread_response Be patient! You are on cooldown, wait {delta} more.`
+ 
+
+***Notes:***
+- "Only has an effect when `thread_cooldown` is set
+- Must have a {delta} included which will be replaced with the duration of time.
+- See also: `cooldown_thread_title`.
+
+Cooldown Thread Title ( cooldown_thread_title )
+------
+
+The title of the message embed when the user has a cooldown before creating a new thread. 
+
+***Default:*** Message not sent!
+
+***Example:***
+- `?config set cooldown_thread_title Error`
+
+
+***Notes:***
+- Only has an effect when `thread_cooldown` is set
+- See also: `cooldown_thread_response`.
+
+Disabled Current Thread Footer ( disabled_current_thread_footer )
+------
+
+The footer of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread. 
+
+***Default:*** Please try again later...
+
+***Example:***
+- `?config set disabled_current_thread_footer Message back!`
+
+***Notes:***
+- Only has an effect when `{prefix}disable all` is set.
+- See also: `disabled_current_thread_title`, `disabled_current_thread_response`, `disabled_new_thread_footer`.
+
+Disabled Current Thread Response ( disabled_current_thread_response )
+------
+
+The body of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread. 
+
+***Default:*** We are not accepting any messages.
+
+***Example:***
+- `?config set disabled_current_thread_response On break right now.`
+
+
+***Notes:***
+- Only has an effect when `{prefix}disable all` is set.
+- See also: `disabled_current_thread_title`, `disabled_current_thread_footer`, `disabled_new_thread_response`.
+
+Disabled Current Thread Title ( disabled_current_thread_title )
+------
+
+The title of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread. 
+
+***Default:*** Not Delivered.
+
+***Example:***
+- `?config set disabled_current_thread_title Unavailable`
+
+
+***Notes:***
+- Only has an effect when `{prefix}disable all` is set.
+- See also: `disabled_current_thread_response`, `disabled_current_thread_footer`, `disabled_new_thread_title`.
+
+Disabled New Thread Footer ( disabled_new_thread_footer )
+------
+
+The footer of the message embed when Modmail new thread creation is disabled and user tries to create a new thread. 
+
+***Default:*** Please try again later...
+
+***Example:***
+- `?config set disabled_new_thread_footer Contact us later`
+
+
+***Notes:***
+- Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
+- See also: `disabled_new_thread_title`, `disabled_new_thread_response`, `disabled_current_thread_footer`.
+
+Disabled New Thread Response ( disabled_new_thread_response )
+------
+
+The body of the message embed when Modmail new thread creation is disabled and user tries to create a new thread. 
+
+***Default:*** We are not accepting new threads.
+
+***Example:***
+- `?config set disabled_new_thread_response Our working hours is between 8am - 6pm EST.`
+
+
+***Notes:***
+- Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
+- See also: `disabled_new_thread_title`, `disabled_new_thread_footer`, `disabled_current_thread_response`.
+
+Disabled New Thread Title ( disabled_new_thread_title )
+------
+
+The title of the message embed when Modmail new thread creation is disabled and user tries to create a new thread. 
+
+***Default:*** Not Delivered.
+
+***Example:***
+- `?config set disabled_new_thread_title Closed`
+
+
+***Notes:***
+- Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
+- See also: `disabled_new_thread_response`, `disabled_new_thread_footer`, `disabled_current_thread_title`.
+
+Private Added To Group Description Anon ( private_added_to_group_description_anon )
+------
+
+This is the message embed content sent to the recipient that is just added to a thread when adduser is used anonymously. 
+
+***Default:*** A moderator has added you to a Modmail thread.
+
+***Example:***
+- `?config set private_added_to_group_description_anon Any message sent here will be sent to all other thread recipients.`
+
+
+***Notes:***
+- When adduser (no anon) is used, `private_added_to_group_description` is used instead.
+- The public_ variant is used when sending to other thread recipients.
+- See also: `private_added_to_group_title`, `public_added_to_group_description_anon`
+
+Private Added To Group Response ( private_added_to_group_response )
+------
+
+This is the message embed content sent to the recipient that is just added to a thread. 
+
+***Default:*** \"{{moderator.name}} has added you to a Modmail thread.\"
+
+***Example:***
+- `?config set private_added_to_group_description Any message sent here will be sent to all otherthread recipients.`
+ 
+
+***Notes:***
+- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+- When anonadduser is used, `private_added_to_group_description_anon` is used instead.
+- The public_ variant is used when sending to other thread recipients.
+- See also: `private_added_to_group_title`, `public_added_to_group_description`
+
+Private Added To Group Title  ( private_added_to_group_title )
+------
+
+This is the message embed title sent to the recipient that is just added to a thread. 
+
+***Default:*** New Thread (Group)
+
+***Example:***
+- `?config set private_added_to_group_title Welcome to this new group thread!`
+
+
+***Notes:***
+- The public_ variant is used when sending to other thread recipients.
+- See also: `private_added_to_group_description`, `public_added_to_group_title`
+
+Private Removed From Group Description Anon  ( private_removed_from_group_description_anon )
+------
+
+This is the message embed content sent to the recipient that is just removed from a thread when removeuser is used anonymously. 
+
+***Default:*** A moderator has removed you from the Modmail thread.
+
+***Example:***
+- `?config set private_removed_from_group_description_anon You are permenantly removed from this thread.`
+
+***Notes:***
+- When adduser (no anon) is used, `private_removed_from_group_description` is used instead.
+- The public_ variant is used when sending to other thread recipients.
+- See also: `private_removed_from_group_title`, `public_removed_from_group_description_anon`
+
+Private Removed From Group Response ( private_removed_from_group_response )
+------
+
+This is the message embed content sent to the recipient that is just removed from a thread. 
+
+***Default:*** \"{{moderator.name}} has removed you from the Modmail thread.\"
+
+***Example:***
+- `?config set private_removed_from_group_description Bye` 
+
+***Notes:***
+- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+- When anonremoveuser is used, `private_removed_from_group_description_anon` is used instead.
+- The public_ variant is used when sending to other thread recipients.
+- See also: `private_removed_from_group_title`, `public_removed_from_group_description`
+
+Private Removed From Group Title ( private_removed_from_group_title )
+------
+
+This is the message embed title sent to the recipient that is just removed from a thread. 
+
+***Default:*** Removed From Thread (Group)
+
+***Example:***
+- `?config set private_removed_from_group_title Welcome to this new group thread!`
+
+***Notes:***
+- The public_ variant is used when sending to other thread recipients.
+- See also: `private_removed_from_group_description`, `public_removed_from_group_title`
+
+Public Added To Group Description Anon ( public_added_to_group_description_anon )
+------
+
+This is the message embed content sent to all other recipients when someone is added to the thread when adduser is used anonymously. 
+
+***Default:*** \"A moderator has added {{users}} to the Modmail thread.\"
+
+***Example:***
+- `?config set public_added_to_group_description_anon Any message sent here will be sent to all other thread recipients.`
+
+
+***Notes:***
+- When adduser (no anon) is used, `public_added_to_group_description` is used instead.
+- The private_ variant is used when sending to the new user.
+- See also: `public_added_to_group_title`, `private_added_to_group_description_anon`
+
+Public Added To Group Response ( public_added_to_group_response )
+------
+
+This is the message embed content sent to all other recipients when someone is added to the thread. 
+
+***Default:*** \"{{moderator.name}} has added {{users}} to the Modmail thread.\"
+
+***Example:***
+- `?config set public_added_to_group_response Welcome {users}!`
+
+***Notes:***
+- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+- When anonadduser is used, `public_added_to_group_description_anon` is used instead.
+- The private_ variant is used when sending to the new user.
+- See also: `public_added_to_group_title`, `private_added_to_group_description`
+
+Public Added To Group Title ( public_added_to_group_title )
+------
+
+This is the message embed title sent to all other recipients when someone is added to the thread. 
+
+***Default:*** New User
+
+***Example:***
+- `?config set public_added_to_group_title Welcome to our new user!`
+ 
+
+***Notes:***
+- The private_ variant is used when sending to the new user.
+- See also: `private_added_to_group_title`, `private_added_to_group_title`
+
+Public Removed From Group Description Anon ( public_removed_from_group_description_anon )
+------
+
+This is the message embed content sent to all other recipients when someone is removed from the thread when removeuser is used anonymously. 
+
+***Default:*** \"A moderator has removed {{users}} from the Modmail thread.\"
+
+***Example:***
+- `?config set public_removed_from_group_description_anon Goodbye {users}!`
+
+
+***Notes:***
+- When adduser (no anon) is used, `public_removed_from_group_description` is used instead.
+- The private_ variant is used when sending to the new user.
+- See also: `public_removed_from_group_title`, `private_removed_from_group_description_anon`
+
+Public Removed From Group Response ( public_removed_from_group_response )
+------
+
+This is the message embed content sent to all other recipients when someone is removed from the thread. 
+
+***Default:*** \"{{moderator.name}} has removed {{users}} from the Modmail thread.\"
+
+***Example:***
+- `?config set public_removed_from_group_response Goodbye {users}!`
+
+
+***Notes:***
+- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+- When anonremoveuser is used, `public_removed_from_group_description_anon` is used instead.
+
+Public Removed From Group Title ( public_removed_from_group_title )
+------
+
+This is the message embed title sent to all other recipients when someone is removed from the thread. 
+
+***Default:*** User Removed
+
+***Example:***
+- `?config set public_removed_from_group_title User is now gone!`
+
+
+***Notes:***
+- The private_ variant is used when sending to the new user.
+- See also: `private_removed_from_group_title`, `private_removed_from_group_title`
+
+React To Contact Message ( react_to_contact_message )
+------
+
+A message ID where reactions are tracked. If the `react_to_contact_emoji` is added, the bot opens a thread with them. 
+
+***Default:*** None
+
+***Example:***
+- `?config set react_to_contact_message 773575608814534717`
+
+
+***Notes:***
+- See also: `react_to_contact_emoji`
+
+
+Recipient Thread Close ( recipient_thread_close )
+------
+
+Setting this configuration will allow recipients to use the `close_emoji` to close the thread themselves. 
+
+***Default:*** Disabled
+
+***Example:***
+- `?config set recipient_thread_close yes`
+- `?config set recipient_thread_close no`
+
+
+***Notes:***
+- The close emoji is dictated by the configuration `close_emoji`.
+- See also: `close_emoji`.
+
+Thread Auto Close Response ( thread_auto_close_response )
+------
+
+This is the message to display when the thread when the thread auto-closes. 
+
+***Default:*** \"This thread has been closed automatically due to inactivity after {{timeout}}.\"
+
+***Example:***
+- `?config set thread_auto_close_response Your close message here.`
+
+
+***Notes:***
+- Its possible to use `{{timeout}}` as a placeholder for a formatted timeout text.
+- This will not have an effect when `thread_auto_close_silently` is enabled.
+- Discord flavoured markdown is fully supported in `thread_auto_close_response`.
+- See also: `thread_auto_close`, `thread_auto_close_silently`.
+
+Thread Auto Close Silently ( thread_auto_close_silently )
+------
+
+Setting this configuration will close silently when the thread auto-closes. 
+
+***Default:*** No
+
+***Example:***
+- `?config set thread_auto_close_silently yes`
+- `?config set thread_auto_close_silently no`
+
+
+***Notes:***
+- This will only have an effect when `thread_auto_close` is set.
+- See also: `thread_auto_close`.
+
+Thread Cancelled ( thread_cancelled )
+------
+
+This is the message to display when a thread times out and creation is cancelled. 
+
+***Default:*** \"Cancelled\"
+
+***Example:***
+- `?config set thread_cancelled Gone.`
+
+
+Thread Close Footer ( thread_close_footer )
+------
+
+This is the message embed footer sent to the recipient upon the closure of a thread. 
+
+***Default:*** \"Replying will create a new thread\"
+
+***Example:***
+- `?config set thread_close_footer Bye!`
+
+
+***Notes:***
+- See also: `thread_close_title`, `thread_close_response`, `thread_creation_footer`.
+
+
+Thread Close Response ( thread_close_response )
+------
+
+This is the message embed content sent to the recipient upon the closure of a thread. 
+
+There are three variables you can use within the thread close message:
+    - `closer`: the discord User object of the user who closed the thread.
+    - `logkey`: the key for the thread logs. (ie. 51ecd946dc29)
+    - `loglink`: the full link URL to the thread logs. (ie. https://logviewer.herokuapp.com/logs/51ecd946dc29)
+
+
+***Default:*** \"{{closer.mention}} has closed this Modmail thread\"
+
+***Example:***
+- `?config set thread_close_response Your message is appriciated!`
+
+To use variables in the thread close message:
+- `?config set thread_close_response {closer.mention} has closed this thread, here's your log key: **`{logkey}`**.`
+
+
+***Notes:***
+- When `recipient_thread_close` is enabled and the recipient closed their own thread, `thread_self_close_response` is used instead of this configuration.
+- You may use the `{{closer}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that closed the thread.
+- Discord flavoured markdown is fully supported in `thread_close_response`.
+- See also: `thread_close_title`, `thread_close_footer`, `thread_self_close_response`, `thread_creation_response`.
+
+Thread Close Title ( thread_close_title )
+------
+
+This is the message embed title sent to the recipient upon the closure of a thread. 
+
+***Default:*** \"Thread Closed\"
+
+***Example:***
+- `?config set thread_close_title Farewell!`
+
+
+***Notes:***
+- See also: `thread_close_response`, `thread_close_footer`, `thread_creation_title`.
+
+
+Thread Contact Silently ( thread_contact_silently )
+------
+
+Setting this configuration will always open a new thread silently in contact. 
+
+***Default:*** No
+
+***Example:***
+- `?config set thread_contact_silently yes`
+- `?config set thread_contact_silently no`
+
+
+***Notes:***
+- Works like `{prefix}contact <user> silent` for every new thread.
+
+
+Thread Creation Contact Response ( thread_creation_contact_response )
+------
+
+This is the message embed description sent to recipients when contacted by a mod. 
+
+***Default:*** \"{{creator.name}} has opened a Modmail thread.\"
+
+***Example:***
+- `?config set thread_creation_contact_response New thread opened.`
+
+
+***Notes:***
+- You may use the `{{creator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that created the thread.
+- `thread_creation_self_contact_response` is used when contacted by self.
+- See also: `thread_creation_contact_title`, `thread_creation_self_contact_response`.
+
+Thread Creation Contact Title ( thread_creation_contact_title )
+------
+
+This is the message embed title sent to recipients when contacted. 
+
+***Default:*** \"New Thread\"
+
+***Example:***
+- `?config set thread_creation_contact_title New Message!`
+
+***Notes:***
+- See also: `thread_creation_self_contact_response`, `thread_creation_contact_response`.
+
+
+Thread Creation Footer ( thread_creation_footer )
+------
+
+This is the message embed footer sent to the recipient upon the creation of a new thread. 
+
+***Default:*** \"Your message has been sent\"
+
+***Example:***
+- `?config set thread_creation_footer Please Hold...
+
+
+***Notes:***
+- This is used in place of `thread_self_closable_creation_footer` when `recipient_thread_close` is enabled.
+- See also: `thread_creation_title`, `thread_creation_response`, `thread_self_closable_creation_footer`, `thread_close_footer`.
+
+Thread Creation Response ( thread_creation_response )
+------
+
+This is the message embed content sent to the recipient upon the creation of a new thread. 
+
+***Default:*** \"The staff team will get back to you as soon as possible.\"
+
+***Example:***
+- `?config set thread_creation_response You will be contacted shortly.`
+
+
+***Notes:***
+- Discord flavoured markdown is fully supported in `thread_creation_response`.
+- See also: `thread_creation_title`, `thread_creation_footer`, `thread_close_response`.
+
+Thread Creation Self Contact Response ( thread_creation_self_contact_response )
+------
+
+This is the message embed description sent to recipients when self-contacted. 
+
+***Default:*** \"You have opened a Modmail thread.\"
+
+***Example:***
+- `?config set thread_creation_self_contact_response You contacted yourself.`
+
+***Notes:***
+- `thread_creation_contact_response` is used when contacted by another user.
+- See also: `thread_creation_contact_title`, `thread_creation_contact_response`.
+
+Thread Creation Title ( thread_creation_title )
+------
+
+This is the message embed title sent to the recipient upon the creation of a new thread. 
+
+***Default:*** \"Thread Created\"
+
+***Example:***
+- `?config set thread_creation_title Hello!`
+
+
+***Notes:***
+- See also: `thread_creation_response`, `thread_creation_footer`, `thread_close_title`.
+
+
+Thread Move Response ( thread_move_response )
+------
+
+This is the message to display to the user when the thread is moved. 
+
+***Default:*** This thread has been moved.
+
+***Example:***
+- `?config set thread_move_response This thread has been moved to another category for review!`
+
+
+***Notes:***
+- Only has an effect when `thread_move_notify` is on.
+- See also: `thread_move_title`, `thread_move_notify`.
+
+Thread Move Title ( thread_move_title )
+------
+
+The title of the message embed when a thread is moved. 
+
+***Default:*** Thread Moved
+
+***Example:***
+- `?config set thread_move_title Thread transferred to another channel!`
+
+
+***Notes:***
+-See also: `thread_move_notify`, `thread_move_notify_mods`, `thread_move_response`.
+
+
+Thread Self Closable Creation Footer  ( thread_self_closable_creation_footer )
+------
+
+This is the message embed footer sent to the recipient upon the creation of a new thread. 
+
+***Default:*** \"Click the lock to close the thread\"
+
+***Example:***
+- `?config set thread_self_closable_creation_footer Please Hold...`
+
+
+***Notes:***
+- This is used in place of `thread_creation_footer` when `recipient_thread_close` is disabled.
+- See also: `thread_creation_title`, `thread_creation_response`, `thread_creation_footer`.
+
+Thread Self Close Response ( thread_self_close_response )
+------
+
+This is the message embed content sent to the recipient upon the closure of a their own thread. 
+ 
+***Default:*** \"You have closed this Modmail thread.\"
+
+***Example:***
+- `?config set thread_self_close_response You have closed your own thread...`
+
+
+***Notes:***
+- When `recipient_thread_close` is disabled or the thread wasn't closed by the recipient, `thread_close_response` is used instead of this configuration.
+- You may use the `{{closer}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that closed the thread.
+- `{{loglink}}` can be used as a placeholder substitute for the full URL linked to the thread in the log viewer and `{{loglink}}` for the unique key (ie. s3kf91a) of the log.
+- Discord flavoured markdown is fully supported in `thread_self_close_response`.
+-See also: `thread_close_title`, `thread_close_footer`, `thread_close_response`.
 
 `.env` Config Options
 ======
