@@ -10,7 +10,7 @@ This bot is free for everyone and always will be. If you like this project and w
 
 ## What is Modmail used for?
 
-When a member sends a direct message to Modmail, the bot will create a channel (we call it a "thread") into a designated category. All further DM messages will automatically relay to that channel, then any available staff can respond within the channel. Compared to ticketing bots, Modmail allows easier and more organised discussions among staff. &#x20;
+When a member sends a direct message to Modmail, the bot will create a channel (we call it a "thread") into a designated category. All further DM messages will automatically relay to that channel, then any available staff can respond within the channel. Compared to ticketing bots, Modmail allows easier and more organised discussions among staff.
 
 <figure><img src="https://i.imgur.com/fru5Q07.png" alt=""><figcaption><p>An example of a Modmail thread.</p></figcaption></figure>
 
@@ -52,11 +52,11 @@ Visit our [installation page](installation/) for detailed instructions on settin
 
 ## Supporting the project
 
-You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/cnUpwrnpYb).&#x20;
+You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/cnUpwrnpYb).
 
 If you like to show your appreciation, consider supporting us on [**Patreon**](https://www.patreon.com/kyber)!
 
-### Contributing
+## Contributing
 
 Support Modmail with your contributions! Whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/modmail-dev/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
 
@@ -65,5 +65,12 @@ Support Modmail with your contributions! Whether it be improvements to the docum
 * Read about [installing Modmail](installation/).
 * Become familiar with [Modmail commands and functionalities](getting-started.md).
 
-
-{% hint style="info" %} In this guide when we refer to bot commands, we will assume the prefix to be `?` and will display them like in this example. `?help`. Optional arguments will be in [brackets], for example `?close [time] [reason] [silently].` Required arguments will be put in <andled brackets>, for example `?permissions add <command/level> <name> <user/role>` {% endhint %}
+{% hint style="info" %}
+Throughout this documentation when we're referring to bot commands, we will assume the prefix of the bot to be <mark style="background-color:yellow;">?</mark> and will display them like in this example: <mark style="background-color:yellow;">?help</mark>.\
+\
+Optional arguments will be enclosed in square brackets:\
+Example: <mark style="background-color:yellow;">?close \[time] \[reason] \[silently]</mark>\
+\
+Required arguments will be enclosed in angle brackets:\
+Example: <mark style="background-color:yellow;">?contact \<user></mark>
+{% endhint %}

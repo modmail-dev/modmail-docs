@@ -16,10 +16,10 @@ description: Deploy Modmail on an Ubuntu server.
 We will be using the following dependencies:
 
 * Python 3.10
-* Tools: `git`, `wget`, `software-properties-common`
+* Tools: `git`, `wget`, `nano`, `software-properties-common`
 * Additional Modmail requirements: `libcairo2-dev`, `libffi-dev`, `g++`
 
-To install these dependencies, we will be using the **`apt`**.
+To install these dependencies, we will be using **`apt`**.
 
 {% hint style="info" %}
 All code blocks should be executed in bash and line by line unless specified otherwise.
@@ -51,7 +51,7 @@ You can manually compile Python instead of adding using the Deadsnakes PPA. Comp
 sudo apt update && sudo apt upgrade -y  # Update and upgrade all packages
 sudo apt install -y software-properties-common \
                     libcairo2-dev libffi-dev g++ \
-                    git wget nginx \
+                    git wget nano \
                     build-essential zlib1g-dev libncurses5-dev \
                     libgdbm-dev libnss3-dev libssl-dev \
                     libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
@@ -62,35 +62,47 @@ cd Python-3.10.9
 make altinstall
 ```
 
+After following this step, make sure to specify the version when running Python commands later in the guide.
+
+For example:
+
+* `pip install pipenv` to `pip3.10 install pipenv`&#x20;
+* `python bot.py` to `python3.10 bot.py`
+
 </details>
 
 ## Installing Bot
 
-Clone and cd into the official Modmail repository with:
+In your home directory, clone and cd into the official Modmail repository with:
 
 ```bash
+cd ~
 git clone https://github.com/modmail-dev/modmail
 cd modmail
 ```
 
-Inside the Modmail folder, Install pipenv and the bot dependencies with:
+Inside the Modmail folder, Install `pipenv` and the bot dependencies with:
 
 ```bash
 pip install pipenv
 pipenv install
 ```
 
-Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor.
+Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
 
 ```bash
 nano .env
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 After that, press `Ctrl+O` and `Enter` to save your changes. Exit the `nano` editor with `Ctrl+X`.
 
-You can now go ahead and try running your bot with:
+{% hint style="info" %}
+If using the `nano` editor is a bit of a learning curve, you can always FTP into your server using software like [WinSCP](https://winscp.net/eng/index.php) to edit the `.env` file manually with your preferred GUI-based editor like Notepad.
+{% endhint %}
+
+After your `.env` file is ready, you can now go ahead and try running your bot with:
 
 ```bash
 pipenv run bot
@@ -136,6 +148,7 @@ sudo nano /etc/systemd/system/modmail.service
 
 and paste in the contents below, replacing `username`, `modmail_path` and `pipenv_path` with yours respectively. `Ctrl+O` and `Enter` to save. `Ctrl+X` to exit the nano editor.
 
+{% code title="modmail.service" %}
 ```bash
 [Unit]
 Description=Modmail bot
@@ -153,6 +166,7 @@ ExecStart=pipenv_path run python bot.py # replace pipenv_path only
 [Install]
 WantedBy=multi-user.target
 ```
+{% endcode %}
 
 Now, start your Modmail bot with:
 
@@ -183,7 +197,7 @@ sudo systemctl disable modmail
 
 Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
 
-If for some reason your update command isn't working correctly, you can update your bot by going into your modmail folder and pulling the latest changes from GitHub like so:
+If for some reason your update command isn't working correctly, you can update your bot by going into your Modmail folder and pulling the latest changes from GitHub like so:
 
 ```bash
 cd modmail && git pull
