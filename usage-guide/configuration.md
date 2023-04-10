@@ -360,4 +360,168 @@ Sends snippets anonymously.
 Appearance Configurations
 ======
 
-TODO
+Blocked Emoji ( blocked_emoji )
+------
+
+This is the emoji added to the message when when a Modmail action is invoked unsuccessfully (ie. DM Modmail when blocked, failed to reply, etc.).
+
+***Default:*** 🚫
+
+***Example:***
+- `?config set blocked_emoji 🙅‍`
+
+***Notes:***
+- You can disable `blocked_emoji` with `{prefix}config set blocked_emoji disable`.
+- Custom/animated emojis are also supported, however, the emoji must be added to the server.
+- See also: `sent_emoji`.
+
+Close Emoji ( close_emoji )
+------
+
+This is the emoji the recipient can click to close a thread themselves. The emoji is automatically added to the `thread_creation_response` embed.
+
+***Default:*** 🔒
+
+***Example:***
+- `?config set close_emoji 👍‍`
+
+***Notes:***
+- This will only have an effect when `recipient_thread_close` is enabled.
+- See also: `recipient_thread_close`.
+
+Confirm Thread Creation Accept ( confirm_thread_creation_accept )
+------
+
+Emoji to accept thread creation  
+
+***Default:*** \u2705
+
+***Example:***
+- `?config set confirm_thread_creation_accept \u2611`
+
+***Notes:***
+- This has no effect unless `confirm_thread_creation` is set
+- See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_deny`
+
+Confirm Thread Creation Deny ( confirm_thread_creation_deny )
+------
+
+Emoji to cancel thread creation  
+
+***Default:*** \uD83D\uDEAB
+
+***Example:*** 
+- `?config set confirm_thread_creation_deny \u26D4`
+
+***Notes:***
+- This has no effect unless `confirm_thread_creation` is set
+- See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_accept`
+
+Name ( error_color )
+------
+
+This is the color for Modmail when anything goes wrong, unsuccessful commands, or a stern warning. 
+
+***Default:*** Discord Red [#E74C3C](https://placehold.it/100/e74c3c?text=+)
+
+***Example:***
+- `?config set error_color ocean blue`
+- `?config set error_color ff1242`
+- `?config set error_color #ff1242`
+- `?config set error_color fa1`
+
+***Notes:***
+- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+- See also: `main_color`, `mod_color`, `recipient_color`.
+
+
+Main Color ( main_color )
+------
+
+This is the main color for Modmail (help/about/ping embed messages, subscribe, move, etc.). 
+
+***Default:*** Discord Blurple [#7289DA](https://placehold.it/100/7289da?text=+)
+
+***Example:***
+- `?config set main_color olive green`
+- `?config set main_color 12de3a`
+- `?config set main_color #12de3a`
+- `?config set main_color fff`
+
+***Notes:***
+- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+- See also: `error_color`, `mod_color`, `recipient_color`.
+
+
+Mod Color ( mod_color )
+------
+
+This is the color of the messages sent by the moderators, this applies to messages within in the thread channel and the DM thread messages received by the recipient. 
+
+***Default:*** Discord Green [#2ECC71](https://placehold.it/100/2ecc71?text=+)
+
+***Example:***
+- `?config set mod_color dark beige`
+- `?config set mod_color cb7723`
+- `?config set mod_color #cb7723`
+- `?config set mod_color c4k`
+
+***Notes:***
+- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+- See also: `recipient_color`, `main_color`, `error_color`.
+
+React To Contact Emoji ( react_to_contact_emoji )
+------
+
+An emoji which is tracked in `react_to_contact_message` 
+
+***Default:*** \u2705
+
+***Example:***
+- `?config set react_to_contact_emoji \u2705`
+
+***Notes:***
+- See also: `react_to_contact_message \u2705`
+
+Recipient Color ( recipient_color )
+------
+
+This is the color of the messages sent by the recipient, this applies to messages received in the thread channel.
+
+***Default:*** "Discord Gold [#F1C40F](https://placehold.it/100/f1c40f?text=+)
+
+***Example:***
+- `?config set recipient_color dark beige`
+- `?config set recipient_color cb7723`
+- `?config set recipient_color #cb7723`
+- `?config set recipient_color c4k`
+
+***Notes:***
+- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+- See also: `mod_color`, `main_color`, `error_color`.
+
+Sent Emoji ( sent_emoji )
+------
+
+This is the emoji added to the message when when a Modmail action is invoked successfully (ie. DM Modmail, edit message, etc.).
+
+***Default:*** ✅
+
+***Example:***
+- `?config set sent_emoji ✨`
+
+***Notes:***
+- You can disable `sent_emoji` with `{prefix}config set sent_emoji disable`.
+- Custom/animated emojis are also supported, however, the emoji must be added to the server.
+- See also: `blocked_emoji`.
+
+Show Log URL Button ( show_log_url_button )
+------
+
+Shows the button to open the Log URL.
+
+***Default:*** No
+
+***Example:***
+- `?config set show_log_url_button yes`
+
