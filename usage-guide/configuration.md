@@ -39,7 +39,7 @@ Set an amount of time a users account has to be created in order to open a ticke
 Alert on Mention ( alert_on_mention )
 ------
 
-***Default: No***
+***Default:*** No
 
 Mentions all mods (mention) in mention channel when bot is mentioned
 
@@ -83,6 +83,7 @@ The join date of the recipient user into this server must be greater than the nu
 ***Notes:***
 - To remove this restriction, do `{prefix}config del guild_age`.
 - See also: `account_age`.
+
 
 Reply Without Command ( reply_without_command )
 ------
@@ -206,7 +207,7 @@ When this is set to `yes`, whenever a moderator starts to type in the thread cha
 
 ***Default:*** Disabled
 
-***Example:*** 
+***Example:***
 - `?config set mod_typing yes`
 - `?config set mod_typing no`
 
@@ -563,7 +564,6 @@ Shows the button to open the Log URL.
 
 ***Example:***
 - `?config set show_log_url_button yes`
-
 
 Thread Appearance
 ======
@@ -1432,4 +1432,3 @@ This is the message embed content sent to the recipient upon the closure of a th
 | disable_autoupdates  | Allows for auto updates | No | `DISABLE_AUTOUPDATES = True` |
 | disable_updates  | Disables updates all together  | No | `DISABLE_UPDATES = True` |
 | log_level  | The type of information posted in the terminal, Default is `INFO` | No | `LOG_LEVEL = ERROR/WARNING/INFO/DEBUG/NOTSET` |
-
