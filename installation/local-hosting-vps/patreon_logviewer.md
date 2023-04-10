@@ -70,7 +70,7 @@ To configure the `.env` file, you can use the following command:
 ```bash
 nano .env.example
 ```
-This will open the example .env file in nano. You can then edit the file with your info. Besides the normal logviewer config, you will also need to add your bot's token and the client ID and secret you copied earlier.
+This will open the example `.env` file in nano. You can then edit the file with your info. Besides the normal logviewer config, you will also need to add your bot's token and the client ID and secret you copied earlier.
 
 You will need to enter the same mongo URI as your bot uses. The rest of the configs can be left to the default values, unless you have a specific reason to change them.
 
