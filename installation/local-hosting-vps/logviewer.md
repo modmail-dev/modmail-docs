@@ -39,12 +39,12 @@ pipenv install
 
 ## Configuring the .env
 
-To configure the .env file, you can use the following command:
+To configure the `.env` file, you can use the following command:
 
 ```bash
 nano .env.example
 ```
-This will open the example .env file in nano. You can then edit the file with your info.
+This will open the example `.env` file in nano. You can then edit the file with your info.
 You will need to enter the same mongo URI as your bot uses. The rest of the configs can be left to the default values, unless you have a specific reason to change them.
 
 Then save the file and exit nano by pressing `ctrl + x`, then `y`, change the name from `.env.example` to `.env` and then `enter`.
