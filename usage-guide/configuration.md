@@ -13,8 +13,6 @@ Things covered in angled brackets are required: `<>`  {% endhint %}
 **Quick Navigation:**
 
 ###### Moderation: 
-- [Prefix]()
-- [Mention](./usage-guide/configuration#mention-mention)
 
 Moderation Configurations
 ======
