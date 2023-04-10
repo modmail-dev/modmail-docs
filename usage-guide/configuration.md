@@ -10,6 +10,11 @@ You may find all of the personalizable tweaks available for Modmail below:
 {% hint style="warning" %} Things covered in brackets are optional: `[]`
 Things covered in angled brackets are required: `<>`  {% endhint %}
 
+**Quick Navigation:**
+
+###### Moderation: 
+- [Prefix]()
+- [Mention](./usage-guide/configuration#mention-mention)
 
 Moderation Configurations
 ======
@@ -45,6 +50,39 @@ Mentions all mods (mention) in mention channel when bot is mentioned
 ***Notes:***
 - See also: `mention`, `mention_channel_id`
 
+
+Prefix ( prefix )
+------
+
+The prefix of the bot
+
+***Default:*** `?` 
+
+***Example:***
+- `?config set prefix !`
+- `?prefix !`
+
+This both result in commands now prefixed with !, for example:
+{% hint style="success" %} !about {% endhint %}
+
+***Notes:***
+- If you forgot the bot prefix, Modmail will always respond to its mention (ping).
+- To reset the prefix back to default: `?config del prefix`
+
+Guild Age ( guild_age )
+------
+
+The join date of the recipient user into this server must be greater than the number of days, hours, minutes or any time-interval specified by this configuration. 
+
+***Default:*** No age threshold
+
+***Example:***
+- `?config set guild_age P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO_8601#Durations))
+- `?config set guild_age 3 days and 5 hours` (accepted readable time)
+
+***Notes:***
+- To remove this restriction, do `{prefix}config del guild_age`.
+- See also: `account_age`.
 
 Reply Without Command ( reply_without_command )
 ------
@@ -138,7 +176,7 @@ Log Channel ID ( log_channel_id )
 
 This is the channel where all log messages will be sent (ie. thread close message, update message, etc.).\n\nTo change the log channel, you will need to find the [channel’s ID](https://support.discordapp.com/hc/en-us/articles/206346498). The channel doesn’t necessary have to be under the `main_category`.
 
-***Default:*** `#bot-logs` (created with `{prefix}setup`)
+***Default:*** `#bot-logs` (created with `?setup`)
 
 ***Example:*** 
 - `?config set log_channel_id 9234932582312` (9234932582312 is the channel ID)
@@ -151,7 +189,7 @@ Main Category ID ( main_category_id )
 
 This is the category where all new threads will be created.\n\nTo change the Modmail category, you will need to find the [category’s ID](https://support.discordapp.com/hc/en-us/articles/206346498).
 
-***Default:*** `Modmail` (created with `{prefix}setup`)
+***Default:*** `Modmail` (created with `?setup`)
 
 ***Example:*** 
 - `?config set main_category_id 9234932582312` (`9234932582312` is the category ID)`
@@ -169,8 +207,8 @@ When this is set to `yes`, whenever a moderator starts to type in the thread cha
 ***Default:*** Disabled
 
 ***Example:*** 
-- `{prefix}config set mod_typing yes`
-- `{prefix}config set mod_typing no`
+- `?config set mod_typing yes`
+- `?config set mod_typing no`
 
 ***Notes:***
 - See also: `mod_typing`
@@ -241,8 +279,8 @@ This is the message above user information for when a new thread is created in t
 - `?mention Yo~ Here's a new thread for ya!`
 
 ***Notes:***
-- To disable mention, use command `{prefix}mention disable`.
-- See also: `{prefix}help mention`.
+- To disable mention, use command `?mention disable`.
+- See also: `?help mention`.
 
 Require Close Reason ( require_close_reason )
 ------
@@ -267,8 +305,8 @@ Setting this configuration will close threads automatically after the number of 
 - `?config set thread_auto_close 3 days and 5 hours` (accepted readable time)
 
 ***Notes:***
-- To disable auto close, do `{prefix}config del thread_auto_close`.
-- To prevent a thread from auto-closing, do `{prefix}close cancel`.
+- To disable auto close, do `?config del thread_auto_close`.
+- To prevent a thread from auto-closing, do `?close cancel`.
 - See also: `thread_auto_close_silently`, `thread_auto_close_response`.
 
 Thread Cooldown ( thread_cooldown )
@@ -334,7 +372,7 @@ Whether to use regex to compare in autotriggers.
 Plain Reply Without Command ( plain_reply_without_command )
 ------
 
-Setting this configuration will make all non-command messages sent in the thread channel to be forwarded to the recipient in a plain form without the need of `{prefix}reply`.
+Setting this configuration will make all non-command messages sent in the thread channel to be forwarded to the recipient in a plain form without the need of `?reply`.
 
 ***Default:*** Disabled 
 
@@ -372,7 +410,7 @@ This is the emoji added to the message when when a Modmail action is invoked uns
 - `?config set blocked_emoji 🙅‍`
 
 ***Notes:***
-- You can disable `blocked_emoji` with `{prefix}config set blocked_emoji disable`.
+- You can disable `blocked_emoji` with `?config set blocked_emoji disable`.
 - Custom/animated emojis are also supported, however, the emoji must be added to the server.
 - See also: `sent_emoji`.
 
@@ -512,7 +550,7 @@ This is the emoji added to the message when when a Modmail action is invoked suc
 - `?config set sent_emoji ✨`
 
 ***Notes:***
-- You can disable `sent_emoji` with `{prefix}config set sent_emoji disable`.
+- You can disable `sent_emoji` with `?config set sent_emoji disable`.
 - Custom/animated emojis are also supported, however, the emoji must be added to the server.
 - See also: `blocked_emoji`.
 
