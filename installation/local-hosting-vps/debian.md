@@ -17,11 +17,11 @@ description: Deploy Modmail on a Debian server.
 * Tools: `git`, `wget`, `nano`
 * Additional Modmail requirements: `libcairo2-dev`, `libffi-dev`, `g++`
 
-To install these dependencies, we will be using **`apt`**.
-
 {% hint style="info" %}
 All code blocks should be executed in bash and line by line unless specified otherwise.
 {% endhint %}
+
+To install these dependencies, we will be using **`apt`**.
 
 ### **Debian 11 Bullseye**
 
@@ -51,7 +51,7 @@ cd Python-3.10.9
 sudo make altinstall
 ```
 
-After following this step, make sure to specify the version when running Python commands later in the guide.
+After following this step, make sure to specify the version when running user-level Python commands later in the guide.
 
 For example:
 
@@ -99,9 +99,9 @@ If no error shows up, it means your bot is now running correctly.
 
 ## Setting up auto-restart
 
-To have the bot auto-restart on crash or system reboot, we will be using systemd by making a service file for our bot.
+To have the bot auto-restart on crash or system reboot, we will be using `systemd` by making a service file for our bot.
 
-In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
+In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your `pipenv_path`.
 
 First, your Linux `username` can be fetched with the following command:
 
@@ -121,7 +121,7 @@ Otherwise, your path should be:
 /home/$USER/modmail/
 ```
 
-You can get your Pipenv `path` with:
+You can get your `pipenv_path` with:
 
 ```
 whereis pipenv
@@ -161,7 +161,7 @@ Now, start your Modmail bot with:
 sudo systemctl start modmail
 ```
 
-If everything goes correctly, you should see your bot online. You can also view the logs of your systemd process with:
+If everything goes correctly, you should see your bot online. You can also view the logs of your `systemd` process with:
 
 ```bash
 sudo journalctl -eu modmail

@@ -19,11 +19,11 @@ We will be using the following dependencies:
 * Tools: `git`, `wget`, `nano`, `software-properties-common`
 * Additional Modmail requirements: `libcairo2-dev`, `libffi-dev`, `g++`
 
-To install these dependencies, we will be using **`apt`**.
-
 {% hint style="info" %}
 All code blocks should be executed in bash and line by line unless specified otherwise.
 {% endhint %}
+
+To install these dependencies, we will be using **`apt`**.
 
 We recommend adding the `deadsnakes` ppa to install Python 3.10:
 
@@ -62,7 +62,7 @@ cd Python-3.10.9
 make altinstall
 ```
 
-After following this step, make sure to specify the version when running Python commands later in the guide.
+After following this step, make sure to specify the version when running user-level Python commands later in the guide.
 
 For example:
 
@@ -112,7 +112,7 @@ If no error shows up, it means your bot is now running correctly.
 
 ## Setting up auto-restart
 
-To have the bot auto-restart on crash or system reboot, we will be using systemd by making a service file for our bot.
+To have the bot auto-restart on crash or system reboot, we will be using `systemd` by making a service file for our bot.
 
 In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
 
@@ -134,7 +134,7 @@ Otherwise, your path should be:
 /home/$USER/modmail/
 ```
 
-You can get your Pipenv `path` with:
+You can get your `pipenv_path` with:
 
 ```
 whereis pipenv

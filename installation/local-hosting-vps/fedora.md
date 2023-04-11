@@ -9,7 +9,7 @@ description: Deploy Modmail on a Fedora server.
 * Root access (**`sudo`**).
 * Minimum 1GB of RAM
 * At least 2GB available disk space.
-* Supported releases: Fedora 37, Fedora 36.
+* Supported releases: Fedora 37, Fedora 36, Fedora 35.
 
 ## Dependencies
 
@@ -17,11 +17,11 @@ description: Deploy Modmail on a Fedora server.
 * Tools: `git`, `wget`, `nano`
 * Additional Modmail requirements: `g++`
 
-Fedora Linux 35 and above has all required packages available in official repositories. Install them with `dnf.`
-
 {% hint style="info" %}
 All code blocks should be executed in bash and line by line unless specified otherwise.
 {% endhint %}
+
+Fedora Linux 35 and above has all required packages available in official repositories. Install them with `dnf`.
 
 ```bash
 sudo dnf -y install python39 git nano g++ gtk3
@@ -74,9 +74,9 @@ If no error shows up, it means your bot is now running correctly.
 
 ## Setting up auto-restart
 
-To have the bot auto-restart on crash or system reboot, we will be using systemd by making a service file for our bot.
+To have the bot auto-restart on crash or system reboot, we will be using `systemd` by making a service file for our bot.
 
-In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
+In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your `pipenv_path`.
 
 First, your Linux `username` can be fetched with the following command:
 
@@ -96,13 +96,13 @@ Otherwise, your path should be:
 /home/$USER/modmail/
 ```
 
-You can get your Pipenv `path` with:
+You can get your `pipenv_path` with:
 
 ```
 whereis pipenv
 ```
 
-Now, using `nano`, create a service file for systemd with:
+Now, using `nano`, create a service file for `systemd` with:
 
 ```bash
 sudo nano /etc/systemd/system/modmail.service
