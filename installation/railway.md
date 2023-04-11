@@ -6,7 +6,7 @@ description: Deploy Modmail on Railway PaaS.
 
 ## What is Railway?
 
-Railway is a deployment platform where you can provision infrastructure, develop with that infrastructure locally, and then deploy to the cloud.&#x20;
+Railway is a deployment platform where you can provision infrastructure, develop with that infrastructure locally, and then deploy to the cloud.
 
 ## Requirements
 
@@ -27,7 +27,7 @@ To keep your bot running 24/7, you'll need to sign up for their "Developer" plan
 
 You will need to fork our repositories to deploy onto Railway.
 
-Make sure you're logged in to [GitHub](https://github.com/). You will need to fork **two** repositories.&#x20;
+Make sure you're logged in to [GitHub](https://github.com/). You will need to fork **two** repositories.
 
 First we fork the Modmail repository. Head over to [https://github.com/modmail-dev/modmail/fork](https://github.com/modmail-dev/modmail/fork), leave all the settings as default, and click **Create fork**.
 
@@ -37,7 +37,7 @@ Next do the same for the Logviewer repository by heading over to [https://github
 
 <figure><img src="../.gitbook/assets/RW2.png" alt="Screenshot of creating a Logviewer fork."><figcaption><p>Create a GitHub fork for the Logviewer Repository.</p></figcaption></figure>
 
-Next, to keep your Modmail and Logviewer up to date, you will need to install the [Pull app](https://github.com/apps/pull). Simply head over to [https://github.com/apps/pull](https://github.com/apps/pull), click **Install**, choose **Only select repositories**, then select **both** the Modmail and Logviewer repositories that you forked in the previous step.&#x20;
+Next, to keep your Modmail and Logviewer up to date, you will need to install the [Pull app](https://github.com/apps/pull). Simply head over to [https://github.com/apps/pull](https://github.com/apps/pull), click **Install**, choose **Only select repositories**, then select **both** the Modmail and Logviewer repositories that you forked in the previous step.
 
 <div>
 
@@ -69,9 +69,7 @@ If your GitHub account is new or not reputable, you may be asked to verify your 
 
 This unfortunately means that you will have to provide a credit card for verification. Click **Verify Account**, read and accept Railway's **Terms of Service**, then enter your credit card details. You may be temporary charged $1 USD to confirm the legitimacy of the card.
 
-![Screenshot of clicking verify account.](../.gitbook/assets/RW6.png)![Screenshot of clicking terms of service.](../.gitbook/assets/RW7.png)![Screenshot of clicking I agree with terms of service.](../.gitbook/assets/RW7B.png)![Screenshot of entering your credit card details.](../.gitbook/assets/RW8.png)
-
-
+<img src="../.gitbook/assets/RW6.png" alt="Screenshot of clicking verify account." data-size="original"><img src="../.gitbook/assets/RW7.png" alt="Screenshot of clicking terms of service." data-size="original"><img src="../.gitbook/assets/RW7B.png" alt="Screenshot of clicking I agree with terms of service." data-size="original"><img src="../.gitbook/assets/RW8.png" alt="Screenshot of entering your credit card details." data-size="original">
 
 </details>
 
@@ -103,7 +101,7 @@ From the [**New Project**](https://railway.app/new) page, create the project by 
 
 </div>
 
-Click **New Variable**, set left to be **`CONNECTION_URI`**, then on the right, paste your revised MongoDB connection string from your Notepad (if this is new to you, [go back and read the initial steps](./)).&#x20;
+Click **New Variable**, set left to be **`CONNECTION_URI`**, then on the right, paste your revised MongoDB connection string from your Notepad (if this is new to you, [go back and read the initial steps](./)).
 
 Don't add any other variables, nor use the suggested variables section. You should see a new variable named **`CONNECTION_URI`** added under variables once you're done.
 
@@ -125,11 +123,11 @@ Next, go to the **Deployments** tab, look at the latest deployment, is it succes
 
 <div>
 
-<figure><img src="../.gitbook/assets/RW16 (1).png" alt="Screenshot of the deployments tab, and clicking the URL."><figcaption><p>Navigate to the <strong>Deployments</strong> tab, save and open this URL.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/RW16.png" alt="Screenshot of the deployments tab, and clicking the URL."><figcaption><p>Navigate to the <strong>Deployments</strong> tab, save and open this URL.</p></figcaption></figure>
 
  
 
-<figure><img src="../.gitbook/assets/LVHOME.png" alt="Screenshot of the Logviewer homepage."><figcaption><p>This URL should show the Logviewer homepage. </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/LVHOME.png" alt="Screenshot of the Logviewer homepage."><figcaption><p>This URL should show the Logviewer homepage.</p></figcaption></figure>
 
 </div>
 
@@ -153,22 +151,27 @@ Click **New Variable.** We will be adding 5 variables in total, so repeat this s
 | -------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | **`CONNECTION_URI`** | The MongoDB Connection string from your Notepad.                              | <pre data-overflow="wrap"><code>mongodb+srv://modmail:elAO7wF1r07pNG6u@cluster0.example.mongodb.net
 </code></pre>     |
+|                      |                                                                               |                                                                                                                       |
 | **`TOKEN`**          | The Discord bot token from your Notepad.                                      | <pre data-overflow="wrap"><code>MTA3Djv3IAxNjk1NDgdKD231.G1AoUjD.5z629aKP34JKHn4v1EsdNUwdDO3MvBR9ifVES4
 </code></pre> |
+|                      |                                                                               |                                                                                                                       |
 | **`LOG_URL`**        | The Logviewer URL from your Notepad. Remember to add `https://` in front!     | <pre data-overflow="wrap"><code><strong>https://web-production-1234.up.railway.app
 </strong></code></pre>             |
+|                      |                                                                               |                                                                                                                       |
 | **`OWNERS`**         | Your Discord ID. If you have multiple owners, separate your IDs with a comma. | <pre><code>718827787302791100
 </code></pre>                                                                           |
+|                      |                                                                               |                                                                                                                       |
 | **`GUILD_ID`**       | The ID of the Discord server for your Modmail bot.                            | <pre><code>109483701365508619
 </code></pre>                                                                           |
+|                      |                                                                               |                                                                                                                       |
 
 <details>
 
 <summary>Do you have a separate staff server?</summary>
 
-If you manage a large server where you have a separate server for communication among your moderation team, Modmail supports directing threads into the staff server instead of your main (public) server.&#x20;
+If you manage a large server where you have a separate server for communication among your moderation team, Modmail supports directing threads into the staff server instead of your main (public) server.
 
-Simply add an additional variable named **`MODMAIL_GUILD_ID`** and set the value to your staff server's ID.&#x20;
+Simply add an additional variable named **`MODMAIL_GUILD_ID`** and set the value to your staff server's ID.
 
 Note: the **`GUILD_ID`** should always be your main server's ID (not staff server's).
 
@@ -204,7 +207,7 @@ You have 10 days to test Modmail without upgrading to the "Developer" plan. As m
 
 #### Usage-based subscription
 
-Head over to the **** [**Billing Details**](https://railway.app/account/billing) page, click the **Unlock** button to unlock Developer plan. Then input your credit card details and hit **Subscribe to Developer Plan**.
+Head over to the \*\*\*\* [**Billing Details**](https://railway.app/account/billing) page, click the **Unlock** button to unlock Developer plan. Then input your credit card details and hit **Subscribe to Developer Plan**.
 
 {% hint style="warning" %}
 Subscribing to the Developer plan under _usage based subscription_ **may incur you unexpected charges**. This because Railway does not provide any safe-guards or monthly spending limits. Average Modmail and Logviewer usage should be well below the free threshold. However, if you run resource-intensive code via plugins or due to other means, you credit card may be billed.
@@ -258,9 +261,9 @@ There you go! Your bot should now be able to run 24/7 without interruptions. Hea
 
 <summary>How do I cancel my Developer plan subscription?</summary>
 
-If you're subscribed under the [usage-based subscription](railway.md#usage-based-subscription) model, you can cancel your subscription by heading to the **** [**Billing Details**](https://railway.app/account/billing) page, click **Manage Subscription**, then click **Cancel plan**.
+If you're subscribed under the [usage-based subscription](railway.md#usage-based-subscription) model, you can cancel your subscription by heading to the \*\*\*\* [**Billing Details**](https://railway.app/account/billing) page, click **Manage Subscription**, then click **Cancel plan**.
 
-![Screenshot of clicking manage subscription.](../.gitbook/assets/RW25.png)![Screenshot of clicking cancel plan.](../.gitbook/assets/RW26.png)
+<img src="../.gitbook/assets/RW25.png" alt="Screenshot of clicking manage subscription." data-size="original"><img src="../.gitbook/assets/RW26.png" alt="Screenshot of clicking cancel plan." data-size="original">
 
 </details>
 
@@ -281,6 +284,3 @@ You can disable auto-updates by heading to the settings page for **both** your M
 Now that you've successfully set up Modmail, visit the [Getting Started](../getting-started.md) page to find information on using Modmail.
 
 You can also join our [**Discord Server**](https://discord.gg/cnUpwrnpYb) to interact with our community or get support for Modmail.
-
-
-
