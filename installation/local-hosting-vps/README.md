@@ -20,7 +20,7 @@ More OS-specific requirements will be listed on their specific installation page
 * [Ubuntu](ubuntu.md)
 * [Debian](debian.md)
 * [Fedora](fedora.md)
-* [AlmaLinux](almalinux.md)
+* [Alma Linux](almalinux.md)
 * [CentOS](almalinux.md)
 * [Raspberry Pi OS](debian.md)
 
@@ -29,4 +29,4 @@ More OS-specific requirements will be listed on their specific installation page
 You can also self-host logviewer by following the guides below.
 
 * [Logviewer](logviewer.md)
-* [Patreon logviewer](patreon\_logviewer.md)
+* [Patreon Logviewer](patreon\_logviewer.md)
