@@ -15,6 +15,7 @@
   * [Railway](installation/railway.md)
   * [Heroku](installation/heroku.md)
   * [Community Guides](installation/community-guides.md)
+* [Setting up auto-restart](setting-up-auto-restart.md)
 * [Getting Started](getting-started.md)
 * [Usage](usage-guide/README.md)
   * [Plugins](usage-guide/plugins.md)
