@@ -1,5 +1,33 @@
 # Setting up auto-restart
 
+## Using pm2 on Linux
+
+`pm2` is a process manager intended for Node.js but can also be used with Python applications, such as our Modmail bot and logviewer. To use `pm2`, we will need to install Node.js.
+
+#### Installing `pm2` Using `apt`:
+
+```bash
+sudo apt install npm -y && sudo npm i pm2 -g
+```
+
+#### Installing `pm2` using `dnf`:
+
+```bash
+sudo dnf -y install npm && sudo npm i pm2 -g
+```
+
+Then, in the Modmail folder, start the Modmail process with:
+
+```
+sudo pm2 start modmail.sh --name "modmail"
+```
+
+And then, to make sure that `pm2` stays active and persistent between machine restarts, run the following commands:
+
+```bash
+pm2 save && pm2 startup
+```
+
 ## Using systemd on Linux
 
 To have the bot auto-restart on crash or system reboot, we will be using `systemd` by making a service file for our bot.
@@ -83,11 +111,7 @@ sudo systemctl stop modmail
 sudo systemctl disable modmail
 ```
 
-## Using pm2 on Linux
-
-
-
-## Using nssm on Windows
+## Using `nssm` on Windows
 
 To have the bot auto-restart on crash or system reboot, we will be using `nssm` by making a service for our bot application.
 
