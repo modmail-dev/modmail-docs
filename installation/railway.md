@@ -123,7 +123,7 @@ Next, go to the **Deployments** tab, look at the latest deployment, is it succes
 
 <div>
 
-<figure><img src="../.gitbook/assets/RW16 (1).png" alt="Screenshot of the deployments tab, and clicking the URL."><figcaption><p>Navigate to the <strong>Deployments</strong> tab, save and open this URL.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/RW16.png" alt="Screenshot of the deployments tab, and clicking the URL."><figcaption><p>Navigate to the <strong>Deployments</strong> tab, save and open this URL.</p></figcaption></figure>
 
  
 

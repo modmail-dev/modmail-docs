@@ -2,1433 +2,1482 @@
 description: Configuring and customizing modmail.
 ---
 
-Modmail offers an assort of customizations to make your Modmail bot unique to your server. Most customizations can be set with `?config`, but some has its own special command, such as `?activity`.
-You may find all of the personalizable tweaks available for Modmail below:
+# Configuration
 
-{% hint style="info" %} All examples presume your prefix is `?`.{% endhint %}
+Modmail offers an assort of customizations to make your Modmail bot unique to your server. Most customizations can be set with `?config`, but some has its own special command, such as `?activity`. You may find all of the personalizable tweaks available for Modmail below:
 
-{% hint style="warning" %} Things covered in brackets are optional: `[]`
-Things covered in angled brackets are required: `<>`  {% endhint %}
+{% hint style="info" %}
+All examples presume your prefix is \`?\`.
+{% endhint %}
+
+{% hint style="warning" %}
+Things covered in brackets are optional: \`\[]\` Things covered in angled brackets are required: \`<>\`
+{% endhint %}
 
 **Quick Navigation:**
 
-###### Moderation: 
-- [Prefix]()
-- [Mention](./usage-guide/configuration#mention-mention)
+**Moderation:**
 
-Moderation Configurations
-======
+* [Prefix](configuration.md)
+* [Mention](usage-guide/configuration/#mention-mention)
 
-Account Age ( account_age )
-------
+## Moderation Configurations
 
-***Default:*** No Age Threshold 
+### Account Age ( account\_age )
 
-Set an amount of time a users account has to be created in order to open a ticket. 
+_**Default:**_ No Age Threshold
 
-***Example:***
+Set an amount of time a users account has to be created in order to open a ticket.
 
-- `?config set account_age P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO_8601#Durations))
-- `?config set account_age 3 days and 5 hours` (accepted readable time)
+_**Example:**_
 
-***Note(s):***
-- To remove this restriction, do ?config del account_age.
-- See also: `guild_age`.
+* `?config set account_age P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO\_8601#Durations))
+* `?config set account_age 3 days and 5 hours` (accepted readable time)
 
+_**Note(s):**_
 
-Alert on Mention ( alert_on_mention )
-------
+* To remove this restriction, do ?config del account\_age.
+* See also: `guild_age`.
 
-***Default:*** No
+### Alert on Mention ( alert\_on\_mention )
+
+_**Default:**_ No
 
 Mentions all mods (mention) in mention channel when bot is mentioned
 
-***Example:***
+_**Example:**_
 
-- `?config set alert_on_mention yes`
+* `?config set alert_on_mention yes`
 
-***Notes:***
-- See also: `mention`, `mention_channel_id`
+_**Notes:**_
 
+* See also: `mention`, `mention_channel_id`
 
-Prefix ( prefix )
-------
+### Prefix ( prefix )
 
 The prefix of the bot
 
-***Default:*** `?` 
+_**Default:**_ `?`
 
-***Example:***
-- `?config set prefix !`
-- `?prefix !`
+_**Example:**_
+
+* `?config set prefix !`
+* `?prefix !`
 
 This both result in commands now prefixed with !, for example:
-{% hint style="success" %} !about {% endhint %}
 
-***Notes:***
-- If you forgot the bot prefix, Modmail will always respond to its mention (ping).
-- To reset the prefix back to default: `?config del prefix`
+{% hint style="success" %}
+!about
+{% endhint %}
 
-Guild Age ( guild_age )
-------
+_**Notes:**_
 
-The join date of the recipient user into this server must be greater than the number of days, hours, minutes or any time-interval specified by this configuration. 
+* If you forgot the bot prefix, Modmail will always respond to its mention (ping).
+* To reset the prefix back to default: `?config del prefix`
 
-***Default:*** No age threshold
+### Guild Age ( guild\_age )
 
-***Example:***
-- `?config set guild_age P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO_8601#Durations))
-- `?config set guild_age 3 days and 5 hours` (accepted readable time)
+The join date of the recipient user into this server must be greater than the number of days, hours, minutes or any time-interval specified by this configuration.
 
-***Notes:***
-- To remove this restriction, do `{prefix}config del guild_age`.
-- See also: `account_age`.
+_**Default:**_ No age threshold
 
+_**Example:**_
 
-Reply Without Command ( reply_without_command )
-------
+* `?config set guild_age P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO\_8601#Durations))
+* `?config set guild_age 3 days and 5 hours` (accepted readable time)
 
-***Default:*** Disabled
+_**Notes:**_
+
+* To remove this restriction, do `{prefix}config del guild_age`.
+* See also: `account_age`.
+
+### Reply Without Command ( reply\_without\_command )
+
+_**Default:**_ Disabled
 
 Setting this configuration will make all non-command messages sent in the thread channel to be forwarded to the recipient without the need of `?reply`.
 
-***Example:*** 
-- `?config set reply_without_command yes`
-- `?config set reply_without_command no`
+_**Example:**_
 
-***Notes:***
-- See also: `anon_reply_without_command`, `plain_reply_without_command`.
+* `?config set reply_without_command yes`
+* `?config set reply_without_command no`
 
+_**Notes:**_
 
-Show Timestamps ( show_timestamp )
-------
+* See also: `anon_reply_without_command`, `plain_reply_without_command`.
 
-***Default:*** Yes
+### Show Timestamps ( show\_timestamp )
+
+_**Default:**_ Yes
 
 Shows timestamps on thread embeds
 
-***Example:*** 
+_**Example:**_
 
-- `?config set show_timestamp no`
+* `?config set show_timestamp no`
 
-
-Silent Alert On Commands ( silent_alert_on_mention )
-------
+### Silent Alert On Commands ( silent\_alert\_on\_mention )
 
 Send a message in the mention channel without mentioning all mods (mention).
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:*** 
-- `?config set alert_on_mention yes`
+_**Example:**_
 
-***Notes:***
-This has no effect unless `alert_on_mention` is set to yes.
-See also: `mention`, `mention_channel_id`
+* `?config set alert_on_mention yes`
 
+_**Notes:**_ This has no effect unless `alert_on_mention` is set to yes. See also: `mention`, `mention_channel_id`
 
-Update Channel ID ( update_channel_id )
-------
+### Update Channel ID ( update\_channel\_id )
 
 This is the channel where update notifications are sent to.
 
-***Default:*** Log Channel (normally `#bot-logs`)
+_**Default:**_ Log Channel (normally `#bot-logs`)
 
-***Example:*** 
-- `?config set update_channel_id 9234932582312` (9234932582312 is the channel ID)`
+_**Example:**_
 
-***Notes:***
-- This has no effect unless `disable_autoupdates` is set to no and `update_notifications` is set to yes.
-- See also: `log_channel_id`
+* `?config set update_channel_id 9234932582312` (9234932582312 is the channel ID)\`
 
+_**Notes:**_
 
-Update Notifications ( update_notifications )
-------
+* This has no effect unless `disable_autoupdates` is set to no and `update_notifications` is set to yes.
+* See also: `log_channel_id`
+
+### Update Notifications ( update\_notifications )
 
 This is the channel where update notifications are sent to.
 
-***Default:*** Yes 
+_**Default:**_ Yes
 
-***Example:*** 
-- `?config set update_notifications no`
+_**Example:**_
 
-***Notes:***
-- This has no effect unless `disable_autoupdates` is set to no.
-- See also: `update_channel_id`
+* `?config set update_notifications no`
 
+_**Notes:**_
 
-Fallback Category ID ( fallback_category_id )
-------
+* This has no effect unless `disable_autoupdates` is set to no.
+* See also: `update_channel_id`
+
+### Fallback Category ID ( fallback\_category\_id )
 
 This is the category that will hold the threads when the main category is full.\n\nTo change the Fallback category, you will need to find the [category’s ID](https://support.discordapp.com/hc/en-us/articles/206346498).
 
-***Default:*** `Fallback Modmail` (created when the main category is full)
+_**Default:**_ `Fallback Modmail` (created when the main category is full)
 
-***Example:*** 
-- `?config set fallback_category_id 9234932582312` (`9234932582312` is the category ID)
+_**Example:**_
 
-***Notes:***
-- If the Fallback category ended up being non-existent/invalid, Modmail will create a new one. To fix this, set `fallback_category_id` to a valid category.
-- See also: `main_category_id`.
+* `?config set fallback_category_id 9234932582312` (`9234932582312` is the category ID)
 
+_**Notes:**_
 
-Log Channel ID ( log_channel_id )
-------
+* If the Fallback category ended up being non-existent/invalid, Modmail will create a new one. To fix this, set `fallback_category_id` to a valid category.
+* See also: `main_category_id`.
+
+### Log Channel ID ( log\_channel\_id )
 
 This is the channel where all log messages will be sent (ie. thread close message, update message, etc.).\n\nTo change the log channel, you will need to find the [channel’s ID](https://support.discordapp.com/hc/en-us/articles/206346498). The channel doesn’t necessary have to be under the `main_category`.
 
-***Default:*** `#bot-logs` (created with `?setup`)
+_**Default:**_ `#bot-logs` (created with `?setup`)
 
-***Example:*** 
-- `?config set log_channel_id 9234932582312` (9234932582312 is the channel ID)
+_**Example:**_
 
-***Notes:*** 
-- If the Modmail logging channel ended up being non-existent/invalid, no logs will be sent.
+* `?config set log_channel_id 9234932582312` (9234932582312 is the channel ID)
 
-Main Category ID ( main_category_id )
-------
+_**Notes:**_
+
+* If the Modmail logging channel ended up being non-existent/invalid, no logs will be sent.
+
+### Main Category ID ( main\_category\_id )
 
 This is the category where all new threads will be created.\n\nTo change the Modmail category, you will need to find the [category’s ID](https://support.discordapp.com/hc/en-us/articles/206346498).
 
-***Default:*** `Modmail` (created with `?setup`)
+_**Default:**_ `Modmail` (created with `?setup`)
 
-***Example:*** 
-- `?config set main_category_id 9234932582312` (`9234932582312` is the category ID)`
+_**Example:**_
 
-***Notes:***
-- If the Modmail category ended up being non-existent/invalid, Modmail will break. To fix this, run `?setup` again or set `main_category_id` to a valid category.
-- When the Modmail category is full, new channels will be created in the fallback category.
-- See also: `fallback_category_id`
+* `?config set main_category_id 9234932582312` (`9234932582312` is the category ID)\`
 
-Mod Typing ( mod_typing )
-------
+_**Notes:**_
 
-When this is set to `yes`, whenever a moderator starts to type in the thread channel, the recipient user will see \"{bot.user.display_name} is typing…\" in their DM channel.
+* If the Modmail category ended up being non-existent/invalid, Modmail will break. To fix this, run `?setup` again or set `main_category_id` to a valid category.
+* When the Modmail category is full, new channels will be created in the fallback category.
+* See also: `fallback_category_id`
 
-***Default:*** Disabled
+### Mod Typing ( mod\_typing )
 
-***Example:***
-- `?config set mod_typing yes`
-- `?config set mod_typing no`
+When this is set to `yes`, whenever a moderator starts to type in the thread channel, the recipient user will see "{bot.user.display\_name} is typing…" in their DM channel.
 
-***Notes:***
-- See also: `mod_typing`
+_**Default:**_ Disabled
 
-User Typing ( user_typing )
-------
+_**Example:**_
 
-When this is set to `yes`, whenever the recipient user starts to type in their DM channel, the moderator will see “{bot.user.display_name} is typing…” in the thread channel.
+* `?config set mod_typing yes`
+* `?config set mod_typing no`
 
-***Default:*** Enabled
+_**Notes:**_
 
-***Example:*** 
-- `?config set user_typing yes`
-- `?config set user_typing no`
+* See also: `mod_typing`
 
-***Notes:***
-- See also: `mod_typing`.
+### User Typing ( user\_typing )
 
-Twitch URL ( twitch_url )
-------
+When this is set to `yes`, whenever the recipient user starts to type in their DM channel, the moderator will see “{bot.user.display\_name} is typing…” in the thread channel.
 
-This channel dictates the linked Twitch channel when the activity is set to \"Streaming\".
+_**Default:**_ Enabled
 
-***Default:*** `https://www.twitch.tv/discordmodmail/`
+_**Example:**_
 
-***Example:***
-- `?config set twitch_url https://www.twitch.tv/yourchannelname/`
+* `?config set user_typing yes`
+* `?config set user_typing no`
 
-***Notes:***
-- This has no effect when the activity is not set to \"Streaming\".
-- See also: `?help activity`
+_**Notes:**_
 
-Close On Leave ( close_on_leave )
-------
+* See also: `mod_typing`.
+
+### Twitch URL ( twitch\_url )
+
+This channel dictates the linked Twitch channel when the activity is set to "Streaming".
+
+_**Default:**_ `https://www.twitch.tv/discordmodmail/`
+
+_**Example:**_
+
+* `?config set twitch_url https://www.twitch.tv/yourchannelname/`
+
+_**Notes:**_
+
+* This has no effect when the activity is not set to "Streaming".
+* See also: `?help activity`
+
+### Close On Leave ( close\_on\_leave )
 
 Closes a modmail thread upon user leave automatically
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:*** 
-- `?config set close_on_leave yes`
+_**Example:**_
 
-***Notes:***
-- See also: `close_on_leave_reason`.
+* `?config set close_on_leave yes`
 
-Confirm Thread Creation ( confirm_thread_creation )
-------
+_**Notes:**_
+
+* See also: `close_on_leave_reason`.
+
+### Confirm Thread Creation ( confirm\_thread\_creation )
 
 Ensure users confirm that they want to create a new thread
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:*** 
-- `?config set confirm_thread_creation yes`
+_**Example:**_
 
-***Notes:***
-- See also: `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
+* `?config set confirm_thread_creation yes`
 
-Mention ( mention )
-------
+_**Notes:**_
+
+* See also: `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
+
+### Mention ( mention )
 
 This is the message above user information for when a new thread is created in the channel.
 
-***Default:*** `@here`
+_**Default:**_ `@here`
 
-***Example:*** 
-- `?config set mention Yo~ Here's a new thread for ya!`
-- `?mention Yo~ Here's a new thread for ya!`
+_**Example:**_
 
-***Notes:***
-- To disable mention, use command `?mention disable`.
-- See also: `?help mention`.
+* `?config set mention Yo~ Here's a new thread for ya!`
+* `?mention Yo~ Here's a new thread for ya!`
 
-Require Close Reason ( require_close_reason )
-------
+_**Notes:**_
+
+* To disable mention, use command `?mention disable`.
+* See also: `?help mention`.
+
+### Require Close Reason ( require\_close\_reason )
 
 Require a reason to close threads.
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:*** 
-- `?config set require_close_reason yes`
+_**Example:**_
 
+* `?config set require_close_reason yes`
 
-Thread Auto Close ( thread_auto_close )
-------
+### Thread Auto Close ( thread\_auto\_close )
 
 Setting this configuration will close threads automatically after the number of days, hours, minutes or any time-interval specified by this configuration.
 
-***Default:*** Never 
+_**Default:**_ Never
 
-***Example:*** 
-- `?config set thread_auto_close P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO_8601#Durations))
-- `?config set thread_auto_close 3 days and 5 hours` (accepted readable time)
+_**Example:**_
 
-***Notes:***
-- To disable auto close, do `?config del thread_auto_close`.
-- To prevent a thread from auto-closing, do `?close cancel`.
-- See also: `thread_auto_close_silently`, `thread_auto_close_response`.
+* `?config set thread_auto_close P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO\_8601#Durations))
+* `?config set thread_auto_close 3 days and 5 hours` (accepted readable time)
 
-Thread Cooldown ( thread_cooldown )
-------
+_**Notes:**_
+
+* To disable auto close, do `?config del thread_auto_close`.
+* To prevent a thread from auto-closing, do `?close cancel`.
+* See also: `thread_auto_close_silently`, `thread_auto_close_response`.
+
+### Thread Cooldown ( thread\_cooldown )
 
 Specify the time required for the recipient to wait before allowed to create a new thread.
 
-***Default:*** Never 
+_**Default:**_ Never
 
-***Example:*** 
-- `?config set thread_cooldown P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO_8601#Durations))
-- `?config set thread_cooldown 3 days and 5 hours` (accepted readable time)
+_**Example:**_
 
-***Notes:***
-- To disable thread cooldown, do `?config del thread_cooldown`.
+* `?config set thread_cooldown P12DT3H` (stands for 12 days and 3 hours in [ISO-8601 Duration Format](https://en.wikipedia.org/wiki/ISO\_8601#Durations))
+* `?config set thread_cooldown 3 days and 5 hours` (accepted readable time)
 
+_**Notes:**_
 
-Thread Move Notify ( thread_move_notify )
-------
+* To disable thread cooldown, do `?config del thread_cooldown`.
+
+### Thread Move Notify ( thread\_move\_notify )
 
 Notify the recipient if the thread was moved.
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:***
-- `?config set thread_move_notify yes`
-- `?config set thread_move_notify no`
+_**Example:**_
 
-***Notes:***
-- See also: `thread_move_title`, `thread_move_response`, `thread_move_notify_mods`.
+* `?config set thread_move_notify yes`
+* `?config set thread_move_notify no`
 
-Thread Move Notify Mods ( thread_move_notify_mods )
-------
+_**Notes:**_
+
+* See also: `thread_move_title`, `thread_move_response`, `thread_move_notify_mods`.
+
+### Thread Move Notify Mods ( thread\_move\_notify\_mods )
 
 Notify mods again after the thread is moved
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:*** 
-- `?config set thread_move_notify_mods yes`
-- `?config set thread_move_notify_mods no`
+_**Example:**_
 
-***Notes:***
-- See also: `thread_move_title`, `thread_move_response`, `thread_move_notify`.
+* `?config set thread_move_notify_mods yes`
+* `?config set thread_move_notify_mods no`
 
-Use Regex Autotrigger ( use_regex_autotrigger )
-------
+_**Notes:**_
+
+* See also: `thread_move_title`, `thread_move_response`, `thread_move_notify`.
+
+### Use Regex Autotrigger ( use\_regex\_autotrigger )
 
 Whether to use regex to compare in autotriggers.
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:***
-- `?config set use_regex_autotrigger yes`
+_**Example:**_
 
-***Notes:***
+* `?config set use_regex_autotrigger yes`
 
-{% hint style="danger" %} This is meant for advanced user that understand regular expressions. {% endhint %}
+_**Notes:**_
 
-- You can test it out with https://regexr.com on `PCRE (Server)` mode
-- See command: `autotrigger`
+{% hint style="danger" %}
+This is meant for advanced user that understand regular expressions.
+{% endhint %}
 
-Plain Reply Without Command ( plain_reply_without_command )
-------
+* You can test it out with https://regexr.com on `PCRE (Server)` mode
+* See command: `autotrigger`
+
+### Plain Reply Without Command ( plain\_reply\_without\_command )
 
 Setting this configuration will make all non-command messages sent in the thread channel to be forwarded to the recipient in a plain form without the need of `?reply`.
 
-***Default:*** Disabled 
+_**Default:**_ Disabled
 
-***Example:*** 
-- `?config set plain_reply_without_command yes`
-- `?config set plain_reply_without_command no`
+_**Example:**_
 
-***Notes:***
-- See also: `reply_without_command`, `anon_reply_without_command`.
+* `?config set plain_reply_without_command yes`
+* `?config set plain_reply_without_command no`
 
-Anonymous Snippets ( anonymous_snippets )
-------
+_**Notes:**_
+
+* See also: `reply_without_command`, `anon_reply_without_command`.
+
+### Anonymous Snippets ( anonymous\_snippets )
 
 Sends snippets anonymously.
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:*** 
-- `?config set anonymous_snippets yes`
+_**Example:**_
 
-***Notes:***
-- See also: `anon_avatar_url`, `anon_tag`, `plain_snippets`.
+* `?config set anonymous_snippets yes`
 
-Appearance Configurations
-======
+_**Notes:**_
 
-Blocked Emoji ( blocked_emoji )
-------
+* See also: `anon_avatar_url`, `anon_tag`, `plain_snippets`.
+
+## Appearance Configurations
+
+### Blocked Emoji ( blocked\_emoji )
 
 This is the emoji added to the message when when a Modmail action is invoked unsuccessfully (ie. DM Modmail when blocked, failed to reply, etc.).
 
-***Default:*** 🚫
+_**Default:**_ 🚫
 
-***Example:***
-- `?config set blocked_emoji 🙅‍`
+_**Example:**_
 
-***Notes:***
-- You can disable `blocked_emoji` with `?config set blocked_emoji disable`.
-- Custom/animated emojis are also supported, however, the emoji must be added to the server.
-- See also: `sent_emoji`.
+* `?config set blocked_emoji 🙅‍`
 
-Close Emoji ( close_emoji )
-------
+_**Notes:**_
+
+* You can disable `blocked_emoji` with `?config set blocked_emoji disable`.
+* Custom/animated emojis are also supported, however, the emoji must be added to the server.
+* See also: `sent_emoji`.
+
+### Close Emoji ( close\_emoji )
 
 This is the emoji the recipient can click to close a thread themselves. The emoji is automatically added to the `thread_creation_response` embed.
 
-***Default:*** 🔒
+_**Default:**_ 🔒
 
-***Example:***
-- `?config set close_emoji 👍‍`
+_**Example:**_
 
-***Notes:***
-- This will only have an effect when `recipient_thread_close` is enabled.
-- See also: `recipient_thread_close`.
+* `?config set close_emoji 👍‍`
 
-Confirm Thread Creation Accept ( confirm_thread_creation_accept )
-------
+_**Notes:**_
 
-Emoji to accept thread creation  
+* This will only have an effect when `recipient_thread_close` is enabled.
+* See also: `recipient_thread_close`.
 
-***Default:*** \u2705
+### Confirm Thread Creation Accept ( confirm\_thread\_creation\_accept )
 
-***Example:***
-- `?config set confirm_thread_creation_accept \u2611`
+Emoji to accept thread creation
 
-***Notes:***
-- This has no effect unless `confirm_thread_creation` is set
-- See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_deny`
+_**Default:**_ \u2705
 
-Confirm Thread Creation Deny ( confirm_thread_creation_deny )
-------
+_**Example:**_
 
-Emoji to cancel thread creation  
+* `?config set confirm_thread_creation_accept \u2611`
 
-***Default:*** \uD83D\uDEAB
+_**Notes:**_
 
-***Example:*** 
-- `?config set confirm_thread_creation_deny \u26D4`
+* This has no effect unless `confirm_thread_creation` is set
+* See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_deny`
 
-***Notes:***
-- This has no effect unless `confirm_thread_creation` is set
-- See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_accept`
+### Confirm Thread Creation Deny ( confirm\_thread\_creation\_deny )
 
-Error Color ( error_color )
-------
+Emoji to cancel thread creation
 
-This is the color for Modmail when anything goes wrong, unsuccessful commands, or a stern warning. 
+_**Default:**_ \uD83D\uDEAB
 
-***Default:*** Discord Red [#E74C3C](https://placehold.it/100/e74c3c?text=+)
+_**Example:**_
 
-***Example:***
-- `?config set error_color ocean blue`
-- `?config set error_color ff1242`
-- `?config set error_color #ff1242`
-- `?config set error_color fa1`
+* `?config set confirm_thread_creation_deny \u26D4`
 
-***Notes:***
-- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
-- See also: `main_color`, `mod_color`, `recipient_color`.
+_**Notes:**_
 
+* This has no effect unless `confirm_thread_creation` is set
+* See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_response`, `confirm_thread_creation_accept`
 
-Main Color ( main_color )
-------
+### Error Color ( error\_color )
 
-This is the main color for Modmail (help/about/ping embed messages, subscribe, move, etc.). 
+This is the color for Modmail when anything goes wrong, unsuccessful commands, or a stern warning.
 
-***Default:*** Discord Blurple [#7289DA](https://placehold.it/100/7289da?text=+)
+_**Default:**_ Discord Red [#E74C3C](https://placehold.it/100/e74c3c?text=+)
 
-***Example:***
-- `?config set main_color olive green`
-- `?config set main_color 12de3a`
-- `?config set main_color #12de3a`
-- `?config set main_color fff`
+_**Example:**_
 
-***Notes:***
-- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
-- See also: `error_color`, `mod_color`, `recipient_color`.
+* `?config set error_color ocean blue`
+* `?config set error_color ff1242`
+* `?config set error_color #ff1242`
+* `?config set error_color fa1`
 
+_**Notes:**_
 
-Mod Color ( mod_color )
-------
+* Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+* See also: `main_color`, `mod_color`, `recipient_color`.
 
-This is the color of the messages sent by the moderators, this applies to messages within in the thread channel and the DM thread messages received by the recipient. 
+### Main Color ( main\_color )
 
-***Default:*** Discord Green [#2ECC71](https://placehold.it/100/2ecc71?text=+)
+This is the main color for Modmail (help/about/ping embed messages, subscribe, move, etc.).
 
-***Example:***
-- `?config set mod_color dark beige`
-- `?config set mod_color cb7723`
-- `?config set mod_color #cb7723`
-- `?config set mod_color c4k`
+_**Default:**_ Discord Blurple [#7289DA](https://placehold.it/100/7289da?text=+)
 
-***Notes:***
-- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
-- See also: `recipient_color`, `main_color`, `error_color`.
+_**Example:**_
 
-React To Contact Emoji ( react_to_contact_emoji )
-------
+* `?config set main_color olive green`
+* `?config set main_color 12de3a`
+* `?config set main_color #12de3a`
+* `?config set main_color fff`
 
-An emoji which is tracked in `react_to_contact_message` 
+_**Notes:**_
 
-***Default:*** \u2705
+* Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+* See also: `error_color`, `mod_color`, `recipient_color`.
 
-***Example:***
-- `?config set react_to_contact_emoji \u2705`
+### Mod Color ( mod\_color )
 
-***Notes:***
-- See also: `react_to_contact_message \u2705`
+This is the color of the messages sent by the moderators, this applies to messages within in the thread channel and the DM thread messages received by the recipient.
 
-Recipient Color ( recipient_color )
-------
+_**Default:**_ Discord Green [#2ECC71](https://placehold.it/100/2ecc71?text=+)
+
+_**Example:**_
+
+* `?config set mod_color dark beige`
+* `?config set mod_color cb7723`
+* `?config set mod_color #cb7723`
+* `?config set mod_color c4k`
+
+_**Notes:**_
+
+* Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+* See also: `recipient_color`, `main_color`, `error_color`.
+
+### React To Contact Emoji ( react\_to\_contact\_emoji )
+
+An emoji which is tracked in `react_to_contact_message`
+
+_**Default:**_ \u2705
+
+_**Example:**_
+
+* `?config set react_to_contact_emoji \u2705`
+
+_**Notes:**_
+
+* See also: `react_to_contact_message \u2705`
+
+### Recipient Color ( recipient\_color )
 
 This is the color of the messages sent by the recipient, this applies to messages received in the thread channel.
 
-***Default:*** "Discord Gold [#F1C40F](https://placehold.it/100/f1c40f?text=+)
+_**Default:**_ "Discord Gold [#F1C40F](https://placehold.it/100/f1c40f?text=+)
 
-***Example:***
-- `?config set recipient_color dark beige`
-- `?config set recipient_color cb7723`
-- `?config set recipient_color #cb7723`
-- `?config set recipient_color c4k`
+_**Example:**_
 
-***Notes:***
-- Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
-- See also: `mod_color`, `main_color`, `error_color`.
+* `?config set recipient_color dark beige`
+* `?config set recipient_color cb7723`
+* `?config set recipient_color #cb7723`
+* `?config set recipient_color c4k`
 
-Sent Emoji ( sent_emoji )
-------
+_**Notes:**_
+
+* Available color names can be found on [Color Options](https://docs.modmail.dev/old-docs/color-names).
+* See also: `mod_color`, `main_color`, `error_color`.
+
+### Sent Emoji ( sent\_emoji )
 
 This is the emoji added to the message when when a Modmail action is invoked successfully (ie. DM Modmail, edit message, etc.).
 
-***Default:*** ✅
+_**Default:**_ ✅
 
-***Example:***
-- `?config set sent_emoji ✨`
+_**Example:**_
 
-***Notes:***
-- You can disable `sent_emoji` with `?config set sent_emoji disable`.
-- Custom/animated emojis are also supported, however, the emoji must be added to the server.
-- See also: `blocked_emoji`.
+* `?config set sent_emoji ✨`
 
-Show Log URL Button ( show_log_url_button )
-------
+_**Notes:**_
+
+* You can disable `sent_emoji` with `?config set sent_emoji disable`.
+* Custom/animated emojis are also supported, however, the emoji must be added to the server.
+* See also: `blocked_emoji`.
+
+### Show Log URL Button ( show\_log\_url\_button )
 
 Shows the button to open the Log URL.
 
-***Default:*** No
+_**Default:**_ No
 
-***Example:***
-- `?config set show_log_url_button yes`
+_**Example:**_
 
-Thread Appearance
-======
+* `?config set show_log_url_button yes`
 
-Use Random Channel Name ( use_random_channel_name )
-------
+## Thread Appearance
 
-When this is set to `yes`, new thread channels will be named with random characters tied to their user ID. 
+### Use Random Channel Name ( use\_random\_channel\_name )
 
-***Default:*** No
+When this is set to `yes`, new thread channels will be named with random characters tied to their user ID.
 
-***Example:***
-- `?config set use_random_channel_name yes`
-- `?config set use_random_channel_name no`
+_**Default:**_ No
 
-***Notes:***
-{% hint style="warning" %} This config is suitable for servers in Server Discovery to comply with channel name restrictions. {% endhint %}
-{% hint style="danger" %} This cannot be applied with `use_timestamp_channel_name`, `use_nickname_channel_name`, or `use_user_id_channel_name`. {% endhint %}
-- See also: `use_timestamp_channel_name`, `use_user_id_channel_name`, `use_nickname_channel_name`.
+_**Example:**_
 
-Use Timestamp Channel Name  ( use_timestamp_channel_name )
-------
+* `?config set use_random_channel_name yes`
+* `?config set use_random_channel_name no`
 
-When this is set to `yes`, new thread channels will be named with the recipient's account creation date instead of the recipient's name. 
+_**Notes:**_
 
-***Default:*** No
+{% hint style="warning" %}
+This config is suitable for servers in Server Discovery to comply with channel name restrictions.
+{% endhint %}
 
-***Example:***
-- `?config set use_timestamp_channel_name yes`
-- `?config set use_timestamp_channel_name no`
+{% hint style="danger" %}
+This cannot be applied with \`use\_timestamp\_channel\_name\`, \`use\_nickname\_channel\_name\`, or \`use\_user\_id\_channel\_name\`.
+{% endhint %}
 
-***Notes:***
-{% hint style="warning" %} This config is **NOT** suitable for servers in Server Discovery to comply with channel name restrictions. {% endhint %}
-{% hint style="danger" %} This cannot be applied with `use_user_id_channel_name`, `use_random_channel_name` or `use_nickname_channel_name`. {% endhint %}
-- See also: `use_user_id_channel_name`, `use_nickname_channel_name`, `use_random_channel_name`.
+* See also: `use_timestamp_channel_name`, `use_user_id_channel_name`, `use_nickname_channel_name`.
 
-Use User ID Channel Name ( use_user_id_channel_name )
-------
+### Use Timestamp Channel Name ( use\_timestamp\_channel\_name )
 
-When this is set to `yes`, new thread channels will be named with the recipient's ID instead of the recipient's name. 
+When this is set to `yes`, new thread channels will be named with the recipient's account creation date instead of the recipient's name.
 
-***Default:*** No 
+_**Default:**_ No
 
-***Example:***
-- `?config set use_user_id_channel_name yes`
-- `?config set use_user_id_channel_name no`
+_**Example:**_
 
-***Notes:***
-{% hint style="warning" %} This config is suitable for servers in Server Discovery to comply with channel name restrictions. {% endhint %}
-{% hint style="danger" %} This cannot be applied with `use_timestamp_channel_name`, `use_random_channel_name` or `use_nickname_channel_name`. {% endhint %}
-- See also: `use_timestamp_channel_name`, `use_nickname_channel_name`, `use_random_channel_name`.
+* `?config set use_timestamp_channel_name yes`
+* `?config set use_timestamp_channel_name no`
 
-Use Nickname Channel Name ( use_nickname_channel_name )
-------
+_**Notes:**_
 
-When this is set to `yes`, new thread channels will be named with the recipient's nickname instead of the recipient's name. 
+{% hint style="warning" %}
+This config is \*\*NOT\*\* suitable for servers in Server Discovery to comply with channel name restrictions.
+{% endhint %}
 
-***Default:***
+{% hint style="danger" %}
+This cannot be applied with \`use\_user\_id\_channel\_name\`, \`use\_random\_channel\_name\` or \`use\_nickname\_channel\_name\`.
+{% endhint %}
 
-***Example:***
-- `?config set use_nickname_channel_name yes`
-- `?config set use_nickname_channel_name no`
+* See also: `use_user_id_channel_name`, `use_nickname_channel_name`, `use_random_channel_name`.
 
-***Notes:***
-{% hint style="warning" %} This config is suitable for servers in Server Discovery to comply with channel name restrictions. {% endhint %}
-{% hint style="danger" %} This cannot be applied with `use_timestamp_channel_name`, `use_random_channel_name` or `use_user_id_channel_name`. {% endhint %}
-- See also: `use_timestamp_channel_name`, `use_user_id_channel_name`, `use_random_channel_name`.
+### Use User ID Channel Name ( use\_user\_id\_channel\_name )
 
-Use Hoisted Top Role ( use_hoisted_top_role )
-------
+When this is set to `yes`, new thread channels will be named with the recipient's ID instead of the recipient's name.
 
-Controls if only hoisted roles are evaluated when finding top role. 
+_**Default:**_ No
 
-***Default:*** Yes 
+_**Example:**_
 
-***Example:***
-- `?config set use_hoisted_top_role yes`
-- `?config set use_hoisted_top_role no`
+* `?config set use_user_id_channel_name yes`
+* `?config set use_user_id_channel_name no`
 
-***Notes:***
-- Top role is displayed in embeds when replying or adding/removing users to a thread in the case mod_tag and anon_username are not set.
-- If this configuration is enabled, only roles that are hoisted (displayed seperately in member list) will be used. If a user has no hoisted roles, it will return 'None'.
-- If you would like to display the top role of a user regardless of if it's hoisted or not, disable `use_hoisted_top_role`.
+_**Notes:**_
 
-Thread Show Account Age ( thread_show_account_age )
-------
+{% hint style="warning" %}
+This config is suitable for servers in Server Discovery to comply with channel name restrictions.
+{% endhint %}
 
-Shows account age on first message sent in thread channels to mods 
+{% hint style="danger" %}
+This cannot be applied with \`use\_timestamp\_channel\_name\`, \`use\_random\_channel\_name\` or \`use\_nickname\_channel\_name\`.
+{% endhint %}
 
-***Default:*** Yes
+* See also: `use_timestamp_channel_name`, `use_nickname_channel_name`, `use_random_channel_name`.
 
-***Example:***
-- `?config set thread_show_account_age no`
+### Use Nickname Channel Name ( use\_nickname\_channel\_name )
 
-***Notes:***
-- See also: `thread_show_roles`, `thread_show_join_age`
+When this is set to `yes`, new thread channels will be named with the recipient's nickname instead of the recipient's name.
 
+_**Default:**_
 
-Thread Show Join Age ( thread_show_join_age )
-------
+_**Example:**_
 
-Shows join age on first message sent in thread channels to mods 
+* `?config set use_nickname_channel_name yes`
+* `?config set use_nickname_channel_name no`
 
-***Default:*** Yes 
+_**Notes:**_
 
-***Example:***
-- `?configconfig set thread_show_join_age no`
+{% hint style="warning" %}
+This config is suitable for servers in Server Discovery to comply with channel name restrictions.
+{% endhint %}
 
-***Notes:***
-- See also: `thread_show_account_age`, `thread_show_roles`.
+{% hint style="danger" %}
+This cannot be applied with \`use\_timestamp\_channel\_name\`, \`use\_random\_channel\_name\` or \`use\_user\_id\_channel\_name\`.
+{% endhint %}
 
+* See also: `use_timestamp_channel_name`, `use_user_id_channel_name`, `use_random_channel_name`.
 
-Thread Show Roles ( thread_show_roles )
-------
+### Use Hoisted Top Role ( use\_hoisted\_top\_role )
 
-Shows roles on first message sent in thread channels to mods 
+Controls if only hoisted roles are evaluated when finding top role.
 
-***Default:*** Yes
+_**Default:**_ Yes
 
-***Example:***
-- `?config set thread_show_account_age no`
+_**Example:**_
 
-***Notes:***
-- See also: `thread_show_roles`, `thread_show_join_age`.
+* `?config set use_hoisted_top_role yes`
+* `?config set use_hoisted_top_role no`
 
+_**Notes:**_
 
-Mod Tag ( mod_tag )
-------
+* Top role is displayed in embeds when replying or adding/removing users to a thread in the case mod\_tag and anon\_username are not set.
+* If this configuration is enabled, only roles that are hoisted (displayed seperately in member list) will be used. If a user has no hoisted roles, it will return 'None'.
+* If you would like to display the top role of a user regardless of if it's hoisted or not, disable `use_hoisted_top_role`.
 
-This is the name tag in the “footer” section of the embeds sent by moderators in the recipient DM and thread channel. 
+### Thread Show Account Age ( thread\_show\_account\_age )
 
-***Default:*** The moderator's highest role
+Shows account age on first message sent in thread channels to mods
 
-***Example:***
-- `?config set mod_tag Moderator`
+_**Default:**_ Yes
 
-***Notes:***
-{% hint style="warning" %} When the message is sent anonymously, `anon_tag` is used instead. {% endhint %}
-- See also: `anon_tag`.
+_**Example:**_
 
-Anon Tag ( anon_tag )
-------
+* `?config set thread_show_account_age no`
 
-This is the name tag in the “footer” section of the embeds sent by anonymous moderators in the recipient DM. 
+_**Notes:**_
 
-***Default:*** \"Response\"
+* See also: `thread_show_roles`, `thread_show_join_age`
 
-***Example:***
-- `?config set anon_tag Support Agent`
+### Thread Show Join Age ( thread\_show\_join\_age )
 
-***Notes:***
-- See also: `anon_avatar_url`, `anon_username`, `mod_tag`.
+Shows join age on first message sent in thread channels to mods
 
-Anon Avatar URL ( anon_avatar_url )
-------
+_**Default:**_ Yes
 
-This is the avatar of the embeds sent by anonymous moderators in the recipient DM. 
+_**Example:**_
 
-***Default:*** Server avatar
+* `?configconfig set thread_show_join_age no`
 
-***Example:***
-- `?config set anon_avatar_url https://path.to/your/avatar.png` (you will need to upload the avatar to somewhere)
+_**Notes:**_
 
-***Notes:***
-- See also: `anon_username`, `anon_tag`.
+* See also: `thread_show_account_age`, `thread_show_roles`.
 
+### Thread Show Roles ( thread\_show\_roles )
 
-Anon Username ( anon_username )
-------
+Shows roles on first message sent in thread channels to mods
 
-This is the name in the “author” section of the embeds sent by anonymous moderators in the recipient DM. 
+_**Default:**_ Yes
 
-***Default:*** Fallback on `mod_tag`
+_**Example:**_
 
-***Example:***
-- `?config set anon_username Incognito Mod`
+* `?config set thread_show_account_age no`
 
-***Notes:***
-- See also: `anon_avatar_url`, `anon_tag`.
+_**Notes:**_
 
+* See also: `thread_show_roles`, `thread_show_join_age`.
 
-Transfer Reactions ( transfer_reactions )
-------
+### Mod Tag ( mod\_tag )
 
-Transfer users reactions to mods and vice versa
-*(If someone reacts to a thread message the other party will see it.)* 
+This is the name tag in the “footer” section of the embeds sent by moderators in the recipient DM and thread channel.
 
-***Default:*** Yes 
+_**Default:**_ The moderator's highest role
 
-***Example:***
-- `?config set transfer_reactions no`
+_**Example:**_
 
+* `?config set mod_tag Moderator`
 
-Thread Responses 
-======
+_**Notes:**_
 
-Close On Leave Reason ( close_on_leave_reason )
-------
+{% hint style="warning" %}
+When the message is sent anonymously, \`anon\_tag\` is used instead.
+{% endhint %}
 
-Reason for closing the thread once member leaves 
+* See also: `anon_tag`.
 
-***Default:*** The recipient has left the server.
+### Anon Tag ( anon\_tag )
 
-***Example:***
-- `?config set close_on_leave_reason Member left`
+This is the name tag in the “footer” section of the embeds sent by anonymous moderators in the recipient DM.
 
-***Notes:***
-- This has no effect unless `close_on_leave` is set.
-- See also: `close_on_leave`.
+_**Default:**_ "Response"
 
-Confirm Thread Creation Title ( confirm_thread_creation_title )
-------
+_**Example:**_
 
-Title for the embed message sent to users to confirm a thread creation 
+* `?config set anon_tag Support Agent`
 
-***Default:*** Confirm thread creation
+_**Notes:**_
 
-***Example:***
-- `?config set confirm_thread_creation_title Are you sure you want to create a new thread?`
+* See also: `anon_avatar_url`, `anon_username`, `mod_tag`.
 
+### Anon Avatar URL ( anon\_avatar\_url )
 
-***Notes:***
-- See also: `confirm_thread_creation`, `confirm_thread_response`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
+This is the avatar of the embeds sent by anonymous moderators in the recipient DM.
 
-Confirm Thread Response ( confirm_thread_response )
-------
+_**Default:**_ Server avatar
 
-Description for the embed message sent to users to confirm a thread creation 
+_**Example:**_
 
-***Default:*** React to confirm thread creation which will directly contact the moderators
+* `?config set anon_avatar_url https://path.to/your/avatar.png` (you will need to upload the avatar to somewhere)
 
-***Example:***
-- `?config set confirm_thread_response React to confirm`
+_**Notes:**_
 
+* See also: `anon_username`, `anon_tag`.
 
-***Notes:***
-- See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
+### Anon Username ( anon\_username )
 
+This is the name in the “author” section of the embeds sent by anonymous moderators in the recipient DM.
 
-Cooldown Thread Response ( cooldown_thread_response )
-------
+_**Default:**_ Fallback on `mod_tag`
 
-The description of the message embed when the user has a cooldown before creating a new thread. 
- 
-***Default:*** Your cooldown ends {delta}. Try contacting me then.
+_**Example:**_
 
-{% hint style="info" %} `{delta}` will be replaced with whatever time you gave it. {% endhint %}
+* `?config set anon_username Incognito Mod`
 
-***Example:***
-- `?config set cooldown_thread_response Be patient! You are on cooldown, wait {delta} more.`
- 
+_**Notes:**_
 
-***Notes:***
-- "Only has an effect when `thread_cooldown` is set
-- Must have a {delta} included which will be replaced with the duration of time.
-- See also: `cooldown_thread_title`.
+* See also: `anon_avatar_url`, `anon_tag`.
 
-Cooldown Thread Title ( cooldown_thread_title )
-------
+### Transfer Reactions ( transfer\_reactions )
 
-The title of the message embed when the user has a cooldown before creating a new thread. 
+Transfer users reactions to mods and vice versa _(If someone reacts to a thread message the other party will see it.)_
 
-***Default:*** Message not sent!
+_**Default:**_ Yes
 
-***Example:***
-- `?config set cooldown_thread_title Error`
+_**Example:**_
 
+* `?config set transfer_reactions no`
 
-***Notes:***
-- Only has an effect when `thread_cooldown` is set
-- See also: `cooldown_thread_response`.
+## Thread Responses
 
-Disabled Current Thread Footer ( disabled_current_thread_footer )
-------
+### Close On Leave Reason ( close\_on\_leave\_reason )
 
-The footer of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread. 
+Reason for closing the thread once member leaves
 
-***Default:*** Please try again later...
+_**Default:**_ The recipient has left the server.
 
-***Example:***
-- `?config set disabled_current_thread_footer Message back!`
+_**Example:**_
 
-***Notes:***
-- Only has an effect when `{prefix}disable all` is set.
-- See also: `disabled_current_thread_title`, `disabled_current_thread_response`, `disabled_new_thread_footer`.
+* `?config set close_on_leave_reason Member left`
 
-Disabled Current Thread Response ( disabled_current_thread_response )
-------
+_**Notes:**_
 
-The body of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread. 
+* This has no effect unless `close_on_leave` is set.
+* See also: `close_on_leave`.
 
-***Default:*** We are not accepting any messages.
+### Confirm Thread Creation Title ( confirm\_thread\_creation\_title )
 
-***Example:***
-- `?config set disabled_current_thread_response On break right now.`
+Title for the embed message sent to users to confirm a thread creation
 
+_**Default:**_ Confirm thread creation
 
-***Notes:***
-- Only has an effect when `{prefix}disable all` is set.
-- See also: `disabled_current_thread_title`, `disabled_current_thread_footer`, `disabled_new_thread_response`.
+_**Example:**_
 
-Disabled Current Thread Title ( disabled_current_thread_title )
-------
+* `?config set confirm_thread_creation_title Are you sure you want to create a new thread?`
 
-The title of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread. 
+_**Notes:**_
 
-***Default:*** Not Delivered.
+* See also: `confirm_thread_creation`, `confirm_thread_response`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
 
-***Example:***
-- `?config set disabled_current_thread_title Unavailable`
+### Confirm Thread Response ( confirm\_thread\_response )
 
+Description for the embed message sent to users to confirm a thread creation
 
-***Notes:***
-- Only has an effect when `{prefix}disable all` is set.
-- See also: `disabled_current_thread_response`, `disabled_current_thread_footer`, `disabled_new_thread_title`.
+_**Default:**_ React to confirm thread creation which will directly contact the moderators
 
-Disabled New Thread Footer ( disabled_new_thread_footer )
-------
+_**Example:**_
 
-The footer of the message embed when Modmail new thread creation is disabled and user tries to create a new thread. 
+* `?config set confirm_thread_response React to confirm`
 
-***Default:*** Please try again later...
+_**Notes:**_
 
-***Example:***
-- `?config set disabled_new_thread_footer Contact us later`
+* See also: `confirm_thread_creation`, `confirm_thread_creation_title`, `confirm_thread_creation_accept`, `confirm_thread_creation_deny`
 
+### Cooldown Thread Response ( cooldown\_thread\_response )
 
-***Notes:***
-- Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
-- See also: `disabled_new_thread_title`, `disabled_new_thread_response`, `disabled_current_thread_footer`.
+The description of the message embed when the user has a cooldown before creating a new thread.
 
-Disabled New Thread Response ( disabled_new_thread_response )
-------
+_**Default:**_ Your cooldown ends {delta}. Try contacting me then.
 
-The body of the message embed when Modmail new thread creation is disabled and user tries to create a new thread. 
+{% hint style="info" %}
+\`{delta}\` will be replaced with whatever time you gave it.
+{% endhint %}
 
-***Default:*** We are not accepting new threads.
+_**Example:**_
 
-***Example:***
-- `?config set disabled_new_thread_response Our working hours is between 8am - 6pm EST.`
+* `?config set cooldown_thread_response Be patient! You are on cooldown, wait {delta} more.`
 
+_**Notes:**_
 
-***Notes:***
-- Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
-- See also: `disabled_new_thread_title`, `disabled_new_thread_footer`, `disabled_current_thread_response`.
+* "Only has an effect when `thread_cooldown` is set
+* Must have a {delta} included which will be replaced with the duration of time.
+* See also: `cooldown_thread_title`.
 
-Disabled New Thread Title ( disabled_new_thread_title )
-------
+### Cooldown Thread Title ( cooldown\_thread\_title )
 
-The title of the message embed when Modmail new thread creation is disabled and user tries to create a new thread. 
+The title of the message embed when the user has a cooldown before creating a new thread.
 
-***Default:*** Not Delivered.
+_**Default:**_ Message not sent!
 
-***Example:***
-- `?config set disabled_new_thread_title Closed`
+_**Example:**_
 
+* `?config set cooldown_thread_title Error`
 
-***Notes:***
-- Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
-- See also: `disabled_new_thread_response`, `disabled_new_thread_footer`, `disabled_current_thread_title`.
+_**Notes:**_
 
-Private Added To Group Description Anon ( private_added_to_group_description_anon )
-------
+* Only has an effect when `thread_cooldown` is set
+* See also: `cooldown_thread_response`.
 
-This is the message embed content sent to the recipient that is just added to a thread when adduser is used anonymously. 
+### Disabled Current Thread Footer ( disabled\_current\_thread\_footer )
 
-***Default:*** A moderator has added you to a Modmail thread.
+The footer of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread.
 
-***Example:***
-- `?config set private_added_to_group_description_anon Any message sent here will be sent to all other thread recipients.`
+_**Default:**_ Please try again later...
 
+_**Example:**_
 
-***Notes:***
-- When adduser (no anon) is used, `private_added_to_group_description` is used instead.
-- The public_ variant is used when sending to other thread recipients.
-- See also: `private_added_to_group_title`, `public_added_to_group_description_anon`
+* `?config set disabled_current_thread_footer Message back!`
 
-Private Added To Group Response ( private_added_to_group_response )
-------
+_**Notes:**_
 
-This is the message embed content sent to the recipient that is just added to a thread. 
+* Only has an effect when `{prefix}disable all` is set.
+* See also: `disabled_current_thread_title`, `disabled_current_thread_response`, `disabled_new_thread_footer`.
 
-***Default:*** \"{{moderator.name}} has added you to a Modmail thread.\"
+### Disabled Current Thread Response ( disabled\_current\_thread\_response )
 
-***Example:***
-- `?config set private_added_to_group_description Any message sent here will be sent to all otherthread recipients.`
- 
+The body of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread.
 
-***Notes:***
-- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
-- When anonadduser is used, `private_added_to_group_description_anon` is used instead.
-- The public_ variant is used when sending to other thread recipients.
-- See also: `private_added_to_group_title`, `public_added_to_group_description`
+_**Default:**_ We are not accepting any messages.
 
-Private Added To Group Title  ( private_added_to_group_title )
-------
+_**Example:**_
 
-This is the message embed title sent to the recipient that is just added to a thread. 
+* `?config set disabled_current_thread_response On break right now.`
 
-***Default:*** New Thread (Group)
+_**Notes:**_
 
-***Example:***
-- `?config set private_added_to_group_title Welcome to this new group thread!`
+* Only has an effect when `{prefix}disable all` is set.
+* See also: `disabled_current_thread_title`, `disabled_current_thread_footer`, `disabled_new_thread_response`.
 
+### Disabled Current Thread Title ( disabled\_current\_thread\_title )
 
-***Notes:***
-- The public_ variant is used when sending to other thread recipients.
-- See also: `private_added_to_group_description`, `public_added_to_group_title`
+The title of the message embed when Modmail DM is disabled and user DMs Modmail from existing thread.
 
-Private Removed From Group Description Anon  ( private_removed_from_group_description_anon )
-------
+_**Default:**_ Not Delivered.
 
-This is the message embed content sent to the recipient that is just removed from a thread when removeuser is used anonymously. 
+_**Example:**_
 
-***Default:*** A moderator has removed you from the Modmail thread.
+* `?config set disabled_current_thread_title Unavailable`
 
-***Example:***
-- `?config set private_removed_from_group_description_anon You are permenantly removed from this thread.`
+_**Notes:**_
 
-***Notes:***
-- When adduser (no anon) is used, `private_removed_from_group_description` is used instead.
-- The public_ variant is used when sending to other thread recipients.
-- See also: `private_removed_from_group_title`, `public_removed_from_group_description_anon`
+* Only has an effect when `{prefix}disable all` is set.
+* See also: `disabled_current_thread_response`, `disabled_current_thread_footer`, `disabled_new_thread_title`.
 
-Private Removed From Group Response ( private_removed_from_group_response )
-------
+### Disabled New Thread Footer ( disabled\_new\_thread\_footer )
 
-This is the message embed content sent to the recipient that is just removed from a thread. 
+The footer of the message embed when Modmail new thread creation is disabled and user tries to create a new thread.
 
-***Default:*** \"{{moderator.name}} has removed you from the Modmail thread.\"
+_**Default:**_ Please try again later...
 
-***Example:***
-- `?config set private_removed_from_group_description Bye` 
+_**Example:**_
 
-***Notes:***
-- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
-- When anonremoveuser is used, `private_removed_from_group_description_anon` is used instead.
-- The public_ variant is used when sending to other thread recipients.
-- See also: `private_removed_from_group_title`, `public_removed_from_group_description`
+* `?config set disabled_new_thread_footer Contact us later`
 
-Private Removed From Group Title ( private_removed_from_group_title )
-------
+_**Notes:**_
 
-This is the message embed title sent to the recipient that is just removed from a thread. 
+* Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
+* See also: `disabled_new_thread_title`, `disabled_new_thread_response`, `disabled_current_thread_footer`.
 
-***Default:*** Removed From Thread (Group)
+### Disabled New Thread Response ( disabled\_new\_thread\_response )
 
-***Example:***
-- `?config set private_removed_from_group_title Welcome to this new group thread!`
+The body of the message embed when Modmail new thread creation is disabled and user tries to create a new thread.
 
-***Notes:***
-- The public_ variant is used when sending to other thread recipients.
-- See also: `private_removed_from_group_description`, `public_removed_from_group_title`
+_**Default:**_ We are not accepting new threads.
 
-Public Added To Group Description Anon ( public_added_to_group_description_anon )
-------
+_**Example:**_
 
-This is the message embed content sent to all other recipients when someone is added to the thread when adduser is used anonymously. 
+* `?config set disabled_new_thread_response Our working hours is between 8am - 6pm EST.`
 
-***Default:*** \"A moderator has added {{users}} to the Modmail thread.\"
+_**Notes:**_
 
-***Example:***
-- `?config set public_added_to_group_description_anon Any message sent here will be sent to all other thread recipients.`
+* Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
+* See also: `disabled_new_thread_title`, `disabled_new_thread_footer`, `disabled_current_thread_response`.
 
+### Disabled New Thread Title ( disabled\_new\_thread\_title )
 
-***Notes:***
-- When adduser (no anon) is used, `public_added_to_group_description` is used instead.
-- The private_ variant is used when sending to the new user.
-- See also: `public_added_to_group_title`, `private_added_to_group_description_anon`
+The title of the message embed when Modmail new thread creation is disabled and user tries to create a new thread.
 
-Public Added To Group Response ( public_added_to_group_response )
-------
+_**Default:**_ Not Delivered.
 
-This is the message embed content sent to all other recipients when someone is added to the thread. 
+_**Example:**_
 
-***Default:*** \"{{moderator.name}} has added {{users}} to the Modmail thread.\"
+* `?config set disabled_new_thread_title Closed`
 
-***Example:***
-- `?config set public_added_to_group_response Welcome {users}!`
+_**Notes:**_
 
-***Notes:***
-- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
-- When anonadduser is used, `public_added_to_group_description_anon` is used instead.
-- The private_ variant is used when sending to the new user.
-- See also: `public_added_to_group_title`, `private_added_to_group_description`
+* Only has an effect when `{prefix}disable` or `{prefix}disable all` is set.
+* See also: `disabled_new_thread_response`, `disabled_new_thread_footer`, `disabled_current_thread_title`.
 
-Public Added To Group Title ( public_added_to_group_title )
-------
+### Private Added To Group Description Anon ( private\_added\_to\_group\_description\_anon )
 
-This is the message embed title sent to all other recipients when someone is added to the thread. 
+This is the message embed content sent to the recipient that is just added to a thread when adduser is used anonymously.
 
-***Default:*** New User
+_**Default:**_ A moderator has added you to a Modmail thread.
 
-***Example:***
-- `?config set public_added_to_group_title Welcome to our new user!`
- 
+_**Example:**_
 
-***Notes:***
-- The private_ variant is used when sending to the new user.
-- See also: `private_added_to_group_title`, `private_added_to_group_title`
+* `?config set private_added_to_group_description_anon Any message sent here will be sent to all other thread recipients.`
 
-Public Removed From Group Description Anon ( public_removed_from_group_description_anon )
-------
+_**Notes:**_
 
-This is the message embed content sent to all other recipients when someone is removed from the thread when removeuser is used anonymously. 
+* When adduser (no anon) is used, `private_added_to_group_description` is used instead.
+* The public\_ variant is used when sending to other thread recipients.
+* See also: `private_added_to_group_title`, `public_added_to_group_description_anon`
 
-***Default:*** \"A moderator has removed {{users}} from the Modmail thread.\"
+### Private Added To Group Response ( private\_added\_to\_group\_response )
 
-***Example:***
-- `?config set public_removed_from_group_description_anon Goodbye {users}!`
+This is the message embed content sent to the recipient that is just added to a thread.
 
+_**Default:**_ "\{{moderator.name\}} has added you to a Modmail thread."
 
-***Notes:***
-- When adduser (no anon) is used, `public_removed_from_group_description` is used instead.
-- The private_ variant is used when sending to the new user.
-- See also: `public_removed_from_group_title`, `private_removed_from_group_description_anon`
+_**Example:**_
 
-Public Removed From Group Response ( public_removed_from_group_response )
-------
+* `?config set private_added_to_group_description Any message sent here will be sent to all otherthread recipients.`
 
-This is the message embed content sent to all other recipients when someone is removed from the thread. 
+_**Notes:**_
 
-***Default:*** \"{{moderator.name}} has removed {{users}} from the Modmail thread.\"
+* You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+* When anonadduser is used, `private_added_to_group_description_anon` is used instead.
+* The public\_ variant is used when sending to other thread recipients.
+* See also: `private_added_to_group_title`, `public_added_to_group_description`
 
-***Example:***
-- `?config set public_removed_from_group_response Goodbye {users}!`
+### Private Added To Group Title ( private\_added\_to\_group\_title )
 
+This is the message embed title sent to the recipient that is just added to a thread.
 
-***Notes:***
-- You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
-- When anonremoveuser is used, `public_removed_from_group_description_anon` is used instead.
+_**Default:**_ New Thread (Group)
 
-Public Removed From Group Title ( public_removed_from_group_title )
-------
+_**Example:**_
 
-This is the message embed title sent to all other recipients when someone is removed from the thread. 
+* `?config set private_added_to_group_title Welcome to this new group thread!`
 
-***Default:*** User Removed
+_**Notes:**_
 
-***Example:***
-- `?config set public_removed_from_group_title User is now gone!`
+* The public\_ variant is used when sending to other thread recipients.
+* See also: `private_added_to_group_description`, `public_added_to_group_title`
 
+### Private Removed From Group Description Anon ( private\_removed\_from\_group\_description\_anon )
 
-***Notes:***
-- The private_ variant is used when sending to the new user.
-- See also: `private_removed_from_group_title`, `private_removed_from_group_title`
+This is the message embed content sent to the recipient that is just removed from a thread when removeuser is used anonymously.
 
-React To Contact Message ( react_to_contact_message )
-------
+_**Default:**_ A moderator has removed you from the Modmail thread.
 
-A message ID where reactions are tracked. If the `react_to_contact_emoji` is added, the bot opens a thread with them. 
+_**Example:**_
 
-***Default:*** None
+* `?config set private_removed_from_group_description_anon You are permenantly removed from this thread.`
 
-***Example:***
-- `?config set react_to_contact_message 773575608814534717`
+_**Notes:**_
 
+* When adduser (no anon) is used, `private_removed_from_group_description` is used instead.
+* The public\_ variant is used when sending to other thread recipients.
+* See also: `private_removed_from_group_title`, `public_removed_from_group_description_anon`
 
-***Notes:***
-- See also: `react_to_contact_emoji`
+### Private Removed From Group Response ( private\_removed\_from\_group\_response )
 
+This is the message embed content sent to the recipient that is just removed from a thread.
 
-Recipient Thread Close ( recipient_thread_close )
-------
+_**Default:**_ "\{{moderator.name\}} has removed you from the Modmail thread."
 
-Setting this configuration will allow recipients to use the `close_emoji` to close the thread themselves. 
+_**Example:**_
 
-***Default:*** Disabled
+* `?config set private_removed_from_group_description Bye`
 
-***Example:***
-- `?config set recipient_thread_close yes`
-- `?config set recipient_thread_close no`
+_**Notes:**_
 
+* You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+* When anonremoveuser is used, `private_removed_from_group_description_anon` is used instead.
+* The public\_ variant is used when sending to other thread recipients.
+* See also: `private_removed_from_group_title`, `public_removed_from_group_description`
 
-***Notes:***
-- The close emoji is dictated by the configuration `close_emoji`.
-- See also: `close_emoji`.
+### Private Removed From Group Title ( private\_removed\_from\_group\_title )
 
-Thread Auto Close Response ( thread_auto_close_response )
-------
+This is the message embed title sent to the recipient that is just removed from a thread.
 
-This is the message to display when the thread when the thread auto-closes. 
+_**Default:**_ Removed From Thread (Group)
 
-***Default:*** \"This thread has been closed automatically due to inactivity after {{timeout}}.\"
+_**Example:**_
 
-***Example:***
-- `?config set thread_auto_close_response Your close message here.`
+* `?config set private_removed_from_group_title Welcome to this new group thread!`
 
+_**Notes:**_
 
-***Notes:***
-- Its possible to use `{{timeout}}` as a placeholder for a formatted timeout text.
-- This will not have an effect when `thread_auto_close_silently` is enabled.
-- Discord flavoured markdown is fully supported in `thread_auto_close_response`.
-- See also: `thread_auto_close`, `thread_auto_close_silently`.
+* The public\_ variant is used when sending to other thread recipients.
+* See also: `private_removed_from_group_description`, `public_removed_from_group_title`
 
-Thread Auto Close Silently ( thread_auto_close_silently )
-------
+### Public Added To Group Description Anon ( public\_added\_to\_group\_description\_anon )
 
-Setting this configuration will close silently when the thread auto-closes. 
+This is the message embed content sent to all other recipients when someone is added to the thread when adduser is used anonymously.
 
-***Default:*** No
+_**Default:**_ "A moderator has added \{{users\}} to the Modmail thread."
 
-***Example:***
-- `?config set thread_auto_close_silently yes`
-- `?config set thread_auto_close_silently no`
+_**Example:**_
 
+* `?config set public_added_to_group_description_anon Any message sent here will be sent to all other thread recipients.`
 
-***Notes:***
-- This will only have an effect when `thread_auto_close` is set.
-- See also: `thread_auto_close`.
+_**Notes:**_
 
-Thread Cancelled ( thread_cancelled )
-------
+* When adduser (no anon) is used, `public_added_to_group_description` is used instead.
+* The private\_ variant is used when sending to the new user.
+* See also: `public_added_to_group_title`, `private_added_to_group_description_anon`
 
-This is the message to display when a thread times out and creation is cancelled. 
+### Public Added To Group Response ( public\_added\_to\_group\_response )
 
-***Default:*** \"Cancelled\"
+This is the message embed content sent to all other recipients when someone is added to the thread.
 
-***Example:***
-- `?config set thread_cancelled Gone.`
+_**Default:**_ "\{{moderator.name\}} has added \{{users\}} to the Modmail thread."
 
+_**Example:**_
 
-Thread Close Footer ( thread_close_footer )
-------
+* `?config set public_added_to_group_response Welcome {users}!`
 
-This is the message embed footer sent to the recipient upon the closure of a thread. 
+_**Notes:**_
 
-***Default:*** \"Replying will create a new thread\"
+* You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+* When anonadduser is used, `public_added_to_group_description_anon` is used instead.
+* The private\_ variant is used when sending to the new user.
+* See also: `public_added_to_group_title`, `private_added_to_group_description`
 
-***Example:***
-- `?config set thread_close_footer Bye!`
+### Public Added To Group Title ( public\_added\_to\_group\_title )
 
+This is the message embed title sent to all other recipients when someone is added to the thread.
 
-***Notes:***
-- See also: `thread_close_title`, `thread_close_response`, `thread_creation_footer`.
+_**Default:**_ New User
 
+_**Example:**_
 
-Thread Close Response ( thread_close_response )
-------
+* `?config set public_added_to_group_title Welcome to our new user!`
 
-This is the message embed content sent to the recipient upon the closure of a thread. 
+_**Notes:**_
 
-There are three variables you can use within the thread close message:
-    - `closer`: the discord User object of the user who closed the thread.
-    - `logkey`: the key for the thread logs. (ie. 51ecd946dc29)
-    - `loglink`: the full link URL to the thread logs. (ie. https://logviewer.herokuapp.com/logs/51ecd946dc29)
+* The private\_ variant is used when sending to the new user.
+* See also: `private_added_to_group_title`, `private_added_to_group_title`
 
+### Public Removed From Group Description Anon ( public\_removed\_from\_group\_description\_anon )
 
-***Default:*** \"{{closer.mention}} has closed this Modmail thread\"
+This is the message embed content sent to all other recipients when someone is removed from the thread when removeuser is used anonymously.
 
-***Example:***
-- `?config set thread_close_response Your message is appriciated!`
+_**Default:**_ "A moderator has removed \{{users\}} from the Modmail thread."
+
+_**Example:**_
+
+* `?config set public_removed_from_group_description_anon Goodbye {users}!`
+
+_**Notes:**_
+
+* When adduser (no anon) is used, `public_removed_from_group_description` is used instead.
+* The private\_ variant is used when sending to the new user.
+* See also: `public_removed_from_group_title`, `private_removed_from_group_description_anon`
+
+### Public Removed From Group Response ( public\_removed\_from\_group\_response )
+
+This is the message embed content sent to all other recipients when someone is removed from the thread.
+
+_**Default:**_ "\{{moderator.name\}} has removed \{{users\}} from the Modmail thread."
+
+_**Example:**_
+
+* `?config set public_removed_from_group_response Goodbye {users}!`
+
+_**Notes:**_
+
+* You may use the `{{moderator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that added the user.
+* When anonremoveuser is used, `public_removed_from_group_description_anon` is used instead.
+
+### Public Removed From Group Title ( public\_removed\_from\_group\_title )
+
+This is the message embed title sent to all other recipients when someone is removed from the thread.
+
+_**Default:**_ User Removed
+
+_**Example:**_
+
+* `?config set public_removed_from_group_title User is now gone!`
+
+_**Notes:**_
+
+* The private\_ variant is used when sending to the new user.
+* See also: `private_removed_from_group_title`, `private_removed_from_group_title`
+
+### React To Contact Message ( react\_to\_contact\_message )
+
+A message ID where reactions are tracked. If the `react_to_contact_emoji` is added, the bot opens a thread with them.
+
+_**Default:**_ None
+
+_**Example:**_
+
+* `?config set react_to_contact_message 773575608814534717`
+
+_**Notes:**_
+
+* See also: `react_to_contact_emoji`
+
+### Recipient Thread Close ( recipient\_thread\_close )
+
+Setting this configuration will allow recipients to use the `close_emoji` to close the thread themselves.
+
+_**Default:**_ Disabled
+
+_**Example:**_
+
+* `?config set recipient_thread_close yes`
+* `?config set recipient_thread_close no`
+
+_**Notes:**_
+
+* The close emoji is dictated by the configuration `close_emoji`.
+* See also: `close_emoji`.
+
+### Thread Auto Close Response ( thread\_auto\_close\_response )
+
+This is the message to display when the thread when the thread auto-closes.
+
+_**Default:**_ "This thread has been closed automatically due to inactivity after \{{timeout\}}."
+
+_**Example:**_
+
+* `?config set thread_auto_close_response Your close message here.`
+
+_**Notes:**_
+
+* Its possible to use `{{timeout}}` as a placeholder for a formatted timeout text.
+* This will not have an effect when `thread_auto_close_silently` is enabled.
+* Discord flavoured markdown is fully supported in `thread_auto_close_response`.
+* See also: `thread_auto_close`, `thread_auto_close_silently`.
+
+### Thread Auto Close Silently ( thread\_auto\_close\_silently )
+
+Setting this configuration will close silently when the thread auto-closes.
+
+_**Default:**_ No
+
+_**Example:**_
+
+* `?config set thread_auto_close_silently yes`
+* `?config set thread_auto_close_silently no`
+
+_**Notes:**_
+
+* This will only have an effect when `thread_auto_close` is set.
+* See also: `thread_auto_close`.
+
+### Thread Cancelled ( thread\_cancelled )
+
+This is the message to display when a thread times out and creation is cancelled.
+
+_**Default:**_ "Cancelled"
+
+_**Example:**_
+
+* `?config set thread_cancelled Gone.`
+
+### Thread Close Footer ( thread\_close\_footer )
+
+This is the message embed footer sent to the recipient upon the closure of a thread.
+
+_**Default:**_ "Replying will create a new thread"
+
+_**Example:**_
+
+* `?config set thread_close_footer Bye!`
+
+_**Notes:**_
+
+* See also: `thread_close_title`, `thread_close_response`, `thread_creation_footer`.
+
+### Thread Close Response ( thread\_close\_response )
+
+This is the message embed content sent to the recipient upon the closure of a thread.
+
+There are three variables you can use within the thread close message: - `closer`: the discord User object of the user who closed the thread. - `logkey`: the key for the thread logs. (ie. 51ecd946dc29) - `loglink`: the full link URL to the thread logs. (ie. https://logviewer.herokuapp.com/logs/51ecd946dc29)
+
+_**Default:**_ "\{{closer.mention\}} has closed this Modmail thread"
+
+_**Example:**_
+
+* `?config set thread_close_response Your message is appriciated!`
 
 To use variables in the thread close message:
-- `?config set thread_close_response {closer.mention} has closed this thread, here's your log key: **`{logkey}`**.`
 
+* `?config set thread_close_response {closer.mention} has closed this thread, here's your log key: **`{logkey}`**.`
 
-***Notes:***
-- When `recipient_thread_close` is enabled and the recipient closed their own thread, `thread_self_close_response` is used instead of this configuration.
-- You may use the `{{closer}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that closed the thread.
-- Discord flavoured markdown is fully supported in `thread_close_response`.
-- See also: `thread_close_title`, `thread_close_footer`, `thread_self_close_response`, `thread_creation_response`.
+_**Notes:**_
 
-Thread Close Title ( thread_close_title )
-------
+* When `recipient_thread_close` is enabled and the recipient closed their own thread, `thread_self_close_response` is used instead of this configuration.
+* You may use the `{{closer}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that closed the thread.
+* Discord flavoured markdown is fully supported in `thread_close_response`.
+* See also: `thread_close_title`, `thread_close_footer`, `thread_self_close_response`, `thread_creation_response`.
 
-This is the message embed title sent to the recipient upon the closure of a thread. 
+### Thread Close Title ( thread\_close\_title )
 
-***Default:*** \"Thread Closed\"
+This is the message embed title sent to the recipient upon the closure of a thread.
 
-***Example:***
-- `?config set thread_close_title Farewell!`
+_**Default:**_ "Thread Closed"
 
+_**Example:**_
 
-***Notes:***
-- See also: `thread_close_response`, `thread_close_footer`, `thread_creation_title`.
+* `?config set thread_close_title Farewell!`
 
+_**Notes:**_
 
-Thread Contact Silently ( thread_contact_silently )
-------
+* See also: `thread_close_response`, `thread_close_footer`, `thread_creation_title`.
 
-Setting this configuration will always open a new thread silently in contact. 
+### Thread Contact Silently ( thread\_contact\_silently )
 
-***Default:*** No
+Setting this configuration will always open a new thread silently in contact.
 
-***Example:***
-- `?config set thread_contact_silently yes`
-- `?config set thread_contact_silently no`
+_**Default:**_ No
 
+_**Example:**_
 
-***Notes:***
-- Works like `{prefix}contact <user> silent` for every new thread.
+* `?config set thread_contact_silently yes`
+* `?config set thread_contact_silently no`
 
+_**Notes:**_
 
-Thread Creation Contact Response ( thread_creation_contact_response )
-------
+* Works like `{prefix}contact <user> silent` for every new thread.
 
-This is the message embed description sent to recipients when contacted by a mod. 
+### Thread Creation Contact Response ( thread\_creation\_contact\_response )
 
-***Default:*** \"{{creator.name}} has opened a Modmail thread.\"
+This is the message embed description sent to recipients when contacted by a mod.
 
-***Example:***
-- `?config set thread_creation_contact_response New thread opened.`
+_**Default:**_ "\{{creator.name\}} has opened a Modmail thread."
 
+_**Example:**_
 
-***Notes:***
-- You may use the `{{creator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that created the thread.
-- `thread_creation_self_contact_response` is used when contacted by self.
-- See also: `thread_creation_contact_title`, `thread_creation_self_contact_response`.
+* `?config set thread_creation_contact_response New thread opened.`
 
-Thread Creation Contact Title ( thread_creation_contact_title )
-------
+_**Notes:**_
 
-This is the message embed title sent to recipients when contacted. 
+* You may use the `{{creator}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that created the thread.
+* `thread_creation_self_contact_response` is used when contacted by self.
+* See also: `thread_creation_contact_title`, `thread_creation_self_contact_response`.
 
-***Default:*** \"New Thread\"
+### Thread Creation Contact Title ( thread\_creation\_contact\_title )
 
-***Example:***
-- `?config set thread_creation_contact_title New Message!`
+This is the message embed title sent to recipients when contacted.
 
-***Notes:***
-- See also: `thread_creation_self_contact_response`, `thread_creation_contact_response`.
+_**Default:**_ "New Thread"
 
+_**Example:**_
 
-Thread Creation Footer ( thread_creation_footer )
-------
+* `?config set thread_creation_contact_title New Message!`
 
-This is the message embed footer sent to the recipient upon the creation of a new thread. 
+_**Notes:**_
 
-***Default:*** \"Your message has been sent\"
+* See also: `thread_creation_self_contact_response`, `thread_creation_contact_response`.
 
-***Example:***
-- `?config set thread_creation_footer Please Hold...
+### Thread Creation Footer ( thread\_creation\_footer )
 
+This is the message embed footer sent to the recipient upon the creation of a new thread.
 
-***Notes:***
-- This is used in place of `thread_self_closable_creation_footer` when `recipient_thread_close` is enabled.
-- See also: `thread_creation_title`, `thread_creation_response`, `thread_self_closable_creation_footer`, `thread_close_footer`.
+_**Default:**_ "Your message has been sent"
 
-Thread Creation Response ( thread_creation_response )
-------
+_**Example:**_
 
-This is the message embed content sent to the recipient upon the creation of a new thread. 
+* \`?config set thread\_creation\_footer Please Hold...
 
-***Default:*** \"The staff team will get back to you as soon as possible.\"
+_**Notes:**_
 
-***Example:***
-- `?config set thread_creation_response You will be contacted shortly.`
+* This is used in place of `thread_self_closable_creation_footer` when `recipient_thread_close` is enabled.
+* See also: `thread_creation_title`, `thread_creation_response`, `thread_self_closable_creation_footer`, `thread_close_footer`.
 
+### Thread Creation Response ( thread\_creation\_response )
 
-***Notes:***
-- Discord flavoured markdown is fully supported in `thread_creation_response`.
-- See also: `thread_creation_title`, `thread_creation_footer`, `thread_close_response`.
+This is the message embed content sent to the recipient upon the creation of a new thread.
 
-Thread Creation Self Contact Response ( thread_creation_self_contact_response )
-------
+_**Default:**_ "The staff team will get back to you as soon as possible."
 
-This is the message embed description sent to recipients when self-contacted. 
+_**Example:**_
 
-***Default:*** \"You have opened a Modmail thread.\"
+* `?config set thread_creation_response You will be contacted shortly.`
 
-***Example:***
-- `?config set thread_creation_self_contact_response You contacted yourself.`
+_**Notes:**_
 
-***Notes:***
-- `thread_creation_contact_response` is used when contacted by another user.
-- See also: `thread_creation_contact_title`, `thread_creation_contact_response`.
+* Discord flavoured markdown is fully supported in `thread_creation_response`.
+* See also: `thread_creation_title`, `thread_creation_footer`, `thread_close_response`.
 
-Thread Creation Title ( thread_creation_title )
-------
+### Thread Creation Self Contact Response ( thread\_creation\_self\_contact\_response )
 
-This is the message embed title sent to the recipient upon the creation of a new thread. 
+This is the message embed description sent to recipients when self-contacted.
 
-***Default:*** \"Thread Created\"
+_**Default:**_ "You have opened a Modmail thread."
 
-***Example:***
-- `?config set thread_creation_title Hello!`
+_**Example:**_
 
+* `?config set thread_creation_self_contact_response You contacted yourself.`
 
-***Notes:***
-- See also: `thread_creation_response`, `thread_creation_footer`, `thread_close_title`.
+_**Notes:**_
 
+* `thread_creation_contact_response` is used when contacted by another user.
+* See also: `thread_creation_contact_title`, `thread_creation_contact_response`.
 
-Thread Move Response ( thread_move_response )
-------
+### Thread Creation Title ( thread\_creation\_title )
 
-This is the message to display to the user when the thread is moved. 
+This is the message embed title sent to the recipient upon the creation of a new thread.
 
-***Default:*** This thread has been moved.
+_**Default:**_ "Thread Created"
 
-***Example:***
-- `?config set thread_move_response This thread has been moved to another category for review!`
+_**Example:**_
 
+* `?config set thread_creation_title Hello!`
 
-***Notes:***
-- Only has an effect when `thread_move_notify` is on.
-- See also: `thread_move_title`, `thread_move_notify`.
+_**Notes:**_
 
-Thread Move Title ( thread_move_title )
-------
+* See also: `thread_creation_response`, `thread_creation_footer`, `thread_close_title`.
 
-The title of the message embed when a thread is moved. 
+### Thread Move Response ( thread\_move\_response )
 
-***Default:*** Thread Moved
+This is the message to display to the user when the thread is moved.
 
-***Example:***
-- `?config set thread_move_title Thread transferred to another channel!`
+_**Default:**_ This thread has been moved.
 
+_**Example:**_
 
-***Notes:***
--See also: `thread_move_notify`, `thread_move_notify_mods`, `thread_move_response`.
+* `?config set thread_move_response This thread has been moved to another category for review!`
 
+_**Notes:**_
 
-Thread Self Closable Creation Footer  ( thread_self_closable_creation_footer )
-------
+* Only has an effect when `thread_move_notify` is on.
+* See also: `thread_move_title`, `thread_move_notify`.
 
-This is the message embed footer sent to the recipient upon the creation of a new thread. 
+### Thread Move Title ( thread\_move\_title )
 
-***Default:*** \"Click the lock to close the thread\"
+The title of the message embed when a thread is moved.
 
-***Example:***
-- `?config set thread_self_closable_creation_footer Please Hold...`
+_**Default:**_ Thread Moved
 
+_**Example:**_
 
-***Notes:***
-- This is used in place of `thread_creation_footer` when `recipient_thread_close` is disabled.
-- See also: `thread_creation_title`, `thread_creation_response`, `thread_creation_footer`.
+* `?config set thread_move_title Thread transferred to another channel!`
 
-Thread Self Close Response ( thread_self_close_response )
-------
+_**Notes:**_ -See also: `thread_move_notify`, `thread_move_notify_mods`, `thread_move_response`.
 
-This is the message embed content sent to the recipient upon the closure of a their own thread. 
- 
-***Default:*** \"You have closed this Modmail thread.\"
+### Thread Self Closable Creation Footer ( thread\_self\_closable\_creation\_footer )
 
-***Example:***
-- `?config set thread_self_close_response You have closed your own thread...`
+This is the message embed footer sent to the recipient upon the creation of a new thread.
 
+_**Default:**_ "Click the lock to close the thread"
 
-***Notes:***
-- When `recipient_thread_close` is disabled or the thread wasn't closed by the recipient, `thread_close_response` is used instead of this configuration.
-- You may use the `{{closer}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that closed the thread.
-- `{{loglink}}` can be used as a placeholder substitute for the full URL linked to the thread in the log viewer and `{{loglink}}` for the unique key (ie. s3kf91a) of the log.
-- Discord flavoured markdown is fully supported in `thread_self_close_response`.
--See also: `thread_close_title`, `thread_close_footer`, `thread_close_response`.
+_**Example:**_
 
-`.env` Config Options
-======
-#### The following is a list of config options that can *ONLY* be added by editing the `.env` file. Please use whichever guide you followed to set up the bot to see how to add these variables. 
+* `?config set thread_self_closable_creation_footer Please Hold...`
 
-{% hint style="danger" %} It is recommended you avoid and ignore changing any of these you do not fully understand {% endhint %}
+_**Notes:**_
 
-| Option        | Description | Required | Usage |
-| ------------- |:-------------:|:-------------:|:-------------:|
-| modmail_guild_id  | Inbox server for tickets | No | `MODMAIL_GUILD_ID = GUILDIDHERE` |
-| guild_id  | Main server the bot is in | Yes | `GUILD_ID = GUILDIDHERE` |
-| log_url_prefix  | Default is `/logs` | Yes | `LOG_URL_PREFIX = PREFIX` |
-| mongo_uri  | The connection uri for the database | Yes | `MONGO_URI = mongodb+srv://Papiersnipper:mypassword123@modmail-rdm99.mongodb.net/` |
-| connection_uri  | The connection uri for the database | Yes | `CONNECTION_URI = mongodb+srv://Papiersnipper:mypassword123@modmail-rdm99.mongodb.net/` |
-| owners  | ID's of the users who will have owner perms | Yes | `OWNERS = 1234,5678,91011` |
-| enable_presence_intent  | Enables the presence intent, required for some plugins. Uses extra resources. | No | `ENABLE_PRESENCE_INTENT = True` |
-| registry_plugins_only  | Disallows the ability to download plugins that aren’t in the plugin registry. | No | `REGISTRY_PLUGINS_ONLY = True` |
-| token  | The bots token | Yes | `TOKEN = MTAyMjk2NTA4MzYxtewgw3eNw.thisis.afaketoken-WGjwfvQ` |
-| enable_eval  | Enables the eval command to run arbitrary code on the bot. | No | `ENABLE_EVAL = True` |
-| github_token  | Needed to use the update command | No | `GITHUB_TOKEN = ghp_ABC132gfdsg4321fds` |
-| disable_autoupdates  | Allows for auto updates | No | `DISABLE_AUTOUPDATES = True` |
-| disable_updates  | Disables updates all together  | No | `DISABLE_UPDATES = True` |
-| log_level  | The type of information posted in the terminal, Default is `INFO` | No | `LOG_LEVEL = ERROR/WARNING/INFO/DEBUG/NOTSET` |
+* This is used in place of `thread_creation_footer` when `recipient_thread_close` is disabled.
+* See also: `thread_creation_title`, `thread_creation_response`, `thread_creation_footer`.
+
+### Thread Self Close Response ( thread\_self\_close\_response )
+
+This is the message embed content sent to the recipient upon the closure of a their own thread.
+
+_**Default:**_ "You have closed this Modmail thread."
+
+_**Example:**_
+
+* `?config set thread_self_close_response You have closed your own thread...`
+
+_**Notes:**_
+
+* When `recipient_thread_close` is disabled or the thread wasn't closed by the recipient, `thread_close_response` is used instead of this configuration.
+* You may use the `{{closer}}` variable for access to the [Member](https://discordpy.readthedocs.io/en/latest/api.html#discord.Member) that closed the thread.
+* `{{loglink}}` can be used as a placeholder substitute for the full URL linked to the thread in the log viewer and `{{loglink}}` for the unique key (ie. s3kf91a) of the log.
+* Discord flavoured markdown is fully supported in `thread_self_close_response`. -See also: `thread_close_title`, `thread_close_footer`, `thread_close_response`.
+
+## `.env` Config Options
+
+**The following is a list of config options that can **_**ONLY**_** be added by editing the `.env` file. Please use whichever guide you followed to set up the bot to see how to add these variables.**
+
+{% hint style="danger" %}
+It is recommended you avoid and ignore changing any of these you do not fully understand
+{% endhint %}
+
+| Option                   |                                  Description                                  | Required |                                          Usage                                          |
+| ------------------------ | :---------------------------------------------------------------------------: | :------: | :-------------------------------------------------------------------------------------: |
+| modmail\_guild\_id       |                            Inbox server for tickets                           |    No    |                             `MODMAIL_GUILD_ID = GUILDIDHERE`                            |
+| guild\_id                |                           Main server the bot is in                           |    Yes   |                                 `GUILD_ID = GUILDIDHERE`                                |
+| log\_url\_prefix         |                               Default is `/logs`                              |    Yes   |                                `LOG_URL_PREFIX = PREFIX`                                |
+| mongo\_uri               |                      The connection uri for the database                      |    Yes   |    `MONGO_URI = mongodb+srv://Papiersnipper:mypassword123@modmail-rdm99.mongodb.net/`   |
+| connection\_uri          |                      The connection uri for the database                      |    Yes   | `CONNECTION_URI = mongodb+srv://Papiersnipper:mypassword123@modmail-rdm99.mongodb.net/` |
+| owners                   |                  ID's of the users who will have owner perms                  |    Yes   |                                `OWNERS = 1234,5678,91011`                               |
+| enable\_presence\_intent | Enables the presence intent, required for some plugins. Uses extra resources. |    No    |                             `ENABLE_PRESENCE_INTENT = True`                             |
+| registry\_plugins\_only  | Disallows the ability to download plugins that aren’t in the plugin registry. |    No    |                              `REGISTRY_PLUGINS_ONLY = True`                             |
+| token                    |                                 The bots token                                |    Yes   |              `TOKEN = MTAyMjk2NTA4MzYxtewgw3eNw.thisis.afaketoken-WGjwfvQ`              |
+| enable\_eval             |           Enables the eval command to run arbitrary code on the bot.          |    No    |                                   `ENABLE_EVAL = True`                                  |
+| github\_token            |                        Needed to use the update command                       |    No    |                         `GITHUB_TOKEN = ghp_ABC132gfdsg4321fds`                         |
+| disable\_autoupdates     |                            Allows for auto updates                            |    No    |                               `DISABLE_AUTOUPDATES = True`                              |
+| disable\_updates         |                         Disables updates all together                         |    No    |                                 `DISABLE_UPDATES = True`                                |
+| log\_level               |       The type of information posted in the terminal, Default is `INFO`       |    No    |                      `LOG_LEVEL = ERROR/WARNING/INFO/DEBUG/NOTSET`                      |

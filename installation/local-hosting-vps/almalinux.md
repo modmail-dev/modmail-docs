@@ -1,17 +1,17 @@
 ---
-description: Deploy Modmail on RHEL / Alma Linux server.
+description: Deploy Modmail on RHEL / Alma Linux / CentOS server.
 ---
 
 # Alma Linux
 
-Alma Linux 9 and Alma Linux 8 is based on Red Hat Enterprise Linux (RHEL) 8 and 9 respectively so you can follow this guide if you're running any of the OS mentioned above.
+Alma Linux 8, 9 and CentOS Stream 8, 9 are based on Red Hat Enterprise Linux (RHEL) 8 and 9 respectively so you can essentially follow this guide if you're running any of the OS mentioned above.
 
 ## Prerequisites
 
 * Root access (**`sudo`**).
 * Minimum 1GB of RAM
 * At least 2GB available disk space.
-* Supported releases: Alma Linux 9, Alma Linux 8.
+* Supported releases: Alma Linux 9, Alma Linux 8, CentOS Stream 9, CentOS Stream 8, RHEL 9 and RHEL 8
 
 ## Dependencies
 
@@ -22,7 +22,7 @@ Alma Linux 9 and Alma Linux 8 is based on Red Hat Enterprise Linux (RHEL) 8 and 
 All code blocks should be executed in bash and line by line unless specified otherwise.
 {% endhint %}
 
-### Alma Linux 9
+### RHEL 9 / Alma Linux 9 / CentOS Stream 9
 
 Alma Linux 9 have all required packages available in official repositories. Install them with `dnf`:
 
@@ -30,7 +30,7 @@ Alma Linux 9 have all required packages available in official repositories. Inst
 sudo dnf -y install python39 git @development nano
 ```
 
-### Alma Linux 8.4-8.x
+### RHEL 8 / Alma Linux 8 / CentOS Stream 8.4-8.x
 
 ```bash
 sudo dnf -y update

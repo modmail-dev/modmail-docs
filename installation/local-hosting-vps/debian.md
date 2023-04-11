@@ -1,15 +1,17 @@
 ---
-description: Deploy Modmail on a Debian server.
+description: Deploy Modmail on Debian / Raspberry Pi OS.
 ---
 
 # Debian
+
+Raspberry Pi OS 11 Bullseye and Raspberry Pi OS 10 Buster are based on Debian 11 Bullseye and Debian 10 Buster respectively so you can essentially follow this guide if you're running any of the OS mentioned above.
 
 ## Prerequisites
 
 * Root access (**`sudo`**).
 * Minimum 1GB of RAM
 * At least 2GB available disk space.
-* Supported releases: Debian 11 Bullseye, Debian 10 Buster.
+* Supported releases: Debian 11 Bullseye, Debian 10 Buster, Raspberry Pi OS 11 Bullseye, and Raspberry Pi OS 10 (Legacy) Buster
 
 ## Dependencies
 
@@ -23,7 +25,7 @@ All code blocks should be executed in bash and line by line unless specified oth
 
 To install these dependencies, we will be using **`apt`**.
 
-### **Debian 11 Bullseye**
+### **Debian 11 Bullseye /** Raspberry Pi OS 11 Bullseye
 
 ```bash
 sudo apt update
@@ -32,7 +34,7 @@ sudo apt -y install python3 python3-dev python3-venv python3-pip libcairo2-dev l
 
 At the time of writing, this will install Python 3.9 from Debian's repository.
 
-### **Debian 10 Buster**
+### **Debian 10 Buster /** Raspberry Pi OS 10 Buster
 
 You will need to manually compile Python 3.10 from source. Compiling Python may take a while (est. 5-10 minutes).
 

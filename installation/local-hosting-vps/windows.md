@@ -128,7 +128,7 @@ You can fill in these extra details as you see fit as it's only for your own ref
 
 You can also optionally specify a log file as output and error in the `I/O` tab, just be sure to create the file beforehand so you can select it in the GUI.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Details on the "I/O" tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Details on the "I/O" tab</p></figcaption></figure>
 
 And finally, click "Install Service" to install your Modmail bot as a service on your Windows system.\
 

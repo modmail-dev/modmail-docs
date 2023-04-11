@@ -14,19 +14,19 @@ More OS-specific requirements will be listed on their specific installation page
 
 ## Choose your Operating System
 
-* [Windows](./windows.md)
-* [MacOS](./macos.md)
-* [Docker](./docker.md)
-* [Ubuntu](./ubuntu.md)
-* [Debian](./debian.md)
-* [Fedora](./fedora.md)
-* [AlmaLinux](./almalinux.md)
-* [CentOS](./centos.md)
-* [Raspberry Pi](./raspberry-pi.md)
+* [Windows](windows.md)
+* [MacOS](macos.md)
+* [Docker](docker.md)
+* [Ubuntu](ubuntu.md)
+* [Debian](debian.md)
+* [Fedora](fedora.md)
+* [AlmaLinux](almalinux.md)
+* [CentOS](almalinux.md)
+* [Raspberry Pi OS](debian.md)
 
 ## Logviewer
 
 You can also self-host logviewer by following the guides below.
 
-* [Logviewer](./logviewer.md)
-* [Patreon logviewer](./patreon_logviewer.md)
+* [Logviewer](logviewer.md)
+* [Patreon logviewer](patreon\_logviewer.md)

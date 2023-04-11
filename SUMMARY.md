@@ -10,8 +10,6 @@
     * [Debian](installation/local-hosting-vps/debian.md)
     * [Fedora](installation/local-hosting-vps/fedora.md)
     * [Alma Linux](installation/local-hosting-vps/almalinux.md)
-    * [CentOS](installation/local-hosting-vps/centos.md)
-    * [Raspberry Pi](installation/local-hosting-vps/raspberry-pi.md)
     * [Logviewer](installation/local-hosting-vps/logviewer.md)
     * [Patreon logviewer](installation/local-hosting-vps/patreon\_logviewer.md)
   * [Railway](installation/railway.md)
