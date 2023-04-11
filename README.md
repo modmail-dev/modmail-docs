@@ -66,11 +66,11 @@ Support Modmail with your contributions! Whether it be improvements to the docum
 * Become familiar with [Modmail commands and functionalities](getting-started.md).
 
 {% hint style="info" %}
-Throughout this documentation when we're referring to bot commands, we will assume the prefix of the bot to be <mark style="background-color:yellow;">?</mark> and will display them like in this example: <mark style="background-color:yellow;">?help</mark>.\
+Throughout this documentation when we're referring to bot commands, we will assume the prefix of the bot to be <mark style="color:green;">?</mark> and will display them like in this example: <mark style="color:green;">?help</mark>.\
 \
 Optional arguments will be enclosed in square brackets:\
-Example: <mark style="background-color:yellow;">?close \[time] \[reason] \[silently]</mark>\
+Example: <mark style="color:green;">?close \[time] \[reason] \[silently]</mark>\
 \
 Required arguments will be enclosed in angle brackets:\
-Example: <mark style="background-color:yellow;">?contact \<user></mark>
+Example: <mark style="color:green;">?contact \<user></mark>
 {% endhint %}
