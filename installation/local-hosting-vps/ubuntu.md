@@ -43,7 +43,7 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 Now install the pre-requirements with `apt`, you can copy and run these 3 lines at once:
 
 ```bash
-sudo apt -y install python3.10 python3.10-dev python3.10-venv \
+sudo apt -y install python3.10 python3.10-dev python3.10-venv python3-pip \
                     libcairo2-dev libffi-dev g++ \
                     git nano
 ```
