@@ -36,17 +36,18 @@ sudo add-apt-repository -y ppa:deadsnakes/ppa
 Now install the pre-requirements with `apt`, you can copy and run these 3 lines at once:
 
 ```bash
-sudo apt -y install python3.10 python3.10-dev python3.10-venv python3-pip \
+sudo apt -y install python3.10 python3.10-dev python3.10-venv \
                     libcairo2-dev libffi-dev g++ \
-                    git wget nano
+                    git nano
 ```
 
 <details>
 
 <summary>Failed to install Python 3.10?</summary>
 
-You can manually compile Python instead of adding using the Deadsnakes PPA. Compiling Python may take a while (est. 5-10 minutes).
+You can manually compile Python instead of adding using the Deadsnakes PPA. Compiling Python may take a while (est. 5-10 minutes). Copy and run line 2-7 all at once.
 
+{% code lineNumbers="true" %}
 ```bash
 sudo apt update && sudo apt upgrade -y  # Update and upgrade all packages
 sudo apt install -y software-properties-common \
@@ -61,31 +62,30 @@ cd Python-3.10.9
 ./configure --enable-optimizations 
 make altinstall
 ```
-
-After following this step, make sure to specify the version when running user-level Python commands later in the guide.
-
-For example:
-
-* `pip install pipenv` to `pip3.10 install pipenv`&#x20;
-* `python bot.py` to `python3.10 bot.py`
+{% endcode %}
 
 </details>
 
-## Installing Bot
-
-In your home directory, clone and cd into the official Modmail repository with:
+After that, ensure `pip` is installed for Python 3.10 with:
 
 ```bash
-cd ~
+python3.10 -m ensurepip --upgrade
+```
+
+## Installing Bot
+
+Clone and change directory into the Modmail folder with:
+
+```bash
 git clone https://github.com/modmail-dev/modmail
 cd modmail
 ```
 
-Inside the Modmail folder, Install `pipenv` and the bot dependencies with:
+Inside the Modmail folder, Install `pipenv` and its Python packages with:
 
 ```bash
-pip install pipenv
-pipenv install
+pip3.10 install pipenv
+pipenv install --python 3.10
 ```
 
 Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
