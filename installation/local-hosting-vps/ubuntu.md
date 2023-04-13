@@ -91,7 +91,7 @@ cd modmail
 Inside the Modmail folder, Install `pipenv` and its Python packages with:
 
 ```bash
-pip3.10 install pipenv
+pip install pipenv
 pipenv install --python 3.10
 ```
 

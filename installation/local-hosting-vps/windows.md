@@ -45,7 +45,7 @@ choco upgrade python310 -y
 After that, ensure `pip` is installed for Python 3.10 with:
 
 ```bash
-python3.10 -m ensurepip --upgrade
+python3.10 -m ensurepip --upgrade --default-pip
 ```
 
 After the above installation has finished, download and install the **GTK runtime for Windows** by [clicking here](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases/latest).
@@ -63,7 +63,7 @@ git clone https://github.com/modmail-dev/modmail; cd modmail
 Install Pipenv and project dependencies with:
 
 ```powershell
-pip3.10 install pipenv; pipenv install
+pip install pipenv; pipenv install
 ```
 
 Create a new file in the modmail folder named `.env` and paste in your environmental variables needed to run Modmail. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.

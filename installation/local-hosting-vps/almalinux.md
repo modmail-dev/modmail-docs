@@ -68,7 +68,7 @@ python3.9 -m ensurepip --upgrade --default-pip
 And then, install `pipenv` and the bot dependencies with:
 
 ```bash
-pip3.9 install pipenv
+pip install pipenv
 pipenv install --python 3.9
 ```
 

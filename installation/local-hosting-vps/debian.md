@@ -85,7 +85,7 @@ cd modmail
 Inside the Modmail folder, Install `pipenv` and the bot dependencies with:&#x20;
 
 ```bash
-pip3.9 install pipenv
+pip install pipenv
 pipenv install --python 3.9
 ```
 
