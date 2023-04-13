@@ -107,9 +107,9 @@ docker run -d --name modmail \
 --restart always myname/modmail:latest
 ```
 
-## Updating
+## Updating on Docker
 
-Auto-update is disabled when running Docker as Docker container state is not persistent across restarts. To update your bot, you will need to run the `docker pull` command in the previous step: [Running the official image for Modmail](docker.md#running-the-official-image-for-modmail) if your image is based from the official repository. After that, you must recreate your container using the `docker rm` and `docker run` command again.
+Auto-update is disabled when running Docker as Docker container state is not persistent across restarts. To update your bot, you will need to update the base image by running the `docker pull` command in the previous step: [Running the official image for Modmail](docker.md#running-the-official-image-for-modmail) if your image is based from the official repository. After that, you must recreate your container using the `docker rm` and `docker run` command again.
 
 If your image is created locally, simply replace the `docker pull` command with `git pull` and rebuilding your image again.
 

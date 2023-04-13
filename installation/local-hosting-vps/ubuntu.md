@@ -4,12 +4,19 @@ description: Deploy Modmail on an Ubuntu server.
 
 # Ubuntu
 
+{% hint style="warning" %}
+For safety reasons, **DO NOT** install Modmail with a root user. A misbehaving or malicious plugin installed on your Modmail bot can easily access your entire system. If you are unsure how to create a new user on Linux, see [DigitalOcean’s tutorial: How To Create a New Sudo-enabled User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-20-04-quickstart).
+{% endhint %}
+
 ## Prerequisites
 
-* Root access (**`sudo`**).
-* Minimum 1GB of RAM
-* At least 2GB available disk space.
-* Supported releases: Ubuntu 18.04 LTS, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS.
+1. Root access (**`sudo`**).
+2. Minimum 1GB of RAM
+3. At least 2GB available disk space.
+4. Supported releases:&#x20;
+   * Ubuntu 18.04 LTS (Bionic Beaver)
+   * Ubuntu 20.04 LTS (Focal Fossa)
+   * Ubuntu 22.04 LTS (Jammy Jellyfish)
 
 ## Dependencies
 
@@ -69,7 +76,7 @@ make altinstall
 After that, ensure `pip` is installed for Python 3.10 with:
 
 ```bash
-python3.10 -m ensurepip --upgrade
+python3.10 -m ensurepip --upgrade --default-pip
 ```
 
 ## Installing Bot
@@ -108,16 +115,4 @@ After your `.env` file is ready, you can now go ahead and try running your bot w
 pipenv run bot
 ```
 
-If no error shows up, it means your bot is now running correctly.
-
-## Updating
-
-Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
-
-If for some reason your update command isn't working correctly, you can update your bot by going into your Modmail folder and pulling the latest changes from GitHub like so:
-
-```bash
-cd modmail && git pull
-```
-
-Be sure to restart your bot to apply the update.
+If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.

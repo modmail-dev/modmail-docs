@@ -4,14 +4,22 @@ description: Deploy Modmail on Debian / Raspberry Pi OS.
 
 # Debian
 
+{% hint style="warning" %}
+For safety reasons, **DO NOT** install Modmail with a root user. A misbehaving or malicious plugin installed on your Modmail bot can easily access your entire system. If you are unsure how to create a new user on Linux, see [DigitalOcean’s tutorial: How To Create a New Sudo-enabled User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-20-04-quickstart).
+{% endhint %}
+
 Raspberry Pi OS 11 Bullseye and Raspberry Pi OS 10 Buster are based on Debian 11 Bullseye and Debian 10 Buster respectively so you can essentially follow this guide if you're running any of the OS mentioned above.
 
 ## Prerequisites
 
-* Root access (**`sudo`**).
-* Minimum 1GB of RAM
-* At least 2GB available disk space.
-* Supported releases: Debian 11 Bullseye, Debian 10 Buster, Raspberry Pi OS 11 Bullseye, and Raspberry Pi OS 10 (Legacy) Buster
+1. Root access (**`sudo`**).
+2. Minimum 1GB of RAM
+3. At least 2GB available disk space.
+4. Supported releases:&#x20;
+   * Debian 11 Bullseye
+   * Debian 10 Buster
+   * Raspberry Pi OS 11 Bullseye
+   * Raspberry Pi OS 10 Buster
 
 ## Dependencies
 
@@ -30,6 +38,12 @@ To install these dependencies, we will be using **`apt`**.
 ```bash
 sudo apt update
 sudo apt -y install python3 python3-dev python3-venv python3-pip libcairo2-dev libffi-dev g++ git wget nano
+```
+
+After that, ensure `pip` is installed for Python 3.9 with:
+
+```
+python3.9 -m ensurepip --upgrade --default-pip
 ```
 
 At the time of writing, this will install Python 3.9 from Debian's repository.
@@ -53,29 +67,31 @@ cd Python-3.10.9
 sudo make altinstall
 ```
 
-After following this step, make sure to specify the version when running user-level Python commands later in the guide.
+After that, ensure `pip` is installed for Python 3.10 with:
 
-For example:
-
-* `pip install pipenv` to `pip3.10 install pipenv`&#x20;
-* `python bot.py` to `python3.10 bot.py`
+```
+python3.10 -m ensurepip --upgrade --default-pip
+```
 
 ## Installing Bot
 
-In your home directory, clone and cd into the official Modmail repository with:
+Clone and change directory into the Modmail folder with:
 
 ```bash
-cd ~
 git clone https://github.com/modmail-dev/modmail
 cd modmail
 ```
 
-Inside the Modmail folder, Install `pipenv` and the bot dependencies with:
+Inside the Modmail folder, Install `pipenv` and the bot dependencies with:&#x20;
 
 ```bash
-pip install pipenv
-pipenv install
+pip3.9 install pipenv
+pipenv install --python 3.9
 ```
+
+{% hint style="info" %}
+Replace <mark style="color:green;">`3.9`</mark> with <mark style="color:green;">`3.10`</mark> on the command above if you followed[ Debian 10 Buster](debian.md#debian-10-buster-raspberry-pi-os-10-buster) method previously.
+{% endhint %}
 
 Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
 
@@ -97,16 +113,4 @@ After your `.env` file is ready, you can now go ahead and try running your bot w
 pipenv run bot
 ```
 
-If no error shows up, it means your bot is now running correctly.
-
-## Updating
-
-Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
-
-If for some reason your update command isn't working correctly, you can update your bot by going into your modmail folder and pulling the latest changes from GitHub like so:
-
-```bash
-cd modmail && git pull
-```
-
-Be sure to restart your bot to apply the update.
+If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.

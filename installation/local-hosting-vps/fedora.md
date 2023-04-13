@@ -4,12 +4,19 @@ description: Deploy Modmail on a Fedora server.
 
 # Fedora
 
+{% hint style="warning" %}
+For safety reasons, **DO NOT** install Modmail with a root user. A misbehaving or malicious plugin installed on your Modmail bot can easily access your entire system. If you are unsure how to create a new user on Linux, see [DigitalOcean’s tutorial: How To Create a New Sudo-enabled User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-20-04-quickstart).
+{% endhint %}
+
 ## Prerequisites
 
-* Root access (**`sudo`**).
-* Minimum 1GB of RAM
-* At least 2GB available disk space.
-* Supported releases: Fedora 37, Fedora 36, Fedora 35.
+1. Root access (**`sudo`**).
+2. Minimum 1GB of RAM
+3. At least 2GB available disk space.
+4. Supported releases:&#x20;
+   * Fedora 37
+   * Fedora 36
+   * Fedora 35
 
 ## Dependencies
 
@@ -27,26 +34,25 @@ Fedora Linux 35 and above has all required packages available in official reposi
 sudo dnf -y install python39 git nano g++ gtk3
 ```
 
-## Installing Bot
+After that, ensure `pip` is installed for Python 3.9 with:
 
-In your home directory, clone and cd into the official Modmail repository with:
-
-```bash
-cd ~
-git clone https://github.com/modmail-dev/modmail
-cd modmail
+```
+python3.9 -m ensurepip --upgrade --default-pip
 ```
 
-Inside the Modmail folder, ensure `pip` is installed correctly and is defaulting to Python 3.9 with:
+## Installing Bot
+
+Clone and change directory into the Modmail folder with:
 
 ```bash
-python3.9 -m ensurepip --default-pip
+git clone https://github.com/modmail-dev/modmail
+cd modmail
 ```
 
 And then, install `pipenv` and the bot dependencies with:
 
 ```bash
-pip install pipenv
+pip3.9 install pipenv
 pipenv install --python 3.9
 ```
 
@@ -70,17 +76,5 @@ After your `.env` file is ready, you can now go ahead and try running your bot w
 pipenv run bot
 ```
 
-If no error shows up, it means your bot is now running correctly.
-
-## Updating
-
-Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
-
-If for some reason your update command isn't working correctly, you can update your bot by going into your modmail folder and pulling the latest changes from GitHub like so:
-
-```bash
-cd modmail && git pull
-```
-
-Be sure to restart your bot to apply the update.
+If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.
 
