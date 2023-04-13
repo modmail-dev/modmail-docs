@@ -34,6 +34,16 @@ And then, to make sure that `pm2` stays active and persistent between machine re
 pm2 save && pm2 startup
 ```
 
+Here's some of the other PM2 commands for future reference:
+
+```bash
+pm2 restart modmail
+pm2 reload modmail
+pm2 stop modmail
+pm2 delete modmail
+pm2 list
+```
+
 ## Using systemd on Linux
 
 `systemd` is a built-in service manager for most Linux systems. It's primary used to manage background applications and services and to make applications auto-restart on crash and run on system startup.
