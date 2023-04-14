@@ -8,6 +8,8 @@ description: Deploy Modmail on Docker.
 Docker is considered an advanced setup, it is recommended that you understand how Docker works before deciding to use this method.
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/27-272811_containerization-docker-explained-edureka-docker-explanation-hd-png-1221238558.png" alt=""><figcaption><p>A simple illustration explaining how Docker works</p></figcaption></figure>
+
 ## Prerequisites
 
 * Supported OS for Docker
