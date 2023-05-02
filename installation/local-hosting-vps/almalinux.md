@@ -62,14 +62,14 @@ cd modmail
 Inside the Modmail folder, ensure `pip` is installed correctly and is defaulting to Python 3.9 with:
 
 ```bash
-python3.9 -m ensurepip --upgrade --default-pip
+python3.9 -m ensurepip --upgrade
 ```
 
 And then, install `pipenv` and the bot dependencies with:
 
 ```bash
-pip install pipenv
-pipenv install --python 3.9
+python3.9 -m pip install pipenv
+python3.9 -m pipenv install --python 3.9
 ```
 
 Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
@@ -89,7 +89,7 @@ If using the `nano` editor is a bit of a learning curve, you can always FTP into
 After your `.env` file is ready, you can now go ahead and try running your bot with:
 
 ```bash
-pipenv run bot
+python3.9 -m pipenv run bot
 ```
 
 If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.
