@@ -40,18 +40,13 @@ sudo apt update
 sudo apt -y install python3 python3-dev python3-venv python3-pip libcairo2-dev libffi-dev g++ git wget nano
 ```
 
-After that, ensure `pip` is installed for Python 3.9 with:
-
-```
-python3.9 -m ensurepip --upgrade --default-pip
-```
-
 At the time of writing, this will install Python 3.9 from Debian's repository.
 
 ### **Debian 10 Buster /** Raspberry Pi OS 10 Buster
 
-You will need to manually compile Python 3.10 from source. Compiling Python may take a while (est. 5-10 minutes).
+You will need to manually compile Python 3.10 from source. Compiling Python may take a while (est. 5-10 minutes). Make sure to run line 2-7 all at once.
 
+{% code lineNumbers="true" %}
 ```bash
 sudo apt update && sudo apt upgrade -y  # Update and upgrade all packages
 sudo apt install -y software-properties-common \
@@ -66,12 +61,15 @@ cd Python-3.10.9
 ./configure --enable-optimizations 
 sudo make altinstall
 ```
+{% endcode %}
 
-After that, ensure `pip` is installed for Python 3.10 with:
+After that, ensure `pip` is installed and updated for Python 3.10 with:
 
 ```
-python3.10 -m ensurepip --upgrade --default-pip
+python3.10 -m ensurepip --upgrade
 ```
+
+Then **log out and log back in** to continue the installation steps.
 
 ## Installing Bot
 
@@ -85,8 +83,8 @@ cd modmail
 Inside the Modmail folder, Install `pipenv` and the bot dependencies with:&#x20;
 
 ```bash
-pip install pipenv
-pipenv install --python 3.9
+python3.9 -m pip install pipenv
+python3.9 -m pipenv install --python 3.9
 ```
 
 {% hint style="info" %}
@@ -110,7 +108,11 @@ If using the `nano` editor is a bit of a learning curve, you can always FTP into
 After your `.env` file is ready, you can now go ahead and try running your bot with:
 
 ```bash
-pipenv run bot
+python3.9 -m pipenv run bot
 ```
+
+{% hint style="info" %}
+Replace <mark style="color:green;">`3.9`</mark> with <mark style="color:green;">`3.10`</mark> on the command above if you followed[ Debian 10 Buster](debian.md#debian-10-buster-raspberry-pi-os-10-buster) method previously.
+{% endhint %}
 
 If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.

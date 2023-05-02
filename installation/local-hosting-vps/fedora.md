@@ -14,13 +14,14 @@ For safety reasons, **DO NOT** install Modmail with a root user. A misbehaving o
 2. Minimum 1GB of RAM
 3. At least 2GB available disk space.
 4. Supported releases:&#x20;
+   * Fedora 38
    * Fedora 37
    * Fedora 36
    * Fedora 35
 
 ## Dependencies
 
-* Python 3.9
+* Python 3.10
 * Tools: `git`, `wget`, `nano`
 * Additional Modmail requirements: `g++`
 
@@ -31,13 +32,13 @@ All code blocks should be executed in bash and line by line unless specified oth
 Fedora Linux 35 and above has all required packages available in official repositories. Install them with `dnf`.
 
 ```bash
-sudo dnf -y install python39 git nano g++ gtk3
+sudo dnf -y install python310 git nano g++ gtk3
 ```
 
-After that, ensure `pip` is installed for Python 3.9 with:
+And then, make sure `pip` is installed for Python 3.10 with:
 
-```
-python3.9 -m ensurepip --upgrade --default-pip
+```bash
+python3.10 -m ensurepip --upgrade
 ```
 
 ## Installing Bot
@@ -51,10 +52,9 @@ cd modmail
 
 And then, install `pipenv` and the bot dependencies with:
 
-```bash
-pip install pipenv
-pipenv install --python 3.9
-```
+<pre class="language-bash"><code class="lang-bash">python3.10 -m pip install pipenv
+<strong>python3.10 -m pipenv install --python 3.10
+</strong></code></pre>
 
 Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
 
@@ -73,7 +73,7 @@ If using the `nano` editor is a bit of a learning curve, you can always FTP into
 After your `.env` file is ready, you can now go ahead and try running your bot with:
 
 ```bash
-pipenv run bot
+python3.10 -m pipenv run bot
 ```
 
 If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.
