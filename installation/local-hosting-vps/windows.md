@@ -42,10 +42,11 @@ choco upgrade git --params "/GitOnlyOnPath /WindowsTerminal" -y
 choco upgrade python310 -y
 ```
 
-After that, ensure `pip` is installed for Python 3.10 with:
+After that, ensure `pip` and `pipenv` are installed and updated for Python 3.10 with:
 
-```bash
-python3.10 -m ensurepip --upgrade --default-pip
+```powershell
+py -3.10 -m ensurepip --upgrade
+py -3.10 -m pip install pipenv
 ```
 
 After the above installation has finished, download and install the **GTK runtime for Windows** by [clicking here](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases/latest).
@@ -57,13 +58,14 @@ In any folder location of your choice, `Shift+Right Click` and click on `Open Po
 In your PowerShell window, run these commands to clone the official Modmail repository locally and `cd` into the folder:
 
 ```powershell
-git clone https://github.com/modmail-dev/modmail; cd modmail
+git clone https://github.com/modmail-dev/modmail
+cd modmail
 ```
 
-Install Pipenv and project dependencies with:
+Install project dependencies inside Modmail's pipenv with:
 
 ```powershell
-pip install pipenv; pipenv install
+py -3.10 -m pipenv install
 ```
 
 Create a new file in the modmail folder named `.env` and paste in your environmental variables needed to run Modmail. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
@@ -73,7 +75,7 @@ Create a new file in the modmail folder named `.env` and paste in your environme
 Lastly, in your PowerShell window simply enter the command below to run your Modmail bot:
 
 ```powershell
-pipenv run bot
+py -3.10 -m pipenv run bot
 ```
 
 If no error shows up, it means that your Modmail is now running correctly.
