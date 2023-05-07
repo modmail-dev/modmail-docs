@@ -4,12 +4,19 @@ description: Deploy Modmail on an Ubuntu server.
 
 # Ubuntu
 
+{% hint style="warning" %}
+For safety reasons, **DO NOT** install Modmail with a root user. A misbehaving or malicious plugin installed on your Modmail bot can easily access your entire system. If you are unsure how to create a new user on Linux, see [DigitalOcean’s tutorial: How To Create a New Sudo-enabled User](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-20-04-quickstart).
+{% endhint %}
+
 ## Prerequisites
 
-* Root access (**`sudo`**).
-* Minimum 1GB of RAM
-* At least 2GB available disk space.
-* Supported releases: Ubuntu 18.04 LTS, Ubuntu 20.04 LTS, Ubuntu 22.04 LTS.
+1. Root access (**`sudo`**).
+2. Minimum 1GB of RAM
+3. At least 2GB available disk space.
+4. Supported releases:&#x20;
+   * Ubuntu 18.04 LTS (Bionic Beaver)
+   * Ubuntu 20.04 LTS (Focal Fossa)
+   * Ubuntu 22.04 LTS (Jammy Jellyfish)
 
 ## Dependencies
 
@@ -38,15 +45,22 @@ Now install the pre-requirements with `apt`, you can copy and run these 3 lines 
 ```bash
 sudo apt -y install python3.10 python3.10-dev python3.10-venv python3-pip \
                     libcairo2-dev libffi-dev g++ \
-                    git wget nano
+                    git nano
+```
+
+After that, install `pipenv` with:
+
+```bash
+python3.10 -m pip install pipenv
 ```
 
 <details>
 
 <summary>Failed to install Python 3.10?</summary>
 
-You can manually compile Python instead of adding using the Deadsnakes PPA. Compiling Python may take a while (est. 5-10 minutes).
+You can manually compile Python instead of adding using the Deadsnakes PPA. Compiling Python may take a while (est. 5-10 minutes). Copy and run line 2-7 all at once.
 
+{% code lineNumbers="true" %}
 ```bash
 sudo apt update && sudo apt upgrade -y  # Update and upgrade all packages
 sudo apt install -y software-properties-common \
@@ -61,32 +75,23 @@ cd Python-3.10.9
 ./configure --enable-optimizations 
 make altinstall
 ```
-
-After following this step, make sure to specify the version when running user-level Python commands later in the guide.
-
-For example:
-
-* `pip install pipenv` to `pip3.10 install pipenv`&#x20;
-* `python bot.py` to `python3.10 bot.py`
+{% endcode %}
 
 </details>
 
 ## Installing Bot
 
-In your home directory, clone and cd into the official Modmail repository with:
+Clone and change directory into the Modmail folder with:
 
 ```bash
-cd ~
 git clone https://github.com/modmail-dev/modmail
 cd modmail
 ```
 
-Inside the Modmail folder, Install `pipenv` and the bot dependencies with:
+Inside the Modmail folder, Install `pipenv` and its Python packages with:
 
-```bash
-pip install pipenv
-pipenv install
-```
+<pre class="language-bash"><code class="lang-bash"><strong>python3.10 -m pipenv install --python 3.10
+</strong></code></pre>
 
 Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
 
@@ -105,19 +110,7 @@ If using the `nano` editor is a bit of a learning curve, you can always FTP into
 After your `.env` file is ready, you can now go ahead and try running your bot with:
 
 ```bash
-pipenv run bot
+python3.10 -m pipenv run bot
 ```
 
-If no error shows up, it means your bot is now running correctly.
-
-## Updating
-
-Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
-
-If for some reason your update command isn't working correctly, you can update your bot by going into your Modmail folder and pulling the latest changes from GitHub like so:
-
-```bash
-cd modmail && git pull
-```
-
-Be sure to restart your bot to apply the update.
+If no error shows up, it means your bot is now running correctly. You can stop the bot from running with `Ctrl+C` to continue using your terminal.

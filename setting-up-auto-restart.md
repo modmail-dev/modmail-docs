@@ -1,25 +1,31 @@
 # Setting up auto-restart
 
-## Using pm2 on Linux
+## Using PM2 on Linux
 
-`pm2` is a process manager intended for Node.js but can also be used with Python applications, such as our Modmail bot and logviewer. To use `pm2`, we will need to install Node.js.
+PM2 is a process manager originally intended for Node.js but can also be used with Python applications, such as our Modmail bot and Logviewer. To use `pm2`, we will need to install Node Package Manager (`npm`).
 
-#### Installing `pm2` Using `apt`:
+#### Installing `pm2` Using `apt` (Ubuntu, Debian, etc):
 
 ```bash
 sudo apt install npm -y && sudo npm i pm2 -g
 ```
 
-#### Installing `pm2` using `dnf`:
+#### Installing `pm2` using `dnf` (Fedora, Alma Linux, etc):
 
 ```bash
 sudo dnf -y install npm && sudo npm i pm2 -g
 ```
 
-Then, in the Modmail folder, start the Modmail process with:
+Then, in the Modmail folder, start the Modmail process in the background with:
 
 ```
-sudo pm2 start modmail.sh --name "modmail"
+pm2 start modmail.sh --name "modmail"
+```
+
+You can see the logs of your Modmail process with:
+
+```
+pm2 logs modmail
 ```
 
 And then, to make sure that `pm2` stays active and persistent between machine restarts, run the following commands:
@@ -28,28 +34,28 @@ And then, to make sure that `pm2` stays active and persistent between machine re
 pm2 save && pm2 startup
 ```
 
+Here's some of the other PM2 commands for future reference:
+
+```bash
+pm2 restart modmail
+pm2 reload modmail
+pm2 stop modmail
+pm2 delete modmail
+pm2 list
+```
+
 ## Using systemd on Linux
 
-To have the bot auto-restart on crash or system reboot, we will be using `systemd` by making a service file for our bot.
+`systemd` is a built-in service manager for most Linux systems. It's primary used to manage background applications and services and to make applications auto-restart on crash and run on system startup.
 
-In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail repository `path` and your Pipenv `path`.
+We will be using `systemd` for Modmail by making a service file for our bot.
+
+In order to create the service file, you will first need to know three things, your Linux `username`, your Modmail folder location as `modmail_path` and your Pipenv location as `pipenv_path`.
 
 First, your Linux `username` can be fetched with the following command:
 
 ```bash
 whoami
-```
-
-If you have cloned the Modmail repo as a `root` user, your Modmail repo path should be:
-
-```bash
-/root/modmail
-```
-
-Otherwise, your path should be:
-
-```bash
-/home/$USER/modmail/
 ```
 
 You can get your `pipenv_path` with:
@@ -111,7 +117,11 @@ sudo systemctl stop modmail
 sudo systemctl disable modmail
 ```
 
-## Using `nssm` on Windows
+## Using PM2 on Windows
+
+Todo: [https://github.com/jessety/pm2-installer](https://github.com/jessety/pm2-installer)
+
+## Using NSSM on Windows
 
 To have the bot auto-restart on crash or system reboot, we will be using `nssm` by making a service for our bot application.
 
@@ -150,7 +160,7 @@ cd "C:\Users\Raiden\Downloads\nssm-2.24\win64"
 ```
 
 {% hint style="info" %}
-Wrapping "your folder\directory" on Windows in doublequotes is necessary to make sure spaces in our file path is parsed correctly.
+Wrapping "your folder\directory" on Windows in double quotes is necessary to make sure spaces in our file path is parsed correctly.
 {% endhint %}
 
 And then, proceed to create a new service for Modmail using `nssm` with:

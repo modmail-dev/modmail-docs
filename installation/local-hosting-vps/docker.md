@@ -8,6 +8,8 @@ description: Deploy Modmail on Docker.
 Docker is considered an advanced setup, it is recommended that you understand how Docker works before deciding to use this method.
 {% endhint %}
 
+<figure><img src="../../.gitbook/assets/27-272811_containerization-docker-explained-edureka-docker-explanation-hd-png-1221238558.png" alt=""><figcaption><p>A simple illustration explaining how Docker works</p></figcaption></figure>
+
 ## Prerequisites
 
 * Supported OS for Docker
@@ -107,9 +109,9 @@ docker run -d --name modmail \
 --restart always myname/modmail:latest
 ```
 
-## Updating
+## Updating on Docker
 
-Auto-update is disabled when running Docker as Docker container state is not persistent across restarts. To update your bot, you will need to run the `docker pull` command in the previous step: [Running the official image for Modmail](docker.md#running-the-official-image-for-modmail) if your image is based from the official repository. After that, you must recreate your container using the `docker rm` and `docker run` command again.
+Auto-update is disabled when running Docker as Docker container state is not persistent across restarts. To update your bot, you will need to update the base image by running the `docker pull` command in the previous step: [Running the official image for Modmail](docker.md#running-the-official-image-for-modmail) if your image is based from the official repository. After that, you must recreate your container using the `docker rm` and `docker run` command again.
 
 If your image is created locally, simply replace the `docker pull` command with `git pull` and rebuilding your image again.
 
