@@ -65,7 +65,7 @@ cd modmail
 Install project dependencies inside Modmail's pipenv with:
 
 ```powershell
-py -3.10 -m pipenv install
+py -3.10 -m pipenv install --python 3.10
 ```
 
 Create a new file in the modmail folder named `.env` and paste in your environmental variables needed to run Modmail. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
