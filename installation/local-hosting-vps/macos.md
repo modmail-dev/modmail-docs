@@ -10,7 +10,7 @@ description: Deploy Modmail on a macOS machine. (Tested with Apple Silicon M2)
 2. At least 2GB available disk space.
 3. Supported macOS version:
    - MacOS 14 Sonoma (Tested)
-   - MacOS 11 Montery (Tested)
+   - MacOS 11 Monterey (Tested)
 
 ## Dependencies
 
@@ -21,7 +21,7 @@ We will be using the following dependencies:
 * Additional Modmail requirements: `cairo`, `libxml2`, `libxslt`, `libffi`
 
 {% hint style="info" %}
-All code blocks should be executed in bash and line by line unless specified otherwise.
+All code blocks should be executed in zsh or bash and line by line unless specified otherwise.
 {% endhint %}
 
 To install these dependencies, we will be using Terminal (zsh or bash):
@@ -60,7 +60,7 @@ nano .env
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-After that, close it and press "Yes" to save your changes. Exit the `nano` editor with `Ctrl+X`.
+After that, exit the nano editor with `Ctrl+X` and select or enter `y` when prompted to save. Press enter to maintain the exiting name of the document.
 
 {% hint style="info" %}
 If using the `nano` editor is a bit of a learning curve, you can edit the `.env` file manually with your preferred GUI-based editor like TextEdit.
