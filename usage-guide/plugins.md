@@ -1,6 +1,7 @@
 # Plugins
 
-Visit the [Unofficial List of Plugins](https://docs.modmail.dev/old-docs/the-unofficial-list-of-plugins) for a list of plugins.
+Plugins can add additional functionality into the modmail bot.
+You can view a list of approved plugins via the ``?plugins registry`` command or take a look at the [`plugins/registry.json`](https://github.com/modmail-dev/modmail/blob/master/plugins/registry.json).
 
 ## Guidelines
 
