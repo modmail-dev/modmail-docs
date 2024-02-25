@@ -7,7 +7,7 @@ You can view a list of approved plugins via the ``?plugins registry`` command or
 
 To get approved and officially verified, you need to ensure you follow these guidelines:
 
-* Supporting Python 3.8 (and above).
+* Supporting Python 3.10 (and above).
 * No malicious intent.
 * The plugin cannot be a feature pending to be added into [Modmail](https://github.com/modmail-dev/modmail/issues). You can submit a PR to add it to the core Modmail.
 * Core Modmail still needs to 100% function.
