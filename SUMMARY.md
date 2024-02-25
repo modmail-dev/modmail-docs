@@ -32,8 +32,5 @@
   * [Frequently Asked Questions](<frequently-asked-questions (1).md>)
   * [Modmail Usage](modmail-usage.md)
   * [Permissions](permissions.md)
-  * [Plugins](plugins.md)
-  * [Seperate Server Setup](seperate-server-setup.md)
-  * [The Unofficial List of Plugins](the-unofficial-list-of-plugins.md)
   * [Updating](<updating (1).md>)
   * [Video Tutorials](video-tutorials.md)
