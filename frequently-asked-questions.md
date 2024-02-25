@@ -24,4 +24,9 @@ And then, fetch the original files with:
 git checkout FETCH_HEAD -- Pipfile && git checkout FETCH_HEAD -- Pipfile.lock
 ```
 
-###
+### I would like to have threads in a seperate guild inbox, how can I do that?
+
+If you want to use a separate server to the main one as the inbox server (Where threads get relayed to) add the following environment variables into your ``.env`` file:
+
+* `MODMAIL_GUILD_ID` (the server where messages are sent to)
+* `GUILD_ID` (The server where users message from)

@@ -32,6 +32,5 @@
   * [Frequently Asked Questions](<frequently-asked-questions (1).md>)
   * [Modmail Usage](modmail-usage.md)
   * [Permissions](permissions.md)
-  * [Seperate Server Setup](seperate-server-setup.md)
   * [Updating](<updating (1).md>)
   * [Video Tutorials](video-tutorials.md)
