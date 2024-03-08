@@ -31,6 +31,5 @@
   * [Configure Modmail and Logviewer](configure-modmail-and-logviewer.md)
   * [Frequently Asked Questions](<frequently-asked-questions (1).md>)
   * [Modmail Usage](modmail-usage.md)
-  * [Permissions](permissions.md)
   * [Updating](<updating (1).md>)
   * [Video Tutorials](video-tutorials.md)
