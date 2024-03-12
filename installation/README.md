@@ -289,9 +289,9 @@ Your next step is to choose one of our supported hosting method that's available
 
 Click on one of the links below to view further instructions for your preferred hosting method. Each method has their pros and cons, be sure to take them into consideration when choosing your hosting platform to run Modmail.
 
-### [Railway](railway.md) (free/paid)
+### [Railway](railway.md) (paid)
 
-A platform as a service (PaaS) that offers a generous free plan, which allows you to host Modmail for free without any downtime. A credit card is required for verification purposes. Their UI is very simple and easy for beginners to quickly deploy and run your Modmail bot on. You can learn more about their Free Tier plan and pricing by clicking [here](https://railway.app/pricing).&#x20;
+A platform as a service (PaaS) that offers relatively low cost plans, which allows you to host Modmail for little without any downtime. A credit card is required for payment. Their UI is very simple and easy for beginners to quickly deploy and run your Modmail bot on. You can learn more about their plans and pricing by clicking [here](https://railway.app/pricing).&#x20;
 
 ### [Northflank](https://northflank.com/) (free/paid)
 

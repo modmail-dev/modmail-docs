@@ -17,7 +17,7 @@ Railway is a deployment platform where you can provision infrastructure, develop
 
 ## Costs
 
-Railway is no longer free. Their lowest plan starts at $5 per month.
+Their lowest plan starts at $5 per month.
 Visit the [pricing](https://railway.app/pricing) page for the up-to-date pricing info.
 
 ## Fork our GitHub repositories
