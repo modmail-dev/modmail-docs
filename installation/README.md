@@ -227,7 +227,7 @@ Next, we will need to generate a _MongoDB connection string_. Simply click **Con
 
  
 
-<figure><img src="../.gitbook/assets/Image20.png" alt=""><figcaption><p>Choose <strong>Connect your application</strong>.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Image20.png" alt=""><figcaption><p>Choose <strong>Drivers</strong>.</p></figcaption></figure>
 
  
 
