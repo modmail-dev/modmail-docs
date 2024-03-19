@@ -279,7 +279,7 @@ TOKEN=OTY3Nzy5MzU5NjAzMzU2NzE4.GtKp_5.JOTYRwGW-LB1He5widCu73vXtmi90KxsqkmoOg
 LOG_URL=https://logs.mymodmailbot.com/
 GUILD_ID=1079074933008781362
 OWNERS=188363246695219201,231595246213922828
-MONGO_URI=mongodb+srv://username:password@cluster0-abcde.mongodb.net/
+CONNECTION_URI=mongodb+srv://username:password@cluster0-abcde.mongodb.net/
 ```
 {% endcode %}
 
