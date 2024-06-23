@@ -227,7 +227,7 @@ Next, we will need to generate a _MongoDB connection string_. Simply click **Con
 
  
 
-<figure><img src="../.gitbook/assets/Image20.png" alt=""><figcaption><p>Choose <strong>Connect your application</strong>.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Image20.png" alt=""><figcaption><p>Choose <strong>Drivers</strong>.</p></figcaption></figure>
 
  
 
@@ -279,7 +279,7 @@ TOKEN=OTY3Nzy5MzU5NjAzMzU2NzE4.GtKp_5.JOTYRwGW-LB1He5widCu73vXtmi90KxsqkmoOg
 LOG_URL=https://logs.mymodmailbot.com/
 GUILD_ID=1079074933008781362
 OWNERS=188363246695219201,231595246213922828
-MONGO_URI=mongodb+srv://username:password@cluster0-abcde.mongodb.net/
+CONNECTION_URI=mongodb+srv://username:password@cluster0-abcde.mongodb.net/
 ```
 {% endcode %}
 
@@ -289,9 +289,9 @@ Your next step is to choose one of our supported hosting method that's available
 
 Click on one of the links below to view further instructions for your preferred hosting method. Each method has their pros and cons, be sure to take them into consideration when choosing your hosting platform to run Modmail.
 
-### [Railway](railway.md) (free/paid)
+### [Railway](railway.md) (paid)
 
-A platform as a service (PaaS) that offers a generous free plan, which allows you to host Modmail for free without any downtime. A credit card is required for verification purposes. Their UI is very simple and easy for beginners to quickly deploy and run your Modmail bot on. You can learn more about their Free Tier plan and pricing by clicking [here](https://railway.app/pricing).&#x20;
+A platform as a service (PaaS) that offers relatively low cost plans, which allows you to host Modmail for little without any downtime. A credit card is required for payment. Their UI is very simple and easy for beginners to quickly deploy and run your Modmail bot on. You can learn more about their plans and pricing by clicking [here](https://railway.app/pricing).&#x20;
 
 ### [Northflank](https://northflank.com/) (free/paid)
 
@@ -327,7 +327,7 @@ The Modmail team does not recommend this hosting method due to their highly unst
 Please note that our Support Team will not be offering any official help or support if you choose this method to host Modmail.
 {% endhint %}
 
-An online code execution environment. You can host Modmail there for free using certain exploits. The legitimate method costs $7 USD per month. However, regardless if you pay or host for free, hosting on Replit are often unstable and thus not recommended. However, a community guide is still available by clicking [here](broken-reference).
+An online code execution environment that costs $7 USD per month. However, hosting on Replit is often unstable, and thus not recommended. However, a community guide is still available by clicking [here](broken-reference).
 
 ## Community Guides
 
