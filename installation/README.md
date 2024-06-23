@@ -327,7 +327,7 @@ The Modmail team does not recommend this hosting method due to their highly unst
 Please note that our Support Team will not be offering any official help or support if you choose this method to host Modmail.
 {% endhint %}
 
-An online code execution environment. You can host Modmail there for free using certain exploits. The legitimate method costs $7 USD per month. However, regardless if you pay or host for free, hosting on Replit are often unstable and thus not recommended. However, a community guide is still available by clicking [here](broken-reference).
+An online code execution environment that costs $7 USD per month. However, hosting on Replit is often unstable, and thus not recommended. However, a community guide is still available by clicking [here](broken-reference).
 
 ## Community Guides
 
