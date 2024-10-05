@@ -8,7 +8,7 @@ description: Deploy Modmail on a Windows machine.
 
 1. Minimum 2GB of RAM\*
 2. At least 2GB available disk space.
-3. Supported Windows version:
+3. Supported Windows versions:
    * Windows 10
    * Windows 11
 
@@ -18,6 +18,12 @@ Note that while it is possible to run Modmail with even less memory, Windows 10 
 
 {% hint style="warning" %}
 It is not recommended to run Modmail with previous versions of Windows such as Windows 7 or Windows 8.1 as they no longer receive important security updates, making your hosted applications significantly more prone to security vulnerabilities.
+
+Windows 10 will reach End of Life and no longer recieve important security updates starting on October 14th, 2025.
+{% endhint %}
+
+{% hint style="info" %}
+If you are using a more powerful Windows computer, such as a gaming PC that runs 24/7, you may want to consider using the Windows Subsystem for Linux (WSL), which allows you to run Linux on top of your existing Windows system, and follow the [Ubuntu guide](installation/local-hosting-vps/ubuntu.md).
 {% endhint %}
 
 ## Dependencies
