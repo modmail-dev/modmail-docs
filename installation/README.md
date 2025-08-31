@@ -293,10 +293,6 @@ Click on one of the links below to view further instructions for your preferred 
 
 A platform as a service (PaaS) that offers relatively low cost plans, which allows you to host Modmail for little without any downtime. A credit card is required for payment. Their UI is very simple and easy for beginners to quickly deploy and run your Modmail bot on. You can learn more about their plans and pricing by clicking [here](https://railway.app/pricing).&#x20;
 
-### [Northflank](https://northflank.com/) (free/paid)
-
-A PaaS like Railway but with more advanced UI and more features. Does require credit card for verification but has a dedicated free tier that has no hourly limit. Learn more about their free tier and pricing by clicking [here](https://northflank.com/pricing).
-
 ### [Local Hosting](local-hosting-vps/) (free)
 
 If you have an old PC, a Raspberry Pi, or a Linux box that you're able to keep online 24/7, you can also host Modmail with your own machine at home. Since Modmail doesn't require intensive resources to run, you can get by with a system having as low as 1GB of RAM. Setting it up can be quite advanced but you have complete control over your bot instance. Refer to our local hosting guide supporting a few popular OSes by clicking [here](./#local-hosting-free).
