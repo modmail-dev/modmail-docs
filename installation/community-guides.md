@@ -12,7 +12,11 @@ Community guides are not verified by the Modmail team, so use them at your own r
 
 An online code execution environment that costs $7 USD per month. However, hosting on Replit is often unstable, and thus not recommended. For the up-to-date pricing info check out their [pricing](https://replit.com/pricing) page.
 
-## [Northflank](https://blog.project-mei.xyz/2023/04/11/hosting-discord-modmail-on-northflank/) Guide by raidensakura
+## [Northflank](https://project-mei.xyz/blog/modmail-on-northflank/) Guide by raidensakura
+
+{% hint style="danger" %}
+Due to uptime and reliability issues on Northflank, the creator of this guide and the Modmail team has deprecated this hosting method. We strongly recommend to use a different host. More information can be read [here](https://discord.com/channels/1079074933008781362/1079077917771964426/1391562969443340360).
+{% endhint %}
 
 Northflank is a Platform as a Service (PaaS) like Railway that offers abilities to run micro-services like bots, schedule jobs that run periodically and databases with a powerful UI, API and CLI. Their panel is a bit more advanced as compared to Railway but comes with the perk of more customization and features. You will need a valid payment method to verify your account, but will unlock a free tier project that's separated from paid resources. They will not charge your card if you go over resource usage as you have limited allocation per service.
 
