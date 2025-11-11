@@ -45,7 +45,7 @@ You can support the developers on the [Patreon page](https://patreon.com/kyber).
 #### Does anyone get any info when I create my own modmail?
 
 There is not much information we get about your instance of modmail, The only thing what we recieve is the guild-info, For example: The guildname, The amount of members of the guild, the botname, and the bot-owner. Using this we keep track of how many modmail-instances get created on a monthly/yearly base. ( Only modmail-developers can see this )
-
+You can disable this by adding `DATA_COLLECTION=no`to your `.env`.
 ***
 
 #### Answer not found?
