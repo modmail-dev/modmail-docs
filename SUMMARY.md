@@ -22,6 +22,7 @@
   * [Plugins](usage-guide/plugins.md)
   * [Configuration](usage-guide/configuration.md)
   * [Permissions](usage-guide/permissions.md)
+  * [Thread Menu](usage-guide/threadmenu.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [OLD DOCS](old-docs/README.md)
   * [Installation](installation-1.md)
