@@ -1,3 +1,7 @@
+---
+description: Instructions on using the threadmenu function of the bot.
+---
+
 # Thread Menu
 
 {% hint style="info" %}
