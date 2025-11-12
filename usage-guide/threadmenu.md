@@ -79,7 +79,7 @@ Migration from the legacy plugin, to core function requires permission to modify
 
 Run the `?advancedmenu dump_config` command to dump the menu config from `advanced-menu`. This will export your menu configuration to a `config.json` file.
 
-[image]
+<figure><img src="../.gitbook/assets/transfer-threadmenu-1.png" alt="Screenshot of output of dump_config subcommand on advanced-menu"><figcaption><p>The bot will provide you a correcly formatted config.json file. <strong>Do not modify this file</strong></p></figcaption></figure>
 
 **Step 2: Download `config.json` to your local computer**
 
@@ -88,6 +88,16 @@ Press the download button and keep track of where the file was saved. You will n
 **Step 3: Import Config to Thread Menu**
 
 Run the `?threadmenu load_config` command, while attaching the downloaded `config.json` to your message.
+
+<div>
+
+<figure><img src="../.gitbook/assets/transfer-threadmenu-2.png" alt="Attach the config.json file directly to your message."><figcaption><p>Attach the config.json file directly to your message.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/transfer-threadmenu-3.png" alt="The bot will provide you a success confirmation message after successful import."><figcaption><p>The import was successful if you see: <strong>Successfully loaded config into core.</strong></p></figcaption></figure>
+
+</div>
 
 **You're done!**
 
