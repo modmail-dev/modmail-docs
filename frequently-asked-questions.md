@@ -54,6 +54,7 @@ If you want to use a separate server to the main one as the inbox server (Where 
 
 {% hint style="info" %}
 You can only use one ID for each of these two variables. It´s not supported for more multi-guild setups.
+The `MODMAIL_GUILD_ID` is optional if the GUILD_ID is the inbox server.
 {% endhint %}
 
 ### How do I assign permissions to my staff members to let them reply to threads?
