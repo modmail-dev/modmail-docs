@@ -62,7 +62,7 @@ In order to assign permissions to staff, you need to use the `?permissions add` 
 The basic permission level for replying, managing snippets (pre-defined responses) is the `Supporter` level 2. For a common setup, you can assign this level to your staff role.
 An example command to add the permissions to a role would look like this:
 ```
-?permissions add level 2 @staff OR its ROLE ID
+?permissions add level 2 @role OR the role ID
 ```
 (you can repeat this command for adding multiple roles).
 
