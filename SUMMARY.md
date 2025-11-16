@@ -29,7 +29,6 @@
   * [Color Names](color-names.md)
   * [Configuration Variables (Config Vars)](configuration-variables-config-vars.md)
   * [Configure Modmail and Logviewer](configure-modmail-and-logviewer.md)
-  * [Frequently Asked Questions](<frequently-asked-questions (1).md>)
   * [Modmail Usage](modmail-usage.md)
   * [Updating](<updating (1).md>)
   * [Video Tutorials](video-tutorials.md)
