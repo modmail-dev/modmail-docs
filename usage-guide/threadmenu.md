@@ -35,25 +35,26 @@ The Thread Menu `?threadmenu` function allows recipients to choose an option to 
 ## Commands
 
 - threadmenu
-├─ dump_config - Dump the current core thread menu config to a file.
-├─ load_config - Load the thread menu config from an attached file.
-├─ option - Manage main-menu options (add/remove/edit/show).
-    ├─ add - Interactive wizard to add a main-menu option.
-    ├─ edit - Interactive wizard to edit a main-menu option.
-    ├─ remove - Remove a main-menu option by label.
-    └─ show - Show detailed information about a main-menu option.
-├─ reset - Reset ALL thread-creation menu settings to their defaults.
-├─ show - Show all current main-menu options.
-├─ submenu - Manage submenus (create/delete/list/show and options within).
-    ├─ create - Create an empty submenu that can hold nested options.
-    ├─ delete - Delete a submenu and all its options.
-    ├─ list - List all submenu keys currently configured.
-    ├─ option - Manage options within a specific submenu (add/remove/edit).
-        ├─ add - Interactive wizard to add an option inside a submenu.
-        ├─ edit - Interactive wizard to edit a submenu option.
-        └─ remove - Remove an option from a submenu via an interactive prompt.
-    └─ show - Show the options configured inside a submenu.
-└─ toggle - Enable or disable the thread-creation menu.
+- dump_config - Dump the current core thread menu config to a file.
+- load_config - Load the thread menu config from an attached file.
+- option - Manage main-menu options (add/remove/edit/show).
+    - add - Interactive wizard to add a main-menu option.
+    - edit - Interactive wizard to edit a main-menu option.
+    - remove - Remove a main-menu option by label.
+    - show - Show detailed information about a main-menu option.
+- reset - Reset ALL thread-creation menu settings to their defaults.
+- show - Show all current main-menu options.
+- submenu - Manage submenus (create/delete/list/show and options within).
+    - create - Create an empty submenu that can hold nested options.
+    - delete - Delete a submenu and all its options.
+    - list - List all submenu keys currently configured.
+    - option - Manage options within a specific submenu (add/remove/edit).
+        - add - Interactive wizard to add an option inside a submenu.
+        - edit - Interactive wizard to edit a submenu option.
+        - remove - Remove an option from a submenu via an interactive prompt.
+        - show - Show the options configured inside a submenu.
+- toggle - Enable or disable the thread-creation menu.
+
 
 ## Example Flowchart and Command Order
 
@@ -75,7 +76,7 @@ This feature allows the creation of very complex menu systems. If you are intend
 
 <details>
 
-<summary>Migrating from Legacy `advanced-menu` Plugin</summary>
+<summary>Migrating from Legacy advanced-menu Plugin</summary>
 
 Migration from the legacy plugin, to core function requires permission to modify the menu. In both, by default, this level is ADMINISTRATOR [4].
 
@@ -110,7 +111,7 @@ Good job! You have successfully migrated your `advanced-menu` config to the Thre
 </details>
 <details>
 
-<summary>Menu `.json` File Structure</summary>
+<summary>Menu .json File Structure</summary>
 
 {% hint style="warning" %}
 This is an **advanced** concept, and is **not** required to make full use of this feature. If you do not have significant experience working with `.json` files, you should not be using any of the information in this section.
@@ -123,6 +124,8 @@ By default, the file is now called `thread_creation_menu_config.json`. You can r
 Note: the `"category_id":` in each menu option is optional, and not required for successful import.
 
 See an example dumped config below:
+{% code title="thread_creation_menu_config.json" %}
+
 ```json
 {
   "enabled": true,
@@ -175,5 +178,6 @@ See an example dumped config below:
   "dropdown_placeholder": "Select an option to contact the staff team."
 }
 ```
+{% endcode %}
 
 </details>
