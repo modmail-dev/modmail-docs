@@ -1,5 +1,5 @@
 ---
-description: These hosts are hosts we, and members of our community have d success with.
+description: These hosts are hosts we, and members of our community have had success with.
 ---
 
 # Recommended Hosts

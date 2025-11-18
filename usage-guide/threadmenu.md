@@ -35,25 +35,25 @@ The Thread Menu `?threadmenu` function allows recipients to choose an option to 
 ## Commands
 
 - threadmenu
-- dump_config - Dump the current core thread menu config to a file.
-- load_config - Load the thread menu config from an attached file.
-- option - Manage main-menu options (add/remove/edit/show).
-    - add - Interactive wizard to add a main-menu option.
-    - edit - Interactive wizard to edit a main-menu option.
-    - remove - Remove a main-menu option by label.
-    - show - Show detailed information about a main-menu option.
-- reset - Reset ALL thread-creation menu settings to their defaults.
-- show - Show all current main-menu options.
-- submenu - Manage submenus (create/delete/list/show and options within).
-    - create - Create an empty submenu that can hold nested options.
-    - delete - Delete a submenu and all its options.
-    - list - List all submenu keys currently configured.
-    - option - Manage options within a specific submenu (add/remove/edit).
-        - add - Interactive wizard to add an option inside a submenu.
-        - edit - Interactive wizard to edit a submenu option.
-        - remove - Remove an option from a submenu via an interactive prompt.
-        - show - Show the options configured inside a submenu.
-- toggle - Enable or disable the thread-creation menu.
+  - dump_config - Dump the current core thread menu config to a file.
+  - load_config - Load the thread menu config from an attached file.
+  - option - Manage main-menu options (add/remove/edit/show).
+      - add - Interactive wizard to add a main-menu option.
+      - edit - Interactive wizard to edit a main-menu option.
+      - remove - Remove a main-menu option by label.
+      - show - Show detailed information about a main-menu option.
+  - reset - Reset ALL thread-creation menu settings to their defaults.
+  - show - Show all current main-menu options.
+  - submenu - Manage submenus (create/delete/list/show and options within).
+      - create - Create an empty submenu that can hold nested options.
+      - delete - Delete a submenu and all its options.
+      - list - List all submenu keys currently configured.
+      - option - Manage options within a specific submenu (add/remove/edit).
+          - add - Interactive wizard to add an option inside a submenu.
+          - edit - Interactive wizard to edit a submenu option.
+          - remove - Remove an option from a submenu via an interactive prompt.
+          - show - Show the options configured inside a submenu.
+  - toggle - Enable or disable the thread-creation menu.
 
 
 ## Example Flowchart and Command Order
