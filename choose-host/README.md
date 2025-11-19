@@ -28,7 +28,7 @@ You have likely heard of the cheap, good, fast principal. Which states, that you
 
 |Low Cost|High Uptime|Simple|Example|
 |-|-|-|-|
-|✅|❌|✅|Free Peterodactyl Panel
+|✅|❌|✅|Free Pterodactyl Panel
 |✅|✅|❌|Private VPS
 |❌|✅|✅|Heroku
 
