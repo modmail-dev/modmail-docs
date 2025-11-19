@@ -25,7 +25,7 @@ description: These hosts are hosts we, and members of our community have had lit
 - [Website](https://pylexnodes.net/)
 - Similar setup and issues as Bot-Hosting.net — shared resources and inconsistent reliability.  
 
-## Karlo Hosting
+### Karlo Hosting
 - [Website](https://karlo-hosting.com/)
 - Another free or low cost hosting provider based on the Pterodactyl panel, our users have reported unusual difficulties deploying Modmail with this host due to their specific Pterodactyl configuration and limitations.
 
