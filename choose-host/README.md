@@ -21,22 +21,21 @@ You can also view hosts that are **not suitable** for Modmail on the [Unrecommen
 
 ## Understanding the Tradeoffs
 
-No hosting option is perfect: choosing a host involves balancing tradeoffs between cost, uptime, and simplicity.
+No hosting option is perfect — choosing where to host your bot always means balancing cost, uptime, and simplicity.
 
-You have likely heard of the cheap, good, fast principal. Which states, that you can pick to but you lose out on the third one. A similar principal applies to hosting Modmail (or any other Discord bot). In a principal we are calling. Cost, Uptime, Simplicity. You can have two of these, but you will miss out on the third. See the below table:
+You may have heard the saying *“cheap, good, fast — pick two.”* Hosting Modmail (or any Discord bot) follows a similar idea. In our case, the three factors are **Cost**, **Uptime**, and **Simplicity**. You can usually get two of them, but you’ll have to compromise on the third. Here’s a quick overview:
 
-
-|Low Cost|High Uptime|Simple|Example|
-|-|-|-|-|
-|✅|❌|✅|Free Pterodactyl Panel
-|✅|✅|❌|Private VPS
-|❌|✅|✅|Heroku
+| Low Cost | High Uptime | Simple | Example                |
+| -------- | ----------- | ------ | ---------------------- |
+| ✅        | ❌           | ✅      | Free Pterodactyl Panel |
+| ✅        | ✅           | ❌      | Private VPS            |
+| ❌        | ✅           | ✅      | Heroku                 |
 
 
 {% hint style="warning" %}
 **Free Hosting Platforms are Discouraged**
 
-Over the years, the Modmail team has spent many hours researching and recommending free hosting platforms. Starting in 2025, we are no longer spending the time, or recommending platforms purely for being free.
+Over the years, the Modmail team has spent many hours researching and recommending free hosting platforms. Starting in 2025, we are no longer spending the time, or recommending platforms purley for being free.
 
 Free platforms usually have, or develop one of these problems: remove free tier, high downtime, problematic server connection, terminating instances without notice.
 
@@ -50,9 +49,9 @@ The Modmail project does not have a minimum specification required to use run yo
 |System Spec|Minimum Value|
 |-|-|
 |CPU|1 core, speed mostly irrelevant|
-|RAM|512mb|
+|RAM|1GB|
 |Storage|~2GB (on top of OS)|
-|Network Speed| > 10 MBPS|
+|Network Speed| > 10 Mbps|
 ---
 
 ## Hosting Decision Flow
@@ -66,7 +65,7 @@ Modmail is a very lightweight bot, very minimal resources are required.
 
 If not: you likely do not need more than 512mb of memory and 1 CPU core.
 
-If yes: you can potineitally get away with the minimum spec, but you should consider upgrading.
+If yes: you can potentially get away with the minimum spec, but you should consider upgrading.
 
 > Do you require your Modmail bot to be online with 0 downtime?
 
@@ -90,15 +89,15 @@ If you struggle with technology, you may want to consider a PaaS (Platform as a 
 ### Step 2 — Decide on Your Budget
 - **$0:** Not recommended. Free hosts are unstable and may terminate at any time.  
 - **$2–10/month:** Ideal for most users. Reliable cloud or VPS hosting with full control.  
-- **$15+/month:** Unnecessary in almost all cases. Consult with our support team if you feel some special case in your server warrants this.
+- **$15+/month:** Used for hosting multiple **large** modmail bots and/or extra services besides modmail. Unnecessary for hosting a single modmail bot.
 {% endstep %}
 
 {% step %}
 ### Step 3 — Pick Your Platform Type
 | Platform Type | Best For | Pros | Cons | Examples | 
 |-----------|-----------|------|------|-|
-| **PaaS** | Very Less Technical Users | Simple UI, auto-deploys, managed | Paid Plan usually Required | Heroku, Railway| 
-| **Hetzner / OVH / DO (VPS)** | Most users | Full control, high uptime | Linux/Docker setup required | See [Recommended Hosts](../recommended-hosts/README.md) |
+| **PaaS** | Simple setup requiring less technical knowledge | Simple UI, auto-deploys, managed | Paid Plan usually Required | Heroku, Railway| 
+| **Hetzner / OVH / DigitalOcean (VPS)** | Users with basic technical knowledge | Full control, high uptime | Linux/Docker setup required | See [Recommended Hosts](../recommended-hosts/README.md) |
 | **Local Hosting** | Users with special cost requirements, or other locally running, always on, computer at home. | No subscription, complete control | Local outages affect uptime | Old Computer, Raspberry Pi, etc|
 {% endstep %}
 {% endstepper %}
@@ -113,7 +112,7 @@ If you struggle with technology, you may want to consider a PaaS (Platform as a 
 ### Our Recommendation for Most Users
 For nearly all cases, we recommend a cheap Virtual Private Server from one of our [Recommended Hosts](../recommended-hosts/README.md).
 
-For users who do not wish to pay, we recommend locally hosting the bot from hardware you already own.
+For users who do not wish to pay, we recommend locally hosting the bot from hardware you already own, like a Raspberry Pi, or old computer you can keep running 24/7 in your house.
 
 In situations where you significantly struggle with technology, a PaaS option *may* be better with you. Feel free to consult with our [team](https://discord.gg/nfErcs7mDM) if you don't know if this is the best option for you.
 {% endhint %}
@@ -123,7 +122,7 @@ In situations where you significantly struggle with technology, a PaaS option *m
 
 Many hosting "companies" have popped up in recent years using the free, open source, [Pterodactyl](https://pterodactyl.io/) hosting platform. These hosting sites are particularly problematic. With the biggest concern usually revolving around **your data security**. Many, if not all, of these platforms do not provide, possess, or follow proper agreements relating to the access of your uploaded information. This includes your MongoDB Conncection URI, and Bot Token, allowing the "staff" of these "companies" to access any message ever sent to or from your bot, any message in your server, and carry out actions as your bot (ie. deleting channels, reading messages, banning users).
 
-Additionally, many of these hosts are run with substandard hardware and infrastructure, usually resulting to temporary IP bans from Discord, poor uptime, poor performance, improper dependancy installation, and more.
+Additionally, many of these hosts are run with substandard hardware and infrastucture, usually resulting to temporary IP bans from Discord, poor uptime, poor performance, improper dependancy installation, and more.
 
 We **strongly** encourage you to conduct **full and complete** research before using these hosts. *Our general recommendation is to: avoid them.*
 

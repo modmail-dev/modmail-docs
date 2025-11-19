@@ -62,10 +62,10 @@ description: These hosts are hosts we, and members of our community have had suc
 
 ## PaaS Providers
 
-PaaS Hosting is usually more expensive, but a more turnkey solution, which removes the need for securing a server, ssh configurations, terminal usage, and similar. However, because of this the platforms are usually more restricted, and difficult to troubleshoot. Despite this they are still an adequate and supported option.
+PaaS Hosting is usually more expensive, but a simpler to setup solution, which removes the need for securing a server, ssh configurations, terminal usage, and similar. However, because of this the platforms are usually more restricted, and difficult to troubleshoot. Despite this they are still an adequate and supported option.
 
-Heroku
+[Heroku](https://www.heroku.com/)
 
-Railway
+[Railway](https://railway.com/)
 
-Northflank
+[Northflank](https://northflank.com/)
