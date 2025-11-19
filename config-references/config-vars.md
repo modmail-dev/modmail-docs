@@ -234,7 +234,9 @@ These are currently all the valid configuration variables you can change with th
 
 {% endtab %}
 
-{% tab title="Uncategorized Vars" %} | Name | Type | Default Value | Description | Notes |
+{% tab title="Uncategorized Vars" %} 
+
+| Name | Type | Default Value | Description | Notes |
 |------|------|----------------|--------------|--------|
 | `twitch_url` | URL | `https://www.twitch.tv/discordmodmail/` | Linked Twitch channel when activity is set to “Streaming”. | Has no effect when not streaming. See also: `{prefix}help activity`. |
 | `main_category_id` | Category ID | `Modmail` (created with `{prefix}setup`) | Category where new threads are created. | Must be valid or Modmail will break. See also: `fallback_category_id`. |
