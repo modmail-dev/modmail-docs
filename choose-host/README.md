@@ -123,7 +123,7 @@ In situations where you significantly struggle with technology, a PaaS option *m
 
 Many hosting "companies" have popped up in recent years using the free, open source, [Pterodactyl](https://pterodactyl.io/) hosting platform. These hosting sites are particularly problematic. With the biggest concern usually revolving around **your data security**. Many, if not all, of these platforms do not provide, possess, or follow proper agreements relating to the access of your uploaded information. This includes your MongoDB Conncection URI, and Bot Token, allowing the "staff" of these "companies" to access any message ever sent to or from your bot, any message in your server, and carry out actions as your bot (ie. deleting channels, reading messages, banning users).
 
-Additionally, many of these hosts are run with substandard hardware and infrastucture, usually resulting to temporary IP bans from Discord, poor uptime, poor performance, improper dependancy installation, and more.
+Additionally, many of these hosts are run with substandard hardware and infrastructure, usually resulting to temporary IP bans from Discord, poor uptime, poor performance, improper dependancy installation, and more.
 
 We **strongly** encourage you to conduct **full and complete** research before using these hosts. *Our general recommendation is to: avoid them.*
 
