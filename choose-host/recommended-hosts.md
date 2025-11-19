@@ -47,7 +47,7 @@ description: These hosts are hosts we, and members of our community have had suc
 
 {% hint style="info" %} Pricing current as of time of publication, October 5th, 2024. Check websites for up to date pricing information {% endhint %}
 
-{% hint style="warning" %} Be sure to research hosting providers before renting a server from one. Our recommendations and experiences should be used as recommendations only, we cannot guarentee any specific experience with any provider, nor can we provide billing or other support regarding the operating system, or availability of servers. Support is only provided through the process of installing and maintaining Modmail itself. {% endhint %}
+{% hint style="warning" %} Be sure to research hosting providers before renting a server from one. Our recommendations and experiences should be used as recommendations only, we cannot guarantee any specific experience with any provider, nor can we provide billing or other support regarding the operating system, or availability of servers. Support is only provided through the process of installing and maintaining Modmail itself. {% endhint %}
 
 {% hint style="info" %} The Modmail Team always recommends excercising security best practices with any server. While we are unable to provide official support on this matter, we can recommend some good places to start:
 
