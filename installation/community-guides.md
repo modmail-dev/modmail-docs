@@ -22,7 +22,7 @@ Replit is on the Modmail Team's unrecommended hosts list. See more details on th
 Northflank is a Platform as a Service (PaaS) like Railway that offers abilities to run micro-services like bots, schedule jobs that run periodically and databases with a powerful UI, API and CLI. Their panel is a bit more advanced as compared to Railway but comes with the perk of more customization and features. You will need a valid payment method to verify your account, but will unlock a free tier project that's separated from paid resources. They will not charge your card if you go over resource usage as you have limited allocation per service.
 
 {% hint style="warning" %}
-In July of 2025, the Modmail Team, and Community Guide Creator raidensakura decined to provide further support for hosting on the Northflank Platform.
+In July of 2025, the Modmail Team, and Community Guide Creator raidensakura declined to provide further support for hosting on the Northflank Platform.
 {% endhint %}
 
 > Northflank has been observed to have uptime and reliability issues on their free project for a few months where deployed apps are constantly crashing or being restarted every few hours. Due to this, I no longer recommend hosting Modmail on Northflank and no support will be offered with this platform. This guide will only serve as an archive from now on. - _raidensakura_
@@ -37,5 +37,5 @@ Pterodactyl is a hosting self hostable platform that originally allows to host g
 Some hosting provider providing you a free plan in order to application via this panel.
 
 {% hint style="warning" %}
-Pterodactyl Panel based hosts are on the Modmail Team's use-caution hosting providers list. For more information, please view [the additional considerations page](../choose-host/choose-host1.md ) in our [choosing a host guide](../choose-host/README.md).
+Pterodactyl Panel based hosts are on the Modmail Team's use-caution hosting providers list. For more information, please view [the additional considerations page](../choose-host/choose-host1.md) in our [choosing a host guide](../choose-host/README.md).
 {% endhint %}

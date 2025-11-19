@@ -4,7 +4,7 @@ description: These hosts are hosts we, and members of our community have had lit
 
 # Unrecommended Hosts
 
-{% hint style="warning" %} The Modmail team does not in any way intend to defame, harm, or otherwise create badwill betweeen Modmail and the open source community as a whole, and any hosting provider. We simply provide this list to our users through our experience. We do not in any way imply that these hosts are bad, unreliable, or that it is not possible to use them, we simply state that these are not a good fit for hosting Modmail. {% endhint %}
+{% hint style="warning" %} The Modmail team does not in any way intend to defame, harm, or otherwise create badwill between Modmail and the open source community as a whole, and any hosting provider. We simply provide this list to our users through our experience. We do not in any way imply that these hosts are bad, unreliable, or that it is not possible to use them, we simply state that these are not a good fit for hosting Modmail. {% endhint %}
 
 ### Repl.it
 
@@ -17,7 +17,7 @@ description: These hosts are hosts we, and members of our community have had lit
 
 - [Website](https://bot-hosting.net/)
 - bot-hosting.net is a free or low cost hosting provider that bases their hosting platform on the common free and open-source panel [Pterodactyl](https://pterodactyl.io/).
-- Hosting on any Pterodactyl panel based host is already challenging, however, bot-hosting.net shares IP addressess amoung users, which has resulted in high numbers of our users reporting rate limits being applied to their bot. In other words: your bot will randomly stop working with nothing you can do to fix it.
+- Hosting on any Pterodactyl panel based host is already challenging, however, bot-hosting.net shares IP addressess among users, which has resulted in high numbers of our users reporting rate limits being applied to their bot. In other words: your bot will randomly stop working with nothing you can do to fix it.
 
 
 ### Pylex Nodes
@@ -25,7 +25,7 @@ description: These hosts are hosts we, and members of our community have had lit
 - [Website](https://pylexnodes.net/)
 - Similar setup and issues as Bot-Hosting.net — shared resources and inconsistent reliability.  
 
-## Karlo Hosting
+### Karlo Hosting
 - [Website](https://karlo-hosting.com/)
 - Another free or low cost hosting provider based on the Pterodactyl panel, our users have reported unusual difficulties deploying Modmail with this host due to their specific Pterodactyl configuration and limitations.
 
