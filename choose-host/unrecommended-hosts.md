@@ -17,7 +17,7 @@ description: These hosts are hosts we, and members of our community have had lit
 
 - [Website](https://bot-hosting.net/)
 - bot-hosting.net is a free or low cost hosting provider that bases their hosting platform on the common free and open-source panel [Pterodactyl](https://pterodactyl.io/).
-- Hosting on any Pterodactyl panel based host is already challenging, however, bot-hosting.net shares IP addressess amoung users, which has resulted in high numbers of our users reporting rate limits being applied to their bot. In other words: your bot will randomly stop working with nothing you can do to fix it.
+- Hosting on any Pterodactyl panel based host is already challenging, however, bot-hosting.net shares IP addressess among users, which has resulted in high numbers of our users reporting rate limits being applied to their bot. In other words: your bot will randomly stop working with nothing you can do to fix it.
 
 
 ### Pylex Nodes
