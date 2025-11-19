@@ -36,7 +36,7 @@ You have likely heard of the cheap, good, fast principal. Which states, that you
 {% hint style="warning" %}
 **Free Hosting Platforms are Discouraged**
 
-Over the years, the Modmail team has spent many hours researching and recommending free hosting platforms. Starting in 2025, we are no longer spending the time, or recommending platforms purley for being free.
+Over the years, the Modmail team has spent many hours researching and recommending free hosting platforms. Starting in 2025, we are no longer spending the time, or recommending platforms purely for being free.
 
 Free platforms usually have, or develop one of these problems: remove free tier, high downtime, problematic server connection, terminating instances without notice.
 
