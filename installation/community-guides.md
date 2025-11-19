@@ -37,5 +37,5 @@ Pterodactyl is a hosting self hostable platform that originally allows to host g
 Some hosting provider providing you a free plan in order to application via this panel.
 
 {% hint style="warning" %}
-Pterodactyl Panel based hosts are on the Modmail Team's use-caution hosting providers list. For more information, please view [the additional considerations page](../choose-host/choose-host1.md ) in our [choosing a host guide](../choose-host/README.md).
+Pterodactyl Panel based hosts are on the Modmail Team's use-caution hosting providers list. For more information, please view [the additional considerations page](../choose-host/choose-host1.md) in our [choosing a host guide](../choose-host/README.md).
 {% endhint %}
