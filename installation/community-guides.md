@@ -25,7 +25,7 @@ Northflank is a Platform as a Service (PaaS) like Railway that offers abilities 
 In July of 2025, the Modmail Team, and Community Guide Creator raidensakura decined to provide further support for hosting on the Northflank Platform.
 {% endhint %}
 
-> Northflank has been observed to have uptime and reliability issues on their free project for a few months where deployed apps are constantly crashing or being restarted every few hours. Due to this, I no longer recommend hosting Modmail on Nortflank and no support will be offered with this platform. This guide will only serve as an archive from now on. - _raidensakura_
+> Northflank has been observed to have uptime and reliability issues on their free project for a few months where deployed apps are constantly crashing or being restarted every few hours. Due to this, I no longer recommend hosting Modmail on Northflank and no support will be offered with this platform. This guide will only serve as an archive from now on. - _raidensakura_
 
 ## [Oracle Guide](http://docs.lidistat67.xyz/) by lidistat67
 

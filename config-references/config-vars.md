@@ -94,7 +94,6 @@ These are currently all the valid configuration variables you can change with th
 ## 🚨 Access & Security Controls
 - `account_age`
 - `guild_age`
-- `thread_cancelled`
 
 
 </details> 
@@ -230,7 +229,7 @@ These are currently all the valid configuration variables you can change with th
 |------|------|----------------|--------------|--------|
 | `account_age` | Duration | None | Minimum account age required to DM Modmail. | Anti-spam measure. |
 | `guild_age` | Duration | None | Minimum server join age required to use Modmail. | Works alongside `account_age`. |
-| `thread_cancelled` | Message | `"Thread creation has been cancelled."` | Sent when user aborts setup. | Confirmation response. |
+
 
 
 {% endtab %}
