@@ -4,7 +4,7 @@ description: These hosts are hosts we, and members of our community have had lit
 
 # Unrecommended Hosts
 
-{% hint style="warning" %} The Modmail team does not in any way intend to defame, harm, or otherwise create badwill betweeen Modmail and the open source community as a whole, and any hosting provider. We simply provide this list to our users through our experience. We do not in any way imply that these hosts are bad, unreliable, or that it is not possible to use them, we simply state that these are not a good fit for hosting Modmail. {% endhint %}
+{% hint style="warning" %} The Modmail team does not in any way intend to defame, harm, or otherwise create badwill between Modmail and the open source community as a whole, and any hosting provider. We simply provide this list to our users through our experience. We do not in any way imply that these hosts are bad, unreliable, or that it is not possible to use them, we simply state that these are not a good fit for hosting Modmail. {% endhint %}
 
 ### Repl.it
 
