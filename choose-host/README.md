@@ -13,8 +13,8 @@ There are three main factors to balance when selecting a host:
 3. **Simplicity**
 
 {% hint style="info" %}
-If you’re looking for specific providers that have been tested by our community, check the [Recommended Hosts](../choose-host/recommended-hosts.md) page.  
-You can also view hosts that are **not suitable** for Modmail on the [Unrecommended Hosts](../choose-host/unrecommended-hosts.md) page.
+If you’re looking for specific providers that have been tested by our community, check the [Recommended Hosts](recommended-hosts.md) page.  
+You can also view hosts that are **not suitable** for Modmail on the [Unrecommended Hosts](unrecommended-hosts.md) page.
 {% endhint %}
 
 ---
