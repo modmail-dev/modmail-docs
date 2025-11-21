@@ -13,8 +13,8 @@ There are three main factors to balance when selecting a host:
 3. **Simplicity**
 
 {% hint style="info" %}
-If you’re looking for specific providers that have been tested by our community, check the [Recommended Hosts](../recommended-hosts/recommended-hosts.md) page.  
-You can also view hosts that are **not suitable** for Modmail on the [Unrecommended Hosts](../unrecommended-hosts/README.md) page.
+If you’re looking for specific providers that have been tested by our community, check the [Recommended Hosts](recommended-hosts.md) page.  
+You can also view hosts that are **not suitable** for Modmail on the [Unrecommended Hosts](unrecommended-hosts.md) page.
 {% endhint %}
 
 ---
@@ -97,20 +97,20 @@ If you struggle with technology, you may want to consider a PaaS (Platform as a 
 | Platform Type | Best For | Pros | Cons | Examples | 
 |-----------|-----------|------|------|-|
 | **PaaS** | Simple setup requiring less technical knowledge | Simple UI, auto-deploys, managed | Paid Plan usually Required | Heroku, Railway| 
-| **Hetzner / OVH / DigitalOcean (VPS)** | Users with basic technical knowledge | Full control, high uptime | Linux/Docker setup required | See [Recommended Hosts](../recommended-hosts/README.md) |
+| **Hetzner / OVH / DigitalOcean (VPS)** | Users with basic technical knowledge | Full control, high uptime | Linux/Docker setup required | See [Recommended Hosts](../choose-host/recommended-hosts.md) |
 | **Local Hosting** | Users with special cost requirements, or other locally running, always on, computer at home. | No subscription, complete control | Local outages affect uptime | Old Computer, Raspberry Pi, etc|
 {% endstep %}
 {% endstepper %}
 
 
 ## Related Pages
-- [Recommended Hosts](../recommended-hosts/README.md) — Tested VPS and PaaS providers our users trust.
-- [Unrecommended Hosts](../unrecommended-hosts/README.md) — Platforms known to cause Modmail reliability issues.
+- [Recommended Hosts](../choose-host/recommended-hosts.md) — Tested VPS and PaaS providers our users trust.
+- [Unrecommended Hosts](../choose-host/unrecommended-hosts.md) — Platforms known to cause Modmail reliability issues.
 
 
 {% hint style="success" %}
 ### Our Recommendation for Most Users
-For nearly all cases, we recommend a cheap Virtual Private Server from one of our [Recommended Hosts](../recommended-hosts/README.md).
+For nearly all cases, we recommend a cheap Virtual Private Server from one of our [Recommended Hosts](../choose-host/recommended-hosts.md).
 
 For users who do not wish to pay, we recommend locally hosting the bot from hardware you already own, like a Raspberry Pi, or old computer you can keep running 24/7 in your house.
 
