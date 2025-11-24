@@ -67,5 +67,3 @@ PaaS Hosting is usually more expensive, but a simpler to setup solution, which r
 [Heroku](https://www.heroku.com/)
 
 [Railway](https://railway.com/)
-
-[Northflank](https://northflank.com/)
