@@ -20,9 +20,9 @@ description: These hosts are hosts we, and members of our community have had lit
 - Hosting on any Pterodactyl panel based host is already challenging, however, bot-hosting.net shares IP addressess among users, which has resulted in high numbers of our users reporting rate limits being applied to their bot. In other words: your bot will randomly stop working with nothing you can do to fix it.
 
 
-### Pylex Nodes
+### Wispbyte
 
-- [Website](https://pylexnodes.net/)
+- [Website](https://wispbyte.com/)
 - Similar setup and issues as Bot-Hosting.net — shared resources and inconsistent reliability.  
 
 ### Karlo Hosting
