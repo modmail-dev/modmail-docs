@@ -7,7 +7,14 @@ description: These hosts are hosts we, and members of our community have had suc
 {% hint style="info" %} The Modmail Team does not have any affiliation with any hosting providers or platforms. {% endhint %}
 
 ## Official Modmail Hosting
-[See details on the Hosting page](../choose-host/README.md).
+
+The Modmail team provides official hosting of the bot using Buy Me a Coffee. Monthly plans start at $4/month.
+
+Most plans also include premium logviewer, which allows locking a Loglink using OAuth Discord Login, and a dashboard.
+
+Official Hosting is run on redundant servers with automatic failover.
+
+See details on [Buy Me a Coffee](https://buymeacoffee.com/modmaildev/membership).
 
 ## VPS Providers
 

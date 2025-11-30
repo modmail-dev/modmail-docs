@@ -2,7 +2,16 @@
 description: Hosting the patreon logviewer on the cloud or on your own computer.
 ---
 
-# Patreon logviewer
+# Patreon Logviewer
+
+{% hint style="danger" %}
+The Modmail team is no longer supporting or encouraging the self-hosting of the Patreon logviewer. This guide is saved for archive reasons only. This guide does not have any use to nearly any users. If you want to self-host the normal logviewer, this is supported. Please see the [Logviewer Hosting Guide](logviewer.md).
+{% endhint %}
+
+
+<details>
+
+<summary>Archived Patreon Logviewer Guide</summary>
 
 This logviewer hosting tutorial is written assuming you have already set up your bot and are running Ubuntu 20.04-22.04.
 
@@ -104,3 +113,5 @@ sudo pm2 start logviewer.sh --name "logviewer" && sudo pm2 save
 ```
 
 More info on how to use pm2 can be found [on pm2's website](https://pm2.keymetrics.io/docs/usage/quick-start/).
+
+</details>
