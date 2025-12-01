@@ -4,7 +4,7 @@ description: Guide on how to update the Modmail bot.
 
 # Updating
 
-Your Modmail is set to auto-update itself by default, but you can also run the `?update` command on your bot manually, replacing `?` with your bot prefix.
+You can run the `?update` command on your bot manually, replacing `?` with your bot prefix.
 
 If for some reason your update command isn't working correctly, you can update your bot by going into your Modmail folder and pulling the latest changes from GitHub with the steps below.
 

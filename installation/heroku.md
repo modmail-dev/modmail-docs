@@ -17,9 +17,9 @@ Heroku is a container-based cloud Platform as a Service (PaaS). Developers use H
 
 ## Costs
 
-Unfortunately, Heroku is no longer free-of-charge. You will need at least their Eco plan, which currently costs $5 USD per month. See their [pricing page ](https://www.heroku.com/pricing)for more info and up-to-date prices.
+Unfortunately, Heroku is no longer free-of-charge. You will need at least their Eco plan, which currently costs $5 USD per month. See their [pricing page](https://www.heroku.com/pricing) for more info and up-to-date prices.
 
-If you are a higher-education student, you may be eligible for their [student offer](https://www.heroku.com/github-students), which grants you $13 USD of credits per month for 12 months—enough to host Modmail free for one year.
+If you are a higher-education student, you *may* be eligible for their [student offer](https://www.heroku.com/github-students), which grants you $13 USD of credits per month for 24 months—enough to host Modmail free for two years.
 
 ## Fork our GitHub repositories
 
