@@ -30,6 +30,7 @@
 * [Config References]()
   * [Configuration Variables](config-references/config-vars.md)
   * [Color Names](config-references/color-names.md)
+  * [Valid Parameters](config-references/valid-parameters.md)
 * [OLD DOCS](old-docs/README.md)
   * [Installation](installation-1.md)
   * [Installation (continued)](installation-continued.md)
