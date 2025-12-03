@@ -42,6 +42,10 @@ description: These hosts are hosts we, and members of our community have had lit
 
 </details>
 
+### Discord Bot Hosting
+- [Website](https://discordbothosting.com/)
+- Pterodactyl based host that can have issues with ratelimits due to shared IP addresses and reasons that have been listed below.
+
 {% hint style="danger" %}
 ### Why These Are Not Recommended
 These hosts generally:
@@ -49,6 +53,7 @@ These hosts generally:
 - Offer **free or ultra-low-cost tiers** with limited resources  
 - Experience **rate limits, sleep periods, or unresponsive containers**  
 - Provide **no control over environment configuration**
+- Hide **legal information regarding their business or company**
 
 If you value stability, security, and consistent uptime, avoid free or oversold shared hosts.  
 Refer to [Choosing a Host](../choose-host/README.md) for guidance on reliable alternatives.
