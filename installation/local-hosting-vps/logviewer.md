@@ -11,7 +11,7 @@ This logviewer hosting tutorial is written assuming you have already set up your
 {% hint style="warning" %}
 The logviewer can be set up using your local pc or homeserver. However it is higly recommended to run the logviewer on a vps or different cloud based service to avoid security issues. To let staff members access the logviewer (which is a popular usecase) you need to expose ports to the public internet which can be risky for your router and it´s local network.
 There are also several other issues that can occur.
-Please only set up your logviewer on your local network **if you can take full responsibility and 100% know what you are doing**.
+Please only set up your logviewer on your local network **if you can take full responsibility and 100% know what you are doing.**
 {% endhint %}
 
 ## Dependencies
