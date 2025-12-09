@@ -6,7 +6,17 @@ description: Hosting the logviewer on the cloud or on your own computer.
 
 ## Prerequisites
 
-This logviewer hosting tutorial is written assuming you have already set up your bot and are running Ubuntu 20.04-22.04.
+This logviewer hosting tutorial is written assuming you have already set up your bot on one of the supported operating systems.
+
+{% hint style="warning" %}
+The logviewer can be set up using your local pc or homeserver. However it is higly recommended to run the logviewer on a vps or different cloud based service to avoid security issues. To let staff members access the logviewer (which is a popular usecase) you need to expose ports to the public internet which can be risky for your router and it´s local network.
+There are also several other issues that can occur.
+Please only set up your logviewer on your local network **if you can take full responsibility and 100% know what you are doing.**
+{% endhint %}
+
+## Dependencies
+- Python 3.11
+- Tools: `git`, `wget`, `nano`
 
 ## Downloading the files
 
@@ -24,7 +34,7 @@ Once done, you can use `cd logviewer` to enter the directory.
 
 First, install pipenv by running the following command:
 
-* Pipenv must be installed. Since this is also used for the bot, you can skip this step if you have already installed it.
+* Pipenv must be installed. Since this is also used for the bot, you can skip this step if you have already installed it. You may neeed to use a different command to access your python installation depending on your operating system and python configuration.
 
 ```bash
 python -m pip install pipenv
