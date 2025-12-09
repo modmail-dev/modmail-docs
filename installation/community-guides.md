@@ -16,7 +16,7 @@ An online code execution environment that costs $7 USD per month. However, hosti
 Replit is on the Modmail Team's unrecommended hosts list. See more details on the [unrecommended hosts page](../choose-host/unrecommended-hosts.md)
 {% endhint %}
 
-## [Oracle Guide](http://docs.lidistat67.xyz/) by lidistat67
+## [Oracle Guide](https://docs.lidistat67.eu/) by lidistat67
 
 Oracle Cloud Compute is an Infrastructure as a Service (IaaS) platform. Unlike Railway and Heroku, Oracle gives you access to a VPS where you can have a more direct control of your instance. Oracle is a reputable company known for owning products such as Java, VirtualBox, MySQL, etc. Oracle Cloud offers 3,000 OCPU hours and 18,000 GB hours per month. This is equivalent to 24 GB of RAM and 4 OCPUs. TL;DR, Oracle offers powerful instances for free! Oracle requires a credit card for verification but will never charge you as long as you are on their free plan. The setup is similar to self-hosting Modmail as Oracle offers a VPS.
 
