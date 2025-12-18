@@ -85,6 +85,11 @@ Using the example cog above, the load command would be
 ?plugin load @local/hello
 ```
 
+{% hint style="info" %}
+You can also use this as a way to have a private plugin installed on your bot if you host locally or on a VPS, and do not intend to update your plugin frequently. If you plan on even semi-frequent updates, you should use the private plugins process listed below.
+{% endhint %}
+
+
 #### Best Practices
 
 1. Create a development branch

@@ -39,7 +39,7 @@ Examples:
 * `?perms add command "plugin enabled" @role`
 * `?perms add command help 984301093849028`
 
-## Override permission level
+## Override Permission Level
 In some cases it can be useful to override a command permission level.
 This can be done like this:
 
@@ -49,6 +49,12 @@ Examples:
 
 * `?perms override reply administrator`
 * `?perms override "plugin enabled" moderator`
+
+### Bulk Permissions Override
+
+Starting in v4.2.2 (check version with `?about`), permissions can be overridden in bulk. To start the process run:
+
+`?permissions override bulk``  
 
 ***
 If you need help setting up permissions, feel free to join our [Discord server](https://discord.gg/zmdYe3ZVHG) and DM Modmail. One of our support members will help you.
