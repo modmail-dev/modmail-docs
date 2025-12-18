@@ -64,7 +64,7 @@ This feature allows the creation of very complex menu systems. If you are intend
 
 {% tabs %}
 
-{% tab title="Flowchart Example" %} **In Progress by theonlystephen** {% endtab %}
+{% tab title="Flowchart Example" %} <figure><img src=".gitbook/assets/example_threadmenu_diagram" alt=""><figcaption></figcaption></figure> {% endtab %}
 
 {% tab title="Commands Example" %} **In Progress by theonlystephen** {% endtab %}
 
