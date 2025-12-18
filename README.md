@@ -6,7 +6,7 @@ description: https://github.com/modmail-dev/modmail
 
 Modmail is a self-hosted Discord bot for your server. It works similar to [Reddit](https://reddit.zendesk.com/hc/en-us/articles/210896606-What-is-Modmail-)'s Modmail—both in functionality and purpose. It serves as a shared inbox for server staff to communicate with their users in a seamless way.
 
-This bot is free for everyone and always will be. If you like this project and would like to show your appreciation, you can support us on [**Patreon**](https://www.patreon.com/kyber), cool benefits included!
+This bot is free for everyone and always will be. If you like this project and would like to show your appreciation, you can support us on [**BuyMeACoffee**](https://buymeacoffee.com/modmaildev/membership), cool benefits included!
 
 ## What is Modmail used for?
 
@@ -42,7 +42,7 @@ Our Logviewer will save the threads so your staff can view previous threads thro
 * Schedule tasks in human time, e.g. `?close in 2 hours silently`.
 * Editing and deleting messages are synced.
 * Support for the diverse range of message contents (multiple images, files).
-* Paginated commands interfaces via reactions.
+* Paginated commands interfaces via buttons.
 
 This list is ever-growing thanks to active development by our exceptional contributors. See a full list of available commands by using the `?help` command.
 
@@ -53,8 +53,6 @@ Visit our [installation page](installation/) for detailed instructions on settin
 ## Supporting the project
 
 You have various options to help the project. Giving this repository a star is greatly appreciated. You can also help people that have trouble setting up Modmail at our [Discord server](https://discord.gg/cnUpwrnpYb).
-
-If you like to show your appreciation, consider supporting us on [**Patreon**](https://www.patreon.com/kyber)!
 
 ## Contributing
 

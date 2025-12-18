@@ -64,7 +64,7 @@ This feature allows the creation of very complex menu systems. If you are intend
 
 {% tabs %}
 
-{% tab title="Flowchart Example" %} **In Progress by theonlystephen** {% endtab %}
+{% tab title="Flowchart Example" %} <figure><img src=".gitbook/assets/example_threadmenu_diagram" alt=""><figcaption></figcaption></figure> {% endtab %}
 
 {% tab title="Commands Example" %} **In Progress by theonlystephen** {% endtab %}
 
@@ -103,6 +103,10 @@ Run the `?threadmenu load_config` command, while attaching the downloaded `confi
 <figure><img src="../.gitbook/assets/transfer-threadmenu-3.png" alt="The bot will provide you a success confirmation message after successful import."><figcaption><p>The import was successful if you see: <strong>Successfully loaded config into core.</strong></p></figcaption></figure>
 
 </div>
+
+##Step 4: Uninstall advancedmenu Plugin
+
+Run the command: ``?plugin remove advancedmenu``.
 
 **You're done!**
 

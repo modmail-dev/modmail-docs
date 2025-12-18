@@ -8,16 +8,14 @@ description: Deploy Modmail on a Windows machine.
 
 1. Minimum 2GB of RAM\*
 2. At least 2GB available disk space.
-3. Supported Windows version:
-   * Windows 10
-   * Windows 11
+3. Supported Windows version: Windows 11
 
 {% hint style="info" %}
 Note that while it is possible to run Modmail with even less memory, Windows 10 itself recommend at least 2GB (4GB for Windows 11). This guide assumes the lowest threshold to comfortably run Modmail without possibly running into any resource bottleneck.
 {% endhint %}
 
 {% hint style="warning" %}
-It is not recommended to run Modmail with previous versions of Windows such as Windows 7 or Windows 8.1 as they no longer receive important security updates, making your hosted applications significantly more prone to security vulnerabilities.
+It is not recommended to run Modmail with previous versions of Windows such as Windows 7, 8, 8.1, or 10 as they no longer receive important security updates, making your hosted applications significantly more prone to security vulnerabilities.
 {% endhint %}
 
 ## Dependencies
@@ -67,6 +65,10 @@ Install project dependencies inside Modmail's pipenv with:
 ```powershell
 py -3.10 -m pipenv install
 ```
+
+{% hint style="info" %}
+To be able to create file named `.env` you **must** have the option to `Hide extensions for known file types` to OFF. It will not allow you to create a correctly named file with this set to on. (To turn it off, press the `...` on the File Explorer options bar, then `Options`, then `View`, and finally uncheck the option.)
+{% endhint %}
 
 Create a new file in the modmail folder named `.env` and paste in your environmental variables needed to run Modmail. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
 
