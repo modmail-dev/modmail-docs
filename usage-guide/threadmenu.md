@@ -104,6 +104,10 @@ Run the `?threadmenu load_config` command, while attaching the downloaded `confi
 
 </div>
 
+##Step 4: Uninstall advancedmenu Plugin
+
+Run the command: ``?plugin remove advancedmenu``.
+
 **You're done!**
 
 Good job! You have successfully migrated your `advanced-menu` config to the Thread Menu feature introduced in Modmail 4.2.0.
