@@ -27,7 +27,7 @@ All code blocks should be executed in zsh or bash and line by line unless specif
 To install these dependencies, we will be using Terminal (zsh or bash):
 
 ```bash
-brew install python3 cairo libxml2 libxslt libffi
+brew install git python@3.10 cairo libxml2 libxslt libffi
 pip3 install cairosvg
 ```
 
