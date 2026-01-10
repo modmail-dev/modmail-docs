@@ -30,10 +30,6 @@ description: These hosts are hosts we, and members of our community have had lit
 - [Website](https://karlo-hosting.com/)
 - Another free or low cost hosting provider based on the Pterodactyl panel, our users have reported unusual difficulties deploying Modmail with this host due to their specific Pterodactyl configuration and limitations.
 
-### Embotic Hosting
-- [Website](https://client.embotic.xyz/)
-- Despite claiming to provide a VPS, they do not do so, and hosting Modmail is likely not possible. See the response from company representatives below:
-
 <details>
 
 <summary>1x Screenshot</summary>
