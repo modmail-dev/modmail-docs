@@ -30,14 +30,6 @@ description: These hosts are hosts we, and members of our community have had lit
 - [Website](https://karlo-hosting.com/)
 - Another free or low cost hosting provider based on the Pterodactyl panel, our users have reported unusual difficulties deploying Modmail with this host due to their specific Pterodactyl configuration and limitations.
 
-<details>
-
-<summary>1x Screenshot</summary>
-<figure><img src="../.gitbook/assets/embotic-hosting.png" alt="It seems like the bot would simply not be compatible as it seems to need a higher level of permissons(system-level) which we do not provide for security reasons. You can try to find a workaround to run it in the userspace but I'm not sure wether that might work."></figure>
-
-
-</details>
-
 ### Discord Bot Hosting
 - [Website](https://discordbothosting.com/)
 - Pterodactyl based host that can have issues with ratelimits due to shared IP addresses and reasons that have been listed below.
