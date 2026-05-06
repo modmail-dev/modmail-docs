@@ -18,7 +18,19 @@ Railway is a deployment platform where you can provision infrastructure, develop
 ## Costs
 
 Their lowest plan starts at $5 per month.
-Visit the [pricing](https://railway.app/pricing) page for the up-to-date pricing info.
+Visit the [pricing](https://railway.com/pricing) page for the up-to-date pricing info.
+
+# Deploy on Railway using Railway Templates
+
+### Modmail Bot:
+
+[![Deploy Modmail Bot](https://railway.com/button.svg)](https://railway.com/deploy/modmail)
+
+### Modmail Logviewer:
+
+[![Deploy Modmail Logviewer](https://railway.com/button.svg)](https://railway.com/deploy/modmail-logviewer)
+
+Deploying via these templates makes it easier because you do not need to fork (copy) our github repository and creating the project is made a bit smoother. However if you do face issues or anything else, you may use the alternative way to deploy below. The User account creation instructions can be followed from below
 
 ## Fork our GitHub repositories
 
