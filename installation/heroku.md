@@ -30,7 +30,8 @@ It is recommended you use the
 {% tabs %}
 
 {% tab title="Basic Setup (not recommended)" icon="taxi" %} 
-
+{% stepper %}
+{% step %}
 ## Deploying the Log Viewer
 
 ### **Click the button below to deploy the logviewer to Heroku!**
@@ -47,6 +48,8 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 ![Heroku Logviewer](https://i.imgur.com/tmiPfTL.png)
 
+{% endstep %}
+{% step %}
 ## Deploying Modmail
 
 ### **Click the button below to deploy the bot to heroku.**
@@ -55,31 +58,33 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/modmail)
 
-**6.1.** Choose any name for your app. Note: this name doesn't matter at all.
+**1.** Choose any name for your app. Note: this name doesn't matter at all.
 
-**6.2.** Put your bot's token in the `TOKEN` field.
+**2.** Put your bot's token in the `TOKEN` field.
 
-**6.3.** In the `DATABASE_TYPE` You may fillout: `mongodb`
+**3.** In the `DATABASE_TYPE` You may fillout: `mongodb`
 
-**6.4.** Put the ID of your Server into the `GUILD_ID` field.
+**4.** Put the ID of your Server into the `GUILD_ID` field.
 
-**6.5.** Put your own ID in the `OWNERS` field. If there are multiple owners, separate them by a comma.
+**5.** Put your own ID in the `OWNERS` field. If there are multiple owners, separate them by a comma.
 
-**6.6.** Put your Mongo connection URI from the previous section in the `CONNECTION_URI` field.
+**6.** Put your Mongo connection URI from the previous section in the `CONNECTION_URI` field.
 
-**6.7.** Put the URL of your log viewer Heroku app (`https://yourlogviewerappname.herokuapp.com`) in the `LOG_URL` field.
+**7.** Put the URL of your log viewer Heroku app (`https://yourlogviewerappname.herokuapp.com`) in the `LOG_URL` field.
 
-**6.8** Click the `Deploy App` button and wait for it to finish.
+**8** Click the `Deploy App` button and wait for it to finish.
 
-**6.9.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
+**9.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
 
-**6.11.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. Our support team will gladly assist with any issues.
+**10.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. Our support team will gladly assist with any issues.
 
-**6.12.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
+**11.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
 
-**6.13.** Run the `?setup` command and you are good to go!
+**12.** Run the `?setup` command and you are good to go!
 
 ***
+{% endstep %}
+{% endstepper %}
 
  {% endtab %}
 
