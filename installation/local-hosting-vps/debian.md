@@ -33,6 +33,13 @@ All code blocks should be executed in bash and line by line unless specified oth
 
 To install these dependencies, we will be using **`apt`**.
 
+### Raspberry Pi OS Steps
+
+{% hint style="info" %}
+By default, [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/) is missing some libraries to use modmail. Please run the following command to be able to use modmail.
+```sudo apt update && sudo apt upgrade -y && sudo apt install libjpeg8-dev```
+{% endhint %}
+
 ### **Debian 11 Bullseye /** Raspberry Pi OS 11 Bullseye
 
 ```bash
@@ -88,7 +95,7 @@ python3.9 -m pipenv install --python 3.9
 ```
 
 {% hint style="info" %}
-Replace <mark style="color:green;">`3.9`</mark> with <mark style="color:green;">`3.10`</mark> on the command above if you followed[ Debian 10 Buster](debian.md#debian-10-buster-raspberry-pi-os-10-buster) method previously.
+Replace <mark style="color:green;">`3.9`</mark> with <mark style="color:green;">`3.10`</mark> on the command above if you followed [Debian 10 Buster](debian.md#debian-10-buster-raspberry-pi-os-10-buster) method previously.
 {% endhint %}
 
 Create a file named `.env` with `nano` and paste all the environmental variables (secrets) needed to run the bot via right-clicking in the nano editor. Refer to the steps in the [parent Installation page](../#preparing-your-environmental-variables) to find where to obtain these.
