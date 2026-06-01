@@ -4,24 +4,24 @@ description: Deploy Modmail on Heroku PaaS.
 
 # Heroku
 
-## What is Heroku? <a href="#what-is-railway" id="what-is-railway"></a>
+### What is Heroku? <a href="#what-is-railway" id="what-is-railway"></a>
 
 Heroku is a container-based cloud Platform as a Service (PaaS). Developers use Heroku to deploy, manage, and scale modern apps.
 
-## Requirements <a href="#requirements" id="requirements"></a>
+### Requirements <a href="#requirements" id="requirements"></a>
 
 * A credit card (for payment and verification).
 * An email account.
 * A [GitHub](https://github.com/signup) account.
 * You have completed the initial steps: [invited your bot](./#create-a-discord-bot) and [created a MongoDB database](./#create-a-mongodb-database).
 
-## Costs
+### Costs
 
 Unfortunately, Heroku is no longer free-of-charge. You will need at least their Eco plan, which currently costs $5 USD per month. See their [pricing page](https://www.heroku.com/pricing) for more info and up-to-date prices.
 
 If you are a higher-education student, you *may* be eligible for their [student offer](https://www.heroku.com/github-students), which grants you $13 USD of credits per month for 24 months—enough to host Modmail free for two years.
 
-## Fork our GitHub repositories
+### Fork our GitHub repositories
 
 You will need to fork our repositories to deploy onto Heroku.
 
@@ -47,16 +47,65 @@ Next, to keep your Modmail and Logviewer up to date, you will need to install th
 
 </div>
 
-Your GitHub should now be all set. Next step, [create a Heroku account](heroku.md#create-a-heroku-account) to deploy your bot.
+Your GitHub should now be all set. Next step, [create a Heroku account](https://heroku.com) on their website to deploy your bot.
 
+## Deploying the Log Viewer
 
+### **Click the button below to deploy the logviewer to Heroku!**
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/logviewer)
+
+**This is not the bot!**
+
+You will need to deploy a separate log viewer application from [this repository](https://github.com/modmail-dev/logviewer). This Heroku application is separate from the bot; it's a simple website that will be used to display your thread logs.
+
+Choose a name for your app and paste your Mongo URI (from your notepad). After you click the `Deploy App` button, it will start creating the website.
+
+After that's done configuring, click the `View` button. It will redirect you to the logviewer home screen. Copy the link in the address bar and paste it in Notepad.
+
+![Heroku Logviewer](https://i.imgur.com/tmiPfTL.png)
+
+## 6. Modmail
+
+### **Click the button below to deploy the bot to heroku.**
+
+**This is the second application you will be deploying - this is the actual bot.**
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/modmail)
+
+**6.1.** Choose any name for your app. Note: this name doesn't matter at all.
+
+**6.2.** Put your bot's token in the `TOKEN` field.
+
+**6.3.** In the `DATABASE_TYPE` You may fillout: `mongodb`
+
+**6.4.** Put the ID of your Server into the `GUILD_ID` field.
+
+**6.5.** Put your own ID in the `OWNERS` field. If there are multiple owners, separate them by a comma.
+
+**6.6.** Put your Mongo connection URI from the previous section in the `CONNECTION_URI` field.
+
+**6.7.** Put the URL of your log viewer Heroku app (`https://yourlogviewerappname.herokuapp.com`) in the `LOG_URL` field.
+
+**6.8** Click the `Deploy App` button and wait for it to finish.
+
+**6.9.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
+
+**6.11.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. Our support team will gladly assist with any issues.
+
+**6.12.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
+
+**6.13.** Run the `?setup` command and you are good to go!
+
+***
+
+Congratulations! Your bot is ready! Head over to Discord and try it out! If you have any issues or questions, join our [Discord Server](https://discord.gg/cnUpwrnpYb).
 
 ## Updating
 
 You can update Modmail on your Heroku account whenever changes are made to the repository. If you want to update while hosting locally (not Heroku), simply type `git pull` in your terminal and install the requirements again with `pipenv install`.
 
-## Forking the repo
+### Forking the repo
 
 Before you get started, you must [fork](https://github.com/modmail-dev/modmail/fork) the repo first if you are using Heroku and want to update the bot.
 
