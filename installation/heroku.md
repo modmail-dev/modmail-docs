@@ -24,69 +24,10 @@ If you are a higher-education student, you *may* be eligible for their [student 
 {% hint style="info" %}
 The Basic Setup option below uses templates from our repository, while this is a simpler way to setup the bot, it is no longer recommended due to added complexities in the updating process.
 
-It is recommended you use the 
+It is recommended you use the complex setup, which allows for seamless autoupdate of your Modmail instance.
 {% endhint %}
 
 {% tabs %}
-
-{% tab title="Basic Setup (not recommended)" icon="taxi" %} 
-{% stepper %}
-{% step %}
-## Deploying the Log Viewer
-
-### **Click the button below to deploy the logviewer to Heroku!**
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/logviewer)
-
-**This is not the bot!**
-
-You will need to deploy a separate log viewer application from [this repository](https://github.com/modmail-dev/logviewer). This Heroku application is separate from the bot; it's a simple website that will be used to display your thread logs.
-
-Choose a name for your app and paste your Mongo URI (from your notepad). After you click the `Deploy App` button, it will start creating the website.
-
-After that's done configuring, click the `View` button. It will redirect you to the logviewer home screen. Copy the link in the address bar and paste it in Notepad.
-
-![Heroku Logviewer](https://i.imgur.com/tmiPfTL.png)
-
-{% endstep %}
-{% step %}
-## Deploying Modmail
-
-### **Click the button below to deploy the bot to heroku.**
-
-**This is the second application you will be deploying - this is the actual bot.**
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/modmail)
-
-**1.** Choose any name for your app. Note: this name doesn't matter at all.
-
-**2.** Put your bot's token in the `TOKEN` field.
-
-**3.** In the `DATABASE_TYPE` You may fillout: `mongodb`
-
-**4.** Put the ID of your Server into the `GUILD_ID` field.
-
-**5.** Put your own ID in the `OWNERS` field. If there are multiple owners, separate them by a comma.
-
-**6.** Put your Mongo connection URI from the previous section in the `CONNECTION_URI` field.
-
-**7.** Put the URL of your log viewer Heroku app (`https://yourlogviewerappname.herokuapp.com`) in the `LOG_URL` field.
-
-**8** Click the `Deploy App` button and wait for it to finish.
-
-**9.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
-
-**10.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. Our support team will gladly assist with any issues.
-
-**11.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
-
-**12.** Run the `?setup` command and you are good to go!
-
-***
-{% endstep %}
-{% endstepper %}
-
- {% endtab %}
 
 {% tab title="Complex Setup (recommended)" icon="shuttle-space" %}
 
@@ -184,5 +125,64 @@ You can update Modmail on your Heroku account whenever changes are made to the r
 {% endstep %}
 {% endstepper %}
 {% endtab %}
+
+{% tab title="Basic Setup (not recommended)" icon="taxi" %} 
+{% stepper %}
+{% step %}
+## Deploying the Log Viewer
+
+### **Click the button below to deploy the logviewer to Heroku!**
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/logviewer)
+
+**This is not the bot!**
+
+You will need to deploy a separate log viewer application from [this repository](https://github.com/modmail-dev/logviewer). This Heroku application is separate from the bot; it's a simple website that will be used to display your thread logs.
+
+Choose a name for your app and paste your Mongo URI (from your notepad). After you click the `Deploy App` button, it will start creating the website.
+
+After that's done configuring, click the `View` button. It will redirect you to the logviewer home screen. Copy the link in the address bar and paste it in Notepad.
+
+![Heroku Logviewer](https://i.imgur.com/tmiPfTL.png)
+
+{% endstep %}
+{% step %}
+## Deploying Modmail
+
+### **Click the button below to deploy the bot to heroku.**
+
+**This is the second application you will be deploying - this is the actual bot.**
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/modmail-dev/modmail)
+
+**1.** Choose any name for your app. Note: this name doesn't matter at all.
+
+**2.** Put your bot's token in the `TOKEN` field.
+
+**3.** In the `DATABASE_TYPE` You may fillout: `mongodb`
+
+**4.** Put the ID of your Server into the `GUILD_ID` field.
+
+**5.** Put your own ID in the `OWNERS` field. If there are multiple owners, separate them by a comma.
+
+**6.** Put your Mongo connection URI from the previous section in the `CONNECTION_URI` field.
+
+**7.** Put the URL of your log viewer Heroku app (`https://yourlogviewerappname.herokuapp.com`) in the `LOG_URL` field.
+
+**8** Click the `Deploy App` button and wait for it to finish.
+
+**9.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
+
+**10.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. Our support team will gladly assist with any issues.
+
+**11.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
+
+**12.** Run the `?setup` command and you are good to go!
+
+***
+{% endstep %}
+{% endstepper %}
+
+ {% endtab %}
 
 {% endtabs %}
