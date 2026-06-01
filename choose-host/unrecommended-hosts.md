@@ -57,7 +57,7 @@ description: These hosts are hosts we, and members of our community have had lit
 - baud.host does not allow users to provide their MongoDB Connection URI, this is not recommended as it locks users into a single host, and limits a user's ownership of their data. We were not able to conduct a test on the security of their locally hosted database, but if managed improperly, it could also be a security concern.
 - baud.host uses Stripe for payment verification, however, appears to use their own processing flow, instead of the one provided by Stripe. We were unable to conduct a test on security, but this could be a security concern.
 - Kybo Group claims compliance with HIPAA, GDPR, DPDPA, with an ISO27001, PCI DSS, SOC 1 Type 2, and SOC 2 Type 2 certifications, however, attempts to verify this have failed. You can conduct your own certification search with the [IAF](https://www.iafcertsearch.org/search/certified-entities?search=Kybo%20Group).
-- Some users have reported feagures in latest updates not working with this host.
+- Some users have reported features in latest updates not working with this host.
 
 
 {% hint style="danger" %}
