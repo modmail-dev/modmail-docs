@@ -85,6 +85,8 @@ After that's done configuring, click the `View` button. It will redirect you to 
 
 {% tab title="Complex Setup (recommended)" icon="shuttle-space" %}
 
+{% stepper %}
+{% step %}
 ## Fork our GitHub repositories
 
 You will need to fork our repositories to deploy onto Heroku.
@@ -112,10 +114,12 @@ Next, to keep your Modmail and Logviewer up to date, you will need to install th
 </div>
 
 Your GitHub should now be all set. Next step, [create a Heroku account](https://heroku.com) on their website to deploy your bot.
-
+{% endstep %}
+{% step %}
 ## Deploying the Log Viewer
 
 Go to this link: ``https://heroku.com/deploy?template=https://github.com/[YOUR GITHUB USERNAME HERE!!!]/logviewer``
+
 *Fill in your Github username `[YOUR GITHUB USERNAME HERE!!!]` before pressing enter!*
 
 **This is not the bot!**
@@ -125,12 +129,14 @@ Choose a name for your app and paste your Mongo URI in the field (from your note
 After that's done configuring, click the `View` button. It will redirect you to the logviewer home screen. Copy the link in the address bar and paste it in Notepad.
 
 ![Heroku Logviewer](https://i.imgur.com/tmiPfTL.png)
-
+{% endstep %}
+{% step %}
 ## Deploying Modmail
 
 **This is the second application you will be deploying - this is the actual bot.**
 
 Go to this link: ``https://heroku.com/deploy?template=https://github.com/[YOUR GITHUB USERNAME HERE!!!]/modmail``
+
 *Fill in your Github username `[YOUR GITHUB USERNAME HERE!!!]` before pressing enter!*
 
 **01.** Choose any name for your app. Note: this name doesn't matter at all.
@@ -156,7 +162,8 @@ Go to this link: ``https://heroku.com/deploy?template=https://github.com/[YOUR G
 **11.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
 
 **12.** Run the `?setup` command and you are good to go!
-
+{% endstep %}
+{% step %}
 ## Updating
 
 You can update Modmail on your Heroku account whenever changes are made to the repository. Link your GitHub Account to Heroku:
@@ -169,6 +176,8 @@ You can update Modmail on your Heroku account whenever changes are made to the r
 
 ![](https://i.imgur.com/jgUVl7f.png)
 
+{% endstep %}
+{% endstepper %}
 {% endtab %}
 
 {% endtabs %}
