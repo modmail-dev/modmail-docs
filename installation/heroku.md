@@ -91,15 +91,15 @@ You will need to fork our repositories to deploy onto Heroku.
 
 Make sure you're logged in to [GitHub](https://github.com/). You will need to fork **two** repositories.&#x20;
 
-First we fork the Modmail repository. Head over to [https://github.com/kyb3rr/modmail/fork](https://github.com/modmail-dev/modmail/fork), leave all the settings as default, and click **Create fork**.
+First we fork the Modmail repository. Head over to [https://github.com/modmail-dev/modmail/fork](https://github.com/modmail-dev/modmail/fork), leave all the settings as default, and click **Create fork**.
 
 <figure><img src="../.gitbook/assets/RW1.png" alt="Screenshot of creating a Modmail fork."><figcaption><p>Create a GitHub fork for the Modmail Repository.</p></figcaption></figure>
 
-Next do the same for the Logviewer repository by heading over to [https://github.com/kyb3r/logviewer/fork](https://github.com/modmail-dev/logviewer/fork), leave all the settings as default, and click **Create fork**.
+Next do the same for the Logviewer repository by heading over to [https://github.com/modmail-dev/logviewer/fork](https://github.com/modmail-dev/logviewer/fork), leave all the settings as default, and click **Create fork**.
 
 <figure><img src="../.gitbook/assets/RW2.png" alt="Screenshot of creating a Logviewer fork."><figcaption><p>Create a GitHub fork for the Logviewer Repository.</p></figcaption></figure>
 
-Next, to keep your Modmail and Logviewer up to date, you will need to install the [Pull app](https://github.com/apps/pull). Simply head over to [https://github.com/apps/pull](https://github.com/apps/pull), click **Install**, choose **Only select repositories**, then select **both** the Modmail and Logviewer repositories that you forked in the previous step.&#x20;
+Next, to keep your Modmail and Logviewer up to date, you will need to install the [Pull App](https://github.com/apps/pull). Simply head over to [https://github.com/apps/pull](https://github.com/apps/pull), click **Install**, choose **Only select repositories**, then select **both** the Modmail and Logviewer repositories that you forked in the previous step.&#x20;
 
 <div>
 
@@ -113,48 +113,62 @@ Next, to keep your Modmail and Logviewer up to date, you will need to install th
 
 Your GitHub should now be all set. Next step, [create a Heroku account](https://heroku.com) on their website to deploy your bot.
 
+## Deploying the Log Viewer
 
+Go to this link: ``https://heroku.com/deploy?template=https://github.com/[YOUR GITHUB USERNAME HERE!!!]/logviewer``
+*Fill in your Github username `[YOUR GITHUB USERNAME HERE!!!]` before pressing enter!*
 
-Congratulations! Your bot is ready! Head over to Discord and try it out! If you have any issues or questions, join our [Discord Server](https://discord.gg/cnUpwrnpYb).
+**This is not the bot!**
+
+Choose a name for your app and paste your Mongo URI in the field (from your notepad). After you click the `Deploy App` button, it will start creating the website.
+
+After that's done configuring, click the `View` button. It will redirect you to the logviewer home screen. Copy the link in the address bar and paste it in Notepad.
+
+![Heroku Logviewer](https://i.imgur.com/tmiPfTL.png)
+
+## Deploying Modmail
+
+**This is the second application you will be deploying - this is the actual bot.**
+
+Go to this link: ``https://heroku.com/deploy?template=https://github.com/[YOUR GITHUB USERNAME HERE!!!]/modmail``
+*Fill in your Github username `[YOUR GITHUB USERNAME HERE!!!]` before pressing enter!*
+
+**01.** Choose any name for your app. Note: this name doesn't matter at all.
+
+**02.** Put your bot's token in the `TOKEN` field.
+
+**03.** In the `DATABASE_TYPE` You may fillout: `mongodb`
+
+**04.** Put the ID of your Server into the `GUILD_ID` field.
+
+**05.** Put your own ID in the `OWNERS` field. If there are multiple owners, separate them by a comma.
+
+**06.** Put your Mongo connection URI from the previous section in the `CONNECTION_URI` field.
+
+**07.** Put the URL of your log viewer Heroku app (`https://yourlogviewerappname.herokuapp.com`) in the `LOG_URL` field.
+
+**08** Click the `Deploy App` button and wait for it to finish.
+
+**09.** Click `Manage App` and go into the `Resources` tab, where you need to turn on the worker by clicking the pencil icon next to it.
+
+**10.** If you want, you can go over and check the application logs to see if everything is running smoothly. If any unexpected errors pop up, join our [Discord server](https://discord.gg/cnUpwrnpYb) and DM Modmail. Our support team will gladly assist with any issues.
+
+**11.** Once the bot is online in your server, make sure to give it the required positions from [Installation](https://docs.modmail.dev/installation).
+
+**12.** Run the `?setup` command and you are good to go!
 
 ## Updating
 
-You can update Modmail on your Heroku account whenever changes are made to the repository.
+You can update Modmail on your Heroku account whenever changes are made to the repository. Link your GitHub Account to Heroku:
 
-### Forking the repo
+![](https://i.imgur.com/qjWraS0.png)
 
-Before you get started, you must [fork](https://github.com/modmail-dev/modmail/fork) the repo first if you are using Heroku and want to update the bot.
+**One Time Update:** You then want to go to your modmail application in Heroku, connect your modmail fork via the `Deploy` tab and deploy the `master` branch.
 
-### Syncing a fork branch from the web UI
+**Automatic Updates:** You can turn on auto-deploy for the master branch if you don't want to go through the process of logging into Heroku and deploying the branch every time changes to the repo are made in the future.
 
-1. On GitHub, navigate to the main page of the forked repository that you want to sync with the upstream repository.
-2.  Select the Sync fork dropdown.
-
-    ![sync-fork-dropdown](https://user-images.githubusercontent.com/70805800/194696934-5333af5d-165e-4873-b5b7-bd01f0461185.png)
-3.  Then click Update branch.
-
-    ![update-branch-button](https://user-images.githubusercontent.com/70805800/194696947-68891d50-a624-4901-a03d-e49564852a23.png)
-
-If the changes from the upstream repository cause conflicts, GitHub will prompt you to create a pull request to resolve the conflicts.
-
-### I want to enable automatic updates
-
-1. Create a GitHub account
-2. [Fork](https://github.com/modmail-dev/modmail/fork) the repository
-3. Add GITHUB\_TOKEN into your configuration variables from https://github.com/settings/tokens with the repo scope ([Guide](https://github.com/modmail-dev/modmail/wiki/Installation-\(cont.\)#4-how-to-obtain-your-github\_token---required-for-the-update-command-)).
-4. Link your GitHub account to heroku ![](https://i.imgur.com/qjWraS0.png)
-5. Turn on automatic deploys ![](https://i.imgur.com/jgUVl7f.png)
-6. Restart the bot
-
-### I want to update the bot once
-
-[Click here to create a new pull request to your fork](https://github.com/modmail-dev/modmail/pull/new/master). Select `compare across forks`, make the base repository `yourusername/modmail` and ensure the branch is set to master. Put any title you want and create the pull request. On the page that comes after this, merge the pull request.
-
-You then want to go to your modmail application in Heroku, connect your modmail fork via the `Deploy` tab and deploy the `master` branch.
-
-You can turn on auto-deploy for the master branch if you don't want to go through the process of logging into Heroku and deploying the branch every time changes to the repo are made in the future. However, you will have to make a pull request to update your fork every time.
+![](https://i.imgur.com/jgUVl7f.png)
 
 {% endtab %}
 
 {% endtabs %}
-
