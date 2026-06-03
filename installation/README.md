@@ -6,9 +6,7 @@ description: Modmail hosting and installation guide.
 
 Modmail is a self-hosted bot. This unfortunately means that there's **no** public bot invite. Furthermore, due to the inner workings of the bot and its highly customisable interfaces, you will need to host your own dedicated Modmail bot.
 
-This section provides setup instructions for Modmail on many hosting methods, both **free\* and paid**.
-
-\*Some free options require a credit card for verification.
+This section provides setup instructions for Modmail on many hosting methods, both **free[^1] and paid**.
 
 Here are the basic requirements for hosting your Modmail bot. You will find instructions on obtaining and using them in later sections.
 
@@ -27,6 +25,7 @@ Here are the basic requirements for hosting your Modmail bot. You will find inst
 
 {% hint style="warning" %}
 **Note:** There are two components for Modmail: the bot component and the Logviewer component. You will need **both** to take full advantage of Modmail.
+
 {% endhint %}
 
 ## Create a Discord bot
@@ -120,7 +119,7 @@ Discord should prompt you to choose a server to invite your bot, followed by a l
 </div>
 
 {% hint style="info" %}
-You **must leave on** all permissions excepted for _Administrator_ (optional). However, we recommend allowing _Administrator_ for ease of setup and to avoid complications with Discord permissions.
+You **must leave on** all permissions excepted for _Administrator_ (optional). However, we recommend allowing _Administrator_ during the setup process for ease of setup and to avoid complications with Discord permissions. Once you have fully setup and began to use the bot, you should restrict permissions to only those necessary.
 {% endhint %}
 
 <details>
@@ -265,7 +264,7 @@ You finished the MongoDB steps! At this point, your bot should still be **offlin
 Once you have finished the previous steps, gather and save the variables listed below as they will be needed to run your bot in later steps:
 
 * `TOKEN` - The token to run your Modmail application under your Discord bot account
-* `LOG_URL` **- \[Optional]** Logviewer URL that will be used to view threads in your web browser
+* `LOG_URL` - Logviewer URL that will be used to view threads in your web browser. *Please view the below **Danger** block if you do not intend on using a Logviewer.
 * `GUILD_ID` - The ID of the main Discord server that your bot will operate in.
 * `MODMAIL_GUILD_ID` - **\[Optional]** The ID of the Discord server that your bot will create ticket channels in. This is only needed if you want your ticket channels to be created in a separate server, for an example, Staff Server.
 * `OWNERS` - The user ID of the Discord accounts you want to set as owner for the bot. Can consist of multiple users, separated by comma.
@@ -283,9 +282,20 @@ CONNECTION_URI=mongodb+srv://username:password@cluster0-abcde.mongodb.net/
 ```
 {% endcode %}
 
+{% hint style="danger" %}
+**DANGER!!** - `LOG_URL` Enviornment Variable without a Logviewer
+
+*This is only relevant if you choose not to use a logviewer with your Modmail Instance, if you intend on having a fully featured instance, you can safely ignore this block.*
+
+If you do not intend on using a Logviewer for your Modmail Instance, you must still ensure `LOG_URL` is set to a valid FQDN (Fully Qualified Domain Name). You can leave it as `example.com` or change it to anything else, but, do **not** delete the row, or set a value that is not an FQDN. `none`, `local`, `12032`, etc are **not** FQDNs.
+
+If you set the `LOG_URL` to an invalid FQDN, Discord will not handle it well and you will experience issues with thread creation.
+{% endhint %}
+
+
 ## Hosting Modmail
 
-Your next step is to choose one of our supported hosting method that's available and preferable to you.&#x20;
+Your next step is to choose one of our supported hosting method that's available and preferable to you.
 
 Click on one of the links below to view further instructions for your preferred hosting method. Each method has their pros and cons, be sure to take them into consideration when choosing your hosting platform to run Modmail.
 
@@ -297,11 +307,15 @@ A platform as a service (PaaS) that offers relatively low cost plans, which allo
 
 If you have an old PC, a Raspberry Pi, or a Linux box that you're able to keep online 24/7, you can also host Modmail with your own machine at home. Since Modmail doesn't require intensive resources to run, you can get by with a system having as low as 1GB of RAM. Setting it up can be quite advanced but you have complete control over your bot instance. Refer to our local hosting guide supporting a few popular OSes by clicking [here](./#local-hosting-free).
 
-### [Modmail Patreon](https://www.patreon.com/kyber) (paid)
+### [Modmail Team Hosting](https://buymeacoffee.com/modmaildev) (paid)
 
 We offer paid hosting solution for your Modmail bot. Hosting Modmail with us costs $4-5 USD per month.
 
-We will also fully manage your bot hosting for you, so you don't need to worry about upgrading or setting up your own host server. Refer to our [Patreon Hosting here](https://www.patreon.com/kyber).
+We will also fully manage your bot hosting for you, so you don't need to worry about upgrading or setting up your own host server. Refer to our [Patreon Hosting here](https://buymeacoffee.com/modmaildev).
+
+### [modmail.lvh.lol](https://modmail.lvh.lol) (paid)
+
+Run by a member of our community, this hosting provider has a purpose built software stack for hosting Modmail, logviewer not included.
 
 ### [Heroku](heroku.md) (paid)
 
@@ -315,16 +329,6 @@ Apart from [Patreon hosting](./#modmail-patreon-paid), hosting on a cloud server
 
 This method is a lot more "involved" than other solutions. If you're not comfortable with configuring remote Linux environments, we recommend you to choose a different option. For this method, you will need to refer to our Local hosting installation guide [here](local-hosting-vps/) and choose your desired OS.
 
-### [Replit](https://replit.com/\~) (free/paid)
-
-{% hint style="warning" %}
-The Modmail team does not recommend this hosting method due to their highly unstable and heavily abused environment. That said, we still decided to list this option here as a method for users with no access to valid payment cards since most hosting platforms require them for verification.\
-\
-Please note that our Support Team will not be offering any official help or support if you choose this method to host Modmail.
-{% endhint %}
-
-An online code execution environment that costs $7 USD per month. However, hosting on Replit is often unstable, and thus not recommended. However, a community guide is still available by clicking [here](broken-reference).
-
 ## Community Guides
 
 {% hint style="warning" %}
@@ -336,3 +340,5 @@ If you're not satisfied with the options listed above, some of our community mem
 {% content-ref url="community-guides.md" %}
 [community-guides.md](community-guides.md)
 {% endcontent-ref %}
+
+[^1]: Some free options require a credit card for verification.

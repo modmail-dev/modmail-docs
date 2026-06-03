@@ -63,25 +63,26 @@ Modmail is a very lightweight bot, very minimal resources are required.
 
 > Do you have more than 1000 members in your server?
 
-If not: you likely do not need more than 512mb of memory and 1 CPU core.
+**If not:** you likely do not need more than 512mb of memory and 1 CPU core.
 
-If yes: you can potentially get away with the minimum spec, but you should consider upgrading.
+**If yes:** you can potentially get away with the minimum spec, but you should consider upgrading.
 
 > Do you require your Modmail bot to be online with 0 downtime?
 
-If yes: you want to steer away from free hosts, and in most cases, local hosting as well.
+**If yes:** you want to steer away from free hosts, and in most cases, local hosting as well.
+*Clarification: for our team, "local hosting" is hosting on a computer that you have in your house, not a VPS in a datacenter*
 
 > Do you plan to have significant usage of your bot?
 
-If yes (ie plugins, hundreds of active threads at once - being replied to not sitting dormant, etc): you can potineitally get away with the minimum spec, but you should consider upgrading.
+**If yes (ie many plugins, hundreds of active threads at once - being replied to not sitting dormant, etc):** you can potineitally get away with the minimum spec, but you should consider upgrading.
 
-If you aren't sure: Talk with our [community and team](https://discord.gg/nfErcs7mDM).
+**If you aren't sure:** Talk with our [community and team](https://discord.gg/nfErcs7mDM).
 
-If no: use the minimum spec above.
+**If no:** use the minimum spec above.
 
 > How technical are you?
 
-If you struggle with technology, you may want to consider a PaaS (Platform as a Service) host, which handles the backend of a server for you. If you have strong technical proficiencies, a VPS or local hosting is likely a better fit for you.
+If you struggle with technology, you may want to consider a PaaS (Platform as a Service) host, which handles the backend of a server for you. If you have strong technical proficiencies (or a willingness to research and learn), a VPS or local hosting is likely a better fit for you.
 
 {% endstep %}
 
@@ -115,6 +116,8 @@ For nearly all cases, we recommend a cheap Virtual Private Server from one of ou
 For users who do not wish to pay, we recommend locally hosting the bot from hardware you already own, like a Raspberry Pi, or old computer you can keep running 24/7 in your house.
 
 In situations where you significantly struggle with technology, a PaaS option *may* be better with you. Feel free to consult with our [team](https://discord.gg/nfErcs7mDM) if you don't know if this is the best option for you.
+
+If you want the simplest possible method of getting your bot online, we would recommend one of our two native Modmail hosts, [buymeacoffee.com/modmaildev](https://buymeacoffee.com/modmaildev) or [modmail.lvl.lol](https://modmail.lvh.lol). Both run a panel that is purpose built and custom developed solely for the purpose of running Modmail.
 {% endhint %}
 
 {% hint style="danger" %}

@@ -6,12 +6,12 @@ description: Deploy Modmail on a Windows machine.
 
 ## Prerequisites
 
-1. Minimum 2GB of RAM\*
+1. Minimum 4GB of RAM\*
 2. At least 2GB available disk space.
 3. Supported Windows version: Windows 11
 
 {% hint style="info" %}
-Note that while it is possible to run Modmail with even less memory, Windows 10 itself recommend at least 2GB (4GB for Windows 11). This guide assumes the lowest threshold to comfortably run Modmail without possibly running into any resource bottleneck.
+Note that while it is possible to run Modmail with even less memory, Windows 10 itself recommends at least 4GB. This guide assumes the lowest threshold to comfortably run Modmail without possibly running into any resource bottleneck.
 {% endhint %}
 
 {% hint style="warning" %}
