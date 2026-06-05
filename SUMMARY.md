@@ -19,6 +19,8 @@
     * [Setting up Auto-Restart (Windows)](installation/local-hosting-vps/autorestart_windows.md)
   * [Railway](installation/railway.md)
   * [Heroku](installation/heroku.md)
+  * [Free Logviewer Hosting](installation/free-logviewer.md)
+  * [Modmail Hosting Panel](installation/modmail-panel.md)
   * [Community Guides](installation/community-guides.md)
 * [Updating](updating.md)
 * [Usage](usage-guide/README.md)
