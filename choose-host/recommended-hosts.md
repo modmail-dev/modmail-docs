@@ -63,14 +63,25 @@ See details on [Buy Me a Coffee](https://buymeacoffee.com/modmaildev/membership)
 - [ninjaOne Recommendations](https://www.ninjaone.com/blog/key-steps-for-a-more-secure-linux-server/)
 - [Linux.org Fourms Recommendations](https://www.linux.org/threads/the-ultimate-guide-to-reasonable-security-for-your-debian-ubuntu-linux-server-for-new-linux-admins.49199/)
 
-    *Consider these a starting point, but be sure to do your own research. The Modmail Team holds no liability for any security mishaps that may occur with a server not rented by us and under our full, direct, and exclusive control. (in other words: we aren't responsible for your server)
+    *Consider these a starting point, but be sure to do your own research. The Modmail Team holds no liability for any security mishaps that may occur with a server not rented by us and under our full, direct, and exclusive control. (in other words: we aren't responsible for your server)*
 
  {% endhint %}
 
 ## PaaS Providers
 
-PaaS Hosting is usually more expensive, but a simpler to setup solution, which removes the need for securing a server, ssh configurations, terminal usage, and similar. However, because of this the platforms are usually more restricted, and difficult to troubleshoot. Despite this they are still an adequate and supported option.
+PaaS Hosting is usually more expensive, but a simpler to setup solution, which removes the need for securing a server, SSH configurations, terminal usage, and similar. However, because of this the platforms are usually more restricted, and difficult to troubleshoot. Despite this they are still an adequate and supported option.
 
 [Heroku](https://www.heroku.com/)
 
 [Railway](https://railway.com/)
+
+{% hint style="danger" %}
+## A Caution on Free Pterodactyl based hosts.
+
+Many hosting "companies" have popped up in recent years using the free, open source, [Pterodactyl](https://pterodactyl.io/) hosting platform. These hosting sites are particularly problematic. With the biggest concern usually revolving around **your data security**. Many, if not all, of these platforms do not provide, possess, or follow proper agreements relating to the access of your uploaded information. This includes your MongoDB Conncection URI, and Bot Token, allowing the "staff" of these "companies" to access any message ever sent to or from your bot, any message in your server, and carry out actions as your bot (ie. deleting channels, reading messages, banning users).
+
+Additionally, many of these hosts are run with substandard hardware and infrastucture, usually resulting to temporary IP bans from Discord, poor uptime, poor performance, improper dependancy installation, and more.
+
+We **strongly** encourage you to conduct **full and complete** research before using these hosts. *Our general recommendation is to: **avoid them.***
+
+{% endhint %}

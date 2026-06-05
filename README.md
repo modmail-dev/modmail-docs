@@ -1,5 +1,5 @@
 ---
-description: https://github.com/modmail-dev/modmail
+description: [https://github.com/modmail-dev/modmail](https://github.com/modmail-dev/modmail)
 ---
 
 # Introduction
@@ -24,15 +24,17 @@ Our Logviewer will save the threads so your staff can view previous threads thro
 * Versatile command permission system.
 * Interface elements (color, responses, reactions, etc.).
 * Snippets and command aliases.
-* Minimum duration for accounts to be created before allowed to contact Modmail (`account_age`).
-* Minimum length for members to be in the guild before allowed to contact Modmail (`guild_age`).
+* Minimum durations for account age and time in server before allowed to contact Modmail.
+* Plugin support for extending functionality.
+* Custom thread creation messages and thread naming formats.
+* Configurable auto-close, inactivity, and notification settings.
 
 **Advanced logging functionality**
 
 * When you close a thread, Modmail will generate a log link and post it to your log channel.
 * Native Discord dark-mode feel.
 * Markdown/formatting support.
-* Discord authentication-protected logs ([Patreon-only feature](https://patreon.com/kyber)).
+* Discord authentication-protected logs ([Patreon/BMAC-only feature](https://buymeacoffee.com/modmaildev/membership)).
 * See past logs of a user with `?logs`.
 * Searchable by text queries using `?logs search`.
 
@@ -41,8 +43,10 @@ Our Logviewer will save the threads so your staff can view previous threads thro
 * Ease of installation: you can get your Modmail bot running in under 10 minutes!
 * Schedule tasks in human time, e.g. `?close in 2 hours silently`.
 * Editing and deleting messages are synced.
-* Support for the diverse range of message contents (multiple images, files).
+* Support for images, files, stickers, and other attachments.
+* Internal notes and moderator-only discussions.
 * Paginated commands interfaces via buttons.
+* Multi-user conversations and private thread management tools.
 
 This list is ever-growing thanks to active development by our exceptional contributors. See a full list of available commands by using the `?help` command.
 
@@ -58,7 +62,7 @@ You have various options to help the project. Giving this repository a star is g
 
 Support Modmail with your contributions! Whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/modmail-dev/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
 
-## Next steps
+## Next Steps
 
 * Read about [installing Modmail](installation/).
 * Become familiar with [Modmail commands and functionalities](getting-started.md).
@@ -66,9 +70,9 @@ Support Modmail with your contributions! Whether it be improvements to the docum
 {% hint style="info" %}
 Throughout this documentation when we're referring to bot commands, we will assume the prefix of the bot to be <mark style="color:green;">?</mark> and will display them like in this example: <mark style="color:green;">?help</mark>.\
 \
-Optional arguments will be enclosed in square brackets:\
+**Optional** arguments will be enclosed in square brackets:\
 Example: <mark style="color:green;">?close \[time] \[reason] \[silently]</mark>\
 \
-Required arguments will be enclosed in angle brackets:\
+**Required** arguments will be enclosed in angle brackets:\
 Example: <mark style="color:green;">?contact \<user></mark>
 {% endhint %}

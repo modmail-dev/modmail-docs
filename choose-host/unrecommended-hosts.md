@@ -30,7 +30,7 @@ description: These hosts are hosts we, and members of our community have had lit
 
 ### Discord Bot Hosting
 - [Website](https://discordbothosting.com/)
-- Pterodactyl based host that can have issues with ratelimits due to shared IP addresses and reasons that have been listed below.
+- Pterodactyl based host that can have issues with ratelimits due to shared IP addresses and reasons that have been listed above.
 
 ### Kairo Hositing
 - Discord Only
