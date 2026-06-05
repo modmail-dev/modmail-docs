@@ -115,7 +115,7 @@ You have successfully deployed your Modmail bot using the Modmail Panel! You can
 
 {% endstepper %}
 
-<details>
+
 
 ## Sharing Access to your Modmail Instance
 
@@ -154,7 +154,7 @@ If you have shared your bot with someone else, you can revoke their access at an
 If you have had a bot shared with you that you no longer wish to have access to, you can use the **Leave Instance** button as seen in the red box below:
 <figure><img src="../.gitbook/assets/PANEL-14.png"></figure>
 
-
+<details>
 <summary>Version History</summary>
 
 {% updates format="full" %}

@@ -84,6 +84,7 @@ If for any reason you want to rename your logviewer, the easiest way to do this 
 {% endstep %}
 {% endstepper %}
 
+<details>
 <summary>Version History</summary>
 
 {% updates format="full" %}
