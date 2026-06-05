@@ -1,5 +1,5 @@
 ---
-description: [https://github.com/modmail-dev/modmail](https://github.com/modmail-dev/modmail)
+description: https://github.com/modmail-dev/modmail
 ---
 
 # Introduction
