@@ -82,10 +82,10 @@ You can disable this by adding `DATA_COLLECTION=no` to your `.env` file.
 
 #### Discord forces me to apply for priviliged Intents to continue using Modmail, why? What does this mean? (Affects large Discord communities only)
 
-Discord requires bot owners to apply for the usage of priviliged Intents that Modmail uses to offer several functionalities **if your Modmail Bot reaches more than 10,000 Users in total in your guild(s)** regardless of the server count. If your bot reaches that user count you need to apply for these intents in the Discord Developer Portal. Official information can be read [here](https://support-dev.discord.com/hc/de/articles/40281523410967-Changes-to-Privileged-Intent-Access-for-Discord-Apps)
+Discord requires bot owners to apply for the usage of priviliged Intents that Modmail uses to offer several functionalities **if your Modmail Bot reaches more than 10,000 Users in total in your server(s)** regardless of the server count. If your bot reaches that user count you need to apply for these intents in the Discord Developer Portal. Official information can be read [here](https://support-dev.discord.com/hc/de/articles/40281523410967-Changes-to-Privileged-Intent-Access-for-Discord-Apps)
 
 If you need any assistance to fill out the intents application form
-regarding what information to sent to discord please reach out to us in our support server.
+regarding what information to sent to Discord please reach out to us in our support server.
 
 #### I tried installing the dependencies with another Python version and it messed up my Pipfile! How can I get the original Pipfile back?
 
