@@ -26,6 +26,7 @@
   * [Configuration](usage-guide/configuration.md)
   * [Permissions](usage-guide/permissions.md)
   * [Thread Menu](usage-guide/threadmenu.md)
+  * [Intents Review Process](usage-guide/intents-review.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Config References]()
   * [Configuration Variables](config-references/config-vars.md)
