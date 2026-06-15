@@ -45,6 +45,7 @@ Your data is highly restricted. We do not sell, monetize, or trade your personal
 
 1. Authorized Server Staff: Moderators and administrators of the Discord server who have the necessary permissions to view Modmail threads and logs.
 2. The Database Administrator: The technical individual responsible for hosting the MongoDB instance and keeping the Bot online.[^1]
+3. MongoDB Atlas Employees: Select employees of the MongoDB Atlas team are able to access the data. Their usage of the data is generally restricted, and governed by their [privacy policy](https://www.mongodb.com/legal/privacy/privacy-policy)
 
 We will not share your data with any third parties unless explicitly required to do so by law or to comply with Discord's Trust and Safety requests.
 
@@ -110,6 +111,8 @@ Your data is highly restricted. We do not sell, monetize, or trade your personal
 1. Authorized Server Staff: Moderators and administrators of `[Insert Discord Server Name]` who have the necessary permissions to view Modmail threads and logs.
 2. The Database Administrator: The technical individual(s) responsible for hosting the MongoDB instance and keeping the Bot online.
     a. Database Administror(s): `[Insert Names of Database Administrators Here]` 
+3. MongoDB Atlas Employees: Select employees of the MongoDB Atlas team are able to access the data. Their usage of the data is generally restricted, and governed by their [privacy policy](https://www.mongodb.com/legal/privacy/privacy-policy)
+4. `[Insert Name of Hosting Company]` Employees: Select employees of `[Insert Name of Hosting Company]` are able to access the data due to their ability to access the MongoDB connection information. Their privacy policy is defined [here](`[Insert URL to Hosting Company Privacy Policy Here]`).
 
 We will not share your data with any third parties unless explicitly required to do so by law or to comply with Discord's Trust and Safety requests.
 
