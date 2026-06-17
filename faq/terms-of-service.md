@@ -4,9 +4,8 @@ description: Sample Bot Terms of Service that can be used by instances at their 
 
 # Terms of Service
 
-{% hint style="info" %}
-These Terms of Service only apply to Modmail Instances hosted by administrators who choose to use them. If a bot administrator has provided you these terms, they have agreed to use them for their specific instance. If you have any questions regarding the validity of these terms for any specific Modmail instance, please contact the relevant staff team.
-{% endhint %}
+> [!NOTE]
+> These Terms of Service only apply to Modmail Instances hosted by administrators who choose to use them. If a bot administrator has provided you these terms, they have agreed to use them for their specific instance. If you have any questions regarding the validity of these terms for any specific Modmail instance, please contact the relevant staff team.
 
 Last Updated: June 17th, 2026
 
@@ -78,12 +77,12 @@ If you have any questions or concerns regarding these Terms, please contact:
 2. Any member of the server's staff team; or
 3. The owner of the Discord server.
 
-{% hint style="info" %}
-**Server Owners**
+---
 
-If you do not want this one size fits all option, you can use the template below as a starting point.
+> [!NOTE]
+> **Server Owners** — If you do not want this one size fits all option, you can use the template below as a starting point.
+
 <details>
-
 <summary>Basic Template</summary>
 
 These Terms of Service ("Terms") govern your use of `[Insert Bot Name]` (referred to as "the Bot", "we", or "us"). The Bot is an instance of the open-source [modmail-dev/modmail](https://github.com/modmail-dev/modmail) project and is hosted independently by the administrators of `[Insert Discord Server Name]`.
@@ -154,30 +153,30 @@ If you have any questions or concerns regarding these Terms, please contact:
 1. Discord User(s): `[Insert Discord Username(s) of the Bot Owner/Administrator(s)]`
 2. Email: `[Insert Contact Email, if applicable]`
 3. Server: `[Insert Invite Link or instructions on how to reach staff]`
+
 </details>
-{% endhint %}
 
-{% hint style="info" %}
-**Server Owners**
-
-Please note that by using the Terms of Service on our Docs site without modification, you are making legally binding promises to your users and to Discord. These promises include, but are not limited to:
-1. Liability Limitations
-
+> [!IMPORTANT]
+> **Server Owners**
+>
+> Please note that by using the Terms of Service on our Docs site without modification, you are making legally binding promises to your users and to Discord. These promises include, but are not limited to:
+>
+> **1. Liability Limitations**
+>
 > You are claiming that the Bot is provided "as-is" and that you bear no liability for damages. While this is standard, the enforceability of liability limitations varies by jurisdiction. In some regions (particularly within the EU), blanket liability disclaimers may not be enforceable against consumers. You should be aware of the laws applicable to your users.
-
-2. Availability Commitments
-
+>
+> **2. Availability Commitments**
+>
 > By stating that you do not guarantee uptime, you are setting the expectation that the Bot may be unavailable at times. However, if you consistently fail to maintain the Bot or abandon it without notice while still collecting user data, you may be in violation of your obligations under the Discord Developer Terms of Service.
-
-3. Third-Party Service Accountability
-
+>
+> **3. Third-Party Service Accountability**
+>
 > The Terms reference Discord and MongoDB as third-party services. If you use additional services (such as a specific hosting provider), you must either use the template to disclose them or accept that you have not fully informed your users about where their data may be processed.
-
-4. Enforcing Acceptable Use
-
+>
+> **4. Enforcing Acceptable Use**
+>
 > Your Terms prohibit abusive behaviour and Bot exploitation. If you fail to consistently enforce these rules, or if you yourself violate the acceptable use standards (e.g., using the Bot to harass users), you undermine the legitimacy of your own Terms and may face consequences from Discord.
-
-5. Consistency with Privacy Policy
-
+>
+> **5. Consistency with Privacy Policy**
+>
 > These Terms reference the Privacy Policy. If the two documents contradict each other (e.g., your Terms claim data is deleted immediately but your Privacy Policy states a 14-day window), the inconsistency could create legal exposure. Ensure both documents are aligned.
-{% endhint %}

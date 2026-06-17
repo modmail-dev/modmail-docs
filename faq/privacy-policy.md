@@ -4,9 +4,8 @@ description: Sample Bot Privacy Policy that can be used by instances at their di
 
 # Privacy Policy
 
-{% hint style="info" %}
-This Privacy Policy only applies to Modmail Instances hosted by administrators who choose to use it. If a bot administrator has provided you this privacy policy, they have agreed to use it for their specific instance. If you have any questions regarding the validity of this privacy policy for any specific Modmail instance, please contact the relevant staff team.
-{% endhint %}
+> [!NOTE]
+> This Privacy Policy only applies to Modmail Instances hosted by administrators who choose to use it. If a bot administrator has provided you this privacy policy, they have agreed to use it for their specific instance. If you have any questions regarding the validity of this privacy policy for any specific Modmail instance, please contact the relevant staff team.
 
 Last Updated: June 17th, 2026
 
@@ -23,13 +22,11 @@ When you send a direct message to the Bot to initiate a support thread or intera
 3. **Server Data:** Relevant Guild (Server) IDs and Channel IDs required to route your messages to the correct moderation team.
 4. **Action Logs:** Metadata related to the thread, such as when it was opened, closed, or transferred by moderators.
 
-
 ## 2. How We Store Your Data
 
 The [modmail-dev/modmail](https://github.com/modmail-dev/modmail) application does not store data on Discord's infrastructure once a thread is archived ("closed"). Instead, all collected data (including message logs and user identifiers) is exported and stored off-platform in a MongoDB database.
 
 This database is managed independently by the individual or team hosting the Bot instance. We implement reasonable security measures to protect your data from unauthorized access.
-
 
 ## 3. How We Use Your Data
 
@@ -72,17 +69,18 @@ If you have any questions, concerns, or data deletion requests regarding this Pr
 
 [^1]: In almost all cases, this is a member of the authorized server staff.
 
-{% hint style="info" %}
-**Server Owners**
+---
 
-If you do not want this one size fits all option, you can use the template below as a starting point.
+> [!NOTE]
+> **Server Owners** — If you do not want this one size fits all option, you can use the template below as a starting point.
+
 <details>
-
 <summary>Basic Template</summary>
 
 This Privacy Policy explains how `[Insert Bot Name]` (referred to as "the Bot", "we", or "us") collects, uses, stores, and protects your data. This Bot is an instance of the open-source [modmail-dev/modmail](https://github.com/modmail-dev/modmail) project and is hosted independently by the administrators of `[Insert Discord Server Name]`.
 
 By interacting with the Bot, you consent to the data practices described in this policy. This policy is designed to comply with the [Discord Developer Terms of Service](https://support-dev.discord.com/hc/en-us/articles/8562894815383-Discord-Developer-Terms-of-Service) and [Developer Policy](https://support-dev.discord.com/hc/en-us/articles/8563934450327-Discord-Developer-Policy).
+
 1. Data We Collect
 
 When you send a direct message to the Bot to initiate a support thread or interact with an active thread, we collect and store the following information:
@@ -97,6 +95,7 @@ When you send a direct message to the Bot to initiate a support thread or intera
 The [modmail-dev/modmail](https://github.com/modmail-dev/modmail) application does not store data on Discord's infrastructure once a thread is archived. Instead, all collected data (including message logs and user identifiers) is exported and stored off-platform in a MongoDB database.
 
 This database is managed independently by the individual or team hosting this Bot instance. We implement reasonable security measures within the database environment to protect your logs from unauthorized access.
+
 3. How We Use Your Data
 
 The data we collect is strictly used to provide and maintain the functionality of the Bot. Specifically, we use it for:
@@ -127,6 +126,7 @@ Under the Discord Developer Policies, you have the right to request the deletion
 2. Contacting the server administrators or the contact person(s) listed below.
 
 Upon receiving a verifiable request, we will manually purge your identifying information and message content from our database within [Insert Number, e.g., 30] days.
+
 7. Contact Information
 
 If you have any questions, concerns, or data deletion requests regarding this Privacy Policy or the Bot's operation, please contact us at:
@@ -134,30 +134,30 @@ If you have any questions, concerns, or data deletion requests regarding this Pr
 1. Discord User(s): `[Insert Discord Username(s) of the Bot Owner/Administrator(s)]`
 2. Email: `[Insert Contact Email, if applicable]`
 3. Server: `[Insert Invite Link or instructions on how to reach staff]`
+
 </details>
-{% endhint %}
 
-{% hint style="info" %}
-**Server Owners**
-
-Please note that by using the Privacy Policy on our Docs site without modification, you are making legally binding promises to your users and to Discord. These promises include, but are not limited to:
-1. Strict Data Sharing Limitations
-
+> [!IMPORTANT]
+> **Server Owners**
+>
+> Please note that by using the Privacy Policy on our Docs site without modification, you are making legally binding promises to your users and to Discord. These promises include, but are not limited to:
+>
+> **1. Strict Data Sharing Limitations**
+>
 > You are agreeing that you will not share user data with any third parties unless required by law. This means you cannot share Modmail logs with other Discord servers, community ban lists, global moderation databases, or any external entities. If you do so: you are violating this privacy policy, which could carry civil penalties in some jurisdictions.
-2. Infrastructure and Hosting Trust
-
-> The policy states that only server staff and the database administrator have access to the logs. You must ensure that your hosting provider and your database host are secure and trustworthy. If your hosting provider has weak security and your database leaks, the responsibility falls entirely on you.
-(This is primarily a concern for individuals using hosting providers that are not established, see our comments on [unrecommended hosts](../choose-host/unrecommended-hosts.md).)
-
-3. Binding Deletion Timelines
-
+>
+> **2. Infrastructure and Hosting Trust**
+>
+> The policy states that only server staff and the database administrator have access to the logs. You must ensure that your hosting provider and your database host are secure and trustworthy. If your hosting provider has weak security and your database leaks, the responsibility falls entirely on you. *(This is primarily a concern for individuals using hosting providers that are not established, see our comments on [unrecommended hosts](../choose-host/unrecommended-hosts.md).)*
+>
+> **3. Binding Deletion Timelines**
+>
 > If you state that you will delete data upon request within 14 days, you must have a reliable, manual process to find and purge a user's data from your MongoDB cluster within that exact timeframe. Failure to honor data deletion requests is a direct violation of the Discord Developer Terms of Service and can result in action taken against your account. If you fail to honor this you also: are violating this privacy policy, which could carry civil penalties in some jurisdictions.
-
-4. Managing Staff Access
-
+>
+> **4. Managing Staff Access**
+>
 > Because your policy guarantees that only authorized staff have access to user data, you must rigorously manage permissions. When a moderator steps down or is removed from your team, you must immediately revoke their access to the Modmail bot commands, the database, and the log viewer. If you fail to do so: you are violating this privacy policy, which could carry civil penalties in some jurisdictions.
-
-5. Regional Privacy Laws
-
-> Depending on where you and your users reside, you may be subject to strict data protection laws like the GDPR in Europe or the CCPA in California. These laws impose significant obligations regarding data handling, consent, and user rights, even for hobbyist or volunteer run Discord servers.
-{% endhint %}
+>
+> **5. Regional Privacy Laws**
+>
+> Depending on where you and your users reside, you may be subject to strict data protection laws like the GDPR in Europe or the CCPA in California. These laws impose significant obligations regarding data handling, consent, and user rights, even for hobbyist or volunteer-run Discord servers.
