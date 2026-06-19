@@ -15,17 +15,17 @@ By interacting with the Bot, you agree to be bound by these Terms. If you do not
 
 ## 1. Description of Service
 
-Modmail is a Discord bot that functions as a shared inbox between server members and staff. It allows users to send direct messages to the Bot, which are then relayed to the server's moderation or support team as private threads. Staff can respond through these threads, and the replies are sent back to the user via direct message.
+Modmail is a Discord bot that functions as a shared inbox between server members and staff. It allows users to send direct messages to the Bot, which are then relayed to the server's staff as private threads. Staff can respond through these threads, and the replies are sent back to the user via direct message.
 
 ## 2. Eligibility
 
-You must comply with Discord's [Terms of Service](https://discord.com/terms) to use the Bot. By using the Bot, you confirm that you meet the minimum age requirements set by Discord and that your Discord account is in good standing.
+You must comply with Discord's [Terms of Service](https://discord.com/terms) to use the Bot. By using the Bot, you confirm that you meet the minimum age requirements set by Discord and that your Discord account is in good standing. You must also be a member of the Discord server where the Bot operates to use its services. The Bot will be unavailable to you if you are not a member of the server, or if you have been blocked from using the Bot by the server's staff.
 
 ## 3. Acceptable Use
 
 When interacting with the Bot, you agree to:
 
-1. **Use the Bot for its intended purpose:** Communicating with the server's moderation or support staff through the Modmail system.
+1. **Use the Bot for its intended purpose:** Communicating with the server's staff through the Modmail system.
 2. **Follow the server's rules:** Abide by the community guidelines and rules of the Discord server the Bot operates in.
 3. **Not abuse the Bot:** Refrain from spamming, sending unsolicited messages, or otherwise attempting to disrupt the Bot's functionality or the staff's ability to respond.
 4. **Not attempt to exploit the Bot:** Do not attempt to reverse-engineer, manipulate, or exploit the Bot's functionality, including its commands, APIs, or data storage.
@@ -91,17 +91,17 @@ By interacting with the Bot, you agree to be bound by these Terms. If you do not
 
 1. Description of Service
 
-Modmail is a Discord bot that functions as a shared inbox between server members and staff. It allows users to send direct messages to the Bot, which are then relayed to the server's moderation or support team as private threads. Staff can respond through these threads, and the replies are sent back to the user via direct message.
+Modmail is a Discord bot that functions as a shared inbox between server members and staff. It allows users to send direct messages to the Bot, which are then relayed to the server's staff as private threads. Staff can respond through these threads, and the replies are sent back to the user via direct message.
 
 2. Eligibility
 
-You must comply with Discord's [Terms of Service](https://discord.com/terms) to use the Bot. By using the Bot, you confirm that you meet the minimum age requirements set by Discord and that your Discord account is in good standing.
+You must comply with Discord's [Terms of Service](https://discord.com/terms) to use the Bot. By using the Bot, you confirm that you meet the minimum age requirements set by Discord and that your Discord account is in good standing. You must also be a member of `[Insert Discord Server Name]` to use its services. The Bot will be unavailable to you if you are not a member of the server, or if you have been blocked from using the Bot by the server's staff.
 
 3. Acceptable Use
 
 When interacting with the Bot, you agree to:
 
-1. Use the Bot for its intended purpose: Communicating with the server's moderation or support staff through the Modmail system.
+1. Use the Bot for its intended purpose: Communicating with the server's staff through the Modmail system.
 2. Follow the server's rules: Abide by the community guidelines and rules of `[Insert Discord Server Name]`.
 3. Not abuse the Bot: Refrain from spamming, sending unsolicited messages, or otherwise attempting to disrupt the Bot's functionality.
 4. Not attempt to exploit the Bot: Do not attempt to reverse-engineer, manipulate, or exploit the Bot's functionality, including its commands, APIs, or data storage.
