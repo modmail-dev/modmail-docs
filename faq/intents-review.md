@@ -62,7 +62,8 @@ You will need to adopt a privacy policy for your bot. We have a version you can 
 {% code title="Question 1" lineNumbers="false" %}
 
 ```
-Why do you need the Guild Members intent?-------------------------------------------------------------------
+Why do you need the Server Members intent?
+-------------------------------------------------------------------
 Modmail requires the Server Members Intent to accurately check a user's membership status. 
 
 When a user initiates a Direct Message with the bot, the bot must scan the user's shared servers to route the message to the correct server's staff team. Additionally, the bot uses member data to verify staff permissions, ensuring that only authorized moderators can view the modmail threads, use staff commands, and reply to users. 
@@ -127,10 +128,6 @@ Select: Yes
 <details>
 
 <summary>Message Content Intent</summary>
-
-Add your expandable body text here. This expandable is collapsed by default.
-
-</details>
 {% code title="Question 1" lineNumbers="false" %}
 ```
 Can users opt-out of having their message content data tracked?
@@ -196,6 +193,7 @@ Please provide links to screenshots and/or videos that demonstrate your use case
 [link]
 ```
 {% endcode %}
+</details>
 <details>
 
 <summary>Presence Intent</summary>
