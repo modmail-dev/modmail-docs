@@ -37,14 +37,14 @@ You may have heard the saying *“cheap, good, fast — pick two.”* Hosting Mo
 
 Over the years, the Modmail team has spent many hours researching and recommending free hosting platforms. Starting in 2025, we are no longer spending the time, or recommending platforms purley for being free.
 
-Free platforms usually have, or develop one of these problems: remove free tier, high downtime, problematic server connection, terminating instances without notice.
+Free platforms usually have, or develop one of these problems: remove free tier, high downtime, problematic server connection, or terminating instances without notice.
 
 
 {% endhint %}
 
 ### "Minimum Spec"
 
-The Modmail project does not have a minimum specification required to use run your bot. However, generally, if you hear anyone from our team, or read on this page the term "minimum spec" or "min spec", we are referring to this:
+The Modmail project does not have a minimum specification required to use run your bot. However, generally, if you hear anyone from our team, or read on this page the term **minimum spec**, we are referring to this:
 
 |System Spec|Minimum Value|
 |-|-|
@@ -121,12 +121,12 @@ If you want the simplest possible method of getting your bot online, we would re
 {% endhint %}
 
 {% hint style="danger" %}
-### A Caution on Free Pterodactyl based hosts.
+## A Caution on Free Pterodactyl based hosts.
 
 Many hosting "companies" have popped up in recent years using the free, open source, [Pterodactyl](https://pterodactyl.io/) hosting platform. These hosting sites are particularly problematic. With the biggest concern usually revolving around **your data security**. Many, if not all, of these platforms do not provide, possess, or follow proper agreements relating to the access of your uploaded information. This includes your MongoDB Conncection URI, and Bot Token, allowing the "staff" of these "companies" to access any message ever sent to or from your bot, any message in your server, and carry out actions as your bot (ie. deleting channels, reading messages, banning users).
 
 Additionally, many of these hosts are run with substandard hardware and infrastucture, usually resulting to temporary IP bans from Discord, poor uptime, poor performance, improper dependancy installation, and more.
 
-We **strongly** encourage you to conduct **full and complete** research before using these hosts. *Our general recommendation is to: avoid them.*
+We **strongly** encourage you to conduct **full and complete** research before using these hosts. *Our general recommendation is to: **avoid them.***
 
 {% endhint %}
