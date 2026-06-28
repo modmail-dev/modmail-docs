@@ -79,11 +79,19 @@ Finally, tracking member leave events is necessary to immediately detect if a us
 ```
 Please provide links to screenshots and/or videos that demonstrate your use case
 -------------------------------------------------------------------
-link
+https://youtu.be/wkLv6_PsmHQ
 
 ```
 
 {% endcode %}
+
+{% hint style="info" %}
+Our team is aware that this video does not meet our usual requirements for a polished final result. Once we have additional time, and verification that the details in this video are sufficient, we will release a more polished version to be used in the future.
+
+If you want to record a video using your own bot, you are welcome to do so.
+
+{% embed url="https://youtu.be/wkLv6_PsmHQ" %}
+{% endhint %}
 
 {% code title="Question 3" lineNumbers="false" %}
 
@@ -190,7 +198,7 @@ The core functionality of Modmail relies on processing, relaying, and logging me
 ```
 Please provide links to screenshots and/or videos that demonstrate your use case
 -------------------------------------------------------------------
-[link]
+https://youtu.be/wkLv6_PsmHQ
 ```
 {% endcode %}
 </details>
