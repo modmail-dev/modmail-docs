@@ -51,7 +51,7 @@ Select: Yes(required if for any applicayion using the intents or with more then 
 {% endcode %}
 
 {% hint style="info" %}
-You will need to adopt a privacy policy for your bot. We have a version you can opt to use [here](privacy-policy.md).
+You will need to adopt a privacy policy for your bot. We have a version you can opt to use [here](../faq/privacy-policy.md).
 {% endhint %}
 
 </details>
