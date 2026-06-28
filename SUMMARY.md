@@ -29,6 +29,8 @@
   * [Permissions](usage-guide/permissions.md)
   * [Thread Menu](usage-guide/threadmenu.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
+  * [Intents Review Process](faq/intents-review.md)
+  * [Instance Privacy Policy](faq/)
 * [Config References]()
   * [Configuration Variables](config-references/config-vars.md)
   * [Color Names](config-references/color-names.md)
