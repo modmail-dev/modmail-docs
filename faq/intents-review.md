@@ -29,7 +29,7 @@ Modmail requires the **Message Content Intent** to read user messages and create
 
 > *Q: What does your application do? Please be as detailed as possible...*
 
-{% code title="Application Description" lineNumbers="false" overflow="wrap" %}
+{% code title="Application Description"  overflow="wrap" %}
 
 ```
 Modmail is a shared inbox bot for server moderation. When a user sends a Direct Message to the bot, it automatically creates a dedicated text channel (a "thread") within a designated staff category in our Discord server. Server staff can read the user's messages in this channel and reply using bot commands. The bot then relays these staff replies back to the user via Direct Message. This allows for organized, private, and collaborative support between users and the moderation team.
@@ -60,7 +60,7 @@ Select: Yes
 
 > *Q: Why do you need the Server Members intent?*
 
-{% code title="Question 1" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 1"  overflow="wrap" %}
 
 ```
 Modmail requires the Server Members Intent to accurately check a user's membership status. 
@@ -75,7 +75,7 @@ Finally, tracking member leave events is necessary to immediately detect if a us
 
 > *Q: Please provide links to screenshots and/or videos that demonstrate your use case*
 
-{% code title="Question 2" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 2"  overflow="wrap" %}
 
 ```
 https://youtu.be/wkLv6_PsmHQ
@@ -93,7 +93,7 @@ If you want to record a video using your own bot, you are welcome to do so.
 
 > *Q: Are you storing any API Data off-platform (outside of Discord)?*
 
-{% code title="Question 3" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 3"  overflow="wrap" %}
 
 ```
 Select: Yes
@@ -103,7 +103,7 @@ Select: Yes
 
 > *Q: Are you storing API Data for 30 days or less?*
 
-{% code title="Question 4" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 4"  overflow="wrap" %}
 ```
 Select: No
 ```
@@ -111,7 +111,7 @@ Select: No
 
 > *Q: How do users contact you to request deletion of their activity data?*
 
-{% code title="Question 5" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 5"  overflow="wrap" %}
 ```
 Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
 ```
@@ -119,7 +119,7 @@ Users can request the deletion of their data by sending a Direct Message to the 
 
 > *Q: Are you encrypting the data that you store at rest, as is required by our developer policy?*
 
-{% code title="Question 6" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 6"  overflow="wrap" %}
 ```
 Select: Yes
 ```
@@ -129,7 +129,7 @@ Select: Yes
 
 > *Q: Can users opt-out of having their message content data tracked?*
 
-{% code title="Question 1" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 1"  overflow="wrap" %}
 ```
 Select: Yes
 ```
@@ -137,7 +137,7 @@ Select: Yes
 
 > *Q: Are you storing message content data off-platform (outside of Discord)?*
 
-{% code title="Question 2" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 2"  overflow="wrap" %}
 ```
 Select: Yes
 ```
@@ -145,7 +145,7 @@ Select: Yes
 
 > *Q: Are you storing user message content data for 30 days or less?*
 
-{% code title="Question 3" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 3"  overflow="wrap" %}
 ```
 Select: No
 ```
@@ -157,7 +157,7 @@ In almost all cases the answer to the question above (#3) will be No. However, i
 
 > *Q: How do users contact you to request deletion of their activity data?*
 
-{% code title="Question 4" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 4"  overflow="wrap" %}
 ```
 Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
 ```
@@ -165,7 +165,7 @@ Users can request the deletion of their data by sending a Direct Message to the 
 
 > Q: Are you encrypting the data that you store at rest, as is required by our developer policy?
 
-{% code title="Question 5" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 5"  overflow="wrap" %}
 ```
 Select: Yes
 ```
@@ -173,7 +173,7 @@ Select: Yes
 
 > Q: Will the message content data be used to train machine learning or AI Models?
 
-{% code title="Question 6" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 6"  overflow="wrap" %}
 ```
 Select: No
 ```
@@ -181,7 +181,7 @@ Select: No
 
 > Q: Why do you need the Message Content intent?
 
-{% code title="Question 6" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 6"  overflow="wrap" %}
 ```
 The core functionality of Modmail relies on processing, relaying, and logging message content sent within the server's moderation channels. The bot requires the Message Content intent to read the messages sent by staff members inside the server's modmail threads, allowing the bot to forward those replies back to the user. Additionally, the intent is necessary to monitor and log internal staff-only discussions within these server channels to preserve a complete and accurate moderation history for future reference. Without the Message Content intent, the bot cannot detect staff replies or archive internal server logs, rendering the moderation workflow non-functional.
 ```
@@ -189,7 +189,7 @@ The core functionality of Modmail relies on processing, relaying, and logging me
 
 > Q: Please provide links to screenshots and/or videos that demonstrate your use case
 
-{% code title="Question 7" lineNumbers="false" overflow="wrap" %}
+{% code title="Question 7"  overflow="wrap" %}
 ```
 https://youtu.be/wkLv6_PsmHQ
 ```
