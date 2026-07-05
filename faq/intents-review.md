@@ -25,27 +25,15 @@ Modmail requires the **Message Content Intent** to read user messages and create
 
 ## Suggested Responses
 
-<details>
+## Application Details
 
-<summary>Application Details</summary>
+> Q: What does your application do? Please be as detailed as possible...
 
-{% code title="Application Description" lineNumbers="false" %}
+{% code title="Application Description" lineNumbers="false" overflow="wrap" %}
 
 ```
-What does your application do? Please be as detailed as possible...
--------------------------------------------------------------------
 Modmail is a shared inbox bot for server moderation. When a user sends a Direct Message to the bot, it automatically creates a dedicated text channel (a "thread") within a designated staff category in our Discord server. Server staff can read the user's messages in this channel and reply using bot commands. The bot then relays these staff replies back to the user via Direct Message. This allows for organized, private, and collaborative support between users and the moderation team.
 
-```
-
-{% endcode %}
-
-{% code title="Application Description" lineNumbers="false" %}
-
-```
-Do you have a public Privacy Policy telling your users about their data usage?
--------------------------------------------------------------------
-Select: Yes(required if for any applicayion using the intents or with more then 100 servers.) or No.
 ```
 
 {% endcode %}
@@ -54,16 +42,28 @@ Select: Yes(required if for any applicayion using the intents or with more then 
 You will need to adopt a privacy policy for your bot. We have a version you can opt to use [here](../faq/privacy-policy.md).
 {% endhint %}
 
-</details>
-<details>
+{% hint style="danger" %}
+Whether you use our template privacy policy, or another privacy policy of your choosing, it is a legally binding committment between you, and the users who use your bot in most jusrisdictions. Failing to comply with the guidlines, expectations, and promises made in a privacy policy is not only a gross breach of trust, but in some jusrisdictions, illegal, or at a minimum, subject to civil liability.
 
-<summary>Server Members Intent</summary>
+It is imperative that before adopting any privacy policy you review it personally, and with your team, and continue to review it with new team members as they join your team. As the operator of the bot, you are responsible for ensuring that everyone on your team is compliant with the chosen privacy policy.
+{% endhint %}
 
-{% code title="Question 1" lineNumbers="false" %}
+> Q: Do you have a public Privacy Policy telling your users about their data usage?
+{% code title="Application Description" lineNumbers="false" overflow="wrap" %}
 
 ```
-Why do you need the Server Members intent?
--------------------------------------------------------------------
+Select: Yes(required if for any application using the intents or with more then 100 servers.)
+```
+
+{% endcode %}
+
+## Server Members Intent
+
+> Q: Why do you need the Server Members intent?
+
+{% code title="Question 1" lineNumbers="false" overflow="wrap" %}
+
+```
 Modmail requires the Server Members Intent to accurately check a user's membership status. 
 
 When a user initiates a Direct Message with the bot, the bot must scan the user's shared servers to route the message to the correct server's staff team. Additionally, the bot uses member data to verify staff permissions, ensuring that only authorized moderators can view the modmail threads, use staff commands, and reply to users. 
@@ -74,11 +74,11 @@ Finally, tracking member leave events is necessary to immediately detect if a us
 
 {% endcode %}
 
-{% code title="Question 2" lineNumbers="false" %}
+> Q: Please provide links to screenshots and/or videos that demonstrate your use case
+
+{% code title="Question 2" lineNumbers="false" overflow="wrap" %}
 
 ```
-Please provide links to screenshots and/or videos that demonstrate your use case
--------------------------------------------------------------------
 https://youtu.be/wkLv6_PsmHQ
 
 ```
@@ -93,115 +93,107 @@ If you want to record a video using your own bot, you are welcome to do so.
 {% embed url="https://youtu.be/wkLv6_PsmHQ" %}
 {% endhint %}
 
-{% code title="Question 3" lineNumbers="false" %}
+> Q: Are you storing any API Data off-platform (outside of Discord)?
+
+{% code title="Question 3" lineNumbers="false" overflow="wrap" %}
 
 ```
-Are you storing any API Data off-platform (outside of Discord)?
--------------------------------------------------------------------
-Select: Yes
-
-```
-
-{% endcode %}
-
-
-{% code title="Question 4" lineNumbers="false" %}
-```
-Are you storing API Data for 30 days or less?
--------------------------------------------------------------------
-Select: No
-
-```
-{% endcode %}
-
-{% code title="Question 5" lineNumbers="false" %}
-```
-How do users contact you to request deletion of their activity data?
--------------------------------------------------------------------
-Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
-
-```
-{% endcode %}
-
-{% code title="Question 6" lineNumbers="false" %}
-```
-Are you encrypting the data that you store at rest, as is required by our developer policy?
--------------------------------------------------------------------
-Select: Yes
-
-```
-{% endcode %}
-</details>
-
-<details>
-
-<summary>Message Content Intent</summary>
-{% code title="Question 1" lineNumbers="false" %}
-```
-Can users opt-out of having their message content data tracked?
--------------------------------------------------------------------
 Select: Yes
 ```
+
 {% endcode %}
 
-{% code title="Question 2" lineNumbers="false" %}
-```
-Are you storing message content data off-platform (outside of Discord)?
--------------------------------------------------------------------
-Select: Yes
-```
-{% endcode %}
+> Q: Are you storing API Data for 30 days or less?
 
-{% code title="Question 3" lineNumbers="false" %}
+{% code title="Question 4" lineNumbers="false" overflow="wrap" %}
 ```
-Are you storing user message content data for 30 days or less?
--------------------------------------------------------------------
 Select: No
 ```
 {% endcode %}
 
+> Q: How do users contact you to request deletion of their activity data?
 
-{% code title="Question 4" lineNumbers="false" %}
+{% code title="Question 5" lineNumbers="false" overflow="wrap" %}
 ```
-How do users contact you to request deletion of their activity data?
--------------------------------------------------------------------
 Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
 ```
 {% endcode %}
 
-{% code title="Question 5" lineNumbers="false" %}
+> Q: Are you encrypting the data that you store at rest, as is required by our developer policy?
+
+{% code title="Question 6" lineNumbers="false" overflow="wrap" %}
 ```
-Are you encrypting the data that you store at rest, as is required by our developer policy?
--------------------------------------------------------------------
 Select: Yes
 ```
 {% endcode %}
 
-{% code title="Question 6" lineNumbers="false" %}
+## Message Content Intent
+
+> Q: Can users opt-out of having their message content data tracked?
+
+{% code title="Question 1" lineNumbers="false" overflow="wrap" %}
 ```
-Will the message content data be used to train machine learning or AI Models?
--------------------------------------------------------------------
+Select: Yes
+```
+{% endcode %}
+
+> Q: Are you storing message content data off-platform (outside of Discord)?
+
+{% code title="Question 2" lineNumbers="false" overflow="wrap" %}
+```
+Select: Yes
+```
+{% endcode %}
+
+> Q: Are you storing user message content data for 30 days or less?
+
+{% code title="Question 3" lineNumbers="false" overflow="wrap" %}
+```
 Select: No
 ```
 {% endcode %}
 
-{% code title="Question 6" lineNumbers="false" %}
+> Q: How do users contact you to request deletion of their activity data?
+
+{% code title="Question 4" lineNumbers="false" overflow="wrap" %}
 ```
-Why do you need the Message Content intent?
--------------------------------------------------------------------
+Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
+```
+{% endcode %}
+
+> Q: Are you encrypting the data that you store at rest, as is required by our developer policy?
+
+{% code title="Question 5" lineNumbers="false" overflow="wrap" %}
+```
+Select: Yes
+```
+{% endcode %}
+
+> Q: Will the message content data be used to train machine learning or AI Models?
+
+{% code title="Question 6" lineNumbers="false" overflow="wrap" %}
+```
+Select: No
+```
+{% endcode %}
+
+> Q: Why do you need the Message Content intent?
+
+{% code title="Question 6" lineNumbers="false" overflow="wrap" %}
+```
 The core functionality of Modmail relies on processing, relaying, and logging message content sent within the server's moderation channels. The bot requires the Message Content intent to read the messages sent by staff members inside the server's modmail threads, allowing the bot to forward those replies back to the user. Additionally, the intent is necessary to monitor and log internal staff-only discussions within these server channels to preserve a complete and accurate moderation history for future reference. Without the Message Content intent, the bot cannot detect staff replies or archive internal server logs, rendering the moderation workflow non-functional.
 
 ```
 {% endcode %}
 
-{% code title="Question 7" lineNumbers="false" %}
+> Q: Please provide links to screenshots and/or videos that demonstrate your use case
+
+{% code title="Question 7" lineNumbers="false" overflow="wrap" %}
 ```
-Please provide links to screenshots and/or videos that demonstrate your use case
--------------------------------------------------------------------
 https://youtu.be/wkLv6_PsmHQ
 ```
 {% endcode %}
-</details>
+
 <details>
 
 <summary>Presence Intent</summary>
