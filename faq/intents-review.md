@@ -113,7 +113,7 @@ Select: No
 
 {% code title="Question 5"  overflow="wrap" %}
 ```
-Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
+Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators. This information is also contained in the bot's privacy policy.
 ```
 {% endcode %}
 
@@ -159,7 +159,7 @@ In almost all cases the answer to the question above (#3) will be No. However, i
 
 {% code title="Question 4"  overflow="wrap" %}
 ```
-Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators.
+Users can request the deletion of their data by sending a Direct Message to the bot itself to contact the server staff, or by directly messaging one of the server administrators. This information is also contained in the bot's privacy policy.
 ```
 {% endcode %}
 
@@ -178,6 +178,11 @@ Select: Yes
 Select: No
 ```
 {% endcode %}
+
+{% hint style="info" %}
+This may be different for your use case. If you currently, or intend in the future to; use the data Modmail collects for AI training purposes, you would need to select `Yes` for this question.
+{% endhint %}
+
 
 > Q: Why do you need the Message Content intent?
 
