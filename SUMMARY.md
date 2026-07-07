@@ -29,6 +29,7 @@
   * [Permissions](usage-guide/permissions.md)
   * [Thread Menu](usage-guide/threadmenu.md)
 * [Frequently Asked Questions](faq/README.md)
+  * [Intents Review Process](faq/intents-review.md)
   * [Instance Privacy Policy](faq/privacy-policy.md)
   * [Instance Terms of Service](faq/terms-of-service.md)
 * [Config References]()
