@@ -81,7 +81,7 @@ If you have any questions or concerns regarding these Terms, please contact:
 ---
 
 {% hint style="info" %}
-> **Server Owners** — If you do not want this one size fits all option, you can use the template below as a starting point.
+**Server Owners** — If you do not want this one size fits all option, you can use the template below as a starting point.
 
 <details>
 <summary>Basic Template</summary>

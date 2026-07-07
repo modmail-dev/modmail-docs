@@ -80,7 +80,6 @@ Initial Publication of the Privacy Policy. [Permalink](https://github.com/modmai
 {% endupdates %}
 
 {% hint style="info" %}
-**Server Owners**
 **Server Owners** — If you do not want this one size fits all option, you can use the template below as a starting point.
 {% endhint %}
 <details>
