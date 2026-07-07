@@ -54,7 +54,7 @@ Examples:
 
 Starting in v4.2.2 (check version with `?about`), permissions can be overridden in bulk. To start the process run:
 
-`?permissions override bulk``  
+`?permissions override bulk`
 
 ***
 If you need help setting up permissions, feel free to join our [Discord server](https://discord.gg/zmdYe3ZVHG) and DM Modmail. One of our support members will help you.

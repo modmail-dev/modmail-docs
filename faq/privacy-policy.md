@@ -18,7 +18,7 @@ By interacting with the Bot, you consent to the data practices described in this
 When you send a direct message to the Bot to initiate a support thread or interact with an active thread, we collect and store the following information:
 
 1. **User Data:** Your Discord User ID, username, and avatar.
-2. **Message Content:** The text content, attachments, and timestamps of any messages sent to the Bot.
+2. **Message Content:** The text content, links to attachments, and timestamps of any messages sent to the Bot.
 3. **Server Data:** Relevant Guild (Server) IDs and Channel IDs required to route your messages to the correct moderation team.
 4. **Action Logs:** Metadata related to the thread, such as when it was opened, closed, or transferred by moderators.
 
@@ -69,7 +69,14 @@ If you have any questions, concerns, or data deletion requests regarding this Pr
 
 [^1]: In almost all cases, this is a member of the authorized server staff.
 
----
+{% updates format="full" %}
+{% update date="2026-07-05" tags="beta" %}
+Initial Publication of the Privacy Policy. *A permanent GitHub commit link will be added here when changes are made to track changes overtime.*
+{% endupdate %}
+{% endupdates %}
+
+{% hint style="info" %}
+**Server Owners**
 
 > [!NOTE]
 > **Server Owners** — If you do not want this one size fits all option, you can use the template below as a starting point.
@@ -86,7 +93,7 @@ By interacting with the Bot, you consent to the data practices described in this
 When you send a direct message to the Bot to initiate a support thread or interact with an active thread, we collect and store the following information:
 
 1. User Data: Your Discord User ID, username, and avatar.
-2. Message Content: The text content, attachments, and timestamps of any messages sent to the Bot.
+2. Message Content: The text content, links to attachments, and timestamps of any messages sent to the Bot.
 3. Server Data: Relevant Guild (Server) IDs and Channel IDs required to route your messages to the correct moderation team.
 4. Action Logs: Metadata related to the thread, such as when it was opened, closed, or transferred by moderators.
 

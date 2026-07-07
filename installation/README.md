@@ -4,7 +4,7 @@ description: Modmail hosting and installation guide.
 
 # Installation
 
-Modmail is a self-hosted bot. This unfortunately means that there's **no** public bot invite. Furthermore, due to the inner workings of the bot and its highly customisable interfaces, you will need to host your own dedicated Modmail bot.
+Modmail is a self-hosted bot. This unfortunately means that there's **no** public bot invite. Due to the inner workings of the bot and its highly customisable interfaces, you will need to host your own dedicated Modmail bot.
 
 This section provides setup instructions for Modmail on many hosting methods, both **free[^1] and paid**.
 
@@ -126,9 +126,13 @@ You **must leave on** all permissions excepted for _Administrator_ (optional). H
 
 <summary>Do you have a separate staff server?</summary>
 
-If you manage a large server where you have a separate server for communication among your moderation team, Modmail supports directing threads into the staff server instead of your main (public) server.
+If you manage a large server where you have a separate server for communication among your team, Modmail supports directing threads into the staff server instead of your main (public) server. (In our docs, when we refer to "mailbox server" or "inbox server" we are referring to this server that your threads are created in.)
 
 You will need to invite your Modmail bot to **both** your main (public) server and your staff server using the same invite link above.
+
+{% hint style="info" icon="location-dot">%}
+You can add your Modmail bot to multiple different servers if you manage multiple. For example if you have a primary server, a gaming focused server, and a staff server. All threads will go to your staff server, but can be submitted by members of any of your servers. However, please note, that there is reduced functionality when using this approach.
+{% endhint %}
 
 </details>
 
@@ -138,7 +142,13 @@ Your bot should now be **offline** in your server. Congratulations, that's as ex
 
 Modmail uses MongoDB to store its internal configurations and log histories. You must create a MongoDB database in order to use Modmail.
 
-We will be using [MongoDB Atlas](https://www.mongodb.com/atlas), which provides us with a free 512MB storage share—more than enough for Modmail.
+We will be using [MongoDB Atlas](https://www.mongodb.com/atlas), which provides us with a free 512MB storage share, more than enough for Modmail. *If you are concerned about storage space, this free cluster will last you around 300k log entries, or around 3 million messages, it is extremely rare to hit this limit, even in some of the biggest and busiest servers.*
+
+{% hint style="info" %}
+Throughout this entire section, you may find that exact page layouts, icons, and buttons have been changed or relocated on the screen. This is not a problem and will not stop you from deploying Modmail. Simply look at the page being displayed, look at the screenshot, and you will be able to find what you need with minimal complication.
+
+MongoDB Atlas significantly alters their user interface on an overly-frequent basis, and the Modmail team does not have the time or bandwidth to take new screenshots to reflect the sometimes multiple times per month changes.
+{% endhint %}
 
 ### Requirements
 
@@ -173,7 +183,7 @@ It's possible that you verified your email in a different browser session, or yo
 
 In this case, you can still follow the same steps below, but first click **Build a Database**:
 
-<img src="../.gitbook/assets/Image22.png" alt="Screenshot of homepage and click build a database." data-size="original">
+<img src="../.gitbook/assets/Image22.png" alt="Screenshot of homepage and click build a database.">
 
 </details>
 
@@ -193,7 +203,7 @@ On the following **Security Quickstart** page, do the following:
 
 1.  Authentication method: _Username and Password_
 
-    Username: `modmail`
+    Username: `modmail` *(You can use anything you wish for this field, however, keep it short and avoid any special characters. For most users, we recommend keeping `modmail`.)*
 
     Password: Click **Autogenerate Secure Password** - don't type your own password!
 2.  Copy and **save the password** in your Notepad, you will need this for later.
@@ -264,7 +274,7 @@ You finished the MongoDB steps! At this point, your bot should still be **offlin
 Once you have finished the previous steps, gather and save the variables listed below as they will be needed to run your bot in later steps:
 
 * `TOKEN` - The token to run your Modmail application under your Discord bot account
-* `LOG_URL` - Logviewer URL that will be used to view threads in your web browser. *Please view the below **Danger** block if you do not intend on using a Logviewer.
+* `LOG_URL` - Logviewer URL that will be used to view threads in your web browser. *Please view the below **danger** block if you do not intend on using a Logviewer.*
 * `GUILD_ID` - The ID of the main Discord server that your bot will operate in.
 * `MODMAIL_GUILD_ID` - **\[Optional]** The ID of the Discord server that your bot will create ticket channels in. This is only needed if you want your ticket channels to be created in a separate server, for an example, Staff Server.
 * `OWNERS` - The user ID of the Discord accounts you want to set as owner for the bot. Can consist of multiple users, separated by comma.
@@ -283,13 +293,17 @@ CONNECTION_URI=mongodb+srv://username:password@cluster0-abcde.mongodb.net/
 {% endcode %}
 
 {% hint style="danger" %}
-**DANGER!!** - `LOG_URL` Enviornment Variable without a Logviewer
+**DANGER** - `LOG_URL` Enviornment Variable without a Logviewer
 
 *This is only relevant if you choose not to use a logviewer with your Modmail Instance, if you intend on having a fully featured instance, you can safely ignore this block.*
 
 If you do not intend on using a Logviewer for your Modmail Instance, you must still ensure `LOG_URL` is set to a valid FQDN (Fully Qualified Domain Name). You can leave it as `example.com` or change it to anything else, but, do **not** delete the row, or set a value that is not an FQDN. `none`, `local`, `12032`, etc are **not** FQDNs.
 
-If you set the `LOG_URL` to an invalid FQDN, Discord will not handle it well and you will experience issues with thread creation.
+If you set the `LOG_URL` to an invalid FQDN, Discord will not be able to render it properly and you will experience issues with thread creation.
+{% endhint %}
+
+{% hint style="success" %}
+Congratulations! You have now completed all of the backend setup steps to get your Modmail ready, you can now move on to getting it deployed with the host of your choice. If you haven't chosen your host yet, check out our [Choosing a Host considerations](../choose-host/README.md).
 {% endhint %}
 
 
@@ -305,7 +319,9 @@ A platform as a service (PaaS) that offers relatively low cost plans, which allo
 
 ### [Local Hosting](local-hosting-vps/) (free)
 
-If you have an old PC, a Raspberry Pi, or a Linux box that you're able to keep online 24/7, you can also host Modmail with your own machine at home. Since Modmail doesn't require intensive resources to run, you can get by with a system having as low as 1GB of RAM. Setting it up can be quite advanced but you have complete control over your bot instance. Refer to our local hosting guide supporting a few popular OSes by clicking [here](./#local-hosting-free).
+If you have an old PC, a Raspberry Pi, or a Linux box that you're able to keep online 24/7, you can also host Modmail with your own machine at home. Since Modmail doesn't require intensive resources to run, you can get by with a system having as low as 1GB of RAM. Setting it up can be quite advanced but you have complete control over your bot instance. Refer to our local hosting guide supporting a few popular OSes by clicking [here](local-hosting-vps/).
+
+> A tip for Local Hosting: if you don't want to, don't know how to, or don't feel comfortable exposing your local machine to the internet for the Logviewer component of Modmail, Lorenzo from the Modmail team offers FREE logviewer hosting! Check it out [here](./free-logviewer.md)
 
 ### [Modmail Team Hosting](https://buymeacoffee.com/modmaildev) (paid)
 
@@ -313,9 +329,13 @@ We offer paid hosting solution for your Modmail bot. Hosting Modmail with us cos
 
 We will also fully manage your bot hosting for you, so you don't need to worry about upgrading or setting up your own host server. Refer to our [Patreon Hosting here](https://buymeacoffee.com/modmaildev).
 
+See guide [Modmail Panel Hosting](./modmail-panel.md)
+
 ### [modmail.lvh.lol](https://modmail.lvh.lol) (paid)
 
 Run by a member of our community, this hosting provider has a purpose built software stack for hosting Modmail, logviewer not included.
+
+See guide [Modmail Panel Hosting](./modmail-panel.md).
 
 ### [Heroku](heroku.md) (paid)
 

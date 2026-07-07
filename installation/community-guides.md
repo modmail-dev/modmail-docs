@@ -14,6 +14,8 @@ An online code execution environment that costs $7 USD per month. However, hosti
 
 {% hint style="warning" %}
 Replit is on the Modmail Team's unrecommended hosts list. See more details on the [unrecommended hosts page](../choose-host/unrecommended-hosts.md)
+
+**The Modmail team does not provide any support of any kind to anyone hosting with Repl.it.**
 {% endhint %}
 
 ## [Oracle Guide](https://docs.lidistat67.eu/) by lidistat67
