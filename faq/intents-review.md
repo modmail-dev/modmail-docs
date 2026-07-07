@@ -29,7 +29,7 @@ Modmail requires the **Message Content Intent** to read user messages and create
 
 > *Q: What does your application do? Please be as detailed as possible...*
 
-{% code title="Application Description"  overflow="wrap" %}
+{% code title="Question 1"  overflow="wrap" %}
 
 ```
 Modmail is a shared inbox bot for server moderation. When a user sends a Direct Message to the bot, it automatically creates a dedicated text channel (a "thread") within a designated staff category in our Discord server. Server staff can read the user's messages in this channel and reply using bot commands. The bot then relays these staff replies back to the user via Direct Message. This allows for organized, private, and collaborative support between users and the moderation team.
@@ -48,10 +48,37 @@ It is imperative that before adopting any privacy policy you review it personall
 {% endhint %}
 
 > *Q: Do you have a public Privacy Policy telling your users about their data usage?*
-{% code title="Application Description" overflow="wrap" %}
+{% code title="Question 2" overflow="wrap" %}
 
 ```
 Select: Yes
+```
+
+{% endcode %}
+
+{% hint style="info" %}
+You'll need to add a link to your bots Privacy Policy to its Bio field via the [Discord Developer Portal](https://discord.com/developers/applications). *The **Description** field on the **General Information** is the text displayed in your bots Bio field.*
+{% endhint %}
+
+> *Q: Where is your Privacy Policy available?*
+{% code title="Question 3" overflow="wrap" %}
+
+```
+The bot has a link to the Privacy Policy in its Bio. As the interaction with the bot occurs via DMs, it is likely that users will see the bot's profile with the Privacy Policy link.
+```
+
+{% endcode %}
+
+{% hint style="warning" %}
+Only use the Privacy Policy link below if you have chosen to file our published generic privacy policy for bots. If you choose to implement your own, or use the template we provide at the bottom of that page, then you must link that policy instead.
+{% endhint %}
+
+
+> *Q: Please share a link to your Privacy Policy.*
+{% code title="Question 4" overflow="wrap" %}
+
+```
+https://docs.modmail.dev/frequently-asked-questions/privacy-policy
 ```
 
 {% endcode %}

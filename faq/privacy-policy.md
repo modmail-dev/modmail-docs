@@ -8,7 +8,7 @@ description: Sample Bot Privacy Policy that can be used by instances at their di
 This Privacy Policy only applies to Modmail Instances hosted by administrators who choose to use it. If a bot administrator has provided you this privacy policy, they have agreed to use it for their specific instance. If you have any questions regarding the validity of this privacy policy for any specific Modmail instance, please contact the relevant staff team.
 {% endhint %}
 
-Last Updated: July 6th, 2026
+Last Updated: July 7th, 2026
 
 This Privacy Policy explains how Modmail (referred to as "the Bot", "we", or "us") collects, uses, stores, and protects your data. The Bot is an instance of the open-source [modmail-dev/modmail](https://github.com/modmail-dev/modmail) project and is hosted independently by the administrators of the Discord server.
 
@@ -71,8 +71,11 @@ If you have any questions, concerns, or data deletion requests regarding this Pr
 [^1]: In almost all cases, this is a member of the authorized server staff.
 
 {% updates format="full" %}
+{% update date="2026-07-07" tags="beta" %}
+Fix typo in last update date.
+{% endupdate %}
 {% update date="2026-07-05" tags="beta" %}
-Initial Publication of the Privacy Policy. *A permanent GitHub commit link will be added here when changes are made to track changes overtime.*
+Initial Publication of the Privacy Policy. [Permalink](https://github.com/modmail-dev/modmail-docs/blob/7afe2153184617ac5802cdef9496732235b3cae1/faq/privacy-policy.md)
 {% endupdate %}
 {% endupdates %}
 
