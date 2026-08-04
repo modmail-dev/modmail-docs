@@ -115,7 +115,7 @@ Our team is aware that this video does not meet our usual requirements for a pol
 
 If you want to record a video using your own bot, you are welcome to do so.
 
-{% embed url="https://youtu.be/wkLv6_PsmHQ" %}
+{% embed url="https://youtu.be/WNi6FUAGceE" %}
 {% endhint %}
 
 > *Q: Are you storing any API Data off-platform (outside of Discord)?*
