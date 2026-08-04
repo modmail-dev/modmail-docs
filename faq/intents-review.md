@@ -105,7 +105,7 @@ Finally, tracking member leave events is necessary to immediately detect if a us
 {% code title="Question 2"  overflow="wrap" %}
 
 ```
-https://youtu.be/wkLv6_PsmHQ
+https://youtu.be/jxEbZOMrF9w
 ```
 
 {% endcode %}
@@ -115,7 +115,7 @@ Our team is aware that this video does not meet our usual requirements for a pol
 
 If you want to record a video using your own bot, you are welcome to do so.
 
-{% embed url="https://youtu.be/wkLv6_PsmHQ" %}
+{% embed url="https://youtu.be/jxEbZOMrF9w" %}
 {% endhint %}
 
 > *Q: Are you storing any API Data off-platform (outside of Discord)?*
@@ -223,7 +223,7 @@ The core functionality of Modmail relies on processing, relaying, and logging me
 
 {% code title="Question 7"  overflow="wrap" %}
 ```
-https://youtu.be/wkLv6_PsmHQ
+https://youtu.be/jxEbZOMrF9w
 ```
 {% endcode %}
 
