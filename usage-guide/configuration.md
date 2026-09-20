@@ -720,7 +720,7 @@ _**Default:**_ Yes
 
 _**Example:**_
 
-* `?configconfig set thread_show_join_age no`
+* `?config set thread_show_join_age no`
 
 _**Notes:**_
 
