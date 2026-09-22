@@ -1347,7 +1347,7 @@ _**Default:**_ "Your message has been sent"
 
 _**Example:**_
 
-* \`?config set thread\_creation\_footer Please Hold...
+* \`?config set thread\_creation\_footer Please Hold...`
 
 _**Notes:**_
 
